@@ -3,14 +3,53 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.administrator.electronicproject.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <FrameLayout
+        android:id="@+id/frame_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:text="Hello World!" />
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+        <RadioButton
+            android:id="@+id/radio_button_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/home_colectoe"
+            android:button="@null"
+            android:layout_weight="1"/>
+        <RadioButton
+            android:id="@+id/radio_button_divider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:drawableTop="@drawable/divider_colectoe"
+            android:layout_weight="1"/>
+        <RadioButton
+            android:id="@+id/radio_button_fashion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:drawableTop="@drawable/fashion_colectoe"
+            android:layout_weight="1"/>
+        <RadioButton
+            android:id="@+id/radio_button_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:drawableTop="@drawable/message_colectoe"
+            android:layout_weight="1"/>
+        <RadioButton
+            android:id="@+id/radio_button_mine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:drawableTop="@drawable/mine_colectoe"
+            android:layout_weight="1"/>
+    </RadioGroup>
 </RelativeLayout>
