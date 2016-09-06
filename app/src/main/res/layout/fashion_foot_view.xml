@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:layout_marginTop="10dp">
+
+    <RelativeLayout
+        android:id="@+id/fashion_pull_relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:id="@+id/fashion_hot_recommend_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingLeft="10dp"
+            android:text="@string/hot"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/fashion_all_lable_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:drawableRight="@drawable/icon_topicdetail_next"
+            android:paddingRight="15dp"
+            android:text="@string/all" />
+
+    </RelativeLayout>
+
+
+    <com.example.administrator.electronicproject.FashionFragment.view.CustomGridView
+        android:id="@+id/fashion_pull_middle_custom_grid_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/fashion_pull_relative_layout"
+        android:padding="5dp"
+        android:numColumns="3"/>
+
+    <com.example.administrator.electronicproject.FashionFragment.view.CustomGridView
+        android:id="@+id/fashion_pull_custom_grid_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/fashion_pull_middle_custom_grid_view"
+        android:background="#EEE5DE"
+        android:numColumns="2"
+        android:padding="5dp" />
+
+</RelativeLayout>

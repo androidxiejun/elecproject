@@ -8,7 +8,7 @@ import android.os.Bundle;
 import android.widget.RadioGroup;
 
 import com.example.administrator.electronicproject.ClassifyFragment.ClassifyFragment;
-import com.example.administrator.electronicproject.FashionFragment.FashionFragment;
+import com.example.administrator.electronicproject.FashionFragment.view.FashionFragment;
 import com.example.administrator.electronicproject.MessageFragment.MessageFragment;
 import com.example.administrator.electronicproject.MineFragment.MineFragment;
 import com.example.administrator.electronicproject.StoreFragment.StoreFragment;
