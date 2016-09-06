@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="?actionBarSize"
+    android:orientation="horizontal">
+    <Button
+        android:id="@+id/classify_search_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/search_btn_selector"
+        android:drawableLeft="@drawable/search_logo"
+        android:text="商品/品牌/帖子/红人"
+        android:paddingLeft="10dp"
+        android:paddingRight="120dp"
+        android:layout_weight="1"/>
+    <Button
+        android:id="@+id/classify_shopping_car_btn"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/shopping_car"
+        />
+</LinearLayout>
+  <android.support.design.widget.TabLayout
+      android:id="@+id/classify_tab_layout"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        <ListView
+            android:id="@+id/classify_list_view"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"/>
+        <GridView
+            android:id="@+id/classify_grid_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:numColumns="3"/>
+    </LinearLayout>
+</LinearLayout>
