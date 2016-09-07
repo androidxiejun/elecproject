@@ -7,7 +7,9 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.example.administrator.electronicproject.FashionFragment.bean.FashionBottonBean;
 import com.example.administrator.electronicproject.FashionFragment.bean.FashionMiddleBean;
@@ -28,7 +30,7 @@ import retrofit2.Response;
  * 1：上部分的banner，作为PullToRefreshListView的item，PullToRefreshListView只有一个item,为了保证有下拉刷新
  * 2: banner以下，两个自定义的GridView
  */
-public class FashionRecommendFragment extends Fragment {
+public class FashionRecommendFragment extends Fragment implements View.OnClickListener{
 
     private Context context;
 
@@ -47,6 +49,7 @@ public class FashionRecommendFragment extends Fragment {
     private CustomGridView fashionMiddleGridView;
     private List<FashionMiddleBean.ResponseBean.DataBean.ItemsBean> fashionMiddleDatas = new ArrayList<>();
     private FashionMiddleGridAdapter fashionMiddleGridAdapter;
+    private TextView mAllTable;
 
 
     public static FashionRecommendFragment newInstance(){
@@ -73,6 +76,9 @@ public class FashionRecommendFragment extends Fragment {
 
         //底部视图
         View inflate = LayoutInflater.from(context).inflate(R.layout.fashion_foot_view, null);
+        //底部视图的全部标签,和点击事件
+        mAllTable = (TextView) inflate.findViewById(R.id.fashion_all_lable_tv);
+        mAllTable.setOnClickListener(this);
         //下部分，第一个gridview
         fashionMiddleGridView = (CustomGridView) inflate.findViewById(R.id.fashion_pull_middle_custom_grid_view);
         fashionMiddleGridAdapter = new FashionMiddleGridAdapter(fashionMiddleDatas,context);
@@ -86,7 +92,30 @@ public class FashionRecommendFragment extends Fragment {
         refreshableView.addFooterView(inflate);
 
         requestDatas();
+        initListener();
         return view;
+    }
+
+    private void initListener() {
+        /**
+         * 下部分，第一个gridview的item的点击
+         */
+        fashionMiddleGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                //跳转到相应界面
+            }
+        });
+
+        /**
+         * 下部分，第二个gridview的item的点击
+         */
+        mCustonGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                //跳转到帖子详情
+            }
+        });
     }
 
     /**
@@ -138,5 +167,15 @@ public class FashionRecommendFragment extends Fragment {
 
             }
         });
+    }
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()){
+            //底部视图，第一个GridView上面的全部标签的点击事件
+            case R.id.fashion_all_lable_tv:
+                //跳转到全部标签页面
+                break;
+        }
     }
 }

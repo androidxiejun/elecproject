@@ -1,6 +1,7 @@
 package com.example.administrator.electronicproject.FashionFragment.view;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
@@ -16,6 +17,7 @@ import android.widget.ListView;
 import com.example.administrator.electronicproject.FashionFragment.bean.FashionBottonBean;
 import com.example.administrator.electronicproject.FashionFragment.bean.FashionMiddleBean;
 import com.example.administrator.electronicproject.FashionFragment.http.HttpUtils;
+import com.example.administrator.electronicproject.FashionFragment.view.activity.CameraActivity;
 import com.example.administrator.electronicproject.R;
 import com.handmark.pulltorefresh.library.PullToRefreshListView;
 import java.util.ArrayList;
@@ -46,6 +48,7 @@ public class FashionFragment extends Fragment implements View.OnClickListener{
     private Fragment mCurrentShowFragment;
     private FashionRecommendFragment mRecommendFragment;
     private FashionNewestFragment mNewestFragment;
+
 
     public static FashionFragment newInstance(){
         return new FashionFragment();
@@ -97,7 +100,7 @@ public class FashionFragment extends Fragment implements View.OnClickListener{
      */
     private void initListener() {
         /**
-         * TabLayout的tab点击监听
+         * TabLayout的tab点击监听,点击不同的tab，加载相应的fragment
          */
         toolBarTab.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
@@ -129,7 +132,16 @@ public class FashionFragment extends Fragment implements View.OnClickListener{
 
     @Override
     public void onClick(View view) {
-        //TODO
+        switch (view.getId()){
+            case R.id.fashion_tool_bar_search_btn:
+                //点击进入搜索界面
+                break;
+            case R.id.fashion_tool_bar_camera_btn:
+                //点击相机进入调用手机相册
+                Intent intent = new Intent(context, CameraActivity.class);
+                startActivity(intent);
+                break;
+        }
     }
 
 

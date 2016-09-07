@@ -8,6 +8,9 @@ import android.widget.BaseAdapter;
 
 import com.example.administrator.electronicproject.R;
 import com.youth.banner.Banner;
+import com.youth.banner.BannerConfig;
+import com.youth.banner.Transformer;
+import com.youth.banner.listener.OnBannerClickListener;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -61,8 +64,18 @@ public class FashionListViewAdapter extends BaseAdapter {
         }else {
             holder = (FashionListHolder) view.getTag();
         }
-        holder.banner.setBannerStyle(Banner.SCROLL_INDICATOR_BOTTOM);
+        holder.banner.setBannerStyle(BannerConfig.CIRCLE_INDICATOR);
+        holder.banner.setIndicatorGravity(BannerConfig.CENTER);
+        //设置banner的默认动画,github查询方法
+        holder.banner.setBannerAnimation(Transformer.Stack);
         holder.banner.setImages(images);
+        holder.banner.setOnBannerClickListener(new OnBannerClickListener() {
+            @Override
+            public void OnBannerClick(int position) {
+                //TODO
+                //点击图片进行跳转
+            }
+        });
         return view;
     }
 

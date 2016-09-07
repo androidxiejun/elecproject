@@ -2,4 +2,5 @@
     <string name="app_name">ElectronicProject</string>
     <string name="hot">热门推荐</string>
     <string name="all">全部标签</string>
+    <string name="camera">相机胶卷</string>
 </resources>

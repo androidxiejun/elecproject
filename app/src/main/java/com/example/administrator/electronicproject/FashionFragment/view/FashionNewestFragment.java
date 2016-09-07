@@ -8,6 +8,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.ImageView;
 
@@ -64,7 +65,20 @@ public class FashionNewestFragment extends Fragment {
         animationDrawable.start();
 
         requestDatas();
+        initListener();
         return inflate;
+    }
+
+    private void initListener() {
+        /**
+         * 最新界面中，PullToRefreshGridView的item的点击事件
+         */
+        mNewestGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                //跳转到帖子详情界面
+            }
+        });
     }
 
     /**
