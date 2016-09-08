@@ -19,7 +19,9 @@
         </activity>
         <activity android:name=".ClassifyFragment.DetaillActivity.ClassifyDetiailActivity" />
         <activity android:name=".SearchActivity.SearchActivity" />
-        <activity android:name=".ClassifyFragment.DetailBrandActivity.DetailBrandActivity"></activity>
+        <activity android:name=".ClassifyFragment.DetailBrandActivity.DetailBrandActivity" />
+        <activity android:name=".PurchaseDetails.PurchaseDetails" />
+        <activity android:name=".PurchaseDetails.CommonActivity"></activity>
     </application>
 
 </manifest>

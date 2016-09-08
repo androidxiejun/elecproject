@@ -9,6 +9,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/day30_webview" />
             <option value="$PROJECT_DIR$/httplibrary" />
             <option value="$PROJECT_DIR$/imageloader" />
             <option value="$PROJECT_DIR$/refreshlibrary" />
@@ -18,6 +19,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/day30_webview" />
             <option value="$PROJECT_DIR$/httplibrary" />
             <option value="$PROJECT_DIR$/imageloader" />
             <option value="$PROJECT_DIR$/refreshlibrary" />
