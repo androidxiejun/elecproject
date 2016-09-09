@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="?actionBarSize"
+    android:background="@color/colorWhite"
+    >
+    <Button
+        android:id="@+id/classify_detail_back_btn"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/back_btn"
+        />
+    <TextView
+        android:id="@+id/classify_detail_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_centerInParent="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"/>
+</RelativeLayout>
+    <android.support.design.widget.TabLayout
+        android:id="@+id/classify_detail_tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabMode="fixed">
+        <android.support.design.widget.TabItem
+            android:id="@+id/detail_tab_first_tab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="默认"/>
+        <android.support.design.widget.TabItem
+            android:id="@+id/detail_tab_second_tab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="上新"/>
+        <android.support.design.widget.TabItem
+            android:id="@+id/detail_tab_third_tab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="销量"/>
+        <android.support.design.widget.TabItem
+            android:id="@+id/detail_tab_forth_tab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="价格"/>
+    </android.support.design.widget.TabLayout>
+    <com.handmark.pulltorefresh.library.PullToRefreshGridView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        ptr:ptrDrawable="@mipmap/ic_launcher"
+        android:id="@+id/classify_detail_puul_to_gridview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:numColumns="2"
+        />
+</LinearLayout>
