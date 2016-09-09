@@ -1,22 +1,25 @@
 package com.example.administrator.electronicproject.ClassifyFragment.DetailBrandActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Paint;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.administrator.electronicproject.ClassifyFragment.DetailBrandActivity.BrandDetailBean.BrandDetailBean;
+import com.example.administrator.electronicproject.ClassifyFragment.DetailBrandActivity.BrandDetailBean.BrandDetailTopBean;
 import com.example.administrator.electronicproject.ClassifyFragment.DetailBrandActivity.BrandDetailUtils.BrandDetailHttpUtils;
+import com.example.administrator.electronicproject.PurchaseDetails.PurchaseDetails;
 import com.example.administrator.electronicproject.R;
 import com.marshalchen.ultimaterecyclerview.UltimateRecyclerView;
 import com.marshalchen.ultimaterecyclerview.UltimateRecyclerviewViewHolder;
@@ -37,8 +40,13 @@ public class BrandDetailsFragment extends Fragment{
     private UltimateRecyclerView recyclerView;
     private StringAdapter adapter;
     private Handler handler;
+    private ImageView topImage,topLogo;
+    private TextView topText;
+    private Button focuseBtn;
+    private boolean isChecked=false;
     private List<BrandDetailBean.ResponseBean.DataBean.ItemsBean> items;
     private BrandDetailBean.ResponseBean.DataBean.ItemsBean.ComponentBean component;
+    private BrandDetailTopBean.ResponseBean.DataBean.BusinessBean business;
     public static BrandDetailsFragment newInstance(){
         return new BrandDetailsFragment();
     }
@@ -52,38 +60,74 @@ public class BrandDetailsFragment extends Fragment{
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view=inflater.inflate(R.layout.activity_detail_brand,container,false);
-       handler=new Handler();
+        initView(view);
+        handler=new Handler();
         recyclerView= (UltimateRecyclerView) view.findViewById(R.id.recycler_view);
         recyclerView.setLayoutManager(new GridLayoutManager(context,2));
-//        adapter = new StringAdapter(items);
-//        recyclerView.setAdapter(adapter);
-        recyclerView.enableDefaultSwipeRefresh(true);
-        recyclerView.setDefaultOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
-            @Override
-            public void onRefresh() {
-                handler.postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        recyclerView.setRefreshing(false);
-                    }
-                },2000);
-            }
-        });
+        initListener();
+//        recyclerView.enableDefaultSwipeRefresh(true);
+//        recyclerView.setDefaultOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+//            @Override
+//            public void onRefresh() {
+//                handler.postDelayed(new Runnable() {
+//                    @Override
+//                    public void run() {
+//                        recyclerView.setRefreshing(false);
+//                    }
+//                },2000);
+//            }
+//        });
         getInfo();
         return view;
     }
+
+    private void initListener() {
+      focuseBtn.setOnClickListener(new View.OnClickListener() {
+          @Override
+          public void onClick(View view) {
+              if(!isChecked){
+                  focuseBtn.setText("已关注");
+                  isChecked=true;
+              }else{
+                  focuseBtn.setText("+关注");
+                  isChecked=false;
+              }
+          }
+      });
+    }
+
+    private void initView(View view) {
+        topImage= (ImageView) view.findViewById(R.id.detail_brand_img_view);
+        topText= (TextView) view.findViewById(R.id.detail_brand_text_view);
+        topLogo= (ImageView) view.findViewById(R.id.detail_brand_logo);
+        focuseBtn= (Button) view.findViewById(R.id.detail_focuse_btn);
+    }
+
     private void getInfo(){
         BrandDetailHttpUtils.create().queryBean().enqueue(new Callback<BrandDetailBean>() {
             @Override
             public void onResponse(Call<BrandDetailBean> call, Response<BrandDetailBean> response) {
                 items= response.body().getResponse().getData().getItems();
-//                adapter.notifyDataSetChanged();
                 adapter=new StringAdapter(items);
                 recyclerView.setAdapter(adapter);
             }
 
             @Override
             public void onFailure(Call<BrandDetailBean> call, Throwable t) {
+
+            }
+        });
+        BrandDetailHttpUtils.create().queryTopBean().enqueue(new Callback<BrandDetailTopBean>() {
+            @Override
+            public void onResponse(Call<BrandDetailTopBean> call, Response<BrandDetailTopBean> response) {
+                business= response.body().getResponse().getData().getBusiness();
+                Picasso.with(context).load(business.getBusiness_banner_url()).into(topImage);
+                topText.setText(business.getBusiness_brief());
+                Picasso.with(context).load(business.getBusiness_image()).into(topLogo);
+            }
+
+            @Override
+            public void onFailure(Call<BrandDetailTopBean> call, Throwable t) {
 
             }
         });
@@ -101,7 +145,6 @@ public class BrandDetailsFragment extends Fragment{
             }
         }
     }
-//    viewHolder.originPrice.getPaint().setFlags(Paint. STRIKE_THRU_TEXT_FLAG);
     class StringAdapter extends UltimateViewAdapter<StringViewHolder> {
         private List<BrandDetailBean.ResponseBean.DataBean.ItemsBean> items;
 
@@ -132,7 +175,7 @@ public class BrandDetailsFragment extends Fragment{
         }
 
         @Override
-        public void onBindViewHolder(StringViewHolder holder, int position) {
+        public void onBindViewHolder(final StringViewHolder holder, final int position) {
             component= items.get(position).getComponent();
             //一定要加这个判断  因为UltimateRecyclerView本身有加了头部和尾部  这个方法返回的是包括头部和尾部在内的
             if (position < getItemCount() && (customHeaderView != null ? position <= items.size() : position < items.size()) && (customHeaderView != null ? position > 0 : true)) {
@@ -142,6 +185,19 @@ public class BrandDetailsFragment extends Fragment{
                 holder.originPrice.setText("￥"+component.getOrigin_price());
                 holder.originPrice.getPaint().setFlags(Paint. STRIKE_THRU_TEXT_FLAG);
                 Picasso.with(context).load(component.getPicUrl()).into(holder.imageView);
+                holder.imageView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        int position1 = holder.getPosition();
+                        component=items.get(position1).getComponent();
+                        Intent intent=new Intent(context, PurchaseDetails.class);
+                        intent.putExtra("currentPrice",component.getPrice());
+                        intent.putExtra("originPrice",component.getOrigin_price());
+                        intent.putExtra("title",component.getDescription());
+                        intent.putExtra("picUrl",component.getPicUrl());
+                        startActivity(intent);
+                    }
+                });
                 //TODO
             }
         }

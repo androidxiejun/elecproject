@@ -6,13 +6,23 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.widget.Button;
 
 import com.example.administrator.electronicproject.R;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 public class PurchaseDetails extends AppCompatActivity {
     private PurchaseDetailFragment fragment;
     private FragmentManager manager;
     private Toolbar toolbar;
+    @BindView(R.id.purchase_detail_kefu)
+    Button serviceBtn;
+    @BindView(R.id.purchase_detail_brand)
+    Button branBtn;
+    @BindView(R.id.purchase_detail_collect)
+    Button collectBtn;
     public static String imgUrl,currentPrice,originPrice,title;
 
 
@@ -20,6 +30,7 @@ public class PurchaseDetails extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_purchase_details);
+        ButterKnife.bind(this);
         initIntent();
         initFragment();
         toolbar= (Toolbar) findViewById(R.id.purchase_detail_toolbar);

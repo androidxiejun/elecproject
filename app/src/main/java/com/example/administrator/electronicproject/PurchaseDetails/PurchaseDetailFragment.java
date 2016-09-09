@@ -15,6 +15,7 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -31,6 +32,8 @@ import retrofit2.Response;
  * Created by Administrator on 2016/9/8.
  */
 public class PurchaseDetailFragment extends Fragment {
+    private int startX,startY;
+    private int distanceX;
     private Context context;
     private PurchaseDetailsBean.ResponseBean.DataBean data;
     private NestedScrollView mNestedScrollView;
@@ -42,10 +45,7 @@ public class PurchaseDetailFragment extends Fragment {
     private TextView originPrice;
     private TextView descriptionTxt;
     private  WebView mWebView;
-    private float mPosX;
-    private float mPosY;
-    private float mCurrentPosX;
-    private float mCurrentPosY;
+    private LinearLayout linearLayout;
 
 
     public static PurchaseDetailFragment newInstance(){
@@ -71,28 +71,36 @@ public class PurchaseDetailFragment extends Fragment {
     }
 
     private void initImageListener() {
-        bigImg.setOnTouchListener(new View.OnTouchListener() {
+
+        linearLayout.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
                 switch (motionEvent.getAction()){
                     case MotionEvent.ACTION_DOWN:
-                        mPosX = motionEvent.getX();
-                        mPosY = motionEvent.getY();
-                        Toast.makeText(context, "..................", Toast.LENGTH_SHORT).show();
+                        if(view==null){
+                            view=bigImg;
+                        }
+                        startX = (int) motionEvent.getX();
+                        startY = (int) motionEvent.getY();
                         break;
                     case MotionEvent.ACTION_MOVE:
-                        mCurrentPosX = motionEvent.getX();
-                        mCurrentPosY = motionEvent.getY();
-                        if (mPosX-mCurrentPosX > 50 && Math.abs(mCurrentPosY - mPosY) < 10){
-                            Toast.makeText(context, "可以加载视图", Toast.LENGTH_SHORT).show();
+                        distanceX = (int) (startX-motionEvent.getX());
+                        if (distanceX >50& distanceX <300) {
+                            view.scrollTo(distanceX,0);
+
                         }
                         break;
                     case MotionEvent.ACTION_UP:
+                        view.scrollTo(0,0);
+                        if(distanceX>200){
+                            Toast.makeText(context, ".............", Toast.LENGTH_SHORT).show();
+                        }
                         break;
                 }
-                return false;
+                return true;
             }
         });
+
     }
 
     private void initScrollViewListenner() {
@@ -139,6 +147,7 @@ public class PurchaseDetailFragment extends Fragment {
     }
 
     private void initView(View view) {
+        linearLayout= (LinearLayout) view.findViewById(R.id.detail_brand_linear_layout);
         mNestedScrollView= (NestedScrollView) view.findViewById(R.id.purchase_detail_nested_scroll_view);
         currentPrice= (TextView) view.findViewById(R.id.purchase_detaiL_current_price);
         logoImg= (ImageView) view.findViewById(R.id.purchase_detail_logo);
