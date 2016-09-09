@@ -1,7 +1,10 @@
 package com.example.administrator.electronicproject.FashionFragment.view;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -14,7 +17,11 @@ import android.widget.TextView;
 import com.example.administrator.electronicproject.FashionFragment.bean.FashionBottonBean;
 import com.example.administrator.electronicproject.FashionFragment.bean.FashionMiddleBean;
 import com.example.administrator.electronicproject.FashionFragment.http.HttpUtils;
+import com.example.administrator.electronicproject.FashionFragment.view.activity.FashionMiddleTableActivity;
+import com.example.administrator.electronicproject.FashionFragment.view.activity.FashionTableDetailsActivity;
+import com.example.administrator.electronicproject.FashionFragment.view.activity.FashionTopDetailsActivity;
 import com.example.administrator.electronicproject.R;
+import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshListView;
 
 import java.util.ArrayList;
@@ -51,6 +58,9 @@ public class FashionRecommendFragment extends Fragment implements View.OnClickLi
     private FashionMiddleGridAdapter fashionMiddleGridAdapter;
     private TextView mAllTable;
 
+    //参数
+    private int ga = 0;
+
 
     public static FashionRecommendFragment newInstance(){
         return new FashionRecommendFragment();
@@ -71,6 +81,13 @@ public class FashionRecommendFragment extends Fragment implements View.OnClickLi
         fashionListView = (PullToRefreshListView) view.findViewById(R.id.fashion_pull_list_view);
         fashionListViewAdapter = new FashionListViewAdapter(context,stringList);
         fashionListView.setAdapter(fashionListViewAdapter);
+        //设置PullToRefreshListView的刷新模式,上拉刷新，下拉加载更多
+        fashionListView.setMode(PullToRefreshBase.Mode.BOTH);
+
+        //暂时存放最上边数据
+        stringList.add("name");
+        fashionListViewAdapter.notifyDataSetChanged();
+
         //PullToRefreshListView的listview，用来加载下部分
         refreshableView = fashionListView.getRefreshableView();
 
@@ -98,12 +115,18 @@ public class FashionRecommendFragment extends Fragment implements View.OnClickLi
 
     private void initListener() {
         /**
-         * 下部分，第一个gridview的item的点击
+         * 下部分，第一个gridview，热门推荐item的点击
          */
         fashionMiddleGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 //跳转到相应界面
+                Intent intent = new Intent(context, FashionTableDetailsActivity.class);
+                int id = fashionMiddleDatas.get(i).getComponent().getAction().getId();
+                intent.putExtra("id",id);
+                //用于判断进入FashionTableDetailsActivity界面的是哪个界面，用于 FashionTableDetailsActivity的返回
+                intent.putExtra("come","middle");
+                startActivity(intent);
             }
         });
 
@@ -113,16 +136,52 @@ public class FashionRecommendFragment extends Fragment implements View.OnClickLi
         mCustonGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                //跳转到帖子详情
+                Intent intent = new Intent(context,FashionTopDetailsActivity.class);
+                intent.putExtra("id",itemsBeanList.get(i).getComponent().getId());
+                intent.putExtra("thread_id",itemsBeanList.get(i).getComponent().getId()+"");
+                intent.putExtra("come","fashion");
+                startActivity(intent);
+            }
+        });
+
+        /**
+         * 下拉刷新，上拉加载更多内容
+         * 在下拉刷新中，时尚圈下部分第二个GridView的请求参数不变，只是刷新了数据
+         * 标签部分参数发生了变化
+         */
+        fashionListView.setOnRefreshListener(new PullToRefreshBase.OnRefreshListener2<ListView>() {
+            @Override
+            public void onPullDownToRefresh(PullToRefreshBase<ListView> refreshView) {
+                ga ++;
+                requestDatas();
+            }
+
+            @Override
+            public void onPullUpToRefresh(PullToRefreshBase<ListView> refreshView) {
+
             }
         });
     }
+
+    private Handler mHandler = new Handler(){
+        @Override
+        public void handleMessage(Message msg) {
+            switch (msg.what){
+                case 1:
+                    fashionGridViewAdapter.notifyDataSetChanged();
+                    break;
+                case 2:
+                    fashionMiddleGridAdapter.notifyDataSetChanged();
+                    break;
+            }
+            fashionListView.onRefreshComplete();
+        }
+    };
 
     /**
      * 请求时尚圈下部分的数据,并刷新下部分GridView的适配器
      */
     private void requestDatas(){
-
         /**
          * 时尚圈下部分第二个GridView的数据,并刷新下部分GridView的适配器
          */
@@ -130,14 +189,16 @@ public class FashionRecommendFragment extends Fragment implements View.OnClickLi
             @Override
             public void onResponse(Call<FashionBottonBean> call, Response<FashionBottonBean> response) {
 
-                stringList.add("name");
-                fashionListViewAdapter.notifyDataSetChanged();
 
                 if (itemsBeanList != null){
                     itemsBeanList.clear();
                 }
                 itemsBeanList.addAll(response.body().getResponse().getData().getItems());//时尚圈下部分，获取网络数据源
-                fashionGridViewAdapter.notifyDataSetChanged();
+//                fashionGridViewAdapter.notifyDataSetChanged();
+
+                Message message = mHandler.obtainMessage();
+                message.what = 1;
+                mHandler.sendMessage(message);
 
             }
 
@@ -149,16 +210,20 @@ public class FashionRecommendFragment extends Fragment implements View.OnClickLi
 
 
         /**
-         * 时尚圈下部分第一个GridView的数据,并刷新下部分GridView的适配器
+         * 时尚圈下部分第一个GridView的数据,并刷新下部分GridView的适配器,参数ga
          */
-        HttpUtils.create().fashionMiddleGridDatas().enqueue(new Callback<FashionMiddleBean>() {
+        HttpUtils.create().fashionMiddleGridDatas(ga).enqueue(new Callback<FashionMiddleBean>() {
             @Override
             public void onResponse(Call<FashionMiddleBean> call, Response<FashionMiddleBean> response) {
                 if (fashionMiddleDatas != null){
                     fashionMiddleDatas.clear();
                 }
                 fashionMiddleDatas.addAll(response.body().getResponse().getData().getItems());
-                fashionMiddleGridAdapter.notifyDataSetChanged();
+//                fashionMiddleGridAdapter.notifyDataSetChanged();
+
+                Message message = mHandler.obtainMessage();
+                message.what = 2;
+                mHandler.sendMessage(message);
             }
 
 
@@ -167,6 +232,7 @@ public class FashionRecommendFragment extends Fragment implements View.OnClickLi
 
             }
         });
+
     }
 
     @Override
@@ -174,7 +240,8 @@ public class FashionRecommendFragment extends Fragment implements View.OnClickLi
         switch (view.getId()){
             //底部视图，第一个GridView上面的全部标签的点击事件
             case R.id.fashion_all_lable_tv:
-                //跳转到全部标签页面
+                Intent intent = new Intent(context, FashionMiddleTableActivity.class);
+                startActivity(intent);
                 break;
         }
     }

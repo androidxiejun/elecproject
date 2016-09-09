@@ -1,11 +1,13 @@
 package com.example.administrator.electronicproject.FashionFragment.view;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 
+import com.example.administrator.electronicproject.FashionFragment.view.activity.FashionTopDetailsActivity;
 import com.example.administrator.electronicproject.R;
 import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
@@ -24,12 +26,13 @@ import butterknife.ButterKnife;
 public class FashionListViewAdapter extends BaseAdapter {
 
     //暂时使用的数据源
+    private int[] id = {469139,469172,469162,469105,468584,469114};
     private String[] images= new String[] {
-            "http://ci.xiaohongshu.com/595dff6f-bad5-42f8-880c-9d58d64e88b2@r_640w_640h.webp",
-            "http://ci.xiaohongshu.com/0071c59b-0f2d-461e-ace4-2643d88ef3d9@r_640w_640h.webp",
-            "http://image.lanrenzhoumo.com/leo/img/20160810100309_273c841b233964e6b26fffbd5fb0474a.jpg",
-            "http://image.lanrenzhoumo.com/leo/img/20160810100345_a37b7fccf945f2c8fa3a30e317968b5e.jpg",
-            "http://image.lanrenzhoumo.com/leo/img/20160810100310_23ba61c23351583c295b63b494f0027c.jpg"};
+            "http://s3.mingxingyichu.cn/group6/M00/AE/2F/wKgBjVfNQEyASrljAALE86r9d_U589.jpg?imageMogr2?imageMogr2?imageMogr2",
+            "http://s0.mingxingyichu.cn/group5/M00/6B/1E/wKgBf1fOermAemBaAAI8p26-TxQ559.jpg?imageMogr2?imageMogr2?imageMogr2",
+            "http://s6.mingxingyichu.cn/group6/M00/AE/1C/wKgBjFfNL3qAOcPrAAF-KXNTTgo759.jpg?imageMogr2?imageMogr2?imageMogr2",
+            "http://s3.mingxingyichu.cn/group6/M00/AE/55/wKgBjVfOYOuAOkuFAAFS1Oz5VZc216.jpg?imageMogr2?imageMogr2?imageMogr2",
+            "http://s6.mingxingyichu.cn/group6/M00/AE/49/wKgBjFfOXyqATirRAAMEd6BpW94137.jpg?imageMogr2?imageMogr2?imageMogr2"};
 
     private Context context;
     private List<String> stringList;
@@ -54,7 +57,7 @@ public class FashionListViewAdapter extends BaseAdapter {
     }
 
     @Override
-    public View getView(int i, View view, ViewGroup viewGroup) {
+    public View getView(final int i, View view, ViewGroup viewGroup) {
         FashionListHolder holder = null;
         if (view == null){
             view = LayoutInflater.from(context).inflate(R.layout.fashion_top_list_item,viewGroup,false);
@@ -67,13 +70,17 @@ public class FashionListViewAdapter extends BaseAdapter {
         holder.banner.setBannerStyle(BannerConfig.CIRCLE_INDICATOR);
         holder.banner.setIndicatorGravity(BannerConfig.CENTER);
         //设置banner的默认动画,github查询方法
-        holder.banner.setBannerAnimation(Transformer.Stack);
+//        holder.banner.setBannerAnimation(Transformer.Stack);
+        holder.banner.setBannerAnimation(Transformer.Accordion);
         holder.banner.setImages(images);
         holder.banner.setOnBannerClickListener(new OnBannerClickListener() {
             @Override
             public void OnBannerClick(int position) {
-                //TODO
-                //点击图片进行跳转
+                Intent intent = new Intent(context, FashionTopDetailsActivity.class);
+                intent.putExtra("id",id[position]);
+                intent.putExtra("thread_id",id[position]+"");
+                intent.putExtra("come","fashion");
+                context.startActivity(intent);
             }
         });
         return view;

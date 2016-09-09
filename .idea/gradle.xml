@@ -11,10 +11,10 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/day30_webview" />
+            <option value="$PROJECT_DIR$/flowlibrary" />
             <option value="$PROJECT_DIR$/httplibrary" />
             <option value="$PROJECT_DIR$/imageloader" />
             <option value="$PROJECT_DIR$/pulllibrary" />
-            <option value="$PROJECT_DIR$/refreshlibrary" />
           </set>
         </option>
         <option name="myModules">
@@ -22,10 +22,10 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/day30_webview" />
+            <option value="$PROJECT_DIR$/flowlibrary" />
             <option value="$PROJECT_DIR$/httplibrary" />
             <option value="$PROJECT_DIR$/imageloader" />
             <option value="$PROJECT_DIR$/pulllibrary" />
-            <option value="$PROJECT_DIR$/refreshlibrary" />
           </set>
         </option>
       </GradleProjectSettings>

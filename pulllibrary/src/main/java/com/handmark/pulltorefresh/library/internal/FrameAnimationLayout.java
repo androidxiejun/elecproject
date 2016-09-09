@@ -43,12 +43,11 @@ public class FrameAnimationLayout extends LoadingLayout {
 
     @Override
     protected void refreshingImpl() {
-        mAnimationDrawable.start();
     }
 
     @Override
     protected void releaseToRefreshImpl() {
-
+        mAnimationDrawable.start();
     }
 
     @Override

@@ -1,3 +1,2 @@
-include ':app', ':httplibrary', ':imageloader'
+include ':app', ':httplibrary', ':imageloader', ':flowlibrary', ':day30_webview'
 include ':pulllibrary'
-include ':app', ':httplibrary', ':imageloader', ':refreshlibrary', ':day30_webview'

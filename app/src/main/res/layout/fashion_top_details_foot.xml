@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f1f1f1"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- 标签的布局-->
+    <RelativeLayout
+        android:id="@+id/recommend_top_details_foot_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:layout_marginBottom="10dp">
+
+        <com.hhl.library.FlowTagLayout
+            android:id="@+id/recommend_top_details_foot_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            android:gravity="center_vertical" />
+
+        <com.example.administrator.electronicproject.FashionFragment.view.CustomGridView
+            android:id="@+id/recommend_top_details_buy_grid"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:padding="5dp"
+            android:numColumns="1"
+            android:layout_below="@id/recommend_top_details_foot_title"/>
+    </RelativeLayout>
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/recommend_top_details_relatie_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/recommend_top_details_foot_rl">
+
+        <com.example.administrator.electronicproject.FashionFragment.view.CustomGridView
+            android:id="@+id/recommend_top_details_foot_comment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:background="#FFFFFF"
+            android:numColumns="1" />
+
+        <TextView
+            android:id="@+id/recommend_top_details_foot_empty"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="#FFFFFF"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:text="暂无评论"
+            android:textColor="#000000"
+            android:textSize="16sp"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/recommend_top_details_foot_see_more"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/recommend_top_details_relatie_layout"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="10dp"
+        android:background="#FFFFFF"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:text="@string/more"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+
+    <com.example.administrator.electronicproject.FashionFragment.view.CustomGridView
+        android:id="@+id/recommend_top_details_foot_more"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/recommend_top_details_foot_see_more"
+        android:numColumns="2" />
+
+</RelativeLayout>

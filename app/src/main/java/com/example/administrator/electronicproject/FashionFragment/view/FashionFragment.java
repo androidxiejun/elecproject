@@ -107,6 +107,7 @@ public class FashionFragment extends Fragment implements View.OnClickListener{
             public void onTabSelected(TabLayout.Tab tab) {
                 switch (tab.getPosition()){
                     case 0:
+                        //关注的fragment
                         break;
                     case 1:
                         chooseFragment(mRecommendFragment);

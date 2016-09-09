@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="F:\Users\Android\workspace\ElectronicProject\refreshlibrary\src\main\assets"/><source path="F:\Users\Android\workspace\ElectronicProject\refreshlibrary\build\generated\assets\shaders\debug"/></dataSet><dataSet config="debug"><source path="F:\Users\Android\workspace\ElectronicProject\refreshlibrary\src\debug\assets"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="H:\workspace\electricproject\refreshlibrary\src\main\assets"/><source path="H:\workspace\electricproject\refreshlibrary\build\generated\assets\shaders\debug"/></dataSet><dataSet config="debug"><source path="H:\workspace\electricproject\refreshlibrary\src\debug\assets"/></dataSet></merger>

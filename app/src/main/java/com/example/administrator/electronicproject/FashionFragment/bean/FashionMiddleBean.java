@@ -194,7 +194,7 @@ public class FashionMiddleBean {
                     public static class ActionBean {
                         private String actionType;
                         private String type;
-                        private String id;
+                        private int id;
                         private String tag;
                         private String title;
 
@@ -214,11 +214,11 @@ public class FashionMiddleBean {
                             this.type = type;
                         }
 
-                        public String getId() {
+                        public int getId() {
                             return id;
                         }
 
-                        public void setId(String id) {
+                        public void setId(int id) {
                             this.id = id;
                         }
 

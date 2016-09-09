@@ -3,4 +3,9 @@
     <string name="hot">热门推荐</string>
     <string name="all">全部标签</string>
     <string name="camera">相机胶卷</string>
+    <string name="content_details">内容详情</string>
+    <string name="comment">评论</string>
+    <string name="collect">喜欢</string>
+    <string name="share">分享</string>
+    <string name="more">查看更多</string>
 </resources>

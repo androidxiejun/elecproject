@@ -33,6 +33,7 @@ import android.view.animation.LinearInterpolator;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.handmark.pulltorefresh.library.ILoadingLayout;
@@ -47,7 +48,7 @@ public abstract class LoadingLayout extends FrameLayout implements ILoadingLayou
 
 	static final Interpolator ANIMATION_INTERPOLATOR = new LinearInterpolator();
 
-	private FrameLayout mInnerLayout;
+	private RelativeLayout mInnerLayout;
 
 	protected final ImageView mHeaderImage;
 	protected final ProgressBar mHeaderProgress;
@@ -79,7 +80,7 @@ public abstract class LoadingLayout extends FrameLayout implements ILoadingLayou
 				break;
 		}
 
-		mInnerLayout = (FrameLayout) findViewById(R.id.fl_inner);
+		mInnerLayout = (RelativeLayout) findViewById(R.id.fl_inner);
 		mHeaderText = (TextView) mInnerLayout.findViewById(R.id.pull_to_refresh_text);
 		mHeaderProgress = (ProgressBar) mInnerLayout.findViewById(R.id.pull_to_refresh_progress);
 		mSubHeaderText = (TextView) mInnerLayout.findViewById(R.id.pull_to_refresh_sub_text);
@@ -225,7 +226,7 @@ public abstract class LoadingLayout extends FrameLayout implements ILoadingLayou
 
 	public final void pullToRefresh() {
 		if (null != mHeaderText) {
-			mHeaderText.setText(mPullLabel);
+			mHeaderText.setText("下拉刷新");
 		}
 
 		// Now call the callback
@@ -234,7 +235,7 @@ public abstract class LoadingLayout extends FrameLayout implements ILoadingLayou
 
 	public final void refreshing() {
 		if (null != mHeaderText) {
-			mHeaderText.setText(mRefreshingLabel);
+			mHeaderText.setText("载入中");
 		}
 
 		if (mUseIntrinsicAnimation) {
@@ -251,7 +252,7 @@ public abstract class LoadingLayout extends FrameLayout implements ILoadingLayou
 
 	public final void releaseToRefresh() {
 		if (null != mHeaderText) {
-			mHeaderText.setText(mReleaseLabel);
+			mHeaderText.setText("松手刷新");
 		}
 
 		// Now call the callback
@@ -260,7 +261,7 @@ public abstract class LoadingLayout extends FrameLayout implements ILoadingLayou
 
 	public final void reset() {
 		if (null != mHeaderText) {
-			mHeaderText.setText(mPullLabel);
+			mHeaderText.setText("载入中!");
 		}
 		mHeaderImage.setVisibility(View.VISIBLE);
 
@@ -349,7 +350,7 @@ public abstract class LoadingLayout extends FrameLayout implements ILoadingLayou
 			if (TextUtils.isEmpty(label)) {
 				mSubHeaderText.setVisibility(View.GONE);
 			} else {
-				mSubHeaderText.setText(label);
+				mSubHeaderText.setText("载入中！！");
 
 				// Only set it to Visible if we're GONE, otherwise VISIBLE will
 				// be set soon

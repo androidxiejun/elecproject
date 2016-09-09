@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="5dp"
+    android:background="#f1f1f1">
+
+    <ImageView
+        android:id="@+id/fashion_top_details_buy_big_iv"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:scaleType="centerCrop" />
+
+    <Button
+        android:id="@+id/fashion_top_details_buy_btn"
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/fashion_buy_shape"
+        android:gravity="center"
+        android:text="购买"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/fashion_top_details_buy_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/fashion_top_details_buy_big_iv"
+        android:layout_marginLeft="10dp"
+        android:layout_toLeftOf="@id/fashion_top_details_buy_btn"
+        android:layout_toRightOf="@id/fashion_top_details_buy_big_iv"
+        android:paddingTop="5dp"
+        android:singleLine="true"
+        android:text="title"
+        android:textColor="#000000"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/fashion_top_details_buy_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/fashion_top_details_buy_title"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/fashion_top_details_buy_big_iv"
+        android:text="dd"
+        android:textColor="#ce104f"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/fashion_top_details_buy_price_small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/fashion_top_details_buy_price"
+        android:layout_below="@id/fashion_top_details_buy_title"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/fashion_top_details_buy_price"
+        android:text="ddd"
+        android:gravity="center"
+        android:textSize="13sp" />
+
+    <ImageView
+        android:id="@+id/fashion_top_details_buy_local"
+        android:layout_width="25dp"
+        android:layout_height="15dp"
+        android:layout_alignBottom="@id/fashion_top_details_buy_big_iv"
+        android:layout_alignLeft="@id/fashion_top_details_buy_price"
+        android:layout_toRightOf="@id/fashion_top_details_buy_big_iv"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/fashion_top_details_buy_local_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/fashion_top_details_buy_local"
+        android:layout_below="@id/fashion_top_details_buy_price_small"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/fashion_top_details_buy_local"
+        android:gravity="bottom"
+        android:text="fffff"
+        android:textSize="13sp" />
+
+</RelativeLayout>
