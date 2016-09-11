@@ -56,6 +56,7 @@ public class BrandRightFragment extends Fragment implements CallBack{
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Intent intent=new Intent(context, DetailBrandActivity.class);
+                intent.putExtra("name","xiejun");
                 startActivity(intent);
             }
         });

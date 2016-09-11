@@ -1,5 +1,11 @@
 [
     {
+        "merged": "F:\\Users\\Android\\workspace\\ElectronicProject\\refreshlibrary\\build\\intermediates\\res\\merged\\release\\drawable\\indicator_bg_top.xml",
+        "source": "F:\\Users\\Android\\workspace\\ElectronicProject\\refreshlibrary\\src\\main\\res\\drawable\\indicator_bg_top.xml"
+    },
+    {
+        "merged": "F:\\Users\\Android\\workspace\\ElectronicProject\\refreshlibrary\\build\\intermediates\\res\\merged\\release\\drawable\\indicator_bg_bottom.xml",
+        "source": "F:\\Users\\Android\\workspace\\ElectronicProject\\refreshlibrary\\src\\main\\res\\drawable\\indicator_bg_bottom.xml"
         "merged": "H:\\workspace\\electricproject\\refreshlibrary\\build\\intermediates\\res\\merged\\release\\drawable\\indicator_bg_top.xml",
         "source": "H:\\workspace\\electricproject\\refreshlibrary\\src\\main\\res\\drawable\\indicator_bg_top.xml"
     },

@@ -6,15 +6,35 @@
     android:id="@+id/brand_detail_ultimate_img"
     android:layout_width="match_parent"
     android:layout_height="200dp"
-
     />
-    <TextView
-        android:id="@+id/brand_detail_ultimate_title"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:singleLine="true"
-        android:padding="10dp"
-        android:textSize="16sp"/>
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/brand_detail_ultimate_circlrcountry"
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:layout_marginLeft="10dp" />
+
+        <TextView
+            android:id="@+id/brand_detail_ultimate_countryname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13dp" />
+    </LinearLayout>
+
+        <TextView
+            android:id="@+id/brand_detail_ultimate_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:padding="10dp"
+            android:textSize="16sp"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

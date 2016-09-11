@@ -1,5 +1,15 @@
 [
     {
+        "merged": "F:\\Users\\Android\\workspace\\ElectronicProject\\refreshlibrary\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\default_ptr_rotate.png",
+        "source": "F:\\Users\\Android\\workspace\\ElectronicProject\\refreshlibrary\\src\\main\\res\\drawable-xhdpi\\default_ptr_rotate.png"
+    },
+    {
+        "merged": "F:\\Users\\Android\\workspace\\ElectronicProject\\refreshlibrary\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\indicator_arrow.png",
+        "source": "F:\\Users\\Android\\workspace\\ElectronicProject\\refreshlibrary\\src\\main\\res\\drawable-xhdpi\\indicator_arrow.png"
+    },
+    {
+        "merged": "F:\\Users\\Android\\workspace\\ElectronicProject\\refreshlibrary\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\default_ptr_flip.png",
+        "source": "F:\\Users\\Android\\workspace\\ElectronicProject\\refreshlibrary\\src\\main\\res\\drawable-xhdpi\\default_ptr_flip.png"
         "merged": "H:\\workspace\\electricproject\\refreshlibrary\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\default_ptr_flip.png",
         "source": "H:\\workspace\\electricproject\\refreshlibrary\\src\\main\\res\\drawable-xhdpi\\default_ptr_flip.png"
     },

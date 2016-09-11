@@ -81,6 +81,9 @@ public class BrandDetailsFragment extends Fragment{
         return view;
     }
 
+    /**
+     * 点击Button时显示已关注，再次点击显示+关注
+     */
     private void initListener() {
       focuseBtn.setOnClickListener(new View.OnClickListener() {
           @Override
@@ -103,7 +106,11 @@ public class BrandDetailsFragment extends Fragment{
         focuseBtn= (Button) view.findViewById(R.id.detail_focuse_btn);
     }
 
+    /**
+     * 进行网络数据加载，然后绑定适配器，刷新视图
+     */
     private void getInfo(){
+        //加载下部分视图数据
         BrandDetailHttpUtils.create().queryBean().enqueue(new Callback<BrandDetailBean>() {
             @Override
             public void onResponse(Call<BrandDetailBean> call, Response<BrandDetailBean> response) {
@@ -117,11 +124,16 @@ public class BrandDetailsFragment extends Fragment{
 
             }
         });
+        //加载上部分视图数据
         BrandDetailHttpUtils.create().queryTopBean().enqueue(new Callback<BrandDetailTopBean>() {
             @Override
             public void onResponse(Call<BrandDetailTopBean> call, Response<BrandDetailTopBean> response) {
                 business= response.body().getResponse().getData().getBusiness();
-                Picasso.with(context).load(business.getBusiness_banner_url()).into(topImage);
+                if(!DetailBrandActivity.me.equals("xiejun")){
+                    Picasso.with(context).load(DetailBrandActivity.imgUrl).into(topImage);
+                }else{
+                    Picasso.with(context).load(business.getBusiness_banner_url()).into(topImage);
+                }
                 topText.setText(business.getBusiness_brief());
                 Picasso.with(context).load(business.getBusiness_image()).into(topLogo);
             }
@@ -132,6 +144,10 @@ public class BrandDetailsFragment extends Fragment{
             }
         });
     }
+
+    /**
+     * 自定义UltimateRecyclerView的适配器
+     */
     public class StringViewHolder extends UltimateRecyclerviewViewHolder {
         public ImageView  imageView;
         public TextView  title,currentPrice,originPrice;

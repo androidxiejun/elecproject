@@ -1,11 +1,23 @@
 [
     {
+        "merged": "F:\\Users\\Android\\workspace\\ElectronicProject\\pulllibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4\\default_ptr_rotate.png",
+        "source": "F:\\Users\\Android\\workspace\\ElectronicProject\\pulllibrary\\build\\intermediates\\bundles\\debug\\res\\drawable-mdpi-v4\\default_ptr_rotate.png"
+    },
+    {
         "merged": "H:\\workspace\\electricproject\\pulllibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4\\indicator_arrow.png",
         "source": "H:\\workspace\\electricproject\\pulllibrary\\build\\intermediates\\bundles\\debug\\res\\drawable-mdpi-v4\\indicator_arrow.png"
     },
     {
+        "merged": "F:\\Users\\Android\\workspace\\ElectronicProject\\pulllibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4\\default_ptr_flip.png",
+        "source": "F:\\Users\\Android\\workspace\\ElectronicProject\\pulllibrary\\build\\intermediates\\bundles\\debug\\res\\drawable-mdpi-v4\\default_ptr_flip.png"
+    },
+    {
         "merged": "H:\\workspace\\electricproject\\pulllibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4\\default_ptr_flip.png",
         "source": "H:\\workspace\\electricproject\\pulllibrary\\build\\intermediates\\bundles\\debug\\res\\drawable-mdpi-v4\\default_ptr_flip.png"
+    },
+    {
+        "merged": "F:\\Users\\Android\\workspace\\ElectronicProject\\pulllibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4\\indicator_arrow.png",
+        "source": "F:\\Users\\Android\\workspace\\ElectronicProject\\pulllibrary\\build\\intermediates\\bundles\\debug\\res\\drawable-mdpi-v4\\indicator_arrow.png"
     },
     {
         "merged": "H:\\workspace\\electricproject\\pulllibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4\\default_ptr_rotate.png",

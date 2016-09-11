@@ -17,6 +17,7 @@
            android:background="@color/colorWhite"
            android:gravity="center_vertical">
            <Button
+               android:id="@+id/purchase_detail_shooping_back_btn"
                android:layout_width="30dp"
                android:layout_height="30dp"
                android:background="@drawable/back_btn"

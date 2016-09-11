@@ -1,5 +1,6 @@
 [
     {
+        "outputFile": "F:\\Users\\Android\\workspace\\ElectronicProject\\refreshlibrary\\build\\intermediates\\res\\merged\\debug\\values-zh\\values-zh.xml",
         "outputFile": "H:\\workspace\\electricproject\\refreshlibrary\\build\\intermediates\\res\\merged\\debug\\values-zh\\values-zh.xml",
         "map": [
             {
@@ -11,6 +12,7 @@
                     "endOffset": 111
                 },
                 "from": {
+                    "file": "F:\\Users\\Android\\workspace\\ElectronicProject\\refreshlibrary\\src\\main\\res\\values-zh\\pull_refresh_strings.xml",
                     "file": "H:\\workspace\\electricproject\\refreshlibrary\\src\\main\\res\\values-zh\\pull_refresh_strings.xml",
                     "position": {
                         "startLine": 2,
@@ -30,6 +32,7 @@
                     "endOffset": 178
                 },
                 "from": {
+                    "file": "F:\\Users\\Android\\workspace\\ElectronicProject\\refreshlibrary\\src\\main\\res\\values-zh\\pull_refresh_strings.xml",
                     "file": "H:\\workspace\\electricproject\\refreshlibrary\\src\\main\\res\\values-zh\\pull_refresh_strings.xml",
                     "position": {
                         "startLine": 4,
@@ -49,6 +52,7 @@
                     "endOffset": 243
                 },
                 "from": {
+                    "file": "F:\\Users\\Android\\workspace\\ElectronicProject\\refreshlibrary\\src\\main\\res\\values-zh\\pull_refresh_strings.xml",
                     "file": "H:\\workspace\\electricproject\\refreshlibrary\\src\\main\\res\\values-zh\\pull_refresh_strings.xml",
                     "position": {
                         "startLine": 3,

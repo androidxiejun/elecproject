@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript">
+<!-- javascrpt -->
+function click2() {
+	var usernameEdt = document.getElementById("username");
+	var passwordEdt = document.getElementById("password");
+	var passwordValue = passwordEdt.value;
+	var usernameValue = usernameEdt.value;
+	<!-- android中显示usernmae和password -->
+	window.android.login(usernameValue,passwordValue);
+}
+</script>
+</head>
+
+<body>
+<center>
+<h1>登陆</h1>
+<form action="" method="post" enctype="multipart/form-data">
+	用户名：<input id="username" type="text"/> <br/><br/>
+    密&nbsp&nbsp码：<input id="password" type="text"/> <br/><br/>
+    <input id="submit_btn" type="button" value="登陆" onclick="javascript:click2()"/>
+</form>
+</center>
+</body>
+</html>

@@ -1,5 +1,19 @@
 [
     {
+        "merged": "F:\\Users\\Android\\workspace\\ElectronicProject\\refreshlibrary\\build\\intermediates\\res\\merged\\release\\anim\\slide_in_from_bottom.xml",
+        "source": "F:\\Users\\Android\\workspace\\ElectronicProject\\refreshlibrary\\src\\main\\res\\anim\\slide_in_from_bottom.xml"
+    },
+    {
+        "merged": "F:\\Users\\Android\\workspace\\ElectronicProject\\refreshlibrary\\build\\intermediates\\res\\merged\\release\\anim\\slide_in_from_top.xml",
+        "source": "F:\\Users\\Android\\workspace\\ElectronicProject\\refreshlibrary\\src\\main\\res\\anim\\slide_in_from_top.xml"
+    },
+    {
+        "merged": "F:\\Users\\Android\\workspace\\ElectronicProject\\refreshlibrary\\build\\intermediates\\res\\merged\\release\\anim\\slide_out_to_bottom.xml",
+        "source": "F:\\Users\\Android\\workspace\\ElectronicProject\\refreshlibrary\\src\\main\\res\\anim\\slide_out_to_bottom.xml"
+    },
+    {
+        "merged": "F:\\Users\\Android\\workspace\\ElectronicProject\\refreshlibrary\\build\\intermediates\\res\\merged\\release\\anim\\slide_out_to_top.xml",
+        "source": "F:\\Users\\Android\\workspace\\ElectronicProject\\refreshlibrary\\src\\main\\res\\anim\\slide_out_to_top.xml"
         "merged": "H:\\workspace\\electricproject\\refreshlibrary\\build\\intermediates\\res\\merged\\release\\anim\\slide_in_from_top.xml",
         "source": "H:\\workspace\\electricproject\\refreshlibrary\\src\\main\\res\\anim\\slide_in_from_top.xml"
     },

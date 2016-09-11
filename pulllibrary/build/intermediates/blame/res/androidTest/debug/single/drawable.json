@@ -1,11 +1,23 @@
 [
     {
+        "merged": "F:\\Users\\Android\\workspace\\ElectronicProject\\pulllibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\indicator_bg_top.xml",
+        "source": "F:\\Users\\Android\\workspace\\ElectronicProject\\pulllibrary\\build\\intermediates\\bundles\\debug\\res\\drawable\\indicator_bg_top.xml"
+    },
+    {
+        "merged": "F:\\Users\\Android\\workspace\\ElectronicProject\\pulllibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\indicator_bg_bottom.xml",
+        "source": "F:\\Users\\Android\\workspace\\ElectronicProject\\pulllibrary\\build\\intermediates\\bundles\\debug\\res\\drawable\\indicator_bg_bottom.xml"
+    },
+    {
         "merged": "H:\\workspace\\electricproject\\pulllibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\pull_waiting.xml",
         "source": "H:\\workspace\\electricproject\\pulllibrary\\build\\intermediates\\bundles\\debug\\res\\drawable\\pull_waiting.xml"
     },
     {
         "merged": "H:\\workspace\\electricproject\\pulllibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\indicator_bg_top.xml",
         "source": "H:\\workspace\\electricproject\\pulllibrary\\build\\intermediates\\bundles\\debug\\res\\drawable\\indicator_bg_top.xml"
+    },
+    {
+        "merged": "F:\\Users\\Android\\workspace\\ElectronicProject\\pulllibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\pull_waiting.xml",
+        "source": "F:\\Users\\Android\\workspace\\ElectronicProject\\pulllibrary\\build\\intermediates\\bundles\\debug\\res\\drawable\\pull_waiting.xml"
     },
     {
         "merged": "H:\\workspace\\electricproject\\pulllibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\indicator_bg_bottom.xml",

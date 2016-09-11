@@ -1,5 +1,17 @@
 [
     {
+        "merged": "F:\\Users\\Android\\workspace\\ElectronicProject\\pulllibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-nodpi-v4\\icon_loading_action2.png",
+        "source": "F:\\Users\\Android\\workspace\\ElectronicProject\\pulllibrary\\build\\intermediates\\bundles\\debug\\res\\drawable-nodpi-v4\\icon_loading_action2.png"
+    },
+    {
+        "merged": "F:\\Users\\Android\\workspace\\ElectronicProject\\pulllibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-nodpi-v4\\icon_loading_action1.png",
+        "source": "F:\\Users\\Android\\workspace\\ElectronicProject\\pulllibrary\\build\\intermediates\\bundles\\debug\\res\\drawable-nodpi-v4\\icon_loading_action1.png"
+    },
+    {
+        "merged": "F:\\Users\\Android\\workspace\\ElectronicProject\\pulllibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-nodpi-v4\\default_ptr_wodfan_frame2.png",
+        "source": "F:\\Users\\Android\\workspace\\ElectronicProject\\pulllibrary\\build\\intermediates\\bundles\\debug\\res\\drawable-nodpi-v4\\default_ptr_wodfan_frame2.png"
+    },
+    {
         "merged": "H:\\workspace\\electricproject\\pulllibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-nodpi-v4\\icon_loading_action2.png",
         "source": "H:\\workspace\\electricproject\\pulllibrary\\build\\intermediates\\bundles\\debug\\res\\drawable-nodpi-v4\\icon_loading_action2.png"
     },
@@ -14,5 +26,9 @@
     {
         "merged": "H:\\workspace\\electricproject\\pulllibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-nodpi-v4\\icon_loading_action1.png",
         "source": "H:\\workspace\\electricproject\\pulllibrary\\build\\intermediates\\bundles\\debug\\res\\drawable-nodpi-v4\\icon_loading_action1.png"
+    },
+    {
+        "merged": "F:\\Users\\Android\\workspace\\ElectronicProject\\pulllibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-nodpi-v4\\default_ptr_wodfan_frame1.png",
+        "source": "F:\\Users\\Android\\workspace\\ElectronicProject\\pulllibrary\\build\\intermediates\\bundles\\debug\\res\\drawable-nodpi-v4\\default_ptr_wodfan_frame1.png"
     }
 ]

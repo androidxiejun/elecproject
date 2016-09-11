@@ -3,8 +3,8 @@
     package="com.example.administrator.electronicproject">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -21,20 +21,27 @@
         </activity>
 
         <!-- 相机调用界面 -->
-        <activity android:name=".FashionFragment.view.activity.CameraActivity" android:launchMode="singleTask"/>
-        <!--时尚圈上部详情界面 -->
-        <activity android:name=".FashionFragment.view.activity.FashionTopDetailsActivity" android:launchMode="standard"/>
-        <!-- 标签界面-->
-        <activity android:name=".FashionFragment.view.activity.FashionMiddleTableActivity" android:launchMode="singleTask"/>
-        <!-- 点击标签，进入的界面-->
-        <activity android:name=".FashionFragment.view.activity.FashionTableDetailsActivity" android:launchMode="singleTask"/>
-
+        <activity
+            android:name=".FashionFragment.view.activity.CameraActivity"
+            android:launchMode="singleTask" />
+        <!-- 时尚圈上部详情界面 -->
+        <activity
+            android:name=".FashionFragment.view.activity.FashionTopDetailsActivity"
+            android:launchMode="standard" />
+        <!-- 标签界面 -->
+        <activity
+            android:name=".FashionFragment.view.activity.FashionMiddleTableActivity"
+            android:launchMode="singleTask" />
+        <!-- 点击标签，进入的界面 -->
+        <activity
+            android:name=".FashionFragment.view.activity.FashionTableDetailsActivity"
+            android:launchMode="singleTask" />
         <activity android:name=".ClassifyFragment.DetaillActivity.ClassifyDetiailActivity" />
         <activity android:name=".SearchActivity.SearchActivity" />
         <activity android:name=".ClassifyFragment.DetailBrandActivity.DetailBrandActivity" />
         <activity android:name=".PurchaseDetails.PurchaseDetails" />
-        <activity android:name=".PurchaseDetails.CommonActivity"/>
-
+        <activity android:name=".PurchaseDetails.CommonActivity.CommonActivity" />
+        <activity android:name=".StoreFragment.GlobalActivity.GlobalActivity"></activity>
     </application>
 
 </manifest>

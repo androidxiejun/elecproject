@@ -1,4 +1,4 @@
-package com.example.administrator.electronicproject.PurchaseDetails;
+package com.example.administrator.electronicproject.PurchaseDetails.CommonActivity;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -7,6 +7,7 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
+import com.example.administrator.electronicproject.PurchaseDetails.JavascriptInterface;
 import com.example.administrator.electronicproject.R;
 
 public class CommonActivity extends AppCompatActivity {

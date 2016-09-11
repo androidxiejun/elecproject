@@ -55,9 +55,17 @@ public class BrandFragment extends Fragment implements ICallback{
         getInfo();
         return view;
     }
+
+    /**
+     * 进行网络数据请求
+     */
     private void getInfo(){
         HttpUtils.load(URL_PATH).callback(this,3);
     }
+
+    /**
+     * 初始化fragment，并将fragment显示在界面
+     */
     private void initFragment() {
         manager=getFragmentManager();
         leftFragment=BrandLeftFragment.newInstance();
@@ -69,6 +77,11 @@ public class BrandFragment extends Fragment implements ICallback{
         fragmentTransaction.commit();
     }
 
+    /**
+     * 数据请求成功，进行JSON解析
+     * @param result
+     * @param requestCode
+     */
     @Override
     public void success(String result, int requestCode) {
         JSONObject jsonObject= null;

@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "H:\\workspace\\electricproject\\refreshlibrary\\build\\intermediates\\res\\merged\\debug\\values\\values.xml",
+        "outputFile": "F:\\Users\\Android\\workspace\\ElectronicProject\\refreshlibrary\\build\\intermediates\\res\\merged\\debug\\values\\values.xml",
         "map": [
             {
                 "to": {
@@ -11,13 +11,13 @@
                     "endOffset": 1887
                 },
                 "from": {
-                    "file": "H:\\workspace\\electricproject\\refreshlibrary\\src\\main\\res\\values\\dimens.xml",
+                    "file": "F:\\Users\\Android\\workspace\\ElectronicProject\\refreshlibrary\\src\\main\\res\\values\\dimens.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
-                        "startOffset": 229,
+                        "startOffset": 223,
                         "endColumn": 63,
-                        "endOffset": 288
+                        "endOffset": 282
                     }
                 }
             },
@@ -30,13 +30,13 @@
                     "endOffset": 1951
                 },
                 "from": {
-                    "file": "H:\\workspace\\electricproject\\refreshlibrary\\src\\main\\res\\values\\dimens.xml",
+                    "file": "F:\\Users\\Android\\workspace\\ElectronicProject\\refreshlibrary\\src\\main\\res\\values\\dimens.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
-                        "startOffset": 294,
+                        "startOffset": 287,
                         "endColumn": 63,
-                        "endOffset": 353
+                        "endOffset": 346
                     }
                 }
             },
@@ -49,13 +49,13 @@
                     "endOffset": 2006
                 },
                 "from": {
-                    "file": "H:\\workspace\\electricproject\\refreshlibrary\\src\\main\\res\\values\\dimens.xml",
+                    "file": "F:\\Users\\Android\\workspace\\ElectronicProject\\refreshlibrary\\src\\main\\res\\values\\dimens.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
-                        "startOffset": 115,
+                        "startOffset": 111,
                         "endColumn": 54,
-                        "endOffset": 165
+                        "endOffset": 161
                     }
                 }
             },
@@ -68,13 +68,13 @@
                     "endOffset": 2063
                 },
                 "from": {
-                    "file": "H:\\workspace\\electricproject\\refreshlibrary\\src\\main\\res\\values\\dimens.xml",
+                    "file": "F:\\Users\\Android\\workspace\\ElectronicProject\\refreshlibrary\\src\\main\\res\\values\\dimens.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
-                        "startOffset": 171,
+                        "startOffset": 166,
                         "endColumn": 56,
-                        "endOffset": 223
+                        "endOffset": 218
                     }
                 }
             },
@@ -87,13 +87,13 @@
                     "endOffset": 2118
                 },
                 "from": {
-                    "file": "H:\\workspace\\electricproject\\refreshlibrary\\src\\main\\res\\values\\dimens.xml",
+                    "file": "F:\\Users\\Android\\workspace\\ElectronicProject\\refreshlibrary\\src\\main\\res\\values\\dimens.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
-                        "startOffset": 59,
+                        "startOffset": 56,
                         "endColumn": 54,
-                        "endOffset": 109
+                        "endOffset": 106
                     }
                 }
             },
@@ -106,7 +106,7 @@
                     "endOffset": 2193
                 },
                 "from": {
-                    "file": "H:\\workspace\\electricproject\\refreshlibrary\\build\\intermediates\\exploded-aar\\com.android.support\\recyclerview-v7\\24.1.1\\res\\values\\values.xml",
+                    "file": "F:\\Users\\Android\\workspace\\ElectronicProject\\refreshlibrary\\build\\intermediates\\exploded-aar\\com.android.support\\recyclerview-v7\\24.1.1\\res\\values\\values.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -125,7 +125,7 @@
                     "endOffset": 2269
                 },
                 "from": {
-                    "file": "H:\\workspace\\electricproject\\refreshlibrary\\build\\intermediates\\exploded-aar\\com.android.support\\recyclerview-v7\\24.1.1\\res\\values\\values.xml",
+                    "file": "F:\\Users\\Android\\workspace\\ElectronicProject\\refreshlibrary\\build\\intermediates\\exploded-aar\\com.android.support\\recyclerview-v7\\24.1.1\\res\\values\\values.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -144,7 +144,7 @@
                     "endOffset": 2341
                 },
                 "from": {
-                    "file": "H:\\workspace\\electricproject\\refreshlibrary\\build\\intermediates\\exploded-aar\\com.android.support\\recyclerview-v7\\24.1.1\\res\\values\\values.xml",
+                    "file": "F:\\Users\\Android\\workspace\\ElectronicProject\\refreshlibrary\\build\\intermediates\\exploded-aar\\com.android.support\\recyclerview-v7\\24.1.1\\res\\values\\values.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
@@ -163,13 +163,13 @@
                     "endOffset": 2379
                 },
                 "from": {
-                    "file": "H:\\workspace\\electricproject\\refreshlibrary\\src\\main\\res\\values\\ids.xml",
+                    "file": "F:\\Users\\Android\\workspace\\ElectronicProject\\refreshlibrary\\src\\main\\res\\values\\ids.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
-                        "startOffset": 59,
+                        "startOffset": 56,
                         "endColumn": 38,
-                        "endOffset": 93
+                        "endOffset": 90
                     }
                 }
             },
@@ -182,7 +182,7 @@
                     "endOffset": 2445
                 },
                 "from": {
-                    "file": "H:\\workspace\\electricproject\\refreshlibrary\\build\\intermediates\\exploded-aar\\com.android.support\\recyclerview-v7\\24.1.1\\res\\values\\values.xml",
+                    "file": "F:\\Users\\Android\\workspace\\ElectronicProject\\refreshlibrary\\build\\intermediates\\exploded-aar\\com.android.support\\recyclerview-v7\\24.1.1\\res\\values\\values.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
@@ -201,13 +201,13 @@
                     "endOffset": 2485
                 },
                 "from": {
-                    "file": "H:\\workspace\\electricproject\\refreshlibrary\\src\\main\\res\\values\\ids.xml",
+                    "file": "F:\\Users\\Android\\workspace\\ElectronicProject\\refreshlibrary\\src\\main\\res\\values\\ids.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
-                        "startOffset": 138,
+                        "startOffset": 133,
                         "endColumn": 40,
-                        "endOffset": 174
+                        "endOffset": 169
                     }
                 }
             },
@@ -220,13 +220,13 @@
                     "endOffset": 2522
                 },
                 "from": {
-                    "file": "H:\\workspace\\electricproject\\refreshlibrary\\src\\main\\res\\values\\ids.xml",
+                    "file": "F:\\Users\\Android\\workspace\\ElectronicProject\\refreshlibrary\\src\\main\\res\\values\\ids.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
-                        "startOffset": 99,
+                        "startOffset": 95,
                         "endColumn": 37,
-                        "endOffset": 132
+                        "endOffset": 128
                     }
                 }
             },
@@ -239,13 +239,13 @@
                     "endOffset": 2624
                 },
                 "from": {
-                    "file": "H:\\workspace\\electricproject\\refreshlibrary\\src\\main\\res\\values\\pull_refresh_strings.xml",
+                    "file": "F:\\Users\\Android\\workspace\\ElectronicProject\\refreshlibrary\\src\\main\\res\\values\\pull_refresh_strings.xml",
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
-                        "startOffset": 398,
+                        "startOffset": 390,
                         "endColumn": 101,
-                        "endOffset": 495
+                        "endOffset": 487
                     }
                 }
             },
@@ -258,13 +258,13 @@
                     "endOffset": 2738
                 },
                 "from": {
-                    "file": "H:\\workspace\\electricproject\\refreshlibrary\\src\\main\\res\\values\\pull_refresh_strings.xml",
+                    "file": "F:\\Users\\Android\\workspace\\ElectronicProject\\refreshlibrary\\src\\main\\res\\values\\pull_refresh_strings.xml",
                     "position": {
                         "startLine": 10,
                         "startColumn": 4,
-                        "startOffset": 610,
+                        "startOffset": 600,
                         "endColumn": 113,
-                        "endOffset": 719
+                        "endOffset": 709
                     }
                 }
             },
@@ -277,13 +277,13 @@
                     "endOffset": 2846
                 },
                 "from": {
-                    "file": "H:\\workspace\\electricproject\\refreshlibrary\\src\\main\\res\\values\\pull_refresh_strings.xml",
+                    "file": "F:\\Users\\Android\\workspace\\ElectronicProject\\refreshlibrary\\src\\main\\res\\values\\pull_refresh_strings.xml",
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,
-                        "startOffset": 501,
+                        "startOffset": 492,
                         "endColumn": 107,
-                        "endOffset": 604
+                        "endOffset": 595
                     }
                 }
             },
@@ -296,13 +296,13 @@
                     "endOffset": 2918
                 },
                 "from": {
-                    "file": "H:\\workspace\\electricproject\\refreshlibrary\\src\\main\\res\\values\\pull_refresh_strings.xml",
+                    "file": "F:\\Users\\Android\\workspace\\ElectronicProject\\refreshlibrary\\src\\main\\res\\values\\pull_refresh_strings.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
-                        "startOffset": 59,
+                        "startOffset": 56,
                         "endColumn": 71,
-                        "endOffset": 126
+                        "endOffset": 123
                     }
                 }
             },
@@ -315,13 +315,13 @@
                     "endOffset": 2988
                 },
                 "from": {
-                    "file": "H:\\workspace\\electricproject\\refreshlibrary\\src\\main\\res\\values\\pull_refresh_strings.xml",
+                    "file": "F:\\Users\\Android\\workspace\\ElectronicProject\\refreshlibrary\\src\\main\\res\\values\\pull_refresh_strings.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
-                        "startOffset": 211,
+                        "startOffset": 206,
                         "endColumn": 69,
-                        "endOffset": 276
+                        "endOffset": 271
                     }
                 }
             },
@@ -334,13 +334,13 @@
                     "endOffset": 3066
                 },
                 "from": {
-                    "file": "H:\\workspace\\electricproject\\refreshlibrary\\src\\main\\res\\values\\pull_refresh_strings.xml",
+                    "file": "F:\\Users\\Android\\workspace\\ElectronicProject\\refreshlibrary\\src\\main\\res\\values\\pull_refresh_strings.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
-                        "startOffset": 132,
+                        "startOffset": 128,
                         "endColumn": 77,
-                        "endOffset": 205
+                        "endOffset": 201
                     }
                 }
             }

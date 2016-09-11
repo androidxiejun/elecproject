@@ -54,7 +54,15 @@ public class ClassifyDetiailActivity extends AppCompatActivity implements View.O
         context=this;
         initIntent();
         initView();
+        initTabLayout();
         getInfo(query,"all","");
+    }
+
+    private void initTabLayout() {
+        mTablayout.addTab(mTablayout.newTab().setText("默认"));
+        mTablayout.addTab(mTablayout.newTab().setText("上新"));
+        mTablayout.addTab(mTablayout.newTab().setText("销量"));
+        mTablayout.addTab(mTablayout.newTab().setText("价格"));
     }
 
     private void initIntent() {
@@ -96,15 +104,13 @@ public class ClassifyDetiailActivity extends AppCompatActivity implements View.O
                 intent.putExtra("originPrice",component.getOrigin_price());
                 intent.putExtra("title",component.getDescription());
                 intent.putExtra("picUrl",component.getPicUrl());
+                intent.putExtra("source_id",component.getAction().getSourceId());
                 startActivity(intent);
             }
         });
         mGridView.setOnRefreshListener(new PullToRefreshBase.OnRefreshListener2<GridView>() {
             @Override
             public void onPullDownToRefresh(PullToRefreshBase<GridView> refreshView) {
-                refreshView.getLoadingLayoutProxy().setRefreshingLabel("载入中");
-                refreshView.getLoadingLayoutProxy().setPullLabel("下拉加载更多");
-                refreshView.getLoadingLayoutProxy().setReleaseLabel("松手刷新");
                 String label = DateUtils.formatDateTime(
                         getApplicationContext(),
                         System.currentTimeMillis(),
@@ -167,6 +173,9 @@ public class ClassifyDetiailActivity extends AppCompatActivity implements View.O
         finish();
     }
 
+    /**
+     * 刷新的线程，当刷新任务结束后，让刷新图标停止
+     */
     private class GetDataTask extends AsyncTask<Void, Void,Boolean>
     {
 
@@ -241,6 +250,10 @@ public class ClassifyDetiailActivity extends AppCompatActivity implements View.O
             }
         }
     }
+
+    /**
+     * 用于手指向右滑动时，退出当前界面
+     */
     //手指上下滑动时的最小速度
     private static final int YSPEED_MIN = 1000;
 
