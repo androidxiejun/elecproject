@@ -3,13 +3,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
-    android:layout_marginTop="10dp">
+    android:layout_marginTop="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.youth.banner.Banner
+        android:id="@+id/fashion_list_item_banner"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        app:indicator_margin="5dp"
+        app:indicator_height="20dp"
+        app:indicator_width="20dp"/>
 
     <RelativeLayout
         android:id="@+id/fashion_pull_relative_layout"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:layout_marginTop="5dp">
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/fashion_list_item_banner">
 
         <TextView
             android:id="@+id/fashion_hot_recommend_tv"
@@ -33,7 +43,6 @@
 
     </RelativeLayout>
 
-
     <com.example.administrator.electronicproject.FashionFragment.view.CustomGridView
         android:id="@+id/fashion_pull_middle_custom_grid_view"
         android:layout_width="match_parent"
@@ -42,13 +51,5 @@
         android:padding="5dp"
         android:numColumns="3"/>
 
-    <com.example.administrator.electronicproject.FashionFragment.view.CustomGridView
-        android:id="@+id/fashion_pull_custom_grid_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/fashion_pull_middle_custom_grid_view"
-        android:background="#EEE5DE"
-        android:numColumns="2"
-        android:padding="5dp" />
 
 </RelativeLayout>

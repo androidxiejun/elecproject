@@ -13,7 +13,7 @@ public class RecommendDeatilsBean {
      * msg : success
      * isNew : 1
      * version :
-     * data : {"items":[{"height":"996","width":"750","component":{"action":{"actionType":"showBigPic","noSaveButton":0,"picUrl":"http://s.pimg.cn/group6/M00/AD/F1/wKgBjVfM1_eAMhzbAAGW21uaqu0495.jpg"},"color":"102,102,102,225","componentType":"msgText","picUrl":"http://s.pimg.cn/group6/M00/AF/00/wKgBjFfREYCAIiR7AAZ9ba_R0z4586.jpg","text":"免费试用阿甘油化妆刷具清洁剂， 化妆刷洗洗更健康"}},{"component":{"color":"102,102,102,225","componentType":"msgText","text":"为了提高妆容完美度，最重要莫过于使用各部分妆容的化妆刷。从眼影、口红到腮红等部位使用的刷子各不相同，种类繁多。而随着大众对彩妆关注度的不断增加，化妆刷使用的人也越来越多。但是，很多人却因为无法长时间保持化妆刷良好状态而苦恼。其实，若想长时间使用价格不菲的化妆刷，就需要注重化妆刷的清洁工作。使用化妆刷专用清洁剂，可以在完成清洁化妆刷的同时，防止刷毛受到损伤。韩国低刺激护肤品牌集纯（KICHO）在我橱对旗下两种化妆刷专用清洁产品进行了试用体验。\n化妆刷洗洗更健康，免费试用阿甘油化妆刷具清洁剂\n现在只需要说说你对化妆刷的使用心得或者清洁技巧或者说说你常用哪几个小刷子，觉得哪个最实用，或者说说一些化妆可以借助工具的小技巧，例如化妆海绵，或者利用化妆刷完成一款初秋【腮红妆】【秋妆】，就有机会获得由KICHO提供的阿甘油化妆刷具清洁剂+阿甘油化妆刷具清洁纸巾1份\n活动时间：\n2016年9月6日\u20149月17日\n"}},{"component":{"action":{"actionType":"showBigPic","noSaveButton":0,"picUrl":"http://s.pimg.cn/group6/M00/AF/00/wKgBjFfREYCAIiR7AAZ9ba_R0z4586.jpg"},"componentType":"cell","picUrl":"http://s.pimg.cn/group6/M00/AF/00/wKgBjFfREYCAIiR7AAZ9ba_R0z4586.jpg"},"height":"996","width":"750"},{"component":{"color":"102,102,102,225","componentType":"msgText","text":"活动规则：\n1.\t只需要在本活动帖子回复说说你对化妆刷的试用心得或者清洁技巧或者说说你常用哪几个小刷子，觉得哪个最实用，或者说说一些化妆可以借助工具的小技巧，例如化妆海绵，或者利用化妆刷完成一款初秋【腮红妆】【秋妆】,发在美妞养成、彩妆等标签下。\n2.\t将随机抽取10位幸运网友，每人获得1份阿甘油化妆刷具清洁剂+阿甘油化妆刷具清洁纸巾。\n3.\t奖品收到后一周内需在【试用报告】标签里发试用心得，如网页发帖正文第一行加【KICHO】，APP发帖在一楼内容里加【KICHO】。\n评奖规则：\n活跃度、发帖数量、质量等会作为参考标准\n本活动最终解释权归明星衣橱所有\n"}},{"component":{"action":{"actionType":"showBigPic","noSaveButton":0,"picUrl":"http://s.pimg.cn/group6/M00/AD/F1/wKgBjVfM1_eAMhzbAAGW21uaqu0495.jpg"},"componentType":"cell","picUrl":"http://s.pimg.cn/group6/M00/AD/F1/wKgBjVfM1_eAMhzbAAGW21uaqu0495.jpg"},"height":"439","width":"552"},{"component":{"color":"102,102,102,225","componentType":"msgText","text":"数量有限，赶快来申领啊~"}},{"component":{"action":{"actionType":"showBigPic","noSaveButton":0,"picUrl":"http://s.pimg.cn/group6/M00/AD/E6/wKgBjFfM2AeAERj3AATAldM9Hyc247.png"},"componentType":"cell","picUrl":"http://s.pimg.cn/group6/M00/AD/E6/wKgBjFfM2AeAERj3AATAldM9Hyc247.png"},"height":"500","width":"1037"},{"component":{"color":"102,102,102,225","componentType":"msgText","text":"试用产品： \n品牌：KICHO\n产品名: 阿甘油化妆刷具清洁剂+阿甘油化妆刷具清洁纸巾（共10份）\n\n小编先来点番外，为大家普及点化妆刷的小知识：首先，为什么需要清洁化妆刷？\n"}},{"component":{"action":{"actionType":"showBigPic","noSaveButton":0,"picUrl":"http://s.pimg.cn/group6/M00/AD/F1/wKgBjVfM2DiAAfVmAAk0Ymizn98184.gif"},"componentType":"cell","picUrl":"http://s.pimg.cn/group6/M00/AD/F1/wKgBjVfM2DiAAfVmAAk0Ymizn98184.gif"},"height":"849","width":"658"},{"component":{"color":"102,102,102,225","componentType":"msgText","text":"我们日常使用的化妆刷吸附着各种皮脂，隐藏着各类细菌。长时间使用同一款化妆刷，会导致肌肤被细菌感染，诱发严重的痘痘等肌肤问题。化妆刷经过长时间使用，表面会粘附大量油脂。为了提高妆容完美程度、化妆刷的寿命，需尽量做到每周一次的面刷清洁工作。\n　　化妆刷清洁品\n　　Type 1. 化妆刷清洁剂\n"}},{"component":{"action":{"actionType":"showBigPic","noSaveButton":0,"picUrl":"http://s.pimg.cn/group5/M00/68/AC/wKgBfVfM2JCACRm1AAEfDPtxT5g256.jpg"},"componentType":"cell","picUrl":"http://s.pimg.cn/group5/M00/68/AC/wKgBfVfM2JCACRm1AAEfDPtxT5g256.jpg"},"height":"383","width":"520"},{"component":{"color":"102,102,102,225","componentType":"msgText","text":"大众使用最广泛的莫过于化妆刷清洁液。集纯阿甘油化妆刷具清洁剂(KICHO ARGAN BRUSH CLEANSER)产品具有260ml及500ml两种容量规格，以绿茶、菖蒲、金盏花、柠檬、苦参等植物成分为主成分制作而成。\n　　植物中提取的非离子界面活性剂PEG-7 Glyceryl Cocoate，清洁力出众同时，不含有对人体有害的防腐剂、苯酮、人工色素，接触到人体也不会出现危险。产品内含有有益于毛发管理的高级阿甘油精油，可以有效维持化妆刷的柔软毛质，延长化妆刷使用寿命。\n"}},{"component":{"action":{"actionType":"showBigPic","noSaveButton":0,"picUrl":"http://s.pimg.cn/group5/M00/6A/9A/wKgBf1fM2JOAbQ_9AAHc1Lfg5Yo214.jpg"},"componentType":"cell","picUrl":"http://s.pimg.cn/group5/M00/6A/9A/wKgBf1fM2JOAbQ_9AAHc1Lfg5Yo214.jpg"},"height":"652","width":"520"},{"component":{"color":"102,102,102,225","componentType":"msgText","text":"化妆刷清洁液使用方法：取能覆盖住化妆刷量的清洁剂。将化妆刷以画圈形式充分搅动，稍加力气，即可将化妆刷上的污垢干净清除。最后，取出化妆刷，用干净纸巾将化妆刷上的清洁剂干净拭去。\n　　化妆刷清洁纸巾\n　　Type 2. 化妆刷专用清洁纸巾\n"}},{"component":{"action":{"actionType":"showBigPic","noSaveButton":0,"picUrl":"http://s.pimg.cn/group5/M00/68/AC/wKgBfVfM2JWALR-hAAE43P4R-4A395.jpg"},"componentType":"cell","picUrl":"http://s.pimg.cn/group5/M00/68/AC/wKgBfVfM2JWALR-hAAE43P4R-4A395.jpg"},"height":"342","width":"520"},{"component":{"color":"102,102,102,225","componentType":"msgText","text":"另一种清洁产品为集纯阿甘油化妆刷具清洁纸巾(KICHO ARGAN BRUSH CLEANSE WIPES)。产品含有高级的阿甘油精油成分，由清洁剂浸泡。这样的产品不仅携带方便，还可以随时随地实现高效的化妆刷清洁。还可以更加有效地清洁眼线刷、眉毛刷这类精细化妆刷。"}},{"component":{"action":{"actionType":"showBigPic","noSaveButton":0,"picUrl":"http://s.pimg.cn/group5/M00/68/AC/wKgBfVfM2JeAZvFXAAH9qvL6jX4445.jpg"},"componentType":"cell","picUrl":"http://s.pimg.cn/group5/M00/68/AC/wKgBfVfM2JeAZvFXAAH9qvL6jX4445.jpg"},"height":"668","width":"520"},{"component":{"color":"102,102,102,225","componentType":"msgText","text":"化妆刷清洁纸巾使用法：清洁之后，化妆刷变得清爽简单，焕然一新。但如果使用时用力过大，会导致化妆刷的模样和毛质受到伤害、寿命减少，需要注意。"}},{"component":{"action":{"actionType":"showBigPic","noSaveButton":0,"picUrl":"http://s.pimg.cn/group5/M00/6A/9A/wKgBf1fM2JmAaG75AAGeNPlvX2g852.jpg"},"componentType":"cell","picUrl":"http://s.pimg.cn/group5/M00/6A/9A/wKgBf1fM2JmAaG75AAGeNPlvX2g852.jpg"},"height":"600","width":"520"},{"component":{"color":"102,102,102,225","componentType":"msgText","text":"清洁纸巾相对于清洁剂来说，具有吸收功效。擦拭6次左右，就可以完全清楚化妆刷上的化妆品残留物和污垢废物，清洁力令人满意。一包一张清洁纸巾的设计，方便携带于女性们日常使用的化妆包包中，携带便利，随时提供化妆刷清洁。"}},{"component":{"action":{"actionType":"showBigPic","noSaveButton":0,"picUrl":"http://s.pimg.cn/group5/M00/6A/9A/wKgBf1fM2JuAMxc0AACIlGkMuBQ898.jpg"},"componentType":"cell","picUrl":"http://s.pimg.cn/group5/M00/6A/9A/wKgBf1fM2JuAMxc0AACIlGkMuBQ898.jpg"},"height":"401","width":"520"},{"component":{"color":"102,102,102,225","componentType":"msgText","text":"化妆刷的使用质量不仅由化妆刷本身决定，还与清洁工作存在密切联系。广大女性可以根据自身需求，选择不同质地的化妆刷清洁产品，这样不仅可以延长化妆刷寿命，还可以极大地提高妆容满意度"}},{"component":{"action":{"actionType":"showBigPic","noSaveButton":0,"picUrl":"http://s.pimg.cn/group5/M00/6A/9A/wKgBf1fM2J6AI09hAAMDZ3GOqSw892.jpg"},"componentType":"cell","picUrl":"http://s.pimg.cn/group5/M00/6A/9A/wKgBf1fM2J6AI09hAAMDZ3GOqSw892.jpg"},"height":"866","width":"1211"},{"component":{"color":"102,102,102,225","componentType":"msgText","text":"好啦，关于化妆刷的小知识你是不是已经Get了，赶紧来分享你的试用心得或者清洁技巧吧，或者说说你常用哪几个小刷子，觉得哪个最实用，或者说说一些化妆可以借助工具的小技巧，例如化妆海绵，如果想把美美的你展示给我们就用化妆刷凹一款初秋的【腮红妆】【秋妆】吧，小编在这里等你哟，赶紧把这套清洁工具凹到手~"}}],"embedItems":[{"component":{"componentType":"embedItem","picUrl":"http://s3.mingxingyichu.cn/group5/M00/6B/0C/wKgBf1fOY-2AapWJAAGlxEJfcAc107.jpg?imageMogr2/thumbnail/100x%3E","description":"设计师品牌HOWL唇膏刺绣经典白衬衫","country":"国内","nationalFlag":"http://s0.mingxingyichu.cn/group6/M00/53/AB/wKgBjVeqzaKAEw9BAAAD_m-28wU681.png","price":"299","origin_price":"599","channelPicUrl":"http://mxyc.mingxingyichu.cn/images/images/20150307/a6463948-6aa0-4cec-9eae-58298cd78df5.png","source":"来自商城","action":{"actionType":"detail","type":"sku","id":"5343489","source":"ecshop","sourceId":"1678344","width":"391","height":"391","main_image":"0"}}}],"tags":[{"category":"清洁","id":"539","action":{"id":"539","type":"forum","actionType":"tag","tag":"清洁"}},{"category":"美妞养成","id":"606","action":{"id":"606","type":"forum","actionType":"tag","tag":"美妞养成"}},{"category":"免费试用","id":"607","action":{"id":"607","type":"forum","actionType":"tag","tag":"免费试用"}}],"user":{"action":{"actionType":"detail","type":"user","id":"3467486"},"userAvatar":"http://mxycsku.mingxingyichu.cn/group6/M00/B6/89/wKgBjVaoI7KAYLELAADfK6j_7H068.jpeg?imageMogr2/thumbnail/600x%3E/quality/95","userId":"3467486","username":"夕夏未薰","datatime":"2天前","isfocus":"0"},"shareAction":{"actionType":"share","type":"thread","typeId":"469114","trackValue":"thread_469114","share":{"title":"我 在明星衣橱给你推荐了一个帖子","shareType":"webpage","id":"469114","description":"精选全球好货","picUrl":"http://s1.mingxingyichu.cn/group6/M00/AD/F1/wKgBjVfM1_eAMhzbAAGW21uaqu0495.jpg?imageMogr2/thumbnail/600x%3E/quality/95","detailUrl":"http://m.hichao.com/app/templates/topic_detail.html?id=469114"}},"title":"免费试用阿甘油化妆刷具清洁剂，","id":"469114"}
+     * data : {"items":[{"width":"541","height":"317","component":{"publishDate":"6个月前","id":"1323840","description":[{"component":{"componentType":"msgText","text":"想必今天飞行员款必定大火。\n实力安利一下B.A的飞行员款。","color":"51,51,51,255"}},{"component":{"componentType":"msgText","text":"","color":"51,51,51,255"}},{"component":{"componentType":"msgText","text":"","color":"51,51,51,255"}}],"embedItems":[{"component":{"componentType":"embedItem","picUrl":"http://s5.mingxingyichu.cn/group6/M00/A2/37/wKgBjFXlOCWAAvNpAADOA-LG32M412.jpg?imageMogr2/thumbnail/100x%3E","description":"BurqaAnge博嘉太阳眼镜韩庚同款限量款时尚CS013","price":"399","channelPicUrl":"http://m1.mingxingyichu.cn/images/images/20150307/a6463948-6aa0-4cec-9eae-58298cd78df5.png","source":"来自商城","action":{"actionType":"detail","type":"sku","id":"4764613","source":"ecshop","sourceId":"1361456","width":"500","height":"500","main_image":"0"},"country":"国内","nationalFlag":"http://s0.mingxingyichu.cn/group6/M00/53/AB/wKgBjVeqzaKAEw9BAAAD_m-28wU681.png"}},{"component":{"componentType":"embedItem","picUrl":"http://s3.mingxingyichu.cn/group5/M00/CD/74/wKgBf1cF_fyAXbJZAACBsha65BA445.jpg?imageMogr2/thumbnail/100x%3E","description":"Burqaange新款飞行员经典款光金红膜太阳镜BA007","price":"299","channelPicUrl":"http://m5.mingxingyichu.cn/images/images/20150307/a6463948-6aa0-4cec-9eae-58298cd78df5.png","source":"来自商城","action":{"actionType":"detail","type":"sku","id":"4759047","source":"ecshop","sourceId":"1359536","width":"1000","height":"1000","main_image":"0"},"country":"国内","nationalFlag":"http://s0.mingxingyichu.cn/group6/M00/53/AB/wKgBjVeqzaKAEw9BAAAD_m-28wU681.png"}}],"imgs":[{"width":"1000","height":"1000","component":{"componentType":"cell","picUrl":"http://s1.mingxingyichu.cn/group5/M00/A2/A7/wKgBf1bc8xmAB6OgAAPEcWVkObs91.jpeg?imageMogr2/thumbnail/600x%3E/quality/95","action":{"actionType":"showBigPic","picUrl":"http://s1.mingxingyichu.cn/group5/M00/A2/A7/wKgBf1bc8xmAB6OgAAPEcWVkObs91.jpeg?imageMogr2/thumbnail/600x%3E/quality/95","noSaveButton":"0"}}},{"width":"5760","height":"3840","component":{"componentType":"cell","picUrl":"http://s2.mingxingyichu.cn/group5/M00/A0/BC/wKgBfVbc85eAJPwVAEOcflpJsJ884.jpeg?imageMogr2/thumbnail/600x%3E/quality/95","action":{"actionType":"showBigPic","picUrl":"http://s2.mingxingyichu.cn/group5/M00/A0/BC/wKgBfVbc85eAJPwVAEOcflpJsJ884.jpeg?imageMogr2/thumbnail/600x%3E/quality/95","noSaveButton":"0"}}}],"isMain":"0","color":"102,102,102,225","text":"从《太子妃》到《步步惊心：丽》，现在的穿越剧一言不合就掉水里","componentType":"cell","picUrl":"http://s5.mingxingyichu.cn/group5/M00/A2/A5/wKgBf1bc8hqAcdLxAAELyP4SdHw76.jpeg?imageMogr2/thumbnail/600x%3E/quality/95","action":{"actionType":"showBigPic","picUrl":"http://s5.mingxingyichu.cn/group5/M00/A2/A5/wKgBf1bc8hqAcdLxAAELyP4SdHw76.jpeg?imageMogr2/thumbnail/600x%3E/quality/95","noSaveButton":"0"}}},{"width":"475","height":"288","component":{"componentType":"cell","picUrl":"http://mxycsku.mingxingyichu.cn/group5/M00/A0/B7/wKgBfVbc8iSARcpMAADIRoe-wkY57.jpeg?imageMogr2/thumbnail/600x%3E/quality/95","action":{"actionType":"showBigPic","picUrl":"http://mxycsku.mingxingyichu.cn/group5/M00/A0/B7/wKgBfVbc8iSARcpMAADIRoe-wkY57.jpeg?imageMogr2/thumbnail/600x%3E/quality/95","noSaveButton":"0"}}},{"width":"362","height":"250","component":{"componentType":"cell","picUrl":"http://s1.mingxingyichu.cn/group6/M00/E0/7B/wKgBjFbc8jyAG7uvAABO2suuVsQ57.jpeg?imageMogr2/thumbnail/600x%3E/quality/95","action":{"actionType":"showBigPic","picUrl":"http://s1.mingxingyichu.cn/group6/M00/E0/7B/wKgBjFbc8jyAG7uvAABO2suuVsQ57.jpeg?imageMogr2/thumbnail/600x%3E/quality/95","noSaveButton":"0"}}},{"component":{"componentType":"msgText","text":"最近一部实力撩妹的韩剧《太阳的后裔》，\n让众多妹子纷纷开挂！\n后来小编就发现了宋仲基欧巴在剧中佩戴得这款墨镜！\n实在很帅....","color":"51,51,51,255"}},{"component":{"componentType":"subjectCell","publishDate":"6个月前","id":"1323840","description":[{"component":{"componentType":"msgText","text":"想必今天飞行员款必定大火。\n实力安利一下B.A的飞行员款。","color":"51,51,51,255"}},{"component":{"componentType":"msgText","text":"","color":"51,51,51,255"}},{"component":{"componentType":"msgText","text":"","color":"51,51,51,255"}}],"embedItems":[{"component":{"componentType":"embedItem","picUrl":"http://s5.mingxingyichu.cn/group6/M00/A2/37/wKgBjFXlOCWAAvNpAADOA-LG32M412.jpg?imageMogr2/thumbnail/100x%3E","description":"BurqaAnge博嘉太阳眼镜韩庚同款限量款时尚CS013","price":"399","channelPicUrl":"http://m1.mingxingyichu.cn/images/images/20150307/a6463948-6aa0-4cec-9eae-58298cd78df5.png","source":"来自商城","action":{"actionType":"detail","type":"sku","id":"4764613","source":"ecshop","sourceId":"1361456","width":"500","height":"500","main_image":"0"},"country":"国内","nationalFlag":"http://s0.mingxingyichu.cn/group6/M00/53/AB/wKgBjVeqzaKAEw9BAAAD_m-28wU681.png"}},{"component":{"componentType":"embedItem","picUrl":"http://s3.mingxingyichu.cn/group5/M00/CD/74/wKgBf1cF_fyAXbJZAACBsha65BA445.jpg?imageMogr2/thumbnail/100x%3E","description":"Burqaange新款飞行员经典款光金红膜太阳镜BA007","price":"299","channelPicUrl":"http://m5.mingxingyichu.cn/images/images/20150307/a6463948-6aa0-4cec-9eae-58298cd78df5.png","source":"来自商城","action":{"actionType":"detail","type":"sku","id":"4759047","source":"ecshop","sourceId":"1359536","width":"1000","height":"1000","main_image":"0"},"country":"国内","nationalFlag":"http://s0.mingxingyichu.cn/group6/M00/53/AB/wKgBjVeqzaKAEw9BAAAD_m-28wU681.png"}}],"imgs":[{"width":"1000","height":"1000","component":{"componentType":"cell","picUrl":"http://s1.mingxingyichu.cn/group5/M00/A2/A7/wKgBf1bc8xmAB6OgAAPEcWVkObs91.jpeg?imageMogr2/thumbnail/600x%3E/quality/95","action":{"actionType":"showBigPic","picUrl":"http://s1.mingxingyichu.cn/group5/M00/A2/A7/wKgBf1bc8xmAB6OgAAPEcWVkObs91.jpeg?imageMogr2/thumbnail/600x%3E/quality/95","noSaveButton":"0"}}},{"width":"5760","height":"3840","component":{"componentType":"cell","picUrl":"http://s2.mingxingyichu.cn/group5/M00/A0/BC/wKgBfVbc85eAJPwVAEOcflpJsJ884.jpeg?imageMogr2/thumbnail/600x%3E/quality/95","action":{"actionType":"showBigPic","picUrl":"http://s2.mingxingyichu.cn/group5/M00/A0/BC/wKgBfVbc85eAJPwVAEOcflpJsJ884.jpeg?imageMogr2/thumbnail/600x%3E/quality/95","noSaveButton":"0"}}}],"isMain":"0"}}],"embedItems":[{"component":{"componentType":"embedItem","picUrl":"http://s0.mingxingyichu.cn/group5/M00/A5/11/wKgBf1VUqmCAIe5ZAAF2StLwaio758.jpg?imageMogr2/thumbnail/100x%3E","description":"2015新款潮女秋装一字领露肩短袖T恤上衣纯色打底衫修身夜店女装","country":"","nationalFlag":"","price":"29","origin_price":"","channelPicUrl":"http://m6.mingxingyichu.cn/images/images/20130523/1bafc0c4-73c6-4ea7-8899-c548da32ed1b.png","source":"来自天猫","action":{"actionType":"detail","type":"sku","id":"4257668","source":"tmall","sourceId":"40758395025","width":"800","height":"800","main_image":"0"}}},{"component":{"componentType":"embedItem","picUrl":"http://s1.mingxingyichu.cn/group5/M00/F4/0E/wKgBf1dCseiAA1yrAAX13M-ZtIo768.jpg?imageMogr2/thumbnail/100x%3E","description":"蕾丝衫 春夏女装新 韩版修身一字领露肩蕾丝上衣 短袖蕾丝打底衫","country":"","nationalFlag":"","price":"79","origin_price":"","channelPicUrl":"http://m3.mingxingyichu.cn/images/images/20130523/1bafc0c4-73c6-4ea7-8899-c548da32ed1b.png","source":"来自天猫","action":{"actionType":"detail","type":"sku","id":"6812083","source":"tmall","sourceId":"42207621063","width":"933","height":"933","main_image":"0"}}},{"component":{"componentType":"embedItem","picUrl":"https://img.alicdn.com/bao/uploaded/i3/2101268414/TB2JipoqVXXXXaGXpXXXXXXXXXX_!!2101268414.jpg","description":"学生2016夏季新款韩版修身高腰显瘦时尚拼接百褶阔腿九分女裤子潮","country":"","nationalFlag":"","price":"85","origin_price":"","channelPicUrl":"http://m2.mingxingyichu.cn/images/images/20130523/1bafc0c4-73c6-4ea7-8899-c548da32ed1b.png","source":"来自天猫","action":{"actionType":"detail","type":"sku","id":"6974500","source":"tmall","sourceId":"534065795264","width":"100","height":"100","main_image":"0"}}},{"component":{"componentType":"embedItem","picUrl":"https://img.alicdn.com/bao/uploaded/i4/1697612986/TB213sPnVXXXXXRXFXXXXXXXXXX_!!1697612986.jpg","description":"16春夏韩版新显瘦不规则阔腿裤条纹黑白百褶拼接七分裤休闲裙裤女","country":"","nationalFlag":"","price":"109","origin_price":"","channelPicUrl":"http://m1.mingxingyichu.cn/images/images/20130523/1bafc0c4-73c6-4ea7-8899-c548da32ed1b.png","source":"来自天猫","action":{"actionType":"detail","type":"sku","id":"6974501","source":"tmall","sourceId":"530954657670","width":"100","height":"100","main_image":"0"}}},{"component":{"componentType":"embedItem","picUrl":"https://img.alicdn.com/imgextra/i1/2225610157/TB2KwPAgXXXXXa9XXXXXXXXXXXX_!!2225610157.jpg_q30.jpg","description":"欧贝姿15年秋冬新款恶搞画家包真皮牛皮欧美风马蹄扣字母手提女包","country":"","nationalFlag":"","price":"238","origin_price":"","channelPicUrl":"http://m6.mingxingyichu.cn/images/images/20130523/1bafc0c4-73c6-4ea7-8899-c548da32ed1b.png","source":"来自天猫","action":{"actionType":"detail","type":"sku","id":"6975011","source":"tmall","sourceId":"44972112057","width":"100","height":"100","main_image":"0"}}},{"component":{"componentType":"embedItem","picUrl":"http://s6.mingxingyichu.cn/group5/M00/04/9F/wKgBf1dqI5uAM6c1AAIhdxrJz5A593.jpg?imageMogr2/thumbnail/100x%3E","description":"Daphne/达芙妮2016夏新品 简约搭扣厚底低跟女凉鞋拖鞋1016303056","country":"","nationalFlag":"","price":"139","origin_price":"","channelPicUrl":"http://m6.mingxingyichu.cn/images/images/20130523/1bafc0c4-73c6-4ea7-8899-c548da32ed1b.png","source":"来自天猫","action":{"actionType":"detail","type":"sku","id":"6880718","source":"tmall","sourceId":"527851646201","width":"800","height":"800","main_image":"0"}}},{"component":{"componentType":"embedItem","picUrl":"http://s3.mingxingyichu.cn/group5/M00/5E/66/wKgBfVXgFZCAKNcjAAGXLqtcIu8223.jpg?imageMogr2/thumbnail/100x%3E","description":"梦语莎真皮学生厚底鞋41码孕妇沙滩女士凉鞋女夏新平底女鞋子大码","country":"","nationalFlag":"","price":"129","origin_price":"","channelPicUrl":"http://m0.mingxingyichu.cn/images/images/20130523/1bafc0c4-73c6-4ea7-8899-c548da32ed1b.png","source":"来自天猫","action":{"actionType":"detail","type":"sku","id":"4763559","source":"tmall","sourceId":"44938581333","width":"800","height":"800","main_image":"0"}}},{"component":{"componentType":"embedItem","picUrl":"http://s0.mingxingyichu.cn/group6/M00/38/48/wKgBjFdLstyAHV4MAADVCJX1nFA450.jpg?imageMogr2/thumbnail/100x%3E","description":"窗外潮款复古圆形韩版三色墨镜太阳眼镜","country":"国内","nationalFlag":"http://s0.mingxingyichu.cn/group6/M00/53/AB/wKgBjVeqzaKAEw9BAAAD_m-28wU681.png","price":"278","origin_price":"699","channelPicUrl":"http://m2.mingxingyichu.cn/images/images/20150307/a6463948-6aa0-4cec-9eae-58298cd78df5.png","source":"来自商城","action":{"actionType":"detail","type":"sku","id":"4443470","source":"ecshop","sourceId":"1201316","width":"500","height":"500","main_image":"0"}}},{"component":{"componentType":"embedItem","picUrl":"http://s6.mingxingyichu.cn/group5/M00/67/E0/wKgBfVfH0w-AfIb7AAG4-6UXuXs419.jpg?imageMogr2/thumbnail/100x%3E","description":"shes茜子复古圆框CR39镜片太阳眼镜 板材粗框墨镜女潮","country":"国内","nationalFlag":"http://s0.mingxingyichu.cn/group6/M00/53/AB/wKgBjVeqzaKAEw9BAAAD_m-28wU681.png","price":"569","origin_price":"980","channelPicUrl":"http://m6.mingxingyichu.cn/images/images/20150307/a6463948-6aa0-4cec-9eae-58298cd78df5.png","source":"来自商城","action":{"actionType":"detail","type":"sku","id":"6717016","source":"ecshop","sourceId":"2473438","width":"500","height":"500","main_image":"0"}}}],"tags":[{"category":"星店推荐","id":"22","action":{"id":"22","type":"forum","actionType":"tag","tag":"星店推荐"}}],"user":{"action":{"actionType":"detail","type":"user","id":"12951489"},"userAvatar":"http://wx.qlogo.cn/mmopen/DNGh0ujJaR7Nfvr11UnpD2DzkiakTCssjHrfibxKSQnTjAIfpGdNiaSb7zdUZkRBibgaWic6I5e7ibTicSlyYEARVC5Wr8aafd3Y5Mg/0","userId":"12951489","username":"Burqa Ange","datatime":"6个月前","isfocus":"0"},"shareAction":{"actionType":"share","type":"thread","typeId":"216105","trackValue":"thread_216105","share":{"title":"我 在明星衣橱给你推荐了一个帖子","shareType":"webpage","id":"216105","description":"精选全球好货","picUrl":"http://s6.mingxingyichu.cn/group5/M00/A2/A5/wKgBf1bc8hqAcdLxAAELyP4SdHw76.jpeg?imageMogr2/thumbnail/600x%3E/quality/95","detailUrl":"http://m.hichao.com/app/templates/topic_detail.html?id=216105"}},"title":"男神|除了撩妹  还要会戴墨镜！","id":"216105"}
      */
 
     private ResponseBean response;
@@ -32,13 +32,13 @@ public class RecommendDeatilsBean {
         private int isNew;
         private String version;
         /**
-         * items : [{"height":"996","width":"750","component":{"action":{"actionType":"showBigPic","noSaveButton":0,"picUrl":"http://s.pimg.cn/group6/M00/AD/F1/wKgBjVfM1_eAMhzbAAGW21uaqu0495.jpg"},"color":"102,102,102,225","componentType":"msgText","picUrl":"http://s.pimg.cn/group6/M00/AF/00/wKgBjFfREYCAIiR7AAZ9ba_R0z4586.jpg","text":"免费试用阿甘油化妆刷具清洁剂， 化妆刷洗洗更健康"}},{"component":{"color":"102,102,102,225","componentType":"msgText","text":"为了提高妆容完美度，最重要莫过于使用各部分妆容的化妆刷。从眼影、口红到腮红等部位使用的刷子各不相同，种类繁多。而随着大众对彩妆关注度的不断增加，化妆刷使用的人也越来越多。但是，很多人却因为无法长时间保持化妆刷良好状态而苦恼。其实，若想长时间使用价格不菲的化妆刷，就需要注重化妆刷的清洁工作。使用化妆刷专用清洁剂，可以在完成清洁化妆刷的同时，防止刷毛受到损伤。韩国低刺激护肤品牌集纯（KICHO）在我橱对旗下两种化妆刷专用清洁产品进行了试用体验。\n化妆刷洗洗更健康，免费试用阿甘油化妆刷具清洁剂\n现在只需要说说你对化妆刷的使用心得或者清洁技巧或者说说你常用哪几个小刷子，觉得哪个最实用，或者说说一些化妆可以借助工具的小技巧，例如化妆海绵，或者利用化妆刷完成一款初秋【腮红妆】【秋妆】，就有机会获得由KICHO提供的阿甘油化妆刷具清洁剂+阿甘油化妆刷具清洁纸巾1份\n活动时间：\n2016年9月6日\u20149月17日\n"}},{"component":{"action":{"actionType":"showBigPic","noSaveButton":0,"picUrl":"http://s.pimg.cn/group6/M00/AF/00/wKgBjFfREYCAIiR7AAZ9ba_R0z4586.jpg"},"componentType":"cell","picUrl":"http://s.pimg.cn/group6/M00/AF/00/wKgBjFfREYCAIiR7AAZ9ba_R0z4586.jpg"},"height":"996","width":"750"},{"component":{"color":"102,102,102,225","componentType":"msgText","text":"活动规则：\n1.\t只需要在本活动帖子回复说说你对化妆刷的试用心得或者清洁技巧或者说说你常用哪几个小刷子，觉得哪个最实用，或者说说一些化妆可以借助工具的小技巧，例如化妆海绵，或者利用化妆刷完成一款初秋【腮红妆】【秋妆】,发在美妞养成、彩妆等标签下。\n2.\t将随机抽取10位幸运网友，每人获得1份阿甘油化妆刷具清洁剂+阿甘油化妆刷具清洁纸巾。\n3.\t奖品收到后一周内需在【试用报告】标签里发试用心得，如网页发帖正文第一行加【KICHO】，APP发帖在一楼内容里加【KICHO】。\n评奖规则：\n活跃度、发帖数量、质量等会作为参考标准\n本活动最终解释权归明星衣橱所有\n"}},{"component":{"action":{"actionType":"showBigPic","noSaveButton":0,"picUrl":"http://s.pimg.cn/group6/M00/AD/F1/wKgBjVfM1_eAMhzbAAGW21uaqu0495.jpg"},"componentType":"cell","picUrl":"http://s.pimg.cn/group6/M00/AD/F1/wKgBjVfM1_eAMhzbAAGW21uaqu0495.jpg"},"height":"439","width":"552"},{"component":{"color":"102,102,102,225","componentType":"msgText","text":"数量有限，赶快来申领啊~"}},{"component":{"action":{"actionType":"showBigPic","noSaveButton":0,"picUrl":"http://s.pimg.cn/group6/M00/AD/E6/wKgBjFfM2AeAERj3AATAldM9Hyc247.png"},"componentType":"cell","picUrl":"http://s.pimg.cn/group6/M00/AD/E6/wKgBjFfM2AeAERj3AATAldM9Hyc247.png"},"height":"500","width":"1037"},{"component":{"color":"102,102,102,225","componentType":"msgText","text":"试用产品： \n品牌：KICHO\n产品名: 阿甘油化妆刷具清洁剂+阿甘油化妆刷具清洁纸巾（共10份）\n\n小编先来点番外，为大家普及点化妆刷的小知识：首先，为什么需要清洁化妆刷？\n"}},{"component":{"action":{"actionType":"showBigPic","noSaveButton":0,"picUrl":"http://s.pimg.cn/group6/M00/AD/F1/wKgBjVfM2DiAAfVmAAk0Ymizn98184.gif"},"componentType":"cell","picUrl":"http://s.pimg.cn/group6/M00/AD/F1/wKgBjVfM2DiAAfVmAAk0Ymizn98184.gif"},"height":"849","width":"658"},{"component":{"color":"102,102,102,225","componentType":"msgText","text":"我们日常使用的化妆刷吸附着各种皮脂，隐藏着各类细菌。长时间使用同一款化妆刷，会导致肌肤被细菌感染，诱发严重的痘痘等肌肤问题。化妆刷经过长时间使用，表面会粘附大量油脂。为了提高妆容完美程度、化妆刷的寿命，需尽量做到每周一次的面刷清洁工作。\n　　化妆刷清洁品\n　　Type 1. 化妆刷清洁剂\n"}},{"component":{"action":{"actionType":"showBigPic","noSaveButton":0,"picUrl":"http://s.pimg.cn/group5/M00/68/AC/wKgBfVfM2JCACRm1AAEfDPtxT5g256.jpg"},"componentType":"cell","picUrl":"http://s.pimg.cn/group5/M00/68/AC/wKgBfVfM2JCACRm1AAEfDPtxT5g256.jpg"},"height":"383","width":"520"},{"component":{"color":"102,102,102,225","componentType":"msgText","text":"大众使用最广泛的莫过于化妆刷清洁液。集纯阿甘油化妆刷具清洁剂(KICHO ARGAN BRUSH CLEANSER)产品具有260ml及500ml两种容量规格，以绿茶、菖蒲、金盏花、柠檬、苦参等植物成分为主成分制作而成。\n　　植物中提取的非离子界面活性剂PEG-7 Glyceryl Cocoate，清洁力出众同时，不含有对人体有害的防腐剂、苯酮、人工色素，接触到人体也不会出现危险。产品内含有有益于毛发管理的高级阿甘油精油，可以有效维持化妆刷的柔软毛质，延长化妆刷使用寿命。\n"}},{"component":{"action":{"actionType":"showBigPic","noSaveButton":0,"picUrl":"http://s.pimg.cn/group5/M00/6A/9A/wKgBf1fM2JOAbQ_9AAHc1Lfg5Yo214.jpg"},"componentType":"cell","picUrl":"http://s.pimg.cn/group5/M00/6A/9A/wKgBf1fM2JOAbQ_9AAHc1Lfg5Yo214.jpg"},"height":"652","width":"520"},{"component":{"color":"102,102,102,225","componentType":"msgText","text":"化妆刷清洁液使用方法：取能覆盖住化妆刷量的清洁剂。将化妆刷以画圈形式充分搅动，稍加力气，即可将化妆刷上的污垢干净清除。最后，取出化妆刷，用干净纸巾将化妆刷上的清洁剂干净拭去。\n　　化妆刷清洁纸巾\n　　Type 2. 化妆刷专用清洁纸巾\n"}},{"component":{"action":{"actionType":"showBigPic","noSaveButton":0,"picUrl":"http://s.pimg.cn/group5/M00/68/AC/wKgBfVfM2JWALR-hAAE43P4R-4A395.jpg"},"componentType":"cell","picUrl":"http://s.pimg.cn/group5/M00/68/AC/wKgBfVfM2JWALR-hAAE43P4R-4A395.jpg"},"height":"342","width":"520"},{"component":{"color":"102,102,102,225","componentType":"msgText","text":"另一种清洁产品为集纯阿甘油化妆刷具清洁纸巾(KICHO ARGAN BRUSH CLEANSE WIPES)。产品含有高级的阿甘油精油成分，由清洁剂浸泡。这样的产品不仅携带方便，还可以随时随地实现高效的化妆刷清洁。还可以更加有效地清洁眼线刷、眉毛刷这类精细化妆刷。"}},{"component":{"action":{"actionType":"showBigPic","noSaveButton":0,"picUrl":"http://s.pimg.cn/group5/M00/68/AC/wKgBfVfM2JeAZvFXAAH9qvL6jX4445.jpg"},"componentType":"cell","picUrl":"http://s.pimg.cn/group5/M00/68/AC/wKgBfVfM2JeAZvFXAAH9qvL6jX4445.jpg"},"height":"668","width":"520"},{"component":{"color":"102,102,102,225","componentType":"msgText","text":"化妆刷清洁纸巾使用法：清洁之后，化妆刷变得清爽简单，焕然一新。但如果使用时用力过大，会导致化妆刷的模样和毛质受到伤害、寿命减少，需要注意。"}},{"component":{"action":{"actionType":"showBigPic","noSaveButton":0,"picUrl":"http://s.pimg.cn/group5/M00/6A/9A/wKgBf1fM2JmAaG75AAGeNPlvX2g852.jpg"},"componentType":"cell","picUrl":"http://s.pimg.cn/group5/M00/6A/9A/wKgBf1fM2JmAaG75AAGeNPlvX2g852.jpg"},"height":"600","width":"520"},{"component":{"color":"102,102,102,225","componentType":"msgText","text":"清洁纸巾相对于清洁剂来说，具有吸收功效。擦拭6次左右，就可以完全清楚化妆刷上的化妆品残留物和污垢废物，清洁力令人满意。一包一张清洁纸巾的设计，方便携带于女性们日常使用的化妆包包中，携带便利，随时提供化妆刷清洁。"}},{"component":{"action":{"actionType":"showBigPic","noSaveButton":0,"picUrl":"http://s.pimg.cn/group5/M00/6A/9A/wKgBf1fM2JuAMxc0AACIlGkMuBQ898.jpg"},"componentType":"cell","picUrl":"http://s.pimg.cn/group5/M00/6A/9A/wKgBf1fM2JuAMxc0AACIlGkMuBQ898.jpg"},"height":"401","width":"520"},{"component":{"color":"102,102,102,225","componentType":"msgText","text":"化妆刷的使用质量不仅由化妆刷本身决定，还与清洁工作存在密切联系。广大女性可以根据自身需求，选择不同质地的化妆刷清洁产品，这样不仅可以延长化妆刷寿命，还可以极大地提高妆容满意度"}},{"component":{"action":{"actionType":"showBigPic","noSaveButton":0,"picUrl":"http://s.pimg.cn/group5/M00/6A/9A/wKgBf1fM2J6AI09hAAMDZ3GOqSw892.jpg"},"componentType":"cell","picUrl":"http://s.pimg.cn/group5/M00/6A/9A/wKgBf1fM2J6AI09hAAMDZ3GOqSw892.jpg"},"height":"866","width":"1211"},{"component":{"color":"102,102,102,225","componentType":"msgText","text":"好啦，关于化妆刷的小知识你是不是已经Get了，赶紧来分享你的试用心得或者清洁技巧吧，或者说说你常用哪几个小刷子，觉得哪个最实用，或者说说一些化妆可以借助工具的小技巧，例如化妆海绵，如果想把美美的你展示给我们就用化妆刷凹一款初秋的【腮红妆】【秋妆】吧，小编在这里等你哟，赶紧把这套清洁工具凹到手~"}}]
-         * embedItems : [{"component":{"componentType":"embedItem","picUrl":"http://s3.mingxingyichu.cn/group5/M00/6B/0C/wKgBf1fOY-2AapWJAAGlxEJfcAc107.jpg?imageMogr2/thumbnail/100x%3E","description":"设计师品牌HOWL唇膏刺绣经典白衬衫","country":"国内","nationalFlag":"http://s0.mingxingyichu.cn/group6/M00/53/AB/wKgBjVeqzaKAEw9BAAAD_m-28wU681.png","price":"299","origin_price":"599","channelPicUrl":"http://mxyc.mingxingyichu.cn/images/images/20150307/a6463948-6aa0-4cec-9eae-58298cd78df5.png","source":"来自商城","action":{"actionType":"detail","type":"sku","id":"5343489","source":"ecshop","sourceId":"1678344","width":"391","height":"391","main_image":"0"}}}]
-         * tags : [{"category":"清洁","id":"539","action":{"id":"539","type":"forum","actionType":"tag","tag":"清洁"}},{"category":"美妞养成","id":"606","action":{"id":"606","type":"forum","actionType":"tag","tag":"美妞养成"}},{"category":"免费试用","id":"607","action":{"id":"607","type":"forum","actionType":"tag","tag":"免费试用"}}]
-         * user : {"action":{"actionType":"detail","type":"user","id":"3467486"},"userAvatar":"http://mxycsku.mingxingyichu.cn/group6/M00/B6/89/wKgBjVaoI7KAYLELAADfK6j_7H068.jpeg?imageMogr2/thumbnail/600x%3E/quality/95","userId":"3467486","username":"夕夏未薰","datatime":"2天前","isfocus":"0"}
-         * shareAction : {"actionType":"share","type":"thread","typeId":"469114","trackValue":"thread_469114","share":{"title":"我 在明星衣橱给你推荐了一个帖子","shareType":"webpage","id":"469114","description":"精选全球好货","picUrl":"http://s1.mingxingyichu.cn/group6/M00/AD/F1/wKgBjVfM1_eAMhzbAAGW21uaqu0495.jpg?imageMogr2/thumbnail/600x%3E/quality/95","detailUrl":"http://m.hichao.com/app/templates/topic_detail.html?id=469114"}}
-         * title : 免费试用阿甘油化妆刷具清洁剂，
-         * id : 469114
+         * items : [{"width":"541","height":"317","component":{"publishDate":"6个月前","id":"1323840","description":[{"component":{"componentType":"msgText","text":"想必今天飞行员款必定大火。\n实力安利一下B.A的飞行员款。","color":"51,51,51,255"}},{"component":{"componentType":"msgText","text":"","color":"51,51,51,255"}},{"component":{"componentType":"msgText","text":"","color":"51,51,51,255"}}],"embedItems":[{"component":{"componentType":"embedItem","picUrl":"http://s5.mingxingyichu.cn/group6/M00/A2/37/wKgBjFXlOCWAAvNpAADOA-LG32M412.jpg?imageMogr2/thumbnail/100x%3E","description":"BurqaAnge博嘉太阳眼镜韩庚同款限量款时尚CS013","price":"399","channelPicUrl":"http://m1.mingxingyichu.cn/images/images/20150307/a6463948-6aa0-4cec-9eae-58298cd78df5.png","source":"来自商城","action":{"actionType":"detail","type":"sku","id":"4764613","source":"ecshop","sourceId":"1361456","width":"500","height":"500","main_image":"0"},"country":"国内","nationalFlag":"http://s0.mingxingyichu.cn/group6/M00/53/AB/wKgBjVeqzaKAEw9BAAAD_m-28wU681.png"}},{"component":{"componentType":"embedItem","picUrl":"http://s3.mingxingyichu.cn/group5/M00/CD/74/wKgBf1cF_fyAXbJZAACBsha65BA445.jpg?imageMogr2/thumbnail/100x%3E","description":"Burqaange新款飞行员经典款光金红膜太阳镜BA007","price":"299","channelPicUrl":"http://m5.mingxingyichu.cn/images/images/20150307/a6463948-6aa0-4cec-9eae-58298cd78df5.png","source":"来自商城","action":{"actionType":"detail","type":"sku","id":"4759047","source":"ecshop","sourceId":"1359536","width":"1000","height":"1000","main_image":"0"},"country":"国内","nationalFlag":"http://s0.mingxingyichu.cn/group6/M00/53/AB/wKgBjVeqzaKAEw9BAAAD_m-28wU681.png"}}],"imgs":[{"width":"1000","height":"1000","component":{"componentType":"cell","picUrl":"http://s1.mingxingyichu.cn/group5/M00/A2/A7/wKgBf1bc8xmAB6OgAAPEcWVkObs91.jpeg?imageMogr2/thumbnail/600x%3E/quality/95","action":{"actionType":"showBigPic","picUrl":"http://s1.mingxingyichu.cn/group5/M00/A2/A7/wKgBf1bc8xmAB6OgAAPEcWVkObs91.jpeg?imageMogr2/thumbnail/600x%3E/quality/95","noSaveButton":"0"}}},{"width":"5760","height":"3840","component":{"componentType":"cell","picUrl":"http://s2.mingxingyichu.cn/group5/M00/A0/BC/wKgBfVbc85eAJPwVAEOcflpJsJ884.jpeg?imageMogr2/thumbnail/600x%3E/quality/95","action":{"actionType":"showBigPic","picUrl":"http://s2.mingxingyichu.cn/group5/M00/A0/BC/wKgBfVbc85eAJPwVAEOcflpJsJ884.jpeg?imageMogr2/thumbnail/600x%3E/quality/95","noSaveButton":"0"}}}],"isMain":"0","color":"102,102,102,225","text":"从《太子妃》到《步步惊心：丽》，现在的穿越剧一言不合就掉水里","componentType":"cell","picUrl":"http://s5.mingxingyichu.cn/group5/M00/A2/A5/wKgBf1bc8hqAcdLxAAELyP4SdHw76.jpeg?imageMogr2/thumbnail/600x%3E/quality/95","action":{"actionType":"showBigPic","picUrl":"http://s5.mingxingyichu.cn/group5/M00/A2/A5/wKgBf1bc8hqAcdLxAAELyP4SdHw76.jpeg?imageMogr2/thumbnail/600x%3E/quality/95","noSaveButton":"0"}}},{"width":"475","height":"288","component":{"componentType":"cell","picUrl":"http://mxycsku.mingxingyichu.cn/group5/M00/A0/B7/wKgBfVbc8iSARcpMAADIRoe-wkY57.jpeg?imageMogr2/thumbnail/600x%3E/quality/95","action":{"actionType":"showBigPic","picUrl":"http://mxycsku.mingxingyichu.cn/group5/M00/A0/B7/wKgBfVbc8iSARcpMAADIRoe-wkY57.jpeg?imageMogr2/thumbnail/600x%3E/quality/95","noSaveButton":"0"}}},{"width":"362","height":"250","component":{"componentType":"cell","picUrl":"http://s1.mingxingyichu.cn/group6/M00/E0/7B/wKgBjFbc8jyAG7uvAABO2suuVsQ57.jpeg?imageMogr2/thumbnail/600x%3E/quality/95","action":{"actionType":"showBigPic","picUrl":"http://s1.mingxingyichu.cn/group6/M00/E0/7B/wKgBjFbc8jyAG7uvAABO2suuVsQ57.jpeg?imageMogr2/thumbnail/600x%3E/quality/95","noSaveButton":"0"}}},{"component":{"componentType":"msgText","text":"最近一部实力撩妹的韩剧《太阳的后裔》，\n让众多妹子纷纷开挂！\n后来小编就发现了宋仲基欧巴在剧中佩戴得这款墨镜！\n实在很帅....","color":"51,51,51,255"}},{"component":{"componentType":"subjectCell","publishDate":"6个月前","id":"1323840","description":[{"component":{"componentType":"msgText","text":"想必今天飞行员款必定大火。\n实力安利一下B.A的飞行员款。","color":"51,51,51,255"}},{"component":{"componentType":"msgText","text":"","color":"51,51,51,255"}},{"component":{"componentType":"msgText","text":"","color":"51,51,51,255"}}],"embedItems":[{"component":{"componentType":"embedItem","picUrl":"http://s5.mingxingyichu.cn/group6/M00/A2/37/wKgBjFXlOCWAAvNpAADOA-LG32M412.jpg?imageMogr2/thumbnail/100x%3E","description":"BurqaAnge博嘉太阳眼镜韩庚同款限量款时尚CS013","price":"399","channelPicUrl":"http://m1.mingxingyichu.cn/images/images/20150307/a6463948-6aa0-4cec-9eae-58298cd78df5.png","source":"来自商城","action":{"actionType":"detail","type":"sku","id":"4764613","source":"ecshop","sourceId":"1361456","width":"500","height":"500","main_image":"0"},"country":"国内","nationalFlag":"http://s0.mingxingyichu.cn/group6/M00/53/AB/wKgBjVeqzaKAEw9BAAAD_m-28wU681.png"}},{"component":{"componentType":"embedItem","picUrl":"http://s3.mingxingyichu.cn/group5/M00/CD/74/wKgBf1cF_fyAXbJZAACBsha65BA445.jpg?imageMogr2/thumbnail/100x%3E","description":"Burqaange新款飞行员经典款光金红膜太阳镜BA007","price":"299","channelPicUrl":"http://m5.mingxingyichu.cn/images/images/20150307/a6463948-6aa0-4cec-9eae-58298cd78df5.png","source":"来自商城","action":{"actionType":"detail","type":"sku","id":"4759047","source":"ecshop","sourceId":"1359536","width":"1000","height":"1000","main_image":"0"},"country":"国内","nationalFlag":"http://s0.mingxingyichu.cn/group6/M00/53/AB/wKgBjVeqzaKAEw9BAAAD_m-28wU681.png"}}],"imgs":[{"width":"1000","height":"1000","component":{"componentType":"cell","picUrl":"http://s1.mingxingyichu.cn/group5/M00/A2/A7/wKgBf1bc8xmAB6OgAAPEcWVkObs91.jpeg?imageMogr2/thumbnail/600x%3E/quality/95","action":{"actionType":"showBigPic","picUrl":"http://s1.mingxingyichu.cn/group5/M00/A2/A7/wKgBf1bc8xmAB6OgAAPEcWVkObs91.jpeg?imageMogr2/thumbnail/600x%3E/quality/95","noSaveButton":"0"}}},{"width":"5760","height":"3840","component":{"componentType":"cell","picUrl":"http://s2.mingxingyichu.cn/group5/M00/A0/BC/wKgBfVbc85eAJPwVAEOcflpJsJ884.jpeg?imageMogr2/thumbnail/600x%3E/quality/95","action":{"actionType":"showBigPic","picUrl":"http://s2.mingxingyichu.cn/group5/M00/A0/BC/wKgBfVbc85eAJPwVAEOcflpJsJ884.jpeg?imageMogr2/thumbnail/600x%3E/quality/95","noSaveButton":"0"}}}],"isMain":"0"}}]
+         * embedItems : [{"component":{"componentType":"embedItem","picUrl":"http://s0.mingxingyichu.cn/group5/M00/A5/11/wKgBf1VUqmCAIe5ZAAF2StLwaio758.jpg?imageMogr2/thumbnail/100x%3E","description":"2015新款潮女秋装一字领露肩短袖T恤上衣纯色打底衫修身夜店女装","country":"","nationalFlag":"","price":"29","origin_price":"","channelPicUrl":"http://m6.mingxingyichu.cn/images/images/20130523/1bafc0c4-73c6-4ea7-8899-c548da32ed1b.png","source":"来自天猫","action":{"actionType":"detail","type":"sku","id":"4257668","source":"tmall","sourceId":"40758395025","width":"800","height":"800","main_image":"0"}}},{"component":{"componentType":"embedItem","picUrl":"http://s1.mingxingyichu.cn/group5/M00/F4/0E/wKgBf1dCseiAA1yrAAX13M-ZtIo768.jpg?imageMogr2/thumbnail/100x%3E","description":"蕾丝衫 春夏女装新 韩版修身一字领露肩蕾丝上衣 短袖蕾丝打底衫","country":"","nationalFlag":"","price":"79","origin_price":"","channelPicUrl":"http://m3.mingxingyichu.cn/images/images/20130523/1bafc0c4-73c6-4ea7-8899-c548da32ed1b.png","source":"来自天猫","action":{"actionType":"detail","type":"sku","id":"6812083","source":"tmall","sourceId":"42207621063","width":"933","height":"933","main_image":"0"}}},{"component":{"componentType":"embedItem","picUrl":"https://img.alicdn.com/bao/uploaded/i3/2101268414/TB2JipoqVXXXXaGXpXXXXXXXXXX_!!2101268414.jpg","description":"学生2016夏季新款韩版修身高腰显瘦时尚拼接百褶阔腿九分女裤子潮","country":"","nationalFlag":"","price":"85","origin_price":"","channelPicUrl":"http://m2.mingxingyichu.cn/images/images/20130523/1bafc0c4-73c6-4ea7-8899-c548da32ed1b.png","source":"来自天猫","action":{"actionType":"detail","type":"sku","id":"6974500","source":"tmall","sourceId":"534065795264","width":"100","height":"100","main_image":"0"}}},{"component":{"componentType":"embedItem","picUrl":"https://img.alicdn.com/bao/uploaded/i4/1697612986/TB213sPnVXXXXXRXFXXXXXXXXXX_!!1697612986.jpg","description":"16春夏韩版新显瘦不规则阔腿裤条纹黑白百褶拼接七分裤休闲裙裤女","country":"","nationalFlag":"","price":"109","origin_price":"","channelPicUrl":"http://m1.mingxingyichu.cn/images/images/20130523/1bafc0c4-73c6-4ea7-8899-c548da32ed1b.png","source":"来自天猫","action":{"actionType":"detail","type":"sku","id":"6974501","source":"tmall","sourceId":"530954657670","width":"100","height":"100","main_image":"0"}}},{"component":{"componentType":"embedItem","picUrl":"https://img.alicdn.com/imgextra/i1/2225610157/TB2KwPAgXXXXXa9XXXXXXXXXXXX_!!2225610157.jpg_q30.jpg","description":"欧贝姿15年秋冬新款恶搞画家包真皮牛皮欧美风马蹄扣字母手提女包","country":"","nationalFlag":"","price":"238","origin_price":"","channelPicUrl":"http://m6.mingxingyichu.cn/images/images/20130523/1bafc0c4-73c6-4ea7-8899-c548da32ed1b.png","source":"来自天猫","action":{"actionType":"detail","type":"sku","id":"6975011","source":"tmall","sourceId":"44972112057","width":"100","height":"100","main_image":"0"}}},{"component":{"componentType":"embedItem","picUrl":"http://s6.mingxingyichu.cn/group5/M00/04/9F/wKgBf1dqI5uAM6c1AAIhdxrJz5A593.jpg?imageMogr2/thumbnail/100x%3E","description":"Daphne/达芙妮2016夏新品 简约搭扣厚底低跟女凉鞋拖鞋1016303056","country":"","nationalFlag":"","price":"139","origin_price":"","channelPicUrl":"http://m6.mingxingyichu.cn/images/images/20130523/1bafc0c4-73c6-4ea7-8899-c548da32ed1b.png","source":"来自天猫","action":{"actionType":"detail","type":"sku","id":"6880718","source":"tmall","sourceId":"527851646201","width":"800","height":"800","main_image":"0"}}},{"component":{"componentType":"embedItem","picUrl":"http://s3.mingxingyichu.cn/group5/M00/5E/66/wKgBfVXgFZCAKNcjAAGXLqtcIu8223.jpg?imageMogr2/thumbnail/100x%3E","description":"梦语莎真皮学生厚底鞋41码孕妇沙滩女士凉鞋女夏新平底女鞋子大码","country":"","nationalFlag":"","price":"129","origin_price":"","channelPicUrl":"http://m0.mingxingyichu.cn/images/images/20130523/1bafc0c4-73c6-4ea7-8899-c548da32ed1b.png","source":"来自天猫","action":{"actionType":"detail","type":"sku","id":"4763559","source":"tmall","sourceId":"44938581333","width":"800","height":"800","main_image":"0"}}},{"component":{"componentType":"embedItem","picUrl":"http://s0.mingxingyichu.cn/group6/M00/38/48/wKgBjFdLstyAHV4MAADVCJX1nFA450.jpg?imageMogr2/thumbnail/100x%3E","description":"窗外潮款复古圆形韩版三色墨镜太阳眼镜","country":"国内","nationalFlag":"http://s0.mingxingyichu.cn/group6/M00/53/AB/wKgBjVeqzaKAEw9BAAAD_m-28wU681.png","price":"278","origin_price":"699","channelPicUrl":"http://m2.mingxingyichu.cn/images/images/20150307/a6463948-6aa0-4cec-9eae-58298cd78df5.png","source":"来自商城","action":{"actionType":"detail","type":"sku","id":"4443470","source":"ecshop","sourceId":"1201316","width":"500","height":"500","main_image":"0"}}},{"component":{"componentType":"embedItem","picUrl":"http://s6.mingxingyichu.cn/group5/M00/67/E0/wKgBfVfH0w-AfIb7AAG4-6UXuXs419.jpg?imageMogr2/thumbnail/100x%3E","description":"shes茜子复古圆框CR39镜片太阳眼镜 板材粗框墨镜女潮","country":"国内","nationalFlag":"http://s0.mingxingyichu.cn/group6/M00/53/AB/wKgBjVeqzaKAEw9BAAAD_m-28wU681.png","price":"569","origin_price":"980","channelPicUrl":"http://m6.mingxingyichu.cn/images/images/20150307/a6463948-6aa0-4cec-9eae-58298cd78df5.png","source":"来自商城","action":{"actionType":"detail","type":"sku","id":"6717016","source":"ecshop","sourceId":"2473438","width":"500","height":"500","main_image":"0"}}}]
+         * tags : [{"category":"星店推荐","id":"22","action":{"id":"22","type":"forum","actionType":"tag","tag":"星店推荐"}}]
+         * user : {"action":{"actionType":"detail","type":"user","id":"12951489"},"userAvatar":"http://wx.qlogo.cn/mmopen/DNGh0ujJaR7Nfvr11UnpD2DzkiakTCssjHrfibxKSQnTjAIfpGdNiaSb7zdUZkRBibgaWic6I5e7ibTicSlyYEARVC5Wr8aafd3Y5Mg/0","userId":"12951489","username":"Burqa Ange","datatime":"6个月前","isfocus":"0"}
+         * shareAction : {"actionType":"share","type":"thread","typeId":"216105","trackValue":"thread_216105","share":{"title":"我 在明星衣橱给你推荐了一个帖子","shareType":"webpage","id":"216105","description":"精选全球好货","picUrl":"http://s6.mingxingyichu.cn/group5/M00/A2/A5/wKgBf1bc8hqAcdLxAAELyP4SdHw76.jpeg?imageMogr2/thumbnail/600x%3E/quality/95","detailUrl":"http://m.hichao.com/app/templates/topic_detail.html?id=216105"}}
+         * title : 男神|除了撩妹  还要会戴墨镜！
+         * id : 216105
          */
 
         private DataBean data;
@@ -85,11 +85,11 @@ public class RecommendDeatilsBean {
 
         public static class DataBean {
             /**
-             * action : {"actionType":"detail","type":"user","id":"3467486"}
-             * userAvatar : http://mxycsku.mingxingyichu.cn/group6/M00/B6/89/wKgBjVaoI7KAYLELAADfK6j_7H068.jpeg?imageMogr2/thumbnail/600x%3E/quality/95
-             * userId : 3467486
-             * username : 夕夏未薰
-             * datatime : 2天前
+             * action : {"actionType":"detail","type":"user","id":"12951489"}
+             * userAvatar : http://wx.qlogo.cn/mmopen/DNGh0ujJaR7Nfvr11UnpD2DzkiakTCssjHrfibxKSQnTjAIfpGdNiaSb7zdUZkRBibgaWic6I5e7ibTicSlyYEARVC5Wr8aafd3Y5Mg/0
+             * userId : 12951489
+             * username : Burqa Ange
+             * datatime : 6个月前
              * isfocus : 0
              */
 
@@ -97,30 +97,30 @@ public class RecommendDeatilsBean {
             /**
              * actionType : share
              * type : thread
-             * typeId : 469114
-             * trackValue : thread_469114
-             * share : {"title":"我 在明星衣橱给你推荐了一个帖子","shareType":"webpage","id":"469114","description":"精选全球好货","picUrl":"http://s1.mingxingyichu.cn/group6/M00/AD/F1/wKgBjVfM1_eAMhzbAAGW21uaqu0495.jpg?imageMogr2/thumbnail/600x%3E/quality/95","detailUrl":"http://m.hichao.com/app/templates/topic_detail.html?id=469114"}
+             * typeId : 216105
+             * trackValue : thread_216105
+             * share : {"title":"我 在明星衣橱给你推荐了一个帖子","shareType":"webpage","id":"216105","description":"精选全球好货","picUrl":"http://s6.mingxingyichu.cn/group5/M00/A2/A5/wKgBf1bc8hqAcdLxAAELyP4SdHw76.jpeg?imageMogr2/thumbnail/600x%3E/quality/95","detailUrl":"http://m.hichao.com/app/templates/topic_detail.html?id=216105"}
              */
 
             private ShareActionBean shareAction;
             private String title;
             private int id;
             /**
-             * height : 996
-             * width : 750
-             * component : {"action":{"actionType":"showBigPic","noSaveButton":0,"picUrl":"http://s.pimg.cn/group6/M00/AD/F1/wKgBjVfM1_eAMhzbAAGW21uaqu0495.jpg"},"color":"102,102,102,225","componentType":"msgText","picUrl":"http://s.pimg.cn/group6/M00/AF/00/wKgBjFfREYCAIiR7AAZ9ba_R0z4586.jpg","text":"免费试用阿甘油化妆刷具清洁剂， 化妆刷洗洗更健康"}
+             * width : 541
+             * height : 317
+             * component : {"publishDate":"6个月前","id":"1323840","description":[{"component":{"componentType":"msgText","text":"想必今天飞行员款必定大火。\n实力安利一下B.A的飞行员款。","color":"51,51,51,255"}},{"component":{"componentType":"msgText","text":"","color":"51,51,51,255"}},{"component":{"componentType":"msgText","text":"","color":"51,51,51,255"}}],"embedItems":[{"component":{"componentType":"embedItem","picUrl":"http://s5.mingxingyichu.cn/group6/M00/A2/37/wKgBjFXlOCWAAvNpAADOA-LG32M412.jpg?imageMogr2/thumbnail/100x%3E","description":"BurqaAnge博嘉太阳眼镜韩庚同款限量款时尚CS013","price":"399","channelPicUrl":"http://m1.mingxingyichu.cn/images/images/20150307/a6463948-6aa0-4cec-9eae-58298cd78df5.png","source":"来自商城","action":{"actionType":"detail","type":"sku","id":"4764613","source":"ecshop","sourceId":"1361456","width":"500","height":"500","main_image":"0"},"country":"国内","nationalFlag":"http://s0.mingxingyichu.cn/group6/M00/53/AB/wKgBjVeqzaKAEw9BAAAD_m-28wU681.png"}},{"component":{"componentType":"embedItem","picUrl":"http://s3.mingxingyichu.cn/group5/M00/CD/74/wKgBf1cF_fyAXbJZAACBsha65BA445.jpg?imageMogr2/thumbnail/100x%3E","description":"Burqaange新款飞行员经典款光金红膜太阳镜BA007","price":"299","channelPicUrl":"http://m5.mingxingyichu.cn/images/images/20150307/a6463948-6aa0-4cec-9eae-58298cd78df5.png","source":"来自商城","action":{"actionType":"detail","type":"sku","id":"4759047","source":"ecshop","sourceId":"1359536","width":"1000","height":"1000","main_image":"0"},"country":"国内","nationalFlag":"http://s0.mingxingyichu.cn/group6/M00/53/AB/wKgBjVeqzaKAEw9BAAAD_m-28wU681.png"}}],"imgs":[{"width":"1000","height":"1000","component":{"componentType":"cell","picUrl":"http://s1.mingxingyichu.cn/group5/M00/A2/A7/wKgBf1bc8xmAB6OgAAPEcWVkObs91.jpeg?imageMogr2/thumbnail/600x%3E/quality/95","action":{"actionType":"showBigPic","picUrl":"http://s1.mingxingyichu.cn/group5/M00/A2/A7/wKgBf1bc8xmAB6OgAAPEcWVkObs91.jpeg?imageMogr2/thumbnail/600x%3E/quality/95","noSaveButton":"0"}}},{"width":"5760","height":"3840","component":{"componentType":"cell","picUrl":"http://s2.mingxingyichu.cn/group5/M00/A0/BC/wKgBfVbc85eAJPwVAEOcflpJsJ884.jpeg?imageMogr2/thumbnail/600x%3E/quality/95","action":{"actionType":"showBigPic","picUrl":"http://s2.mingxingyichu.cn/group5/M00/A0/BC/wKgBfVbc85eAJPwVAEOcflpJsJ884.jpeg?imageMogr2/thumbnail/600x%3E/quality/95","noSaveButton":"0"}}}],"isMain":"0","color":"102,102,102,225","text":"从《太子妃》到《步步惊心：丽》，现在的穿越剧一言不合就掉水里","componentType":"cell","picUrl":"http://s5.mingxingyichu.cn/group5/M00/A2/A5/wKgBf1bc8hqAcdLxAAELyP4SdHw76.jpeg?imageMogr2/thumbnail/600x%3E/quality/95","action":{"actionType":"showBigPic","picUrl":"http://s5.mingxingyichu.cn/group5/M00/A2/A5/wKgBf1bc8hqAcdLxAAELyP4SdHw76.jpeg?imageMogr2/thumbnail/600x%3E/quality/95","noSaveButton":"0"}}
              */
 
             private List<ItemsBean> items;
             /**
-             * component : {"componentType":"embedItem","picUrl":"http://s3.mingxingyichu.cn/group5/M00/6B/0C/wKgBf1fOY-2AapWJAAGlxEJfcAc107.jpg?imageMogr2/thumbnail/100x%3E","description":"设计师品牌HOWL唇膏刺绣经典白衬衫","country":"国内","nationalFlag":"http://s0.mingxingyichu.cn/group6/M00/53/AB/wKgBjVeqzaKAEw9BAAAD_m-28wU681.png","price":"299","origin_price":"599","channelPicUrl":"http://mxyc.mingxingyichu.cn/images/images/20150307/a6463948-6aa0-4cec-9eae-58298cd78df5.png","source":"来自商城","action":{"actionType":"detail","type":"sku","id":"5343489","source":"ecshop","sourceId":"1678344","width":"391","height":"391","main_image":"0"}}
+             * component : {"componentType":"embedItem","picUrl":"http://s0.mingxingyichu.cn/group5/M00/A5/11/wKgBf1VUqmCAIe5ZAAF2StLwaio758.jpg?imageMogr2/thumbnail/100x%3E","description":"2015新款潮女秋装一字领露肩短袖T恤上衣纯色打底衫修身夜店女装","country":"","nationalFlag":"","price":"29","origin_price":"","channelPicUrl":"http://m6.mingxingyichu.cn/images/images/20130523/1bafc0c4-73c6-4ea7-8899-c548da32ed1b.png","source":"来自天猫","action":{"actionType":"detail","type":"sku","id":"4257668","source":"tmall","sourceId":"40758395025","width":"800","height":"800","main_image":"0"}}
              */
 
             private List<EmbedItemsBean> embedItems;
             /**
-             * category : 清洁
-             * id : 539
-             * action : {"id":"539","type":"forum","actionType":"tag","tag":"清洁"}
+             * category : 星店推荐
+             * id : 22
+             * action : {"id":"22","type":"forum","actionType":"tag","tag":"星店推荐"}
              */
 
             private List<TagsBean> tags;
@@ -185,7 +185,7 @@ public class RecommendDeatilsBean {
                 /**
                  * actionType : detail
                  * type : user
-                 * id : 3467486
+                 * id : 12951489
                  */
 
                 private ActionBean action;
@@ -277,15 +277,15 @@ public class RecommendDeatilsBean {
             public static class ShareActionBean {
                 private String actionType;
                 private String type;
-                private String typeId;
+                private int typeId;
                 private String trackValue;
                 /**
                  * title : 我 在明星衣橱给你推荐了一个帖子
                  * shareType : webpage
-                 * id : 469114
+                 * id : 216105
                  * description : 精选全球好货
-                 * picUrl : http://s1.mingxingyichu.cn/group6/M00/AD/F1/wKgBjVfM1_eAMhzbAAGW21uaqu0495.jpg?imageMogr2/thumbnail/600x%3E/quality/95
-                 * detailUrl : http://m.hichao.com/app/templates/topic_detail.html?id=469114
+                 * picUrl : http://s6.mingxingyichu.cn/group5/M00/A2/A5/wKgBf1bc8hqAcdLxAAELyP4SdHw76.jpeg?imageMogr2/thumbnail/600x%3E/quality/95
+                 * detailUrl : http://m.hichao.com/app/templates/topic_detail.html?id=216105
                  */
 
                 private ShareBean share;
@@ -306,11 +306,11 @@ public class RecommendDeatilsBean {
                     this.type = type;
                 }
 
-                public String getTypeId() {
+                public int getTypeId() {
                     return typeId;
                 }
 
-                public void setTypeId(String typeId) {
+                public void setTypeId(int typeId) {
                     this.typeId = typeId;
                 }
 
@@ -389,25 +389,23 @@ public class RecommendDeatilsBean {
             }
 
             public static class ItemsBean {
-                private String height;
                 private String width;
+                private String height;
                 /**
-                 * action : {"actionType":"showBigPic","noSaveButton":0,"picUrl":"http://s.pimg.cn/group6/M00/AD/F1/wKgBjVfM1_eAMhzbAAGW21uaqu0495.jpg"}
+                 * publishDate : 6个月前
+                 * id : 1323840
+                 * description : [{"component":{"componentType":"msgText","text":"想必今天飞行员款必定大火。\n实力安利一下B.A的飞行员款。","color":"51,51,51,255"}},{"component":{"componentType":"msgText","text":"","color":"51,51,51,255"}},{"component":{"componentType":"msgText","text":"","color":"51,51,51,255"}}]
+                 * embedItems : [{"component":{"componentType":"embedItem","picUrl":"http://s5.mingxingyichu.cn/group6/M00/A2/37/wKgBjFXlOCWAAvNpAADOA-LG32M412.jpg?imageMogr2/thumbnail/100x%3E","description":"BurqaAnge博嘉太阳眼镜韩庚同款限量款时尚CS013","price":"399","channelPicUrl":"http://m1.mingxingyichu.cn/images/images/20150307/a6463948-6aa0-4cec-9eae-58298cd78df5.png","source":"来自商城","action":{"actionType":"detail","type":"sku","id":"4764613","source":"ecshop","sourceId":"1361456","width":"500","height":"500","main_image":"0"},"country":"国内","nationalFlag":"http://s0.mingxingyichu.cn/group6/M00/53/AB/wKgBjVeqzaKAEw9BAAAD_m-28wU681.png"}},{"component":{"componentType":"embedItem","picUrl":"http://s3.mingxingyichu.cn/group5/M00/CD/74/wKgBf1cF_fyAXbJZAACBsha65BA445.jpg?imageMogr2/thumbnail/100x%3E","description":"Burqaange新款飞行员经典款光金红膜太阳镜BA007","price":"299","channelPicUrl":"http://m5.mingxingyichu.cn/images/images/20150307/a6463948-6aa0-4cec-9eae-58298cd78df5.png","source":"来自商城","action":{"actionType":"detail","type":"sku","id":"4759047","source":"ecshop","sourceId":"1359536","width":"1000","height":"1000","main_image":"0"},"country":"国内","nationalFlag":"http://s0.mingxingyichu.cn/group6/M00/53/AB/wKgBjVeqzaKAEw9BAAAD_m-28wU681.png"}}]
+                 * imgs : [{"width":"1000","height":"1000","component":{"componentType":"cell","picUrl":"http://s1.mingxingyichu.cn/group5/M00/A2/A7/wKgBf1bc8xmAB6OgAAPEcWVkObs91.jpeg?imageMogr2/thumbnail/600x%3E/quality/95","action":{"actionType":"showBigPic","picUrl":"http://s1.mingxingyichu.cn/group5/M00/A2/A7/wKgBf1bc8xmAB6OgAAPEcWVkObs91.jpeg?imageMogr2/thumbnail/600x%3E/quality/95","noSaveButton":"0"}}},{"width":"5760","height":"3840","component":{"componentType":"cell","picUrl":"http://s2.mingxingyichu.cn/group5/M00/A0/BC/wKgBfVbc85eAJPwVAEOcflpJsJ884.jpeg?imageMogr2/thumbnail/600x%3E/quality/95","action":{"actionType":"showBigPic","picUrl":"http://s2.mingxingyichu.cn/group5/M00/A0/BC/wKgBfVbc85eAJPwVAEOcflpJsJ884.jpeg?imageMogr2/thumbnail/600x%3E/quality/95","noSaveButton":"0"}}}]
+                 * isMain : 0
                  * color : 102,102,102,225
-                 * componentType : msgText
-                 * picUrl : http://s.pimg.cn/group6/M00/AF/00/wKgBjFfREYCAIiR7AAZ9ba_R0z4586.jpg
-                 * text : 免费试用阿甘油化妆刷具清洁剂， 化妆刷洗洗更健康
+                 * text : 从《太子妃》到《步步惊心：丽》，现在的穿越剧一言不合就掉水里
+                 * componentType : cell
+                 * picUrl : http://s5.mingxingyichu.cn/group5/M00/A2/A5/wKgBf1bc8hqAcdLxAAELyP4SdHw76.jpeg?imageMogr2/thumbnail/600x%3E/quality/95
+                 * action : {"actionType":"showBigPic","picUrl":"http://s5.mingxingyichu.cn/group5/M00/A2/A5/wKgBf1bc8hqAcdLxAAELyP4SdHw76.jpeg?imageMogr2/thumbnail/600x%3E/quality/95","noSaveButton":"0"}
                  */
 
                 private ComponentBean component;
-
-                public String getHeight() {
-                    return height;
-                }
-
-                public void setHeight(String height) {
-                    this.height = height;
-                }
 
                 public String getWidth() {
                     return width;
@@ -415,6 +413,14 @@ public class RecommendDeatilsBean {
 
                 public void setWidth(String width) {
                     this.width = width;
+                }
+
+                public String getHeight() {
+                    return height;
+                }
+
+                public void setHeight(String height) {
+                    this.height = height;
                 }
 
                 public ComponentBean getComponent() {
@@ -426,24 +432,60 @@ public class RecommendDeatilsBean {
                 }
 
                 public static class ComponentBean {
+                    private String publishDate;
+                    private int id;
+                    private String isMain;
+                    private String color;
+                    private String text;
+                    private String componentType;
+                    private String picUrl;
                     /**
                      * actionType : showBigPic
+                     * picUrl : http://s5.mingxingyichu.cn/group5/M00/A2/A5/wKgBf1bc8hqAcdLxAAELyP4SdHw76.jpeg?imageMogr2/thumbnail/600x%3E/quality/95
                      * noSaveButton : 0
-                     * picUrl : http://s.pimg.cn/group6/M00/AD/F1/wKgBjVfM1_eAMhzbAAGW21uaqu0495.jpg
                      */
 
                     private ActionBean action;
-                    private String color;
-                    private String componentType;
-                    private String picUrl;
-                    private String text;
+                    /**
+                     * component : {"componentType":"msgText","text":"想必今天飞行员款必定大火。\n实力安利一下B.A的飞行员款。","color":"51,51,51,255"}
+                     */
 
-                    public ActionBean getAction() {
-                        return action;
+                    private List<DescriptionBean> description;
+                    /**
+                     * component : {"componentType":"embedItem","picUrl":"http://s5.mingxingyichu.cn/group6/M00/A2/37/wKgBjFXlOCWAAvNpAADOA-LG32M412.jpg?imageMogr2/thumbnail/100x%3E","description":"BurqaAnge博嘉太阳眼镜韩庚同款限量款时尚CS013","price":"399","channelPicUrl":"http://m1.mingxingyichu.cn/images/images/20150307/a6463948-6aa0-4cec-9eae-58298cd78df5.png","source":"来自商城","action":{"actionType":"detail","type":"sku","id":"4764613","source":"ecshop","sourceId":"1361456","width":"500","height":"500","main_image":"0"},"country":"国内","nationalFlag":"http://s0.mingxingyichu.cn/group6/M00/53/AB/wKgBjVeqzaKAEw9BAAAD_m-28wU681.png"}
+                     */
+
+                    private List<EmbedItemsBean> embedItems;
+                    /**
+                     * width : 1000
+                     * height : 1000
+                     * component : {"componentType":"cell","picUrl":"http://s1.mingxingyichu.cn/group5/M00/A2/A7/wKgBf1bc8xmAB6OgAAPEcWVkObs91.jpeg?imageMogr2/thumbnail/600x%3E/quality/95","action":{"actionType":"showBigPic","picUrl":"http://s1.mingxingyichu.cn/group5/M00/A2/A7/wKgBf1bc8xmAB6OgAAPEcWVkObs91.jpeg?imageMogr2/thumbnail/600x%3E/quality/95","noSaveButton":"0"}}
+                     */
+
+                    private List<ImgsBean> imgs;
+
+                    public String getPublishDate() {
+                        return publishDate;
                     }
 
-                    public void setAction(ActionBean action) {
-                        this.action = action;
+                    public void setPublishDate(String publishDate) {
+                        this.publishDate = publishDate;
+                    }
+
+                    public int getId() {
+                        return id;
+                    }
+
+                    public void setId(int id) {
+                        this.id = id;
+                    }
+
+                    public String getIsMain() {
+                        return isMain;
+                    }
+
+                    public void setIsMain(String isMain) {
+                        this.isMain = isMain;
                     }
 
                     public String getColor() {
@@ -452,6 +494,14 @@ public class RecommendDeatilsBean {
 
                     public void setColor(String color) {
                         this.color = color;
+                    }
+
+                    public String getText() {
+                        return text;
+                    }
+
+                    public void setText(String text) {
+                        this.text = text;
                     }
 
                     public String getComponentType() {
@@ -470,18 +520,42 @@ public class RecommendDeatilsBean {
                         this.picUrl = picUrl;
                     }
 
-                    public String getText() {
-                        return text;
+                    public ActionBean getAction() {
+                        return action;
                     }
 
-                    public void setText(String text) {
-                        this.text = text;
+                    public void setAction(ActionBean action) {
+                        this.action = action;
+                    }
+
+                    public List<DescriptionBean> getDescription() {
+                        return description;
+                    }
+
+                    public void setDescription(List<DescriptionBean> description) {
+                        this.description = description;
+                    }
+
+                    public List<EmbedItemsBean> getEmbedItems() {
+                        return embedItems;
+                    }
+
+                    public void setEmbedItems(List<EmbedItemsBean> embedItems) {
+                        this.embedItems = embedItems;
+                    }
+
+                    public List<ImgsBean> getImgs() {
+                        return imgs;
+                    }
+
+                    public void setImgs(List<ImgsBean> imgs) {
+                        this.imgs = imgs;
                     }
 
                     public static class ActionBean {
                         private String actionType;
-                        private int noSaveButton;
                         private String picUrl;
+                        private String noSaveButton;
 
                         public String getActionType() {
                             return actionType;
@@ -491,20 +565,365 @@ public class RecommendDeatilsBean {
                             this.actionType = actionType;
                         }
 
-                        public int getNoSaveButton() {
-                            return noSaveButton;
-                        }
-
-                        public void setNoSaveButton(int noSaveButton) {
-                            this.noSaveButton = noSaveButton;
-                        }
-
                         public String getPicUrl() {
                             return picUrl;
                         }
 
                         public void setPicUrl(String picUrl) {
                             this.picUrl = picUrl;
+                        }
+
+                        public String getNoSaveButton() {
+                            return noSaveButton;
+                        }
+
+                        public void setNoSaveButton(String noSaveButton) {
+                            this.noSaveButton = noSaveButton;
+                        }
+                    }
+
+                    public static class DescriptionBean {
+                        /**
+                         * componentType : msgText
+                         * text : 想必今天飞行员款必定大火。
+                         实力安利一下B.A的飞行员款。
+                         * color : 51,51,51,255
+                         */
+
+                        private CompoBeans component;
+
+                        public CompoBeans getComponent() {
+                            return component;
+                        }
+
+                        public void setComponent(CompoBeans component) {
+                            this.component = component;
+                        }
+
+                        public static class CompoBeans {
+                            private String componentType;
+                            private String text;
+                            private String color;
+
+                            public String getComponentType() {
+                                return componentType;
+                            }
+
+                            public void setComponentType(String componentType) {
+                                this.componentType = componentType;
+                            }
+
+                            public String getText() {
+                                return text;
+                            }
+
+                            public void setText(String text) {
+                                this.text = text;
+                            }
+
+                            public String getColor() {
+                                return color;
+                            }
+
+                            public void setColor(String color) {
+                                this.color = color;
+                            }
+                        }
+                    }
+
+                    public static class EmbedItemsBean {
+                        /**
+                         * componentType : embedItem
+                         * picUrl : http://s5.mingxingyichu.cn/group6/M00/A2/37/wKgBjFXlOCWAAvNpAADOA-LG32M412.jpg?imageMogr2/thumbnail/100x%3E
+                         * description : BurqaAnge博嘉太阳眼镜韩庚同款限量款时尚CS013
+                         * price : 399
+                         * channelPicUrl : http://m1.mingxingyichu.cn/images/images/20150307/a6463948-6aa0-4cec-9eae-58298cd78df5.png
+                         * source : 来自商城
+                         * action : {"actionType":"detail","type":"sku","id":"4764613","source":"ecshop","sourceId":"1361456","width":"500","height":"500","main_image":"0"}
+                         * country : 国内
+                         * nationalFlag : http://s0.mingxingyichu.cn/group6/M00/53/AB/wKgBjVeqzaKAEw9BAAAD_m-28wU681.png
+                         */
+
+                        private ComBeanss component;
+
+                        public ComBeanss getComponent() {
+                            return component;
+                        }
+
+                        public void setComponent(ComBeanss component) {
+                            this.component = component;
+                        }
+
+                        public static class ComBeanss {
+                            private String componentType;
+                            private String picUrl;
+                            private String description;
+                            private String price;
+                            private String channelPicUrl;
+                            private String source;
+                            /**
+                             * actionType : detail
+                             * type : sku
+                             * id : 4764613
+                             * source : ecshop
+                             * sourceId : 1361456
+                             * width : 500
+                             * height : 500
+                             * main_image : 0
+                             */
+
+                            private ActionBean action;
+                            private String country;
+                            private String nationalFlag;
+
+                            public String getComponentType() {
+                                return componentType;
+                            }
+
+                            public void setComponentType(String componentType) {
+                                this.componentType = componentType;
+                            }
+
+                            public String getPicUrl() {
+                                return picUrl;
+                            }
+
+                            public void setPicUrl(String picUrl) {
+                                this.picUrl = picUrl;
+                            }
+
+                            public String getDescription() {
+                                return description;
+                            }
+
+                            public void setDescription(String description) {
+                                this.description = description;
+                            }
+
+                            public String getPrice() {
+                                return price;
+                            }
+
+                            public void setPrice(String price) {
+                                this.price = price;
+                            }
+
+                            public String getChannelPicUrl() {
+                                return channelPicUrl;
+                            }
+
+                            public void setChannelPicUrl(String channelPicUrl) {
+                                this.channelPicUrl = channelPicUrl;
+                            }
+
+                            public String getSource() {
+                                return source;
+                            }
+
+                            public void setSource(String source) {
+                                this.source = source;
+                            }
+
+                            public ActionBean getAction() {
+                                return action;
+                            }
+
+                            public void setAction(ActionBean action) {
+                                this.action = action;
+                            }
+
+                            public String getCountry() {
+                                return country;
+                            }
+
+                            public void setCountry(String country) {
+                                this.country = country;
+                            }
+
+                            public String getNationalFlag() {
+                                return nationalFlag;
+                            }
+
+                            public void setNationalFlag(String nationalFlag) {
+                                this.nationalFlag = nationalFlag;
+                            }
+
+                            public static class ActionBean {
+                                private String actionType;
+                                private String type;
+                                private String id;
+                                private String source;
+                                private String sourceId;
+                                private String width;
+                                private String height;
+                                private String main_image;
+
+                                public String getActionType() {
+                                    return actionType;
+                                }
+
+                                public void setActionType(String actionType) {
+                                    this.actionType = actionType;
+                                }
+
+                                public String getType() {
+                                    return type;
+                                }
+
+                                public void setType(String type) {
+                                    this.type = type;
+                                }
+
+                                public String getId() {
+                                    return id;
+                                }
+
+                                public void setId(String id) {
+                                    this.id = id;
+                                }
+
+                                public String getSource() {
+                                    return source;
+                                }
+
+                                public void setSource(String source) {
+                                    this.source = source;
+                                }
+
+                                public String getSourceId() {
+                                    return sourceId;
+                                }
+
+                                public void setSourceId(String sourceId) {
+                                    this.sourceId = sourceId;
+                                }
+
+                                public String getWidth() {
+                                    return width;
+                                }
+
+                                public void setWidth(String width) {
+                                    this.width = width;
+                                }
+
+                                public String getHeight() {
+                                    return height;
+                                }
+
+                                public void setHeight(String height) {
+                                    this.height = height;
+                                }
+
+                                public String getMain_image() {
+                                    return main_image;
+                                }
+
+                                public void setMain_image(String main_image) {
+                                    this.main_image = main_image;
+                                }
+                            }
+                        }
+                    }
+
+                    public static class ImgsBean {
+                        private String width;
+                        private String height;
+                        /**
+                         * componentType : cell
+                         * picUrl : http://s1.mingxingyichu.cn/group5/M00/A2/A7/wKgBf1bc8xmAB6OgAAPEcWVkObs91.jpeg?imageMogr2/thumbnail/600x%3E/quality/95
+                         * action : {"actionType":"showBigPic","picUrl":"http://s1.mingxingyichu.cn/group5/M00/A2/A7/wKgBf1bc8xmAB6OgAAPEcWVkObs91.jpeg?imageMogr2/thumbnail/600x%3E/quality/95","noSaveButton":"0"}
+                         */
+
+                        private compeBean component;
+
+                        public String getWidth() {
+                            return width;
+                        }
+
+                        public void setWidth(String width) {
+                            this.width = width;
+                        }
+
+                        public String getHeight() {
+                            return height;
+                        }
+
+                        public void setHeight(String height) {
+                            this.height = height;
+                        }
+
+                        public compeBean getComponent() {
+                            return component;
+                        }
+
+                        public void setComponent(compeBean component) {
+                            this.component = component;
+                        }
+
+                        public static class compeBean {
+                            private String componentType;
+                            private String picUrl;
+                            /**
+                             * actionType : showBigPic
+                             * picUrl : http://s1.mingxingyichu.cn/group5/M00/A2/A7/wKgBf1bc8xmAB6OgAAPEcWVkObs91.jpeg?imageMogr2/thumbnail/600x%3E/quality/95
+                             * noSaveButton : 0
+                             */
+
+                            private ActionBean action;
+
+                            public String getComponentType() {
+                                return componentType;
+                            }
+
+                            public void setComponentType(String componentType) {
+                                this.componentType = componentType;
+                            }
+
+                            public String getPicUrl() {
+                                return picUrl;
+                            }
+
+                            public void setPicUrl(String picUrl) {
+                                this.picUrl = picUrl;
+                            }
+
+                            public ActionBean getAction() {
+                                return action;
+                            }
+
+                            public void setAction(ActionBean action) {
+                                this.action = action;
+                            }
+
+                            public static class ActionBean {
+                                private String actionType;
+                                private String picUrl;
+                                private String noSaveButton;
+
+                                public String getActionType() {
+                                    return actionType;
+                                }
+
+                                public void setActionType(String actionType) {
+                                    this.actionType = actionType;
+                                }
+
+                                public String getPicUrl() {
+                                    return picUrl;
+                                }
+
+                                public void setPicUrl(String picUrl) {
+                                    this.picUrl = picUrl;
+                                }
+
+                                public String getNoSaveButton() {
+                                    return noSaveButton;
+                                }
+
+                                public void setNoSaveButton(String noSaveButton) {
+                                    this.noSaveButton = noSaveButton;
+                                }
+                            }
                         }
                     }
                 }
@@ -513,28 +932,28 @@ public class RecommendDeatilsBean {
             public static class EmbedItemsBean {
                 /**
                  * componentType : embedItem
-                 * picUrl : http://s3.mingxingyichu.cn/group5/M00/6B/0C/wKgBf1fOY-2AapWJAAGlxEJfcAc107.jpg?imageMogr2/thumbnail/100x%3E
-                 * description : 设计师品牌HOWL唇膏刺绣经典白衬衫
-                 * country : 国内
-                 * nationalFlag : http://s0.mingxingyichu.cn/group6/M00/53/AB/wKgBjVeqzaKAEw9BAAAD_m-28wU681.png
-                 * price : 299
-                 * origin_price : 599
-                 * channelPicUrl : http://mxyc.mingxingyichu.cn/images/images/20150307/a6463948-6aa0-4cec-9eae-58298cd78df5.png
-                 * source : 来自商城
-                 * action : {"actionType":"detail","type":"sku","id":"5343489","source":"ecshop","sourceId":"1678344","width":"391","height":"391","main_image":"0"}
+                 * picUrl : http://s0.mingxingyichu.cn/group5/M00/A5/11/wKgBf1VUqmCAIe5ZAAF2StLwaio758.jpg?imageMogr2/thumbnail/100x%3E
+                 * description : 2015新款潮女秋装一字领露肩短袖T恤上衣纯色打底衫修身夜店女装
+                 * country :
+                 * nationalFlag :
+                 * price : 29
+                 * origin_price :
+                 * channelPicUrl : http://m6.mingxingyichu.cn/images/images/20130523/1bafc0c4-73c6-4ea7-8899-c548da32ed1b.png
+                 * source : 来自天猫
+                 * action : {"actionType":"detail","type":"sku","id":"4257668","source":"tmall","sourceId":"40758395025","width":"800","height":"800","main_image":"0"}
                  */
 
-                private ComponentBean component;
+                private CompBeans component;
 
-                public ComponentBean getComponent() {
+                public CompBeans getComponent() {
                     return component;
                 }
 
-                public void setComponent(ComponentBean component) {
+                public void setComponent(CompBeans component) {
                     this.component = component;
                 }
 
-                public static class ComponentBean {
+                public static class CompBeans {
                     private String componentType;
                     private String picUrl;
                     private String description;
@@ -547,11 +966,11 @@ public class RecommendDeatilsBean {
                     /**
                      * actionType : detail
                      * type : sku
-                     * id : 5343489
-                     * source : ecshop
-                     * sourceId : 1678344
-                     * width : 391
-                     * height : 391
+                     * id : 4257668
+                     * source : tmall
+                     * sourceId : 40758395025
+                     * width : 800
+                     * height : 800
                      * main_image : 0
                      */
 
@@ -640,7 +1059,7 @@ public class RecommendDeatilsBean {
                     public static class ActionBean {
                         private String actionType;
                         private String type;
-                        private int id;
+                        private String id;
                         private String source;
                         private String sourceId;
                         private String width;
@@ -663,11 +1082,11 @@ public class RecommendDeatilsBean {
                             this.type = type;
                         }
 
-                        public int getId() {
+                        public String getId() {
                             return id;
                         }
 
-                        public void setId(int id) {
+                        public void setId(String id) {
                             this.id = id;
                         }
 
@@ -716,12 +1135,12 @@ public class RecommendDeatilsBean {
 
             public static class TagsBean {
                 private String category;
-                private int id;
+                private String id;
                 /**
-                 * id : 539
+                 * id : 22
                  * type : forum
                  * actionType : tag
-                 * tag : 清洁
+                 * tag : 星店推荐
                  */
 
                 private ActionBean action;
@@ -734,11 +1153,11 @@ public class RecommendDeatilsBean {
                     this.category = category;
                 }
 
-                public int getId() {
+                public String getId() {
                     return id;
                 }
 
-                public void setId(int id) {
+                public void setId(String id) {
                     this.id = id;
                 }
 
@@ -751,16 +1170,16 @@ public class RecommendDeatilsBean {
                 }
 
                 public static class ActionBean {
-                    private int id;
+                    private String id;
                     private String type;
                     private String actionType;
                     private String tag;
 
-                    public int getId() {
+                    public String getId() {
                         return id;
                     }
 
-                    public void setId(int id) {
+                    public void setId(String id) {
                         this.id = id;
                     }
 

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#f1f1f1"
+        android:textColor="#000000"
+        android:textSize="22sp"
+        android:gravity="bottom"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:text="级别定制"/>
+
+
+    <TextView
+        android:id="@+id/vip_rule_custom_built"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:textSize="18sp"
+        android:inputType="textMultiLine"
+        android:paddingLeft="20dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#f1f1f1"
+        android:textColor="#000000"
+        android:textSize="22sp"
+        android:gravity="bottom"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:text="会员保级制度"/>
+
+    <TextView
+        android:id="@+id/vip_rule_relegation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:textSize="18sp"
+        android:paddingLeft="20dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#f1f1f1"
+        android:textColor="#000000"
+        android:textSize="22sp"
+        android:gravity="bottom"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:text="保级和降级"/>
+
+    <TextView
+        android:id="@+id/vip_rule_demotion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:textSize="18sp"
+        android:paddingLeft="20dp"/>
+
+</LinearLayout>

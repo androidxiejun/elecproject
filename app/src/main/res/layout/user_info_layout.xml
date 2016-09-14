@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f1f1f1">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/user_info_tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#FFFFFF"
+        app:contentInsetStart="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/user_info_back_btn"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/back_button_black" />
+
+            <TextView
+                android:id="@+id/user_info_title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="用户登录"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/user_info_ensure_btn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/user_info_selector" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/user_info_tool_bar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+    <!-- 头像-->
+    <RelativeLayout
+        android:id="@+id/user_head_photo"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="10dp"
+        android:background="#FFFFFF">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="头像"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/user_info_post_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:drawableRight="@drawable/icon_topicdetail_next"
+            android:textSize="16sp" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/user_info_head_image"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/user_info_post_right"
+            android:scaleType="centerCrop"
+            android:src="@drawable/default_avatar"
+            app:civ_border_color="#f1f1f1"
+            app:civ_border_width="1dp" />
+
+    </RelativeLayout>
+
+    <!-- 昵称-->
+    <RelativeLayout
+        android:id="@+id/user_info_nick_name"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#FFFFFF"
+        android:layout_below="@id/user_head_photo"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/user_info_nick_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textSize="16sp"
+            android:layout_marginLeft="10dp"
+            android:text="昵称"/>
+
+
+        <TextView
+            android:id="@+id/user_info_nick_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textSize="16sp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:drawableRight="@drawable/icon_topicdetail_next"/>
+
+        <TextView
+            android:id="@+id/user_info_nick_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/user_info_nick_right"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:textSize="16sp"
+            android:text="18171262635" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/user_info_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#f1f1f1"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@id/user_info_nick_name"/>
+
+
+    <!-- 性别-->
+    <RelativeLayout
+        android:id="@+id/user_info_sex"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#FFFFFF"
+        android:layout_below="@id/user_info_line">
+
+        <TextView
+            android:id="@+id/user_info_sex_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textSize="16sp"
+            android:layout_marginLeft="10dp"
+            android:text="性别"/>
+
+
+        <TextView
+            android:id="@+id/user_info_sex_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textSize="16sp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:drawableRight="@drawable/icon_topicdetail_next"/>
+
+        <TextView
+            android:id="@+id/user_info_sex_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/user_info_sex_right"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:textSize="16sp"
+            android:text="男" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/user_info_line2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#f1f1f1"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@id/user_info_sex"/>
+
+
+    <!-- ID-->
+    <RelativeLayout
+        android:id="@+id/user_info_id"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#FFFFFF"
+        android:layout_below="@id/user_info_line2">
+
+        <TextView
+            android:id="@+id/user_info_id_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textSize="16sp"
+            android:layout_marginLeft="10dp"
+            android:text="ID号"/>
+
+
+        <TextView
+            android:id="@+id/user_info_id_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textSize="16sp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:visibility="invisible"
+            android:drawableRight="@drawable/icon_topicdetail_next"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/user_info_id_right"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:textSize="16sp"
+            android:text="13894726" />
+
+    </RelativeLayout>
+
+
+    <!-- 生日-->
+    <RelativeLayout
+        android:id="@+id/user_info_birthday"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#FFFFFF"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/user_info_id">
+
+        <TextView
+            android:id="@+id/user_info_birthday_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textSize="16sp"
+            android:layout_marginLeft="10dp"
+            android:text="生日"/>
+
+
+        <TextView
+            android:id="@+id/user_info_birthday_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textSize="16sp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:drawableRight="@drawable/icon_topicdetail_next"/>
+
+        <TextView
+            android:id="@+id/user_info_brithday_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/user_info_birthday_right"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:textSize="16sp"
+            android:text="请选择生日" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/user_info_line3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#f1f1f1"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@id/user_info_birthday"/>
+
+
+    <!-- 手机-->
+    <RelativeLayout
+        android:id="@+id/user_info_mobile"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#FFFFFF"
+        android:layout_below="@id/user_info_line3">
+
+        <TextView
+            android:id="@+id/user_info_mobile_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textSize="16sp"
+            android:layout_marginLeft="10dp"
+            android:text="手机"/>
+
+
+        <TextView
+            android:id="@+id/user_info_mobile_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textSize="16sp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:drawableRight="@drawable/icon_topicdetail_next"/>
+
+        <TextView
+            android:id="@+id/user_info_mobile_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/user_info_mobile_right"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:textSize="16sp"
+            android:text="181" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/user_info_line4"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#f1f1f1"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@id/user_info_mobile"/>
+
+
+    <!--邮箱-->
+    <RelativeLayout
+        android:id="@+id/user_info_email"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#FFFFFF"
+        android:layout_below="@id/user_info_line4">
+
+        <TextView
+            android:id="@+id/user_info_email_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textSize="16sp"
+            android:layout_marginLeft="10dp"
+            android:text="邮箱"/>
+
+
+        <TextView
+            android:id="@+id/user_info_email_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textSize="16sp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:drawableRight="@drawable/icon_topicdetail_next"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/user_info_email_right"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:textSize="16sp"
+            android:text="不对外显示" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/user_info_line5"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#f1f1f1"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@id/user_info_email"/>
+
+    <!--地址-->
+    <RelativeLayout
+        android:id="@+id/user_info_address"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#FFFFFF"
+        android:layout_below="@id/user_info_line5">
+
+        <TextView
+            android:id="@+id/user_info_address_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textSize="16sp"
+            android:layout_marginLeft="10dp"
+            android:text="地址"/>
+
+
+        <TextView
+            android:id="@+id/user_info_address_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textSize="16sp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:drawableRight="@drawable/icon_topicdetail_next"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/user_info_address_right"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:textSize="16sp"
+            android:text="请选择地址" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/user_info_line6"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#f1f1f1"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@id/user_info_address"/>
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

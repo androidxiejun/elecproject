@@ -56,16 +56,16 @@ public class FashionTopDetailsBuyAdapter extends BaseAdapter{
         }else {
             buyHolder = (BuyHolder) view.getTag();
         }
-        RecommendDeatilsBean.ResponseBean.DataBean.EmbedItemsBean.ComponentBean componentBean = buyDatas.get(i).getComponent();
-        Picasso.with(context).load(componentBean.getPicUrl()).into(buyHolder.bigIv);
-        buyHolder.titleTv.setText(componentBean.getDescription());
-        buyHolder.priceTv.setText("￥"+componentBean.getPrice());
-        buyHolder.smallPrice.setText("￥"+componentBean.getOrigin_price());
+        RecommendDeatilsBean.ResponseBean.DataBean.EmbedItemsBean.CompBeans compBeans = buyDatas.get(i).getComponent();
+        Picasso.with(context).load(compBeans.getPicUrl()).into(buyHolder.bigIv);
+        buyHolder.titleTv.setText(compBeans.getDescription());
+        buyHolder.priceTv.setText("￥"+compBeans.getPrice());
+        buyHolder.smallPrice.setText("￥"+compBeans.getOrigin_price());
 //        buyHolder.smallPrice.getPaint().setFlags(Paint.ANTI_ALIAS_FLAG);
-        if (!componentBean.getNationalFlag().equals("")){
-            Picasso.with(context).load(componentBean.getNationalFlag()).into(buyHolder.localIv);
+        if (!compBeans.getNationalFlag().equals("")){
+            Picasso.with(context).load(compBeans.getNationalFlag()).into(buyHolder.localIv);
         }
-        buyHolder.localName.setText(componentBean.getCountry());
+        buyHolder.localName.setText(compBeans.getCountry());
         buyHolder.buyBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

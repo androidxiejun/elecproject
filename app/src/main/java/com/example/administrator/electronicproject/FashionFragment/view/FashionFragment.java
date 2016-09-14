@@ -13,25 +13,17 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.FrameLayout;
-import android.widget.ListView;
-import com.example.administrator.electronicproject.FashionFragment.bean.FashionBottonBean;
-import com.example.administrator.electronicproject.FashionFragment.bean.FashionMiddleBean;
-import com.example.administrator.electronicproject.FashionFragment.http.HttpUtils;
+
+import com.example.administrator.electronicproject.FashionFragment.bean.DatasUtils;
 import com.example.administrator.electronicproject.FashionFragment.view.activity.CameraActivity;
 import com.example.administrator.electronicproject.R;
-import com.handmark.pulltorefresh.library.PullToRefreshListView;
-import java.util.ArrayList;
-import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 
 /**
  * Created by Administrator on 2016/9/5.
- *
+ *时尚圈整体的fragment，里面包含三个fragment，分别是关注、推荐和最新
  */
 public class FashionFragment extends Fragment implements View.OnClickListener{
 
@@ -48,6 +40,7 @@ public class FashionFragment extends Fragment implements View.OnClickListener{
     private Fragment mCurrentShowFragment;
     private FashionRecommendFragment mRecommendFragment;
     private FashionNewestFragment mNewestFragment;
+    private FashionAttentionFragment attentionFirst;
 
 
     public static FashionFragment newInstance(){
@@ -85,9 +78,11 @@ public class FashionFragment extends Fragment implements View.OnClickListener{
         toolBarTab.addTab(toolBarTab.newTab().setText("最新"));
         toolBarTab.setTabMode(TabLayout.MODE_FIXED);
 
-        //初始化fragment
+        //初始化fragment，推荐和最新
         mRecommendFragment = FashionRecommendFragment.newInstance();
         mNewestFragment = FashionNewestFragment.newInstance();
+        //关注这里有两个fragment，根据需要加载不同的fragment
+        attentionFirst = FashionAttentionFragment.newInstance();
         //设置默认选中推荐
         toolBarTab.getTabAt(1).select();
         chooseFragment(mRecommendFragment);
@@ -107,7 +102,12 @@ public class FashionFragment extends Fragment implements View.OnClickListener{
             public void onTabSelected(TabLayout.Tab tab) {
                 switch (tab.getPosition()){
                     case 0:
-                        //关注的fragment
+                        //关注的fragment，根据有没有数据加载不同的fragment
+                        if (DatasUtils.attentionList.size() == 0){
+                            chooseFragment(attentionFirst);
+                        }else {
+
+                        }
                         break;
                     case 1:
                         chooseFragment(mRecommendFragment);

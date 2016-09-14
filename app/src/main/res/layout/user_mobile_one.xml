@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/user_mobile_now"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:text="当前绑定手机号:"/>
+
+    <TextView
+        android:id="@+id/user_mobile_now_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/user_mobile_now"
+        android:layout_marginLeft="10dp"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:text="181"/>
+
+    <TextView
+        android:id="@+id/user_mobile_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/user_mobile_now"
+        android:textSize="13sp"
+        android:layout_marginTop="10dp"
+        android:text="换绑前，为确保账号安全，需验证原手机号"/>
+
+    <TextView
+        android:id="@+id/user_mobile_get_code"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/user_mobile_hint"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="获取验证码"
+        android:gravity="center"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/register_shape"/>
+
+    <EditText
+        android:id="@+id/user_mobile_code"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/user_mobile_hint"
+        android:layout_marginTop="10dp"
+        android:layout_toLeftOf="@id/user_mobile_get_code"
+        android:paddingLeft="10dp"
+        android:hint="请输入短信验证码"
+        android:background="@drawable/register_shape"/>
+
+    <TextView
+        android:id="@+id/user_mobile_next"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/user_mobile_code"
+        android:layout_marginTop="10dp"
+        android:text="下一步"
+        android:textColor="#FFFFFF"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:background="@drawable/login_shape_one"/>
+
+</RelativeLayout>

@@ -40,7 +40,7 @@ public class RecommendTopDetailsCommentBean {
     }
 
     public static class DataBean {
-        private String comment_count;
+        private int comment_count;
         private String flag;
         private String appApi;
         /**
@@ -49,11 +49,11 @@ public class RecommendTopDetailsCommentBean {
 
         private List<ItemsBean> items;
 
-        public String getComment_count() {
+        public int getComment_count() {
             return comment_count;
         }
 
-        public void setComment_count(String comment_count) {
+        public void setComment_count(int comment_count) {
             this.comment_count = comment_count;
         }
 

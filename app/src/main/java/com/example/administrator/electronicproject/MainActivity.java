@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.widget.RadioGroup;
 
 import com.example.administrator.electronicproject.ClassifyFragment.ClassifyFragment;
+import com.example.administrator.electronicproject.FashionFragment.bean.DatasUtils;
 import com.example.administrator.electronicproject.FashionFragment.view.FashionFragment;
 import com.example.administrator.electronicproject.MessageFragment.MessageFragment;
 import com.example.administrator.electronicproject.MineFragment.MineFragment;
@@ -30,6 +31,10 @@ public class MainActivity extends AppCompatActivity {
         initFragment();
         chooseRadioBtn();
         chooseFragment(fashionFragment);
+
+        //获取屏幕的宽高
+        DatasUtils.windowHight = getWindowManager().getDefaultDisplay().getHeight();
+        DatasUtils.windowWight = getWindowManager().getDefaultDisplay().getWidth();
     }
 
     /**

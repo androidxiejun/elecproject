@@ -5,45 +5,44 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AbsListView;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 
+import com.example.administrator.electronicproject.FashionFragment.bean.FashionBottonBean;
+import com.example.administrator.electronicproject.FashionFragment.http.HttpUtils;
 import com.example.administrator.electronicproject.FashionFragment.view.activity.FashionTopDetailsActivity;
 import com.example.administrator.electronicproject.R;
-import com.youth.banner.Banner;
-import com.youth.banner.BannerConfig;
-import com.youth.banner.Transformer;
-import com.youth.banner.listener.OnBannerClickListener;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.ButterKnife;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 /**
  * Created by sunbin on 2016/9/6.
- * 时尚圈上部分，PullToRefreshListView中只含有一个banner，用来实现下拉刷新和viewpager效果
+ * 时尚圈主体部分，PullToRefreshListView中只含有一个CustomGridView，用来实现下拉刷新和viewpager效果
  */
-public class FashionListViewAdapter extends BaseAdapter {
-
-    //暂时使用的数据源
-    private int[] id = {469139,469172,469162,469105,468584,469114};
-    private String[] images= new String[] {
-            "http://s3.mingxingyichu.cn/group6/M00/AE/2F/wKgBjVfNQEyASrljAALE86r9d_U589.jpg?imageMogr2?imageMogr2?imageMogr2",
-            "http://s0.mingxingyichu.cn/group5/M00/6B/1E/wKgBf1fOermAemBaAAI8p26-TxQ559.jpg?imageMogr2?imageMogr2?imageMogr2",
-            "http://s6.mingxingyichu.cn/group6/M00/AE/1C/wKgBjFfNL3qAOcPrAAF-KXNTTgo759.jpg?imageMogr2?imageMogr2?imageMogr2",
-            "http://s3.mingxingyichu.cn/group6/M00/AE/55/wKgBjVfOYOuAOkuFAAFS1Oz5VZc216.jpg?imageMogr2?imageMogr2?imageMogr2",
-            "http://s6.mingxingyichu.cn/group6/M00/AE/49/wKgBjFfOXyqATirRAAMEd6BpW94137.jpg?imageMogr2?imageMogr2?imageMogr2"};
+public class FashionListViewAdapter extends BaseAdapter implements FashionGridViewAdapter.GridCallBack {
 
     private Context context;
-    private List<String> stringList;
-    public FashionListViewAdapter(Context context,List<String> stringList){
+    private List<FashionBottonBean.ResponseBean.DataBean.ItemsBean> itemsBeanList = new ArrayList<>();
+    private CustomGridView mCustonGridView;
+    private FashionGridViewAdapter fashionGridViewAdapter;
+    private static int last_item_id = 0;
+    private static int flag = 0;
+    private boolean addMore = false;
+
+
+    public FashionListViewAdapter(Context context) {
         this.context = context;
-        this.stringList = stringList;
     }
 
     @Override
     public int getCount() {
-        return stringList == null ? 0 : stringList.size();
+        return 1;
     }
 
     @Override
@@ -58,35 +57,72 @@ public class FashionListViewAdapter extends BaseAdapter {
 
     @Override
     public View getView(final int i, View view, ViewGroup viewGroup) {
-        FashionListHolder holder = null;
-        if (view == null){
-            view = LayoutInflater.from(context).inflate(R.layout.fashion_top_list_item,viewGroup,false);
-            holder = new FashionListHolder();
-            holder.banner = (Banner) view.findViewById(R.id.fashion_list_item_banner);
-            view.setTag(holder);
-        }else {
-            holder = (FashionListHolder) view.getTag();
-        }
-        holder.banner.setBannerStyle(BannerConfig.CIRCLE_INDICATOR);
-        holder.banner.setIndicatorGravity(BannerConfig.CENTER);
-        //设置banner的默认动画,github查询方法
-//        holder.banner.setBannerAnimation(Transformer.Stack);
-        holder.banner.setBannerAnimation(Transformer.Accordion);
-        holder.banner.setImages(images);
-        holder.banner.setOnBannerClickListener(new OnBannerClickListener() {
-            @Override
-            public void OnBannerClick(int position) {
-                Intent intent = new Intent(context, FashionTopDetailsActivity.class);
-                intent.putExtra("id",id[position]);
-                intent.putExtra("thread_id",id[position]+"");
-                intent.putExtra("come","fashion");
-                context.startActivity(intent);
-            }
-        });
+        view = LayoutInflater.from(context).inflate(R.layout.fashion_recommend_body, viewGroup, false);
+        mCustonGridView = (CustomGridView) view.findViewById(R.id.fashion_pull_custom_grid_view);
+        fashionGridViewAdapter = new FashionGridViewAdapter(context, itemsBeanList,this);
+        mCustonGridView.setAdapter(fashionGridViewAdapter);
+
+        requestMore();
+        initListener();
+
         return view;
     }
 
-    class FashionListHolder{
-        private Banner banner;
+    /**
+     * 时尚圈主体GridView的数据,并刷新下部分GridView的适配器
+     */
+    private void requestMore() {
+        HttpUtils.create().fashionBottomGridDatas(last_item_id, flag).enqueue(new Callback<FashionBottonBean>() {
+            @Override
+            public void onResponse(Call<FashionBottonBean> call, Response<FashionBottonBean> response) {
+                FashionBottonBean.ResponseBean.DataBean dataBean = response.body().getResponse().getData();
+
+                if (!addMore) {
+                    if (itemsBeanList != null) {
+                        itemsBeanList.clear();
+                    }
+                }
+                //更新数据
+                flag = dataBean.getFlag();
+                last_item_id = dataBean.getLast_item_id();
+                itemsBeanList.addAll(dataBean.getItems());//时尚圈主体部分，获取网络数据源
+
+                //更新主体适配器
+                fashionGridViewAdapter.notifyDataSetChanged();
+
+            }
+
+            @Override
+            public void onFailure(Call<FashionBottonBean> call, Throwable t) {
+
+            }
+        });
+
+    }
+        /**
+         * 主体部分GridView的监听事件
+         */
+
+    private void initListener() {
+        /**
+         * 主体gridview的item的点击
+         */
+        mCustonGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent intent = new Intent(context, FashionTopDetailsActivity.class);
+                intent.putExtra("id", itemsBeanList.get(i).getComponent().getId());
+                intent.putExtra("thread_id", itemsBeanList.get(i).getComponent().getId() + "");
+                intent.putExtra("come", "fashion");
+                context.startActivity(intent);
+            }
+        });
+
+    }
+
+
+    @Override
+    public void addMore() {
+        requestMore();
     }
 }

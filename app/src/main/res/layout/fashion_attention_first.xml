@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f7f7f7">
+
+    <TextView
+        android:id="@+id/fashion_attention_welcome_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/atten" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/fashion_attention_welcome_cv"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/icon_my_order"
+        android:layout_above="@id/fashion_attention_welcome_tv"
+        android:layout_marginBottom="30dp"/>
+
+    <Button
+        android:id="@+id/fashion_attention_welcome_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/fashion_attention_welcome_tv"
+        android:background="@drawable/fashion_buy_shape"
+        android:layout_marginTop="50dp"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:text="衣橱达人"/>
+
+</RelativeLayout>

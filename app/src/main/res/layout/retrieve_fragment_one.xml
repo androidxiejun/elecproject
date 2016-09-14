@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/register_fragment_one_user_phone"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/register_tool_line"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:paddingLeft="10dp"
+        android:hint="手机号"
+        android:background="@drawable/register_shape"/>
+
+    <TextView
+        android:id="@+id/register_fragment_one_user_register"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/register_fragment_one_user_phone"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="注册"
+        android:textColor="#FFFFFF"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:background="@drawable/login_shape_one"/>
+
+</RelativeLayout>

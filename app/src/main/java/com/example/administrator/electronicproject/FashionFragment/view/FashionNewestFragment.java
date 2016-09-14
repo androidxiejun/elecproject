@@ -46,7 +46,7 @@ public class FashionNewestFragment extends Fragment {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         context = getContext();
-        fashionNewestGridAdapter = new FashionGridViewAdapter(context,newestGridDatas);
+        fashionNewestGridAdapter = new FashionGridViewAdapter(context,newestGridDatas,null);
     }
 
     @Nullable

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <com.example.administrator.electronicproject.FashionFragment.view.CustomGridView
+        android:id="@+id/top_details_three_images"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:numColumns="1"/>
+
+    <com.example.administrator.electronicproject.FashionFragment.view.CustomGridView
+        android:id="@+id/top_details_three_contents"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/top_details_three_images"
+        android:numColumns="1"/>
+
+    <TextView
+        android:id="@+id/top_details_three_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/top_details_three_contents"
+        android:layout_marginLeft="10dp"
+        android:textSize="13sp"/>
+
+    <RelativeLayout
+        android:id="@+id/top_details_relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@id/top_details_three_date"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/top_details_commercial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_centerInParent="true"
+            android:text="商品链接"/>
+
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="1dp"
+            android:background="#bdbdbd"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/top_details_commercial"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="1dp"
+            android:background="#bdbdbd"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/top_details_commercial"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+    <com.example.administrator.electronicproject.FashionFragment.view.CustomGridView
+        android:id="@+id/top_details_buy_grid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        android:numColumns="1"
+        android:layout_below="@id/top_details_relative_layout"/>
+
+</RelativeLayout>

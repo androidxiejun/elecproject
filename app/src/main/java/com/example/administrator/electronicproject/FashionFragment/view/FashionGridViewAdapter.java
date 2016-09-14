@@ -1,6 +1,7 @@
 package com.example.administrator.electronicproject.FashionFragment.view;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -27,10 +28,14 @@ public class FashionGridViewAdapter extends BaseAdapter {
 
     private Context context;
     private List<FashionBottonBean.ResponseBean.DataBean.ItemsBean> itemsBeanList = new ArrayList<>();
+    private GridCallBack callBack;
 
-    public FashionGridViewAdapter(Context context,List<FashionBottonBean.ResponseBean.DataBean.ItemsBean> itemsBeanList){
+    public FashionGridViewAdapter(Context context
+            ,List<FashionBottonBean.ResponseBean.DataBean.ItemsBean> itemsBeanList
+            ,GridCallBack callBack){
         this.context = context;
         this.itemsBeanList = itemsBeanList;
+        this.callBack = callBack;
     }
 
     @Override
@@ -60,10 +65,13 @@ public class FashionGridViewAdapter extends BaseAdapter {
         }
         FashionBottonBean.ResponseBean.DataBean.ItemsBean itemsBean = itemsBeanList.get(i);
         gridHolder.titleText.setText(itemsBean.getComponent().getContent());
-        gridHolder.nameText.setText(itemsBean.getComponent().getUser().getUsername());
+        if (itemsBean.getComponent().getUser()!=null){
+            gridHolder.nameText.setText(itemsBean.getComponent().getUser().getUsername());
+            Picasso.with(context).load(itemsBean.getComponent().getUser().getUserAvatar()).into(gridHolder.circleImage);
+        }
         gridHolder.collectText.setText(itemsBean.getComponent().getCollect_count());
         Picasso.with(context).load(itemsBean.getComponent().getPics()).into(gridHolder.bigImage);
-        Picasso.with(context).load(itemsBean.getComponent().getUser().getUserAvatar()).into(gridHolder.circleImage);
+
         return itemView;
     }
 
@@ -83,5 +91,9 @@ public class FashionGridViewAdapter extends BaseAdapter {
         TextView nameText;
         @BindView(R.id.fashion_bottom_item_collct_tv)
         TextView collectText;
+    }
+
+    interface GridCallBack{
+        void addMore();
     }
 }

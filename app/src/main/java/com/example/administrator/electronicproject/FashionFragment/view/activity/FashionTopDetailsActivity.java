@@ -17,6 +17,7 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.administrator.electronicproject.FashionFragment.bean.FashionBottonBean;
@@ -84,6 +85,8 @@ public class FashionTopDetailsActivity extends AppCompatActivity implements View
     private TextView headNameTv;
     private TextView headDateTv;
     private TextView headAttentionTv;
+    private RelativeLayout headDetails;
+    private static int user_id = 0;
 
     //底部视图部分
     private View footView;
@@ -105,6 +108,7 @@ public class FashionTopDetailsActivity extends AppCompatActivity implements View
     private static String thread_id = "";
     private String come;
     private FashionTopDetailsBuyAdapter buyAdapter;
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -130,8 +134,8 @@ public class FashionTopDetailsActivity extends AppCompatActivity implements View
             case R.id.recommend_top_details_tool_back_btn:
                 Intent intent = null;
                 if (come.equals("fashion")) {
-                    intent = new Intent(this, MainActivity.class);
-                    startActivity(intent);
+//                    intent = new Intent(this, MainActivity.class);
+//                    startActivity(intent);
                     finish();
                 } else if (come.equals("table")) {
                     intent = new Intent(this, FashionTableDetailsActivity.class);
@@ -142,6 +146,10 @@ public class FashionTopDetailsActivity extends AppCompatActivity implements View
 //                    intent.putExtra("come","this");
 //                    intent.putExtra("thread_id",footDatas.get(i).getComponent().getId()+"");
 //                    startActivity(intent);
+                    finish();
+                }else if (come.equals("expert")){
+                    finish();
+                }else if (come.equals("person")){
                     finish();
                 }
 //                startActivity(intent);
@@ -169,6 +177,20 @@ public class FashionTopDetailsActivity extends AppCompatActivity implements View
             case R.id.top_btn:
                 refreshableView.setSelection(0);
                 break;
+            case R.id.recommend_top_details_head:
+                Intent intent1 = new Intent(this,ExpertPersonActivity.class);
+                intent1.putExtra("userId",user_id);
+                startActivity(intent1);
+                break;
+            case R.id.recommend_top_details_head_attention:
+                //点击进行关注
+                break;
+            case R.id.recommend_top_details_foot_empty:
+                //点击，进入更多评论
+                Intent intentRe = new Intent(this,RecommendActivity.class);
+                intentRe.putExtra("id",id);
+                startActivity(intentRe);
+                break;
         }
     }
 
@@ -191,10 +213,14 @@ public class FashionTopDetailsActivity extends AppCompatActivity implements View
         refreshableView = mListView.getRefreshableView();
         //头部视图
         headView = LayoutInflater.from(this).inflate(R.layout.fashion_top_details_head, null);
+        headDetails = (RelativeLayout) headView.findViewById(R.id.recommend_top_details_head);
         headRecyView = (CircleImageView) headView.findViewById(R.id.recommend_top_details_head_rv);
         headNameTv = (TextView) headView.findViewById(R.id.recommend_top_details_head_name);
         headDateTv = (TextView) headView.findViewById(R.id.recommend_top_details_head_date);
         headAttentionTv = (TextView) headView.findViewById(R.id.recommend_top_details_head_attention);
+
+        headDetails.setOnClickListener(this);
+        headAttentionTv.setOnClickListener(this);
 
         //添加头部
         refreshableView.addHeaderView(headView);
@@ -203,18 +229,20 @@ public class FashionTopDetailsActivity extends AppCompatActivity implements View
         footView = LayoutInflater.from(this).inflate(R.layout.fashion_top_details_foot, null);
         tableLayout = (FlowTagLayout) footView.findViewById(R.id.recommend_top_details_foot_title);
         emptyTv = (TextView) footView.findViewById(R.id.recommend_top_details_foot_empty);
-
+        emptyTv.setOnClickListener(this);
+        //购买
         buyGridView = (CustomGridView) footView.findViewById(R.id.recommend_top_details_buy_grid);
-
+        //评论
         commentGrid = (CustomGridView) footView.findViewById(R.id.recommend_top_details_foot_comment);
         moreGrid = (CustomGridView) footView.findViewById(R.id.recommend_top_details_foot_more);
 
-        footMoreAdapter = new FashionGridViewAdapter(this, footDatas);
+        footMoreAdapter = new FashionGridViewAdapter(this, footDatas,null);
         moreGrid.setAdapter(footMoreAdapter);
 
+        //评论
         commentAdapter = new FashionTopDetailsCommentAdapter(this, commentDatas);
         commentGrid.setAdapter(commentAdapter);
-        commentGrid.setEmptyView(emptyTv);
+//        commentGrid.setEmptyView(emptyTv);
 
         buyAdapter = new FashionTopDetailsBuyAdapter(this,buyDatas);
         buyGridView.setAdapter(buyAdapter);
@@ -237,7 +265,13 @@ public class FashionTopDetailsActivity extends AppCompatActivity implements View
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-
+                //点击，如果是图片，就显示图片，不是无反应
+                String componentType = detailsLists.get(i+1).getComponent().getComponentType();
+                if (componentType.equals("cell")){
+                    Intent intent = new Intent(context,ShowImageActivity.class);
+                    intent.putExtra("url",detailsLists.get(i+1).getComponent().getPicUrl());
+                    startActivity(intent);
+                }
             }
         });
 
@@ -307,6 +341,7 @@ public class FashionTopDetailsActivity extends AppCompatActivity implements View
                 Picasso.with(context).load(user.getUserAvatar()).into(headRecyView);
                 headNameTv.setText(user.getUsername());
                 headDateTv.setText(user.getDatatime());
+                user_id = user.getUserId();
                 headAttentionTv.setTextColor(context.getResources().getColor(R.color.colorAccent));
                 headAttentionTv.setText("+关注");
 
@@ -371,12 +406,18 @@ public class FashionTopDetailsActivity extends AppCompatActivity implements View
         HttpUtils.create().fashionRecommendTopDetailsCommentDatas(id).enqueue(new Callback<RecommendTopDetailsCommentBean>() {
             @Override
             public void onResponse(Call<RecommendTopDetailsCommentBean> call, Response<RecommendTopDetailsCommentBean> response) {
+                RecommendTopDetailsCommentBean.DataBean data = response.body().getData();
                 if (commentDatas != null) {
                     commentDatas.clear();
                 }
-                if (response.body().getData().getItems() != null) {
-                    commentDatas.addAll(response.body().getData().getItems());
+                if (data.getItems() != null) {
+                    commentDatas.addAll(data.getItems());
                     commentAdapter.notifyDataSetChanged();
+                    emptyTv.setText("更多评论"+"("+data.getComment_count()+")");
+                }
+                if (data.getComment_count() == 0 || data.getItems() == null){
+                    emptyTv.setText("暂无评论");
+                    emptyTv.setClickable(false);
                 }
             }
 

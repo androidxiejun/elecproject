@@ -89,7 +89,7 @@ public class FashionTableDetailsActivity extends AppCompatActivity implements Vi
         AnimationDrawable animationDrawable = (AnimationDrawable) emptyIv.getDrawable();
         animationDrawable.start();
         //为PullToRefreshGridView绑定适配器
-        fashionGridViewAdapter = new FashionGridViewAdapter(this,tableDatas);
+        fashionGridViewAdapter = new FashionGridViewAdapter(this,tableDatas,null);
         mGridView.setAdapter(fashionGridViewAdapter);
 
         initDatas();
@@ -144,7 +144,7 @@ public class FashionTableDetailsActivity extends AppCompatActivity implements Vi
     }
 
     /**
-     * 请求标签详情和最新界面的数据
+     * 请求标签 详情和最新 界面的数据
      */
     private void initDatas() {
         HttpUtils.create().fashionTableDeatilsDatas(recommend,flag,tag_id).enqueue(new Callback<FashionBottonBean>() {
@@ -178,8 +178,8 @@ public class FashionTableDetailsActivity extends AppCompatActivity implements Vi
                     startActivity(intent);
                     finish();
                 }else if(come.equals("middle")){
-                    intent = new Intent(this, MainActivity.class);
-                    startActivity(intent);
+//                    intent = new Intent(this, MainActivity.class);
+//                    startActivity(intent);
                     finish();
                 }else if (come.equals("topdetails")){
 //                    intent = new Intent(this,FashionTopDetailsActivity.class);

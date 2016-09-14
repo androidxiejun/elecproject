@@ -10,10 +10,12 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.androidxx.yangjw.imageloader.ImageLoader;
 import com.example.administrator.electronicproject.FashionFragment.bean.RecommendDeatilsBean;
+import com.example.administrator.electronicproject.FashionFragment.view.CustomGridView;
 import com.example.administrator.electronicproject.R;
 
 import java.io.ByteArrayOutputStream;
@@ -26,6 +28,8 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import pl.droidsonroids.gif.GifDrawable;
 import pl.droidsonroids.gif.GifImageView;
 
@@ -38,6 +42,7 @@ public class RecommendTopDetailsAdapter extends BaseAdapter{
     private Context context;
     private final int TYPE_ONE = 1;
     private final int TYPE_TWO = 2;
+    private final int TYPE_THREE = 3;
 
     public RecommendTopDetailsAdapter(Context context,List<RecommendDeatilsBean.ResponseBean.DataBean.ItemsBean> detailsLists){
         this.context = context;
@@ -108,6 +113,32 @@ public class RecommendTopDetailsAdapter extends BaseAdapter{
                     }
                 }
                 break;
+            case TYPE_THREE:
+                TopDetailsHolderThree holderThree = null;
+                RecommendDeatilsBean.ResponseBean.DataBean.ItemsBean.ComponentBean componentBean = detailsLists.get(position).getComponent();
+                List<RecommendDeatilsBean.ResponseBean.DataBean.ItemsBean.ComponentBean.EmbedItemsBean> embedItemsBeen = componentBean.getEmbedItems();
+                List<RecommendDeatilsBean.ResponseBean.DataBean.ItemsBean.ComponentBean.DescriptionBean> description = componentBean.getDescription();
+                List<RecommendDeatilsBean.ResponseBean.DataBean.ItemsBean.ComponentBean.ImgsBean> imgs = componentBean.getImgs();
+                itemView = LayoutInflater.from(context).inflate(R.layout.fashion_recommend_top_details_item_three,viewGroup,false);
+                holderThree = new TopDetailsHolderThree(itemView);
+
+                holderThree.dateTv.setText(componentBean.getPublishDate());
+
+                //图片区域
+                TopDetailsThreeImageAdapter topDetailsThreeImageAdapter = new TopDetailsThreeImageAdapter(context, imgs);
+                holderThree.imagesGrid.setAdapter(topDetailsThreeImageAdapter);
+                //文字区域
+                TopDetailsThreeContentAdapter threeContentAdapter = new TopDetailsThreeContentAdapter(context, description);
+                holderThree.textGrid.setAdapter(threeContentAdapter);
+
+                if (embedItemsBeen.size() < 1){
+                    holderThree.relativeLayout.setVisibility(View.INVISIBLE);
+                }
+                //商品链接
+                TopDetailsThreeShopAdapter topDetailsThreeShopAdapter = new TopDetailsThreeShopAdapter(context, embedItemsBeen);
+                holderThree.buyGrid.setAdapter(topDetailsThreeShopAdapter);
+
+                break;
         }
         return itemView;
     }
@@ -121,6 +152,25 @@ public class RecommendTopDetailsAdapter extends BaseAdapter{
         private GifImageView imageView;
     }
 
+    class TopDetailsHolderThree{
+        public TopDetailsHolderThree(View view){
+            view.setTag(this);
+            ButterKnife.bind(this,view);
+        }
+
+        @BindView(R.id.top_details_three_images)
+        CustomGridView imagesGrid;
+        @BindView(R.id.top_details_three_contents)
+        CustomGridView textGrid;
+        @BindView(R.id.top_details_three_date)
+        TextView dateTv;
+        @BindView(R.id.top_details_relative_layout)
+        RelativeLayout relativeLayout;
+        @BindView(R.id.top_details_buy_grid)
+        CustomGridView buyGrid;
+    }
+
+
     @Override
     public int getItemViewType(int position) {
         String componentType = detailsLists.get(position).getComponent().getComponentType();
@@ -128,6 +178,8 @@ public class RecommendTopDetailsAdapter extends BaseAdapter{
             return TYPE_ONE;
         }else if (componentType.equals("cell")){
             return TYPE_TWO;
+        }else if (componentType.equals("subjectCell")){
+            return TYPE_THREE;
         }
         return super.getItemViewType(position);
     }

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="#00FFFFFF">
+
+    <TextView
+        android:id="@+id/user_info_popup_sex_man"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/login_shape_two"
+        android:textSize="16sp"
+        android:textColor="#FFFFFF"
+        android:gravity="center"
+        android:text="男"/>
+
+    <TextView
+        android:id="@+id/user_info_popup_sex_woman"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/login_shape_two"
+        android:layout_below="@id/user_info_popup_sex_man"
+        android:layout_marginTop="5dp"
+        android:textSize="16sp"
+        android:textColor="#FFFFFF"
+        android:gravity="center"
+        android:text="女"/>
+
+    <TextView
+        android:id="@+id/user_sex_popup_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/login_shape_one"
+        android:layout_below="@id/user_info_popup_sex_woman"
+        android:layout_marginTop="5dp"
+        android:textSize="16sp"
+        android:textColor="#FFFFFF"
+        android:gravity="center"
+        android:text="取消"/>
+
+</RelativeLayout>

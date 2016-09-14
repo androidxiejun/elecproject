@@ -20,7 +20,7 @@
             android:layout_marginTop="30dp"
             android:layout_marginBottom="30dp"
             android:gravity="center_vertical" />
-
+        <!-- 购买-->
         <com.example.administrator.electronicproject.FashionFragment.view.CustomGridView
             android:id="@+id/recommend_top_details_buy_grid"
             android:layout_width="match_parent"
@@ -41,6 +41,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/recommend_top_details_foot_rl">
 
+        <!--评论 -->
         <com.example.administrator.electronicproject.FashionFragment.view.CustomGridView
             android:id="@+id/recommend_top_details_foot_comment"
             android:layout_width="match_parent"
@@ -53,9 +54,9 @@
             android:id="@+id/recommend_top_details_foot_empty"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:layout_marginTop="10dp"
             android:background="#FFFFFF"
             android:gravity="center_vertical"
+            android:layout_below="@id/recommend_top_details_foot_comment"
             android:paddingLeft="15dp"
             android:text="暂无评论"
             android:textColor="#000000"

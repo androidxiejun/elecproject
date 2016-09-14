@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00000000"
+    android:padding="10dp">
+
+    <RelativeLayout
+        android:id="@+id/setting_recommend_popup"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:background="@drawable/list_wrap_white">
+
+        <TextView
+            android:id="@+id/setting_recommend_text"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:text="分享到"
+            android:layout_marginTop="10dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/setting_recommend_text"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/setting_wechat"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:drawableTop="@drawable/share_to_weixin"
+                android:text="微信好友"/>
+
+            <TextView
+                android:id="@+id/setting_friends"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:drawableTop="@drawable/share_to_weixin_pengyouquan"
+                android:text="朋友圈"/>
+            <TextView
+                android:id="@+id/setting_qq"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:drawableTop="@drawable/share_to_qq_haoyou"
+                android:text="QQ好友"/>
+            <TextView
+                android:id="@+id/setting_qq_rome"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:drawableTop="@drawable/share_to_qq_zone"
+                android:text="QQ空间"/>
+            <TextView
+                android:id="@+id/setting_weibo"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:drawableTop="@drawable/share_to_weibo"
+                android:text="新浪微博"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/popup_cancle"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/list_wrap_white"
+        android:layout_below="@id/setting_recommend_popup"
+        android:gravity="center"
+        android:text="取消"
+        android:layout_marginTop="10dp"/>
+
+</RelativeLayout>
