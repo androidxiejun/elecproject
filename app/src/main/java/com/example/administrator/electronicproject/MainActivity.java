@@ -1,11 +1,15 @@
 package com.example.administrator.electronicproject;
 
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+import android.view.KeyEvent;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 import com.example.administrator.electronicproject.ClassifyFragment.ClassifyFragment;
 import com.example.administrator.electronicproject.FashionFragment.bean.DatasUtils;
@@ -23,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     private MineFragment mineFragment;
     private FragmentManager manager;
     private Fragment mCurrentShowFragment;
+    private boolean isExit=false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +42,38 @@ public class MainActivity extends AppCompatActivity {
         DatasUtils.windowWight = getWindowManager().getDefaultDisplay().getWidth();
     }
 
+   private Handler mHandler=new Handler(){
+       @Override
+       public void handleMessage(Message msg) {
+           isExit=false;
+       }
+   };
+
+    /**
+     * 点击两次再退出程序
+     * @param keyCode
+     * @param event
+     * @return
+     */
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if(keyCode==KeyEvent.KEYCODE_BACK){
+            exit();
+            return  false;
+        }
+        return super.onKeyDown(keyCode, event);
+    }
+    private void exit(){
+        if(isExit){
+            finish();
+            System.exit(0);
+        }else{
+            isExit=true;
+            Toast.makeText(MainActivity.this, "再按一次，退出明星衣橱", Toast.LENGTH_SHORT).show();
+            mHandler.sendEmptyMessageDelayed(0,2000);
+
+        }
+    }
     /**
      * 对fragment进行初始化
      */

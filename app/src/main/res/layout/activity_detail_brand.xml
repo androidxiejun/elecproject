@@ -68,6 +68,7 @@
                     android:id="@+id/detail_brand_tab_layout"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
+                    app:tabSelectedTextColor="@color/colorAccent"
                     app:tabMode="fixed">
                     <android.support.design.widget.TabItem
                         android:layout_width="wrap_content"

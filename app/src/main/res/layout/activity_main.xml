@@ -23,12 +23,16 @@
             android:layout_height="wrap_content"
             android:drawableTop="@drawable/home_colectoe"
             android:button="@null"
+            android:text="商城"
+            android:gravity="center_horizontal"
             android:layout_weight="1"/>
         <RadioButton
             android:id="@+id/radio_button_divider"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:button="@null"
+            android:text="分类"
+            android:gravity="center_horizontal"
             android:drawableTop="@drawable/divider_colectoe"
             android:layout_weight="1"/>
         <RadioButton
@@ -36,6 +40,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:button="@null"
+            android:text="时尚圈"
+            android:gravity="center_horizontal"
             android:drawableTop="@drawable/fashion_colectoe"
             android:layout_weight="1"/>
         <RadioButton
@@ -43,6 +49,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:button="@null"
+            android:text="消息"
+            android:gravity="center_horizontal"
             android:drawableTop="@drawable/message_colectoe"
             android:layout_weight="1"/>
         <RadioButton
@@ -50,6 +58,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:button="@null"
+            android:text="我的"
+            android:gravity="center_horizontal"
             android:drawableTop="@drawable/mine_colectoe"
             android:layout_weight="1"/>
     </RadioGroup>

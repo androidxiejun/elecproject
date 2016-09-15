@@ -17,6 +17,7 @@ public class DetailBrandActivity extends AppCompatActivity {
     private BrandDetailsFragment fragment;
     private FragmentManager manager;
     public static String imgUrl,me;
+    public static  String ID;
     public static final String SHARE_URL="http://m.hichao.com/app/templates/brand_detail.html?id=3051";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,8 +30,7 @@ public class DetailBrandActivity extends AppCompatActivity {
 
     private void initIntent() {
         Intent intent = getIntent();
-        imgUrl=intent.getStringExtra("imgUrl");
-        me=intent.getStringExtra("name");
+        ID=intent.getStringExtra("business_id");
     }
 
     private void initFragment() {

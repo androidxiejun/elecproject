@@ -41,7 +41,7 @@ public class ImageAndTextFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view=inflater.inflate(R.layout.activity_image_and_text,container,false);
         type="goodsdetail";
-        id=PurchaseDetails.sourceId;
+        id=PurchaseDetails.source_id;
         initView(view);
         initWeb();
         return view;

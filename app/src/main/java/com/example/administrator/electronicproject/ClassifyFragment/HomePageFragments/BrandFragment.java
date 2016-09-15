@@ -102,6 +102,7 @@ public class BrandFragment extends Fragment implements ICallback{
                     JSONObject jsonObject3=jsonArray1.getJSONObject(j);
                     JSONObject jsonObject4=jsonObject3.getJSONObject("component");
                     pageInfo.storeUrl=jsonObject4.getString("picUrl");
+                    pageInfo.storeId=jsonObject4.getString("id");
                     infoList.add(pageInfo);
                 }
                 brandMap.put(i,infoList);

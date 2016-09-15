@@ -8,13 +8,14 @@
     android:gravity="center_vertical"
     android:orientation="horizontal">
    <Button
+       android:id="@+id/store_sweep_btn"
        android:layout_width="30dp"
        android:layout_height="30dp"
        android:layout_marginLeft="10dp"
        android:background="@drawable/scanner"
        android:layout_centerVertical="true"/>
     <Button
-        android:id="@+id/classify_search_btn"
+        android:id="@+id/store_search_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/search_btn_selector"
@@ -25,6 +26,7 @@
         android:layout_margin="10dp"
         android:layout_weight="1"/>
     <Button
+        android:id="@+id/store_shopping_btn"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_marginRight="10dp"

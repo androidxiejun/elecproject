@@ -20,15 +20,30 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
-                <!--<ImageView-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="300dp"-->
-                <!--android:src="@drawable/test"-->
-                    <!--android:scaleType="fitXY"/>-->
-                <android.support.v4.view.ViewPager
-                    android:id="@+id/store_home_view_pager"
+                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="300dp"/>
+                    android:layout_height="300dp">
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/store_home_view_pager"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"/>
+                    <LinearLayout
+                        android:id="@+id/store_home_linear_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:gravity="bottom|center_horizontal"
+                        android:layout_marginBottom="30dp">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/indecator_selector"/>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/indecator_selector"/>
+                    </LinearLayout>
+                </RelativeLayout>
                 <com.example.administrator.electronicproject.StoreFragment.CustomGridView.CustomGridView
                     android:id="@+id/store_home_grid_view"
                     android:layout_width="match_parent"
@@ -37,7 +52,8 @@
                 <android.support.design.widget.TabLayout
                     android:id="@+id/store_home_grid_tab_layout"
                     android:layout_width="match_parent"
-                    android:layout_height="50dp">
+                    android:layout_height="50dp"
+                    app:tabSelectedTextColor="@color/colorAccent">
                     <android.support.design.widget.TabItem
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"

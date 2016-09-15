@@ -4,6 +4,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Paint;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -17,15 +19,18 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.administrator.electronicproject.PurchaseDetails.PurchaseDetails;
 import com.example.administrator.electronicproject.R;
 import com.example.administrator.electronicproject.StoreFragment.CustomGridView.CustomGridView;
 import com.example.administrator.electronicproject.StoreFragment.GlobalActivity.GlobalActivity;
+import com.example.administrator.electronicproject.StoreFragment.SnapActivity.SnapActivity;
 import com.example.administrator.electronicproject.StoreFragment.StoreHomePageBean.StoreHomePageBean;
 import com.example.administrator.electronicproject.StoreFragment.StoreHomePageBean.StoreHomePageNextBean;
 import com.example.administrator.electronicproject.StoreFragment.StoreHomePageUtils.StoreHttpUtils;
+import com.example.administrator.electronicproject.StoreFragment.SubjectActvity.ProjectActivity;
 import com.marshalchen.ultimaterecyclerview.UltimateRecyclerView;
 import com.marshalchen.ultimaterecyclerview.UltimateRecyclerviewViewHolder;
 import com.marshalchen.ultimaterecyclerview.UltimateViewAdapter;
@@ -50,16 +55,21 @@ public class StoreHomePageFragment extends Fragment {
     private MyGridAdapter gridAdapter;
     private StringAdapter adapter;
     private TabLayout mTabLayout;
+    private int childCount;
+    private int index;
+    private LinearLayout linearLayout;
+    private LinearLayout mIndicatorLayout;
     private UltimateRecyclerView recyclerView;
     private static StoreHomePageBean.DataBean dataBean;
     public static final String URL_PATH = "http://api-v2.mall.hichao.com";
-    private List<Integer> viewPagerList = new ArrayList<>();
     private List<StoreHomePageNextBean.DataBean.ItemsBean> items;
     private List<StoreHomePageBean.DataBean> beanList = new ArrayList<>();
-    private  List<StoreHomePageBean.DataBean.RegionPicturesBean> region_pictures;
-    private  List<StoreHomePageBean.DataBean.RegionSkusBean> region_skus;
+    private List<StoreHomePageBean.DataBean.RegionPicturesBean> region_pictures;
+    private List<StoreHomePageBean.DataBean.RegionSkusBean> region_skus;
     private StoreHomePageNextBean.DataBean.ItemsBean.ComponentBean component;
-
+    public static final String PIC_URL="http://s0.mingxingyichu.cn/group5/M00/9D/2B/wKgBfVfSNrWAShWUAAMy_sVfjOU578.jpg?imageMogr2?imageMogr2?imageMogr2";
+    public static final String PIC_URL2="http://s0.mingxingyichu.cn/group6/M00/B4/FB/wKgBjVfROi6AKRcVAASlcb3jFOI741.jpg?imageMogr2?imageMogr2?imageMogr2";
+    private List<String>urlList=new ArrayList<>();
     public static StoreHomePageFragment newInstance() {
         return new StoreHomePageFragment();
     }
@@ -75,10 +85,35 @@ public class StoreHomePageFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.store_home_page_fargment_layout, container, false);
         initInfo("");
+        initData();
         initListInfo(1);
-        initPagerData();
         initView(view);
+        controlIndicator(0);
+        mViewPager.setCurrentItem(0);
+        mHandler.sendEmptyMessageDelayed(1,2000);
         return view;
+    }
+
+    private void initData() {
+        urlList.add(PIC_URL2);
+        urlList.add(PIC_URL);
+    }
+
+    private Handler mHandler =new Handler(){
+       @Override
+       public void handleMessage(Message msg) {
+           mViewPager.setCurrentItem(index++%2);
+           mHandler.sendEmptyMessageDelayed(1,4000);
+       }
+   };
+    private void controlIndicator(int index) {
+        ImageView view = (ImageView) mIndicatorLayout.getChildAt(index);
+        //初始化所有的ImageView的enable属性为false
+        for (int i = 0; i < childCount; i++) {
+            ImageView childView = (ImageView) mIndicatorLayout.getChildAt(i);
+            childView.setEnabled(false);
+        }
+        view.setEnabled(true);
     }
 
     private void initListInfo(int index) {
@@ -121,12 +156,9 @@ public class StoreHomePageFragment extends Fragment {
     }
 
 
-    private void initPagerData() {
-        viewPagerList.add(R.drawable.test);
-        viewPagerList.add(R.drawable.test);
-    }
-
     private void initView(View view) {
+        mIndicatorLayout= (LinearLayout) view.findViewById(R.id.store_home_linear_layout);
+        childCount=mIndicatorLayout.getChildCount();
         mTabLayout = (TabLayout) view.findViewById(R.id.store_home_grid_tab_layout);
         recyclerView = (UltimateRecyclerView) view.findViewById(R.id.recycler_view);
         recyclerView.setLayoutManager(new GridLayoutManager(context, 2));
@@ -136,6 +168,22 @@ public class StoreHomePageFragment extends Fragment {
         mViewPager.setAdapter(pagerAdapter);
         gridAdapter = new MyGridAdapter();
         mGridView.setAdapter(gridAdapter);
+        mViewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                controlIndicator(position);
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
         mTabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
@@ -184,10 +232,28 @@ public class StoreHomePageFragment extends Fragment {
         }
 
         @Override
-        public Object instantiateItem(ViewGroup container, int position) {
+        public Object instantiateItem(ViewGroup container, final int position) {
             ImageView imageView = new ImageView(context);
-            imageView.setImageResource(viewPagerList.get(position));
+            Picasso.with(context).load(urlList.get(position)).into(imageView);
             imageView.setScaleType(ImageView.ScaleType.FIT_XY);
+            imageView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    switch (position){
+                        case 0:
+                            Intent intent = new Intent(context, ProjectActivity.class);
+                            String id = "14816";
+                            intent.putExtra("topic_id", id);
+                            startActivity(intent);
+                            break;
+                        case 1:
+                            Intent intent1=new Intent(context, SnapActivity.class);
+                            startActivity(intent1);
+                            //TODO
+                            break;
+                    }
+                }
+            });
             container.addView(imageView);
             return imageView;
         }
@@ -203,6 +269,15 @@ public class StoreHomePageFragment extends Fragment {
      */
 
     class MyGridAdapter extends BaseAdapter {
+        private void controlIndicator2(int index) {
+            ImageView view = (ImageView) linearLayout.getChildAt(index);
+            //初始化所有的ImageView的enable属性为false
+            for (int i = 0; i < 5; i++) {
+                ImageView childView = (ImageView) linearLayout.getChildAt(i);
+                childView.setEnabled(false);
+            }
+            view.setEnabled(true);
+        }
         @Override
         public int getCount() {
             return beanList.size();
@@ -219,7 +294,7 @@ public class StoreHomePageFragment extends Fragment {
         }
 
         @Override
-        public View getView(int i, View containView, ViewGroup viewGroup) {
+        public View getView(final int i, View containView, ViewGroup viewGroup) {
             dataBean = beanList.get(i);
             //图片的数组
             List<StoreHomePageBean.DataBean.RegionNameBean> region_name = dataBean.getRegion_name();
@@ -239,8 +314,10 @@ public class StoreHomePageFragment extends Fragment {
             } else {
                 viewHolder = (ViewHolder) view.getTag();
             }
+
+            final StoreHomePageBean.DataBean.RegionNameBean.ComponentBean component2 = region_name.get(0).getComponent();
             viewHolder.imageView.setImageResource(R.mipmap.ic_launcher);
-            Picasso.with(context).load(region_name.get(0).getComponent().getPicUrl()).into(viewHolder.imageView);
+            Picasso.with(context).load(component2.getPicUrl()).into(viewHolder.imageView);
             viewHolder.viewPager.setAdapter(viewPagerAdapter);
             LinearLayoutManager layoutManager = new LinearLayoutManager(context);
             layoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
@@ -249,8 +326,25 @@ public class StoreHomePageFragment extends Fragment {
             viewHolder.imageView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent intent=new Intent(context, GlobalActivity.class);
+                    Intent intent = new Intent(context, GlobalActivity.class);
+                    intent.putExtra("china_id",component2.getAction().getId());
                     startActivity(intent);
+                }
+            });
+            viewHolder.viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+                @Override
+                public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+                }
+
+                @Override
+                public void onPageSelected(int position) {
+                    controlIndicator2(position);
+                }
+
+                @Override
+                public void onPageScrollStateChanged(int state) {
+
                 }
             });
             return view;
@@ -265,6 +359,7 @@ public class StoreHomePageFragment extends Fragment {
                 this.imageView = (ImageView) view.findViewById(R.id.store_grid_view_img);
                 this.viewPager = (ViewPager) view.findViewById(R.id.store_grid_view_view_pager);
                 this.recyclerView = (RecyclerView) view.findViewById(R.id.store_grid_view_recycleview);
+                linearLayout= (LinearLayout) view.findViewById(R.id.store_grid_view_linear_layout);
                 view.setTag(this);
             }
         }
@@ -274,8 +369,9 @@ public class StoreHomePageFragment extends Fragment {
          */
         class MyGridViewPagerAdapter extends PagerAdapter {
             private List<StoreHomePageBean.DataBean.RegionPicturesBean> region_picture;
-            public MyGridViewPagerAdapter(List<StoreHomePageBean.DataBean.RegionPicturesBean> region_pictures){
-                this.region_picture=region_pictures;
+
+            public MyGridViewPagerAdapter(List<StoreHomePageBean.DataBean.RegionPicturesBean> region_pictures) {
+                this.region_picture = region_pictures;
             }
 
             @Override
@@ -285,16 +381,27 @@ public class StoreHomePageFragment extends Fragment {
 
             @Override
             public boolean isViewFromObject(View view, Object object) {
-                return view==object;
+                return view == object;
             }
 
             @Override
             public Object instantiateItem(ViewGroup container, int position) {
+                final StoreHomePageBean.DataBean.RegionPicturesBean.ComponentBean component = region_picture.get(position).getComponent();
+//                View view=LayoutInflater.from(context).inflate(R.layout.store_home_list_view_view_pager_item,container,false);
+//                ImageView imageView= (ImageView) view.findViewById(R.id.store_home_list_view_view_pager_img);
                 ImageView imageView = new ImageView(context);
-                imageView.setImageResource(R.mipmap.ic_launcher);
                 imageView.setScaleType(ImageView.ScaleType.FIT_XY);
-                Picasso.with(context).load(region_picture.get(position).getComponent().getPicUrl()).into(imageView);
+                Picasso.with(context).load(component.getPicUrl()).into(imageView);
                 container.addView(imageView);
+                imageView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(context, ProjectActivity.class);
+                        String id = component.getAction().getId();
+                        intent.putExtra("topic_id", id);
+                        startActivity(intent);
+                    }
+                });
                 return imageView;
             }
 
@@ -320,11 +427,14 @@ public class StoreHomePageFragment extends Fragment {
                 originPrice = (TextView) itemView.findViewById(R.id.store_grid_view_recycleview_originprice);
             }
         }
+
         class MyGridRecycleViewAdapter extends RecyclerView.Adapter<RecycleViewHolder> {
-            private  List<StoreHomePageBean.DataBean.RegionSkusBean> region_sku;
-               public MyGridRecycleViewAdapter(List<StoreHomePageBean.DataBean.RegionSkusBean> region_sku){
-                   this.region_sku=region_sku;
-               }
+            private List<StoreHomePageBean.DataBean.RegionSkusBean> region_sku;
+
+            public MyGridRecycleViewAdapter(List<StoreHomePageBean.DataBean.RegionSkusBean> region_sku) {
+                this.region_sku = region_sku;
+            }
+
             @Override
             public RecycleViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
                 View view = LayoutInflater.from(context).inflate(R.layout.store_grid_view_recycleview_item, parent, false);
@@ -333,13 +443,21 @@ public class StoreHomePageFragment extends Fragment {
 
             @Override
             public void onBindViewHolder(RecycleViewHolder holder, int position) {
-                StoreHomePageBean.DataBean.RegionSkusBean.ComponentBean component = region_sku.get(position).getComponent();
+                final StoreHomePageBean.DataBean.RegionSkusBean.ComponentBean component = region_sku.get(position).getComponent();
                 Picasso.with(context).load(component.getPicUrl()).into(holder.imageView);
                 holder.imageView.setImageResource(R.mipmap.ic_launcher);
                 holder.textView.setText(component.getTitle());
                 holder.currentPrice.setText("￥" + component.getPrice());
                 holder.originPrice.setText("￥" + component.getOrigin_price());
                 holder.originPrice.getPaint().setFlags(Paint.STRIKE_THRU_TEXT_FLAG);
+                holder.imageView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(context, PurchaseDetails.class);
+                        intent.putExtra("source_id",component.getAction().getSourceId());
+                        startActivity(intent);
+                    }
+                });
             }
 
             @Override
@@ -416,23 +534,20 @@ public class StoreHomePageFragment extends Fragment {
                 holder.countryName.setText(component.getCountry());
                 holder.originPrice.getPaint().setFlags(Paint.STRIKE_THRU_TEXT_FLAG);
                 Picasso.with(context).load(component.getPicUrl()).into(holder.imageView);
-                if(!component.getNationalFlag().equals("")){
+                if (!component.getNationalFlag().equals("")) {
                     Picasso.with(context).load(component.getNationalFlag()).into(holder.circleImageView);
                 }
                 holder.imageView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        int position1 = holder.getPosition();
-                        component = items.get(position1).getComponent();
+//                        int position1 = holder.getPosition();
+                        component = items.get(position + 1).getComponent();
+//                        items.get(position).getComponent().
                         Intent intent = new Intent(context, PurchaseDetails.class);
-                        intent.putExtra("currentPrice", component.getPrice());
-                        intent.putExtra("originPrice", component.getOrigin_price());
-                        intent.putExtra("title", component.getDescription());
-                        intent.putExtra("picUrl", component.getPicUrl());
+                        intent.putExtra("source_id","2429284");
                         startActivity(intent);
                     }
                 });
-                //TODO
             }
         }
 

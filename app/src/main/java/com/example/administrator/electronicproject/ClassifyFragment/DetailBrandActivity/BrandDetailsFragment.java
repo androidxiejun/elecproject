@@ -6,6 +6,7 @@ import android.graphics.Paint;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -26,6 +27,7 @@ import com.marshalchen.ultimaterecyclerview.UltimateRecyclerviewViewHolder;
 import com.marshalchen.ultimaterecyclerview.UltimateViewAdapter;
 import com.squareup.picasso.Picasso;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Call;
@@ -44,7 +46,8 @@ public class BrandDetailsFragment extends Fragment{
     private TextView topText;
     private Button focuseBtn;
     private boolean isChecked=false;
-    private List<BrandDetailBean.ResponseBean.DataBean.ItemsBean> items;
+    private TabLayout mTabLayout;
+    private List<BrandDetailBean.ResponseBean.DataBean.ItemsBean> items=new ArrayList<>();
     private BrandDetailBean.ResponseBean.DataBean.ItemsBean.ComponentBean component;
     private BrandDetailTopBean.ResponseBean.DataBean.BusinessBean business;
     public static BrandDetailsFragment newInstance(){
@@ -77,7 +80,7 @@ public class BrandDetailsFragment extends Fragment{
 //                },2000);
 //            }
 //        });
-        getInfo();
+        getInfo(DetailBrandActivity.ID,1);
         return view;
     }
 
@@ -100,18 +103,51 @@ public class BrandDetailsFragment extends Fragment{
     }
 
     private void initView(View view) {
+        mTabLayout= (TabLayout) view.findViewById(R.id.detail_brand_tab_layout);
         topImage= (ImageView) view.findViewById(R.id.detail_brand_img_view);
         topText= (TextView) view.findViewById(R.id.detail_brand_text_view);
         topLogo= (ImageView) view.findViewById(R.id.detail_brand_logo);
         focuseBtn= (Button) view.findViewById(R.id.detail_focuse_btn);
+        mTabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                switch (tab.getPosition()){
+                    case 0:
+                        getInfo(DetailBrandActivity.ID,1);
+                        break;
+                    case 1:
+                        getInfo(DetailBrandActivity.ID,5);
+                        break;
+                    case 2:
+                        getInfo(DetailBrandActivity.ID,3);
+                        break;
+                    case 3:
+                        getInfo(DetailBrandActivity.ID,4);
+                        break;
+                    case 4:
+//                        getInfo(DetailBrandActivity.ID,1);
+                        break;
+                }
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
     }
 
     /**
      * 进行网络数据加载，然后绑定适配器，刷新视图
      */
-    private void getInfo(){
+    private void getInfo(String business_id,int sort){
         //加载下部分视图数据
-        BrandDetailHttpUtils.create().queryBean().enqueue(new Callback<BrandDetailBean>() {
+        BrandDetailHttpUtils.create().queryBean(business_id,sort).enqueue(new Callback<BrandDetailBean>() {
             @Override
             public void onResponse(Call<BrandDetailBean> call, Response<BrandDetailBean> response) {
                 items= response.body().getResponse().getData().getItems();
@@ -125,15 +161,12 @@ public class BrandDetailsFragment extends Fragment{
             }
         });
         //加载上部分视图数据
-        BrandDetailHttpUtils.create().queryTopBean().enqueue(new Callback<BrandDetailTopBean>() {
+        BrandDetailHttpUtils.create().queryTopBean(business_id).enqueue(new Callback<BrandDetailTopBean>() {
             @Override
             public void onResponse(Call<BrandDetailTopBean> call, Response<BrandDetailTopBean> response) {
                 business= response.body().getResponse().getData().getBusiness();
-                if(!DetailBrandActivity.me.equals("xiejun")){
-                    Picasso.with(context).load(DetailBrandActivity.imgUrl).into(topImage);
-                }else{
+//                    Picasso.with(context).load(DetailBrandActivity.imgUrl).into(topImage);
                     Picasso.with(context).load(business.getBusiness_banner_url()).into(topImage);
-                }
                 topText.setText(business.getBusiness_brief());
                 Picasso.with(context).load(business.getBusiness_image()).into(topLogo);
             }
@@ -207,10 +240,8 @@ public class BrandDetailsFragment extends Fragment{
                         int position1 = holder.getPosition();
                         component=items.get(position1).getComponent();
                         Intent intent=new Intent(context, PurchaseDetails.class);
-                        intent.putExtra("currentPrice",component.getPrice());
-                        intent.putExtra("originPrice",component.getOrigin_price());
-                        intent.putExtra("title",component.getDescription());
-                        intent.putExtra("picUrl",component.getPicUrl());
+                        String sourceId = component.getAction().getSourceId();
+                        intent.putExtra("source_id",sourceId);
                         startActivity(intent);
                     }
                 });

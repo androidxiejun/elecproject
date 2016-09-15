@@ -58,13 +58,13 @@
         android:layout_below="@id/purchase_detail_toolbar"/>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="50dp"
         android:orientation="horizontal">
         <Button
             android:id="@+id/purchase_detail_kefu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:drawableTop="@drawable/kefu"
+            android:drawableTop="@drawable/ic_link_customer_service"
             android:background="@color/colorWhite"
             android:layout_weight="2"
             android:text="客服"/>
@@ -72,7 +72,7 @@
             android:id="@+id/purchase_detail_brand"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:drawableTop="@drawable/brand"
+            android:drawableTop="@drawable/ic_link_customer_service"
             android:background="@color/colorWhite"
             android:layout_weight="2"
             android:text="品牌"/>
@@ -80,11 +80,12 @@
             android:id="@+id/purchase_detail_collect"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:drawableTop="@drawable/icon_like"
+            android:drawableTop="@drawable/collect_selector"
             android:background="@color/colorWhite"
             android:layout_weight="2"
             android:text="收藏"/>
         <Button
+            android:id="@+id/purchase_detail_add_car"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:background="@color/colorBlack"
@@ -92,6 +93,7 @@
             android:layout_weight="1"
             android:text="加入购物车"/>
         <Button
+            android:id="@+id/purchase_detail_buy_now"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:background="@color/colorAccent"

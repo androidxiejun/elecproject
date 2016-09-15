@@ -8,7 +8,6 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
@@ -44,7 +43,6 @@ public class BrandRightFragment extends Fragment implements CallBack{
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view=inflater.inflate(R.layout.classify_brand_right_grid_view_layout,container,false);
         initView(view);
-
         return view;
 }
 
@@ -52,14 +50,6 @@ public class BrandRightFragment extends Fragment implements CallBack{
         mGridView= (GridView) view.findViewById(R.id.classify_grand_grid_view);
         brandGridAdapter=new BrandGridAdapter();
         mGridView.setAdapter(brandGridAdapter);
-        mGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Intent intent=new Intent(context, DetailBrandActivity.class);
-                intent.putExtra("name","xiejun");
-                startActivity(intent);
-            }
-        });
     }
 
     @Override
@@ -87,7 +77,7 @@ public class BrandRightFragment extends Fragment implements CallBack{
         }
 
         @Override
-        public View getView(int i, View containView, ViewGroup viewGroup) {
+        public View getView(final int i, View containView, ViewGroup viewGroup) {
             View view=containView;
             ViewHolder viewHolder=null;
             if(view==null){
@@ -98,6 +88,14 @@ public class BrandRightFragment extends Fragment implements CallBack{
             }
             viewHolder.imageView.setImageResource(R.mipmap.ic_launcher);
             Picasso.with(context).load(homePageInfos.get(i).storeUrl).into(viewHolder.imageView);
+           viewHolder.imageView.setOnClickListener(new View.OnClickListener() {
+               @Override
+               public void onClick(View view) {
+                   Intent intent=new Intent(context, DetailBrandActivity.class);
+                   intent.putExtra("business_id",homePageInfos.get(i).storeId);
+                   startActivity(intent);
+               }
+           });
             return view;
         }
         class ViewHolder {

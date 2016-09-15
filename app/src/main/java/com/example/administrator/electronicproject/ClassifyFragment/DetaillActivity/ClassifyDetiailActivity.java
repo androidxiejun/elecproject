@@ -100,10 +100,11 @@ public class ClassifyDetiailActivity extends AppCompatActivity implements View.O
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 component=items.get(i).getComponent();
                 Intent intent=new Intent(context, PurchaseDetails.class);
-                intent.putExtra("currentPrice",component.getPrice());
-                intent.putExtra("originPrice",component.getOrigin_price());
-                intent.putExtra("title",component.getDescription());
-                intent.putExtra("picUrl",component.getPicUrl());
+//                intent.putExtra("currentPrice",component.getPrice());
+//                intent.putExtra("originPrice",component.getOrigin_price());
+//                intent.putExtra("title",component.getDescription());
+//                intent.putExtra("picUrl",component.getPicUrl());
+//                intent.putExtra("source_id",component.getAction().getSourceId());
                 intent.putExtra("source_id",component.getAction().getSourceId());
                 startActivity(intent);
             }

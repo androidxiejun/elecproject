@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
@@ -12,13 +13,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".MainActivity"></activity>
 
         <!-- 相机调用界面 -->
         <activity android:name=".FashionFragment.view.activity.CameraActivity" android:launchMode="singleTask"/>
@@ -81,7 +76,21 @@
         <activity android:name=".ClassifyFragment.DetailBrandActivity.DetailBrandActivity" />
         <activity android:name=".PurchaseDetails.PurchaseDetails" />
         <activity android:name=".PurchaseDetails.CommonActivity.CommonActivity" />
-        <activity android:name=".StoreFragment.GlobalActivity.GlobalActivity"></activity>
+        <activity android:name=".StoreFragment.GlobalActivity.GlobalActivity" />
+        <activity android:name=".StoreFragment.SubjectActvity.ProjectActivity" />
+        <activity android:name=".StoreFragment.SubjectActvity.BigImageActivity.BigImageActvity" />
+        <activity android:name=".SweepQrCode.TakePictureActivity" />
+        <activity android:name=".StoreFragment.SnapActivity.SnapActivity" />
+        <activity android:name=".StoreFragment.SnapActivity.SnapTimeActivity" />
+        <activity android:name=".PurchaseDetails.PurchaseConfirMationActivity.PurchaseFirmationActivity" />
+        <activity android:name=".WelcomeActivity.WelcomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".WelcomeActivity.WelcomeActivityTwo"></activity>
     </application>
 
 </manifest>

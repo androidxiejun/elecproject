@@ -31,8 +31,8 @@
 
                     <ImageView
                         android:id="@+id/purchase_detail_logo"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        android:layout_width="50dp"
+                        android:layout_height="50dp" />
 
                     <TextView
                         android:id="@+id/purchase_detail_productname"
@@ -53,11 +53,12 @@
                     android:layout_width="900dp"
                     android:layout_height="400dp"
                     android:orientation="horizontal"
+                    android:background="@color/colorWhite"
                     >
                     <ImageView
                         android:id="@+id/purchase_detail_img"
                         android:layout_width="360dp"
-                        android:layout_height="400dp"
+                        android:layout_height="350dp"
                         android:scaleType="fitXY"
                         android:src="@drawable/test" />
                     <RelativeLayout
@@ -118,6 +119,7 @@
                     android:id="@+id/purchase_detail_origin_price"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textSize="10sp"
                     android:layout_marginLeft="10dp" />
 
                 <Button
@@ -315,8 +317,8 @@
 
                 <ImageView
                     android:id="@+id/purchase_detail_logo2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_width="50dp"
+                    android:layout_height="50dp" />
 
                 <TextView
                     android:id="@+id/purchase_details_brand_name"

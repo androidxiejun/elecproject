@@ -1173,13 +1173,13 @@ public class PurchaseDetailsBean {
             }
 
             public static class ProductsBean {
-                private int foreign_price;
+                private float foreign_price;
                 private int goods_id;
                 private int id;
                 private int is_delete;
-                private int p_foreign_price;
-                private int p_price;
-                private int p_rule_price;
+                private float p_foreign_price;
+                private float p_price;
+                private float p_rule_price;
                 private int product_id;
                 private String product_number;
                 private String product_price;
@@ -1191,11 +1191,11 @@ public class PurchaseDetailsBean {
                 private String goods_attr;
                 private String source_id;
 
-                public int getForeign_price() {
+                public float getForeign_price() {
                     return foreign_price;
                 }
 
-                public void setForeign_price(int foreign_price) {
+                public void setForeign_price(float foreign_price) {
                     this.foreign_price = foreign_price;
                 }
 
@@ -1223,23 +1223,23 @@ public class PurchaseDetailsBean {
                     this.is_delete = is_delete;
                 }
 
-                public int getP_foreign_price() {
+                public float getP_foreign_price() {
                     return p_foreign_price;
                 }
 
-                public void setP_foreign_price(int p_foreign_price) {
+                public void setP_foreign_price(float p_foreign_price) {
                     this.p_foreign_price = p_foreign_price;
                 }
 
-                public int getP_price() {
+                public float getP_price() {
                     return p_price;
                 }
 
-                public void setP_price(int p_price) {
+                public void setP_price(float p_price) {
                     this.p_price = p_price;
                 }
 
-                public int getP_rule_price() {
+                public float getP_rule_price() {
                     return p_rule_price;
                 }
 
