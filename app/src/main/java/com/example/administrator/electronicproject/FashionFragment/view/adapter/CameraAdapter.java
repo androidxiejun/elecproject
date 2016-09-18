@@ -1,15 +1,11 @@
 package com.example.administrator.electronicproject.FashionFragment.view.adapter;
 
 import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.net.Uri;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
@@ -18,7 +14,6 @@ import android.widget.Toast;
 import com.example.administrator.electronicproject.FashionFragment.bean.DatasUtils;
 import com.example.administrator.electronicproject.FashionFragment.view.fragment.CameraFragmentOne;
 import com.example.administrator.electronicproject.R;
-import com.example.imageloaderlocal.ImageLoader;
 import com.squareup.picasso.Picasso;
 
 import java.io.File;

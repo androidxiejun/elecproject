@@ -101,7 +101,7 @@ public class CategoryFragment extends Fragment implements ICallback{
         FragmentTransaction fragmentTransaction = manager.beginTransaction();
         fragmentTransaction.add(R.id.classify_tablayout_framelayout,storeFragment);
         fragmentTransaction.add(R.id.classify_tablayout_framelayout_left,listFragment);
-        fragmentTransaction.commit();
+        fragmentTransaction.commitAllowingStateLoss();
     }
 
 }

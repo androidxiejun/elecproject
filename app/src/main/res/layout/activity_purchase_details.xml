@@ -29,12 +29,31 @@
                android:text="商品详情"
                android:layout_weight="1"
                android:gravity="center"/>
-           <Button
-               android:id="@+id/purchase_detail_shooping_car"
-               android:layout_width="20dp"
-               android:layout_height="20dp"
-               android:layout_marginRight="10dp"
-               android:background="@drawable/shopping_car"/>
+           <RelativeLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content">
+
+               <Button
+                   android:id="@+id/purchase_detail_shooping_car"
+                   android:layout_width="20dp"
+                   android:layout_height="20dp"
+                   android:layout_marginRight="10dp"
+                   android:layout_marginTop="8dp"
+                   android:background="@drawable/shopping_car"/>
+               <ImageView
+                   android:layout_width="15dp"
+                   android:layout_height="35dp"
+                   android:layout_marginLeft="16dp"
+                   android:paddingBottom="20dp"
+                   android:src="@drawable/icon_bbs_float_on"/>
+               <TextView
+                   android:id="@+id/purchase_detail_shooping_number"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textColor="@color/colorWhite"
+                   android:layout_marginLeft="20dp"
+                   android:textSize="12sp" />
+           </RelativeLayout>
            <Button
                android:id="@+id/purchase_detail_head_msg"
                android:layout_width="20dp"

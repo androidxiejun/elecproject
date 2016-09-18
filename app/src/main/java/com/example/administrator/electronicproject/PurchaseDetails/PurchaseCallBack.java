@@ -5,4 +5,8 @@ package com.example.administrator.electronicproject.PurchaseDetails;
  */
 public interface PurchaseCallBack {
     void addFragment();
+    void changNumber();
+    void addShoppingCar(String productName,String
+            productTitle,String productPrice,
+            String productImgUrl,String productId);
 }

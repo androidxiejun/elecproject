@@ -60,7 +60,7 @@
                         android:layout_width="360dp"
                         android:layout_height="350dp"
                         android:scaleType="fitXY"
-                        android:src="@drawable/test" />
+                        android:src="@drawable/text" />
                     <RelativeLayout
                         android:layout_width="300dp"
                         android:layout_height="match_parent"

@@ -2,6 +2,7 @@ package com.example.administrator.electronicproject.PurchaseDetails;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.drawable.BitmapDrawable;
@@ -42,7 +43,7 @@ import retrofit2.Response;
 /**
  * Created by Administrator on 2016/9/8.
  */
-public class PurchaseDetailFragment extends Fragment implements View.OnClickListener{
+public class PurchaseDetailFragment extends Fragment implements View.OnClickListener {
     private int startX, startY;
     private int distanceX;
     private Context context;
@@ -59,16 +60,26 @@ public class PurchaseDetailFragment extends Fragment implements View.OnClickList
     private ImageView freshBtn;
     private LinearLayout linearLayout;
     private PurchaseCallBack callBack;
-    private Button lookBtn,discountBtn;
+    private Button lookBtn, discountBtn;
     private boolean isChecked = false;
-    private boolean isTouch=false;
+    private boolean isTouch = false;
     private CoordinatorLayout coordinatorLayout;
     private Button insetBtn;
-    private  Button blackBtn;
+    private Button blackBtn;
     private Button blueBtn;
     private Button smallBtn;
     private Button nideumBtn;
     private Button largeBtn;
+    private int number;
+    private String isZero;
+    private SharedPreferences mSp;
+    private SharedPreferences.Editor editor;
+    private boolean isColorBlack=true;
+    private boolean isColorBlue=true;
+    private boolean isDimenSmall=true;
+    private boolean isDimenMedium=true;
+    private boolean isDimenLarge=true;
+    private boolean isInset=false;
     public static PurchaseDetailFragment newInstance() {
         return new PurchaseDetailFragment();
     }
@@ -85,6 +96,8 @@ public class PurchaseDetailFragment extends Fragment implements View.OnClickList
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         context = getContext();
+        mSp=getActivity().getSharedPreferences("star",Context.MODE_PRIVATE);
+        editor=mSp.edit();
     }
 
     @Nullable
@@ -128,7 +141,7 @@ public class PurchaseDetailFragment extends Fragment implements View.OnClickList
                         break;
                     case MotionEvent.ACTION_UP:
                         linearLayout.scrollTo(0, 0);
-                        if(distanceX>200){
+                        if (distanceX > 200) {
                             callBack.addFragment();
                         }
                         break;
@@ -150,7 +163,7 @@ public class PurchaseDetailFragment extends Fragment implements View.OnClickList
                     WebSettings settings = mWebView.getSettings();
                     settings.setJavaScriptEnabled(true);
                     mWebView.addJavascriptInterface(new JavascriptInterface(context), "jsObj");
-                    mWebView.loadUrl(URL_PATH+PurchaseDetails.source_id);
+                    mWebView.loadUrl(URL_PATH + PurchaseDetails.source_id);
                     WebViewClient webViewClient = new WebViewClient() {
                         /**
                          * WebView每次加载地址，都会经过此方法
@@ -175,14 +188,14 @@ public class PurchaseDetailFragment extends Fragment implements View.OnClickList
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(context, CommonActivity.class);
-                intent.putExtra("goods_id",data.getGoods_id());
+                intent.putExtra("goods_id", data.getGoods_id());
                 startActivity(intent);
             }
         });
     }
 
     private void initView(View view) {
-        discountBtn= (Button) view.findViewById(R.id.puechase_detail_discount);
+        discountBtn = (Button) view.findViewById(R.id.puechase_detail_discount);
         coordinatorLayout = (CoordinatorLayout) view.findViewById(R.id.purchase_coordinate);
         chooseColor = (TextView) view.findViewById(R.id.purchase_detail_choose);
         freshBtn = (ImageView) view.findViewById(R.id.brand_detail_pull_arrow);
@@ -227,7 +240,7 @@ public class PurchaseDetailFragment extends Fragment implements View.OnClickList
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(context, DetailBrandActivity.class);
-                intent.putExtra("business_id",data.getBusiness_id());
+                intent.putExtra("business_id", data.getBusiness_id());
                 startActivity(intent);
             }
         });
@@ -236,24 +249,24 @@ public class PurchaseDetailFragment extends Fragment implements View.OnClickList
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(context, DetailBrandActivity.class);
-                intent.putExtra("business_id",data.getBusiness_id());
+                intent.putExtra("business_id", data.getBusiness_id());
                 startActivity(intent);
             }
         });
     }
 
     //显示购买选择弹出框
-    public  void showPopup(View view) {
+    public void showPopup(View view) {
         View popupView = LayoutInflater.from(context).inflate(R.layout.popup_window_layout, null);
         ImageView popupImage = (ImageView) popupView.findViewById(R.id.popup_image_view);
         TextView priceText = (TextView) popupView.findViewById(R.id.popup_price);
         Button deleteBtn = (Button) popupView.findViewById(R.id.popup_delete);
-        insetBtn= (Button) popupView.findViewById(R.id.popup_inset);
-         blackBtn= (Button) popupView.findViewById(R.id.popup_color_black);
-         blueBtn= (Button) popupView.findViewById(R.id.popup_color_blue);
-         smallBtn= (Button) popupView.findViewById(R.id.popup_dimen_small);
-         nideumBtn= (Button) popupView.findViewById(R.id.popup_dimen_medium);
-         largeBtn= (Button) popupView.findViewById(R.id.popup_dimen_large);
+        insetBtn = (Button) popupView.findViewById(R.id.popup_inset);
+        blackBtn = (Button) popupView.findViewById(R.id.popup_color_black);
+        blueBtn = (Button) popupView.findViewById(R.id.popup_color_blue);
+        smallBtn = (Button) popupView.findViewById(R.id.popup_dimen_small);
+        nideumBtn = (Button) popupView.findViewById(R.id.popup_dimen_medium);
+        largeBtn = (Button) popupView.findViewById(R.id.popup_dimen_large);
         blackBtn.setOnClickListener(this);
         blueBtn.setOnClickListener(this);
         smallBtn.setOnClickListener(this);
@@ -261,15 +274,29 @@ public class PurchaseDetailFragment extends Fragment implements View.OnClickList
         largeBtn.setOnClickListener(this);
         insetBtn.setOnClickListener(this);
         Picasso.with(context).load(data.getGoods_img()).into(popupImage);
+        final PopupWindow popupWindow = new PopupWindow(popupView, LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT, true);
         priceText.setText("￥" + data.getShop_price());
         insetBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //TODO
-                //进入订单确认界面
+                if(isInset){
+                    if(PurchaseDetails.isAddCar){
+                        //加入购物车环节
+                        callBack.addShoppingCar(data.getBusiness_name(),data.getGoods_name(),data.getShop_price(),data.getGoods_img(),PurchaseDetails.source_id);
+                        callBack.changNumber();
+                        popupWindow.dismiss();
+                    }else{
+                        //进入订单确认界面
+                        Intent intent=new Intent(context, PurchaseFirmationActivity.class);
+                        intent.putExtra("source_id",PurchaseDetails.source_id);
+                        startActivity(intent);
+                    }
+                }else{
+                    Toast.makeText(context, "请选择颜色和尺码", Toast.LENGTH_SHORT).show();
+                }
+
             }
         });
-        final PopupWindow popupWindow = new PopupWindow(popupView, LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT, true);
         deleteBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -296,7 +323,7 @@ public class PurchaseDetailFragment extends Fragment implements View.OnClickList
     }
 
     //获取屏幕像素高度，使得Popup填充整个屏幕
-    public  int getStatusBarHeight() {
+    public int getStatusBarHeight() {
         int result = 0;
         int resourceId = getResources().getIdentifier("status_bar_height", "dimen", "android");
         if (resourceId > 0) {
@@ -331,87 +358,108 @@ public class PurchaseDetailFragment extends Fragment implements View.OnClickList
             }
         });
     }
-   private Handler mHandler=new Handler(){
-       @Override
-       public void handleMessage(Message msg) {
-           if(isTouch){
-               insetBtn.setBackgroundColor(Color.RED);
-               insetBtn.setTextColor(Color.WHITE);
-           }
-       }
-   };
+
+    private Handler mHandler = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+            switch (msg.what){
+                case 1:
+                    blueBtn.setBackgroundColor(Color.WHITE);
+                    isColorBlue=true;
+                    break;
+                case 2:
+                    blackBtn.setBackgroundColor(Color.WHITE);
+                    isColorBlack=true;
+                    break;
+                case 3:
+                    nideumBtn.setBackgroundColor(Color.WHITE);
+                    largeBtn.setBackgroundColor(Color.WHITE);
+                    isDimenMedium=true;
+                    isDimenLarge=true;
+                    break;
+                case 4:
+                    smallBtn.setBackgroundColor(Color.WHITE);
+                    largeBtn.setBackgroundColor(Color.WHITE);
+                    isDimenSmall=true;
+                    isDimenLarge=true;
+                    break;
+                case 5:
+                    smallBtn.setBackgroundColor(Color.WHITE);
+                    nideumBtn.setBackgroundColor(Color.WHITE);
+                    isDimenSmall=true;
+                    isDimenMedium=true;
+                    break;
+                case 6:
+                    if((!isColorBlack||!isColorBlue)&&(!isDimenSmall||!isDimenMedium||!isDimenLarge)){
+                        insetBtn.setBackgroundColor(Color.RED);
+                        isInset=true;
+                    }else{
+                        insetBtn.setBackgroundColor(Color.GRAY);
+                        isInset=false;
+                    }
+                    break;
+            }
+        }
+    };
+
     @Override
     public void onClick(View view) {
-        switch (view.getId()){
+        switch (view.getId()) {
             case R.id.popup_color_black:
-                if(!isTouch){
+                if (isColorBlack){
+                    isColorBlack=false;
                     blackBtn.setBackgroundColor(Color.RED);
-                    blackBtn.setTextColor(Color.WHITE);
-                    isTouch=true;
+                    mHandler.sendEmptyMessage(1);
                 }else{
-                    isTouch=false;
+                    isColorBlack=true;
                     blackBtn.setBackgroundColor(Color.WHITE);
-                    blackBtn.setTextColor(Color.RED);
                 }
-                mHandler.sendEmptyMessage(1);
+                mHandler.sendEmptyMessage(6);
                 break;
             case R.id.popup_color_blue:
-                if(!isTouch){
+                if(isColorBlue){
+                    isColorBlue=false;
                     blueBtn.setBackgroundColor(Color.RED);
-                    blueBtn.setTextColor(Color.WHITE);
-                    isTouch=true;
+                    mHandler.sendEmptyMessage(2);
                 }else{
-                    isTouch=false;
+                    isColorBlue=true;
                     blueBtn.setBackgroundColor(Color.WHITE);
-                    blueBtn.setTextColor(Color.RED);
                 }
-                mHandler.sendEmptyMessage(1);
+                mHandler.sendEmptyMessage(6);
                 break;
             case R.id.popup_dimen_small:
-                if(!isTouch){
-
+                if(isDimenSmall){
+                    isDimenSmall=false;
                     smallBtn.setBackgroundColor(Color.RED);
-                    smallBtn.setTextColor(Color.WHITE);
-                    isTouch=true;
+                    mHandler.sendEmptyMessage(3);
                 }else{
-                    isTouch=false;
+                    isDimenSmall=true;
                     smallBtn.setBackgroundColor(Color.WHITE);
-                    smallBtn.setTextColor(Color.RED);
                 }
-                mHandler.sendEmptyMessage(1);
+                mHandler.sendEmptyMessage(6);
                 break;
             case R.id.popup_dimen_medium:
-                if(!isTouch){
-
+                if(isDimenMedium){
+                    isDimenMedium=false;
                     nideumBtn.setBackgroundColor(Color.RED);
-                    nideumBtn.setTextColor(Color.WHITE);
-                    isTouch=true;
-                }else {
-                    isTouch=false;
+                    mHandler.sendEmptyMessage(4);
+                }else{
+                    isDimenMedium=true;
                     nideumBtn.setBackgroundColor(Color.WHITE);
-                    nideumBtn.setTextColor(Color.RED);
                 }
-                mHandler.sendEmptyMessage(1);
+                mHandler.sendEmptyMessage(6);
                 break;
             case R.id.popup_dimen_large:
-                if(!isTouch){
+                if(isDimenLarge){
+                    isDimenLarge=false;
                     largeBtn.setBackgroundColor(Color.RED);
-                    largeBtn.setTextColor(Color.WHITE);
-                    isTouch=true;
+                    mHandler.sendEmptyMessage(5);
                 }else{
-                    isTouch=false;
+                    isDimenLarge=true;
                     largeBtn.setBackgroundColor(Color.WHITE);
-                    largeBtn.setTextColor(Color.RED);
                 }
-                mHandler.sendEmptyMessage(1);
+                mHandler.sendEmptyMessage(6);
                 break;
-            case R.id.popup_inset:
-                if(isTouch){
-
-                    Intent intent=new Intent(context, PurchaseFirmationActivity.class);
-                    intent.putExtra("source_id",PurchaseDetails.source_id);
-                    startActivity(intent);
-                }
         }
     }
 }

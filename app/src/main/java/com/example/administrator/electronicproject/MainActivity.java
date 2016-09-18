@@ -8,6 +8,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
+import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
@@ -27,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
     private MineFragment mineFragment;
     private FragmentManager manager;
     private Fragment mCurrentShowFragment;
+    private RadioButton fasionBtn;
     private boolean isExit=false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,14 +37,15 @@ public class MainActivity extends AppCompatActivity {
         initView();
         initFragment();
         chooseRadioBtn();
-        chooseFragment(fashionFragment);
-
+        //默认选择时尚圈
+        fasionBtn.setChecked(true);
         //获取屏幕的宽高
         DatasUtils.windowHight = getWindowManager().getDefaultDisplay().getHeight();
         DatasUtils.windowWight = getWindowManager().getDefaultDisplay().getWidth();
     }
 
-   private Handler mHandler=new Handler(){
+
+    private Handler mHandler=new Handler(){
        @Override
        public void handleMessage(Message msg) {
            isExit=false;
@@ -91,6 +94,7 @@ public class MainActivity extends AppCompatActivity {
     private void initView() {
         mRadioGroup= (RadioGroup) findViewById(R.id.radio_group);
         manager=getSupportFragmentManager();
+        fasionBtn= (RadioButton) findViewById(R.id.radio_button_fashion);
     }
 
     /**

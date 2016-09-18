@@ -20,12 +20,32 @@
         android:paddingRight="120dp"
         android:layout_margin="10dp"
         android:layout_weight="1"/>
-    <Button
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
         android:id="@+id/classify_shopping_car_btn"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:background="@drawable/shopping_car"
         />
+        <ImageView
+            android:id="@+id/classify_shopping_car_top_img"
+            android:layout_width="15dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="25dp"
+            android:paddingBottom="25dp"
+            android:src="@drawable/icon_bbs_float_on"/>
+        <TextView
+            android:id="@+id/classify_shopping_car_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorWhite"
+            android:layout_marginLeft="30dp"
+            android:text="4"
+            android:textSize="8sp" />
+    </RelativeLayout>
 </LinearLayout>
   <android.support.design.widget.TabLayout
       android:id="@+id/classify_tab_layout"

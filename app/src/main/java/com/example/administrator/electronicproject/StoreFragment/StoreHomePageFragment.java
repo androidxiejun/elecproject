@@ -84,7 +84,6 @@ public class StoreHomePageFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.store_home_page_fargment_layout, container, false);
-        initInfo("");
         initData();
         initListInfo(1);
         initView(view);

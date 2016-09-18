@@ -13,6 +13,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.administrator.electronicproject.PurchaseDetails.GotoPayActivity.GoToPayActivity;
 import com.example.administrator.electronicproject.PurchaseDetails.PurchaseDetailsBean.PurchaseDetailsBean;
 import com.example.administrator.electronicproject.PurchaseDetails.PurchaseDetailsUtils.HttpPurchaseUtils;
 import com.example.administrator.electronicproject.R;
@@ -67,6 +68,7 @@ public class PurchaseFirmationActivity extends AppCompatActivity implements View
         setContentView(R.layout.activity_purchase_firmation);
         context=this;
         ButterKnife.bind(this);
+        backBtn.setOnClickListener(this);
         mEditText.setOnClickListener(this);
         gotoPayBtn.setOnClickListener(this);
         initIntent();
@@ -117,7 +119,7 @@ public class PurchaseFirmationActivity extends AppCompatActivity implements View
                 data = response.body().getResponse().getData();
                 brandName.setText(data.getBusiness_name());
 //                Picasso.with(context).load(data.getCountryInfo().getCountry_img()).into(ciecleImg);
-                countryName.setText(data.getCountryInfo().getCountry_title());
+//                countryName.setText(data.getCountryInfo().getCountry_title());
                 Picasso.with(context).load(data.getGoods_img()).into(bigImage);
                 title.setText(data.getGoods_name());
                 price.setText(data.getShop_price());
@@ -137,10 +139,11 @@ public class PurchaseFirmationActivity extends AppCompatActivity implements View
     @Override
     public void onClick(View view) {
         switch (view.getId()){
-            case R.id.firmation_edit_text:
-
-                break;
             case R.id.firmation_go_to_pay:
+                Intent intent=new Intent(context, GoToPayActivity.class);
+                intent.putExtra("price",data.getShop_price());
+                intent.putExtra("title",data.getGoods_name());
+                startActivity(intent);
                 break;
             case R.id.firmation_back_btn:
                 finish();

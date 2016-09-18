@@ -2,6 +2,7 @@ package com.example.administrator.electronicproject.StoreFragment;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -11,13 +12,20 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 
+import com.example.administrator.electronicproject.MineFragment.activity.ShappingCart;
+import com.example.administrator.electronicproject.Products;
 import com.example.administrator.electronicproject.R;
 import com.example.administrator.electronicproject.SearchActivity.SearchActivity;
+import com.example.administrator.electronicproject.ShoppingCarGreenDaoUtils.DaoUtils;
 import com.example.administrator.electronicproject.StoreFragment.StoreHomePageBean.StoreHomePageBean;
 import com.example.administrator.electronicproject.SweepQrCode.TakePictureActivity;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -28,7 +36,12 @@ public class StoreFragment extends Fragment implements View.OnClickListener{
     private StoreHomePageFragment storeFragment;
     private FragmentManager manager;
     private Button sweepBtn,searchBtn,shoppingBtn;
+    private ImageView topImg;
+    private TextView shoppingNUm;
     private int index;
+    private List<Products>productList=new ArrayList<>();
+    private SharedPreferences mSp;
+    private SharedPreferences.Editor editor;
     public static Map<Integer,StoreHomePageBean.DataBean>dataMap=new HashMap<>();
     public static StoreFragment newInstance(){
         return new StoreFragment();
@@ -37,21 +50,35 @@ public class StoreFragment extends Fragment implements View.OnClickListener{
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         context=getContext();
-
     }
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view=inflater.inflate(R.layout.store_fragment_layout,container,false);
+        productList= DaoUtils.getDao(context).loadAll();
+//        mSp=getActivity().getSharedPreferences("star",Context.MODE_PRIVATE);
+//        editor=mSp.edit();
         initFragment();
         initView(view);
         return view;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        productList= DaoUtils.getDao(context).loadAll();
+        shoppingNUm.setText(productList.size()+"");
     }
 
     private void initView(View view) {
         sweepBtn= (Button) view.findViewById(R.id.store_sweep_btn);
         searchBtn= (Button) view.findViewById(R.id.store_search_btn);
         shoppingBtn= (Button) view.findViewById(R.id.store_shopping_btn);
+        topImg= (ImageView) view.findViewById(R.id.store_top_img);
+        shoppingNUm= (TextView) view.findViewById(R.id.store_shopping_car_num);
+//        shoppingNUm.setText(mSp.getInt("number",0)+"");
+        shoppingNUm.setText(productList.size()+"");
+
         sweepBtn.setOnClickListener(this);
         searchBtn.setOnClickListener(this);
         shoppingBtn.setOnClickListener(this);
@@ -77,7 +104,8 @@ public class StoreFragment extends Fragment implements View.OnClickListener{
                 startActivity(intent2);
                 break;
             case R.id.store_shopping_btn:
-                //TODO
+                Intent intent1=new Intent(context, ShappingCart.class);
+                startActivity(intent1);
                 break;
         }
     }

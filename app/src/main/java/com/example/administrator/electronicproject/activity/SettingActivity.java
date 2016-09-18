@@ -1,6 +1,7 @@
 package com.example.administrator.electronicproject.activity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -12,6 +13,7 @@ import android.widget.Button;
 import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.administrator.electronicproject.R;
 
@@ -40,6 +42,8 @@ public class SettingActivity extends AppCompatActivity implements View.OnClickLi
     TextView modifiedPass;
     @BindView(R.id.setting_exit)
     TextView exit;
+    private SharedPreferences mSp;
+    private SharedPreferences.Editor editor;
     private TextView weiChat;
     private TextView frends;
     private TextView qq;
@@ -53,7 +57,8 @@ public class SettingActivity extends AppCompatActivity implements View.OnClickLi
         super.onCreate(savedInstanceState);
         setContentView(R.layout.setting_layout);
         ButterKnife.bind(this);
-
+        mSp=getSharedPreferences("star",MODE_PRIVATE);
+        editor=mSp.edit();
         initView();
     }
 
@@ -83,6 +88,9 @@ public class SettingActivity extends AppCompatActivity implements View.OnClickLi
                 initPopup();
                 break;
             case R.id.seting_clear://清除
+                editor.clear();
+                editor.commit();
+                Toast.makeText(SettingActivity.this, "清除数据成功", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.seting_declaration://声明
                 break;

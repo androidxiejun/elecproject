@@ -46,6 +46,7 @@ public class SnapTimeActivity extends AppCompatActivity implements View.OnClickL
     private MyListViewAdapter adapter;
     private SnapTimeBean.DataBean.MainBean main;
     private  List<SnapTimeBean.DataBean.ItemsBean> items;
+    public static final String SHARE_URL="http://m.hichao.com/app/templates/brand_detail.html?id=3051";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -109,7 +110,11 @@ public class SnapTimeActivity extends AppCompatActivity implements View.OnClickL
                 finish();
                 break;
             case R.id.snap_time_share_btn:
-                //TODO
+                Intent sendIntent = new Intent();
+                sendIntent.setAction(Intent.ACTION_SEND);
+                sendIntent.putExtra(Intent.EXTRA_TEXT,SHARE_URL);
+                sendIntent.setType("text/*");
+                startActivity(sendIntent);
                 break;
         }
     }

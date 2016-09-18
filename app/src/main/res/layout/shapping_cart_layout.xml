@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <android.support.v7.widget.Toolbar
@@ -58,13 +59,86 @@
         android:id="@+id/shopping_cart_tool_line"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_below="@id/shapping_cart_tool_bar"
         android:background="#bdbdbd"/>
 
-    <com.handmark.pulltorefresh.library.PullToRefreshExpandableListView
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
         android:id="@+id/shopping_cart_expand_list"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/shopping_cart_tool_line"/>
+        android:layout_height="wrap_content"
+        android:descendantFocusability="blocksDescendants"
+        android:layout_weight="1"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="没有更多了哦~"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+        <LinearLayout
+            android:id="@+id/shopping_car_edit_linear"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorWhite"
+            android:orientation="horizontal">
+            <CheckBox
+                android:id="@+id/shopping_car_check_box_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="全选"
+                />
+            <Button
+                android:id="@+id/shopping_car_delete_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/colorAccent"
+                android:textColor="@color/colorWhite"
+                android:text="删除"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/colorBlack"
+                android:textColor="@color/colorWhite"
+                android:text="清空下架商品"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/shopping_car_before_edit_linear"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:background="@color/colorWhite"
+            >
+            <CheckBox
+                android:id="@+id/shopping_car_check_box_main"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="全选"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="合计："
+                android:layout_marginLeft="10dp"
 
-</RelativeLayout>
+                />
+            <TextView
+                android:id="@+id/shopping_car_count_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorAccent"
+                android:layout_weight="1"
+                android:text="0"/>
+            <Button
+                android:id="@+id/shopping_car_pay_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/colorAccent"
+                android:text="去结算"
+                android:textColor="@color/colorWhite"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

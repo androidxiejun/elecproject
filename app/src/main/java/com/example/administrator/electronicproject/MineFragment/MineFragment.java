@@ -2,8 +2,7 @@ package com.example.administrator.electronicproject.MineFragment;
 
 import android.content.Context;
 import android.content.Intent;
-import android.location.Address;
-import android.net.Uri;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -16,7 +15,9 @@ import android.widget.TextView;
 
 import com.example.administrator.electronicproject.FashionFragment.view.activity.ExpertFansActivity;
 import com.example.administrator.electronicproject.MineFragment.activity.ShappingCart;
+import com.example.administrator.electronicproject.Products;
 import com.example.administrator.electronicproject.R;
+import com.example.administrator.electronicproject.ShoppingCarGreenDaoUtils.DaoUtils;
 import com.example.administrator.electronicproject.activity.AddressActivity;
 import com.example.administrator.electronicproject.activity.CouponActivity;
 import com.example.administrator.electronicproject.activity.LoginActivity;
@@ -29,6 +30,9 @@ import com.example.administrator.electronicproject.activity.UserInfoActivity;
 import com.example.administrator.electronicproject.activity.UserPostActivity;
 import com.example.administrator.electronicproject.activity.VIPActivity;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import de.hdodenhof.circleimageview.CircleImageView;
@@ -38,7 +42,8 @@ import de.hdodenhof.circleimageview.CircleImageView;
  * 我的界面
  */
 public class MineFragment extends Fragment implements View.OnClickListener {
-
+    @BindView(R.id.mine_shopping_car_num)
+    TextView shoppingCarNum;
     @BindView(R.id.mine_user_name)
     TextView userName;
     @BindView(R.id.mine_shapping_chart)
@@ -97,10 +102,11 @@ public class MineFragment extends Fragment implements View.OnClickListener {
     RelativeLayout help;//帮助
     @BindView(R.id.mine_service)
     RelativeLayout mineService;//客服
-
+    private SharedPreferences mSp;
+    private SharedPreferences.Editor editor;
     private Context context;
     private int userId = 2904927;//默认一个用户id
-
+    private List<Products> productList=new ArrayList<>();
     public static MineFragment newInstance() {
         return new MineFragment();
     }
@@ -109,6 +115,8 @@ public class MineFragment extends Fragment implements View.OnClickListener {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         context = getContext();
+        mSp=getActivity().getSharedPreferences("star",Context.MODE_PRIVATE);
+        editor= mSp.edit();
     }
 
     @Nullable
@@ -116,8 +124,17 @@ public class MineFragment extends Fragment implements View.OnClickListener {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.mine_layout, container, false);
         ButterKnife.bind(this, view);
+        productList= DaoUtils.getDao(context).loadAll();
+        shoppingCarNum.setText(productList.size()+"");
         initListener();
         return view;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        productList= DaoUtils.getDao(context).loadAll();
+        shoppingCarNum.setText(productList.size()+"");
     }
 
     private void initListener() {

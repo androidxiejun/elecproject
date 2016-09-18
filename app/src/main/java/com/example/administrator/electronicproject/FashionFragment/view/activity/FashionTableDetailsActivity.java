@@ -13,10 +13,10 @@ import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import com.example.administrator.electronicproject.FashionFragment.bean.FashionBottonBean;
 import com.example.administrator.electronicproject.FashionFragment.http.HttpUtils;
 import com.example.administrator.electronicproject.FashionFragment.view.FashionGridViewAdapter;
-import com.example.administrator.electronicproject.MainActivity;
 import com.example.administrator.electronicproject.R;
 import com.handmark.pulltorefresh.library.PullToRefreshGridView;
 
@@ -51,11 +51,11 @@ public class FashionTableDetailsActivity extends AppCompatActivity implements Vi
     private Intent intent;
     private Context context;
     private int tag_id;
-    private int recommend = 1;
     private String flag = "";
     private List<FashionBottonBean.ResponseBean.DataBean.ItemsBean> tableDatas = new ArrayList<>();
     private FashionGridViewAdapter fashionGridViewAdapter;
     private GridView refreshableView;
+    private int recommend = 1;
     //用于判断进入FashionTableDetailsActivity界面的是哪个界面，用于 FashionTableDetailsActivity的返回
     private String come;
     private String title;

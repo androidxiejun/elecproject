@@ -2,6 +2,7 @@ package com.example.administrator.electronicproject.ClassifyFragment;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
@@ -13,11 +14,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.example.administrator.electronicproject.ClassifyFragment.HomePageFragments.BrandFragment;
 import com.example.administrator.electronicproject.ClassifyFragment.HomePageFragments.CategoryFragment;
+import com.example.administrator.electronicproject.MineFragment.activity.ShappingCart;
+import com.example.administrator.electronicproject.Products;
 import com.example.administrator.electronicproject.R;
 import com.example.administrator.electronicproject.SearchActivity.SearchActivity;
+import com.example.administrator.electronicproject.ShoppingCarGreenDaoUtils.DaoUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,9 +35,15 @@ public class ClassifyFragment extends Fragment implements View.OnClickListener{
     private TabLayout mTablayout;
     private ViewPager mViewPager;
     private Button searchBtn;
+    private Button shoppingCarBtn;
+    private TextView shoopingNum;
+    private SharedPreferences mSp;
+    private SharedPreferences.Editor editor;
+    private int number;//购物车商品的数量
     private BrandFragment brandFragment;
     private CategoryFragment categoryFragment;
     private ViewPagerAdapter viewPagerAdapter;
+    private List<Products>productList=new ArrayList<>();
     private List<Fragment>fragmentList=new ArrayList<>();
     private List<String>tabTitle=new ArrayList<>();
     public static ClassifyFragment newInstance(){
@@ -49,11 +60,20 @@ public class ClassifyFragment extends Fragment implements View.OnClickListener{
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view=inflater.inflate(R.layout.classify_layout,container,false);
         View view2=inflater.inflate(R.layout.classify_tablayout_fragment_layout,null);
+        productList= DaoUtils.getDao(context).loadAll();
+//        mSp=getActivity().getSharedPreferences("star",Context.MODE_PRIVATE);
+//        editor=mSp.edit();
         initData();
         initFragments();
         initView(view,view2);
-
         return view;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        productList= DaoUtils.getDao(context).loadAll();
+        shoopingNum.setText(productList.size()+"");
     }
 
     private void initFragments() {
@@ -64,7 +84,12 @@ public class ClassifyFragment extends Fragment implements View.OnClickListener{
     }
     private void initView(View view,View view2) {
         searchBtn= (Button) view.findViewById(R.id.classify_search_btn);
+        shoppingCarBtn= (Button) view.findViewById(R.id.classify_shopping_car_btn);
         searchBtn.setOnClickListener(this);
+        shoppingCarBtn.setOnClickListener(this);
+        shoopingNum= (TextView) view.findViewById(R.id.classify_shopping_car_number);
+//        number=mSp.getInt("number",0);
+        shoopingNum.setText(productList.size()+"");
         mViewPager= (ViewPager) view.findViewById(R.id.classify_view_pager);
         mTablayout= (TabLayout) view.findViewById(R.id.classify_tab_layout);
         viewPagerAdapter=new ViewPagerAdapter(getFragmentManager());
@@ -79,8 +104,17 @@ public class ClassifyFragment extends Fragment implements View.OnClickListener{
 
     @Override
     public void onClick(View view) {
-        Intent intent=new Intent(context, SearchActivity.class);
-        startActivity(intent);
+        switch (view.getId()){
+            case R.id.classify_search_btn:
+                Intent intent=new Intent(context, SearchActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.classify_shopping_car_btn:
+                Intent intent1=new Intent(context, ShappingCart.class);
+                startActivity(intent1);
+                break;
+        }
+
     }
 
     class ViewPagerAdapter extends FragmentPagerAdapter{
