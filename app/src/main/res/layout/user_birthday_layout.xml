@@ -15,7 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:datePickerMode="spinner"
-            android:background="@color/colorBlack"
+            android:background="#FFFFFF"
             android:calendarTextColor="#FFFFFF"
             android:calendarViewShown="false"/> <!--不显示日历样式 -->
 

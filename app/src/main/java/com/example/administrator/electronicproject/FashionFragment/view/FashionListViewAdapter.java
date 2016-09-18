@@ -32,7 +32,7 @@ public class FashionListViewAdapter extends BaseAdapter implements FashionGridVi
     private CustomGridView mCustonGridView;
     private FashionGridViewAdapter fashionGridViewAdapter;
     private static int last_item_id = 0;
-    private static int flag = 0;
+    private static String flag = "";
     private boolean addMore = false;
 
 
@@ -72,7 +72,7 @@ public class FashionListViewAdapter extends BaseAdapter implements FashionGridVi
      * 时尚圈主体GridView的数据,并刷新下部分GridView的适配器
      */
     private void requestMore() {
-        HttpUtils.create().fashionBottomGridDatas(last_item_id, flag).enqueue(new Callback<FashionBottonBean>() {
+        HttpUtils.create().fashionBottomGridDatas().enqueue(new Callback<FashionBottonBean>() {
             @Override
             public void onResponse(Call<FashionBottonBean> call, Response<FashionBottonBean> response) {
                 FashionBottonBean.ResponseBean.DataBean dataBean = response.body().getResponse().getData();
@@ -83,8 +83,8 @@ public class FashionListViewAdapter extends BaseAdapter implements FashionGridVi
                     }
                 }
                 //更新数据
-                flag = dataBean.getFlag();
-                last_item_id = dataBean.getLast_item_id();
+//                flag = dataBean.getFlag();
+//                last_item_id = dataBean.getLast_item_id();
                 itemsBeanList.addAll(dataBean.getItems());//时尚圈主体部分，获取网络数据源
 
                 //更新主体适配器

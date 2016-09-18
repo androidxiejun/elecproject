@@ -9,7 +9,7 @@
     <RelativeLayout
         android:id="@+id/expert_top_relative_layout"
         android:layout_width="match_parent"
-        android:layout_height="60dp">
+        android:layout_height="50dp">
 
         <TextView
             android:id="@+id/expert_head_attention"
@@ -31,8 +31,8 @@
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/expert_head_circl_iv"
-                android:layout_width="45dp"
-                android:layout_height="45dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="10dp"
                 android:scaleType="centerCrop" />
@@ -65,18 +65,18 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="100dp"
         android:layout_below="@id/expert_top_relative_layout">
         <com.example.administrator.electronicproject.FashionFragment.view.CustomGridView
             android:id="@+id/expert_image_one"
             android:layout_width="match_parent"
-            android:layout_height="150dp"
+            android:layout_height="100dp"
             android:numColumns="3"
             android:padding="10dp"/>
         <ImageView
             android:id="@+id/expert_pull_empty"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
             android:layout_centerInParent="true"
             android:src="@drawable/pull_waiting"
             />

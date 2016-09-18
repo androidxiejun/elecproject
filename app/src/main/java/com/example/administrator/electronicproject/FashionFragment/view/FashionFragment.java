@@ -3,6 +3,7 @@ package com.example.administrator.electronicproject.FashionFragment.view;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -141,8 +142,11 @@ public class FashionFragment extends Fragment implements View.OnClickListener{
                 startActivity(search);
                 break;
             case R.id.fashion_tool_bar_camera_btn:
-                //点击相机进入调用手机相册
-                Intent intent = new Intent(context, CameraActivity.class);
+//                //点击相机进入调用手机相册
+//                Intent intent = new Intent(context, CameraActivity.class);
+//                startActivity(intent);
+                Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
+                intent.setType("image/*");
                 startActivity(intent);
                 break;
         }

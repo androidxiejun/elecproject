@@ -89,6 +89,7 @@ public class UserMobileFragmentTwo extends Fragment implements View.OnClickListe
             case R.id.user_mobile_new_get_code://获取验证码
                 break;
             case R.id.user_mobile_new_next://确定
+
                 break;
         }
     }

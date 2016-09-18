@@ -94,7 +94,7 @@ public class FashionBottonBean {
              */
 
             private TagHeadBean tagHead;
-            private int flag;
+            private String flag;
             private int last_item_id;
             private String tips;
             /**
@@ -113,11 +113,11 @@ public class FashionBottonBean {
                 this.tagHead = tagHead;
             }
 
-            public int getFlag() {
+            public String getFlag() {
                 return flag;
             }
 
-            public void setFlag(int flag) {
+            public void setFlag(String flag) {
                 this.flag = flag;
             }
 

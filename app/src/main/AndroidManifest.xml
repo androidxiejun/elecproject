@@ -13,70 +13,62 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity" />
+        <activity android:name=".MainActivity"></activity>
 
         <!-- 相机调用界面 -->
-        <activity
-            android:name=".FashionFragment.view.activity.CameraActivity"
-            android:launchMode="singleTask" />
-        <!-- 时尚圈上部详情界面 -->
-        <activity
-            android:name=".FashionFragment.view.activity.FashionTopDetailsActivity"
-            android:launchMode="standard" />
-        <!-- 标签界面 -->
-        <activity
-            android:name=".FashionFragment.view.activity.FashionMiddleTableActivity"
-            android:launchMode="singleTask" />
-        <!-- 点击标签，进入的界面 -->
-        <activity
-            android:name=".FashionFragment.view.activity.FashionTableDetailsActivity"
-            android:launchMode="singleTask" />
-        <!-- 衣橱达人界面 -->
-        <activity android:name=".FashionFragment.view.activity.ExpertActivity" />
-        <!-- 衣橱达人个人界面 -->
-        <activity android:name=".FashionFragment.view.activity.ExpertPersonActivity" />
-        <!-- 点击图片时，用于展示图片 -->
-        <activity android:name=".FashionFragment.view.activity.ShowImageActivity" />
-        <!-- 粉丝和关注界面 -->
-        <activity android:name=".FashionFragment.view.activity.ExpertFansActivity" />
-        <!-- 全部评论界面 -->
-        <activity android:name=".FashionFragment.view.activity.RecommendActivity" />
-        <!-- 购物车界面 -->
-        <activity android:name=".MineFragment.activity.ShappingCart" />
-        <!-- 登陆界面 -->
-        <activity android:name=".activity.LoginActivity" />
-        <!-- 注册界面 -->
-        <activity android:name=".activity.RegisterActivity" />
-        <!-- 找回密码界面 -->
-        <activity android:name=".activity.RetrievePassActivity" />
-        <!-- 我的收藏界面 -->
-        <activity android:name=".activity.MyCollectActivity" />
-        <!-- 我的商城订单 -->
-        <activity android:name=".activity.MyOrderActivity" />
-        <!-- 用户信息界面 -->
-        <activity android:name=".activity.UserInfoActivity" />
-        <!-- 用户昵称界面 -->
-        <activity android:name=".activity.UserNickActivity" />
-        <!-- 绑定手机号界面 -->
-        <activity android:name=".activity.UserInfoMobileActivity" />
-        <!-- 用户邮箱和地址，公用一个界面，做判断 -->
-        <activity android:name=".activity.UserEmailActivity" />
-        <!-- 会员专享界面 -->
-        <activity android:name=".activity.VIPActivity" />
-        <!-- 优惠券界面 -->
-        <activity android:name=".activity.CouponActivity" />
-        <!-- 优惠券兑换界面 -->
-        <activity android:name=".activity.CouponConvertActivity" />
-        <!-- 收货地址 -->
-        <activity android:name=".activity.AddressActivity" />
-        <!-- 新增收货地址 -->
-        <activity android:name=".activity.AddAddressActivity" />
-        <!-- 我的发帖界面 -->
-        <activity android:name=".activity.UserPostActivity" />
-        <!-- 用户关注品牌界面 -->
-        <activity android:name=".activity.UserBrandActivity" />
-        <!-- 设置界面 -->
-        <activity android:name=".activity.SettingActivity" />
+        <activity android:name=".FashionFragment.view.activity.CameraActivity" android:launchMode="singleTask"/>
+        <!--时尚圈上部详情界面 -->
+        <activity android:name=".FashionFragment.view.activity.FashionTopDetailsActivity" android:launchMode="standard"/>
+        <!-- 标签界面-->
+        <activity android:name=".FashionFragment.view.activity.FashionMiddleTableActivity" android:launchMode="singleTask"/>
+        <!-- 点击标签，进入的界面-->
+        <activity android:name=".FashionFragment.view.activity.FashionTableDetailsActivity"/>
+        <!-- 衣橱达人界面-->
+        <activity android:name=".FashionFragment.view.activity.ExpertActivity"/>
+        <!-- 衣橱达人个人界面-->
+        <activity android:name=".FashionFragment.view.activity.ExpertPersonActivity"/>
+        <!--点击图片时，用于展示图片 -->
+        <activity android:name=".FashionFragment.view.activity.ShowImageActivity"/>
+        <!-- 粉丝和关注界面-->
+        <activity android:name=".FashionFragment.view.activity.ExpertFansActivity"/>
+        <!-- 全部评论界面-->
+        <activity android:name=".FashionFragment.view.activity.RecommendActivity"/>
+        <!-- 购物车界面-->
+        <activity android:name=".MineFragment.activity.ShappingCart"/>
+        <!-- 登陆界面-->
+        <activity android:name=".activity.LoginActivity"/>
+        <!--注册界面 -->
+        <activity android:name=".activity.RegisterActivity"/>
+        <!--找回密码界面 -->
+        <activity android:name=".activity.RetrievePassActivity"/>
+        <!-- 我的收藏界面-->
+        <activity android:name=".activity.MyCollectActivity"/>
+        <!--我的商城订单 -->
+        <activity android:name=".activity.MyOrderActivity"/>
+        <!-- 用户信息界面-->
+        <activity android:name=".activity.UserInfoActivity"/>
+        <!-- 用户昵称界面-->
+        <activity android:name=".activity.UserNickActivity"/>
+        <!-- 绑定手机号界面-->
+        <activity android:name=".activity.UserInfoMobileActivity"/>
+        <!--用户邮箱和地址，公用一个界面，做判断 -->
+        <activity android:name=".activity.UserEmailActivity"/>
+        <!-- 会员专享界面-->
+        <activity android:name=".activity.VIPActivity"/>
+        <!--优惠券界面 -->
+        <activity android:name=".activity.CouponActivity"/>
+        <!-- 优惠券兑换界面-->
+        <activity android:name=".activity.CouponConvertActivity"/>
+        <!-- 收货地址-->
+        <activity android:name=".activity.AddressActivity"/>
+        <!-- 新增收货地址-->
+        <activity android:name=".activity.AddAddressActivity"/>
+        <!--我的发帖界面 -->
+        <activity android:name=".activity.UserPostActivity"/>
+        <!-- 用户关注品牌界面-->
+        <activity android:name=".activity.UserBrandActivity"/>
+        <!-- 设置界面-->
+        <activity android:name=".activity.SettingActivity"/>
         <!-- 下载图片的服务-->
         <service android:name=".FashionFragment.view.activity.DownImageService"/>
         <!-- 拍照界面-->
@@ -94,7 +86,6 @@
         <activity android:name=".StoreFragment.SnapActivity.SnapActivity" />
         <activity android:name=".StoreFragment.SnapActivity.SnapTimeActivity" />
         <activity android:name=".PurchaseDetails.PurchaseConfirMationActivity.PurchaseFirmationActivity" />
-        <activity android:name=".PurchaseDetails.GotoPayActivity.GoToPayActivity"/>
         <activity android:name=".WelcomeActivity.WelcomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

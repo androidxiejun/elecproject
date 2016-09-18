@@ -24,8 +24,8 @@ import retrofit2.http.Query;
 public interface HttpService {
 
     //时尚圈推荐下部分GridView的数据请求
-    @GET("/forum/recommend-list?last_item_id=468273&flag=40")
-    Call<FashionBottonBean> fashionBottomGridDatas(@Query("last_item_id")int last_item_id,@Query("flag")int flag);
+    @GET("/forum/recommend-list?last_item_id=0&ga=%2Fforum%2Frecommend-list&flag=0")
+    Call<FashionBottonBean> fashionBottomGridDatas();
 
     //时尚圈推荐中部分GridView的数据请求
     @GET("/forum/tag-recommend?")

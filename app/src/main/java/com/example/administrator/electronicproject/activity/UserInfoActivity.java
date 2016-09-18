@@ -1,10 +1,14 @@
 package com.example.administrator.electronicproject.activity;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
@@ -59,6 +63,7 @@ public class UserInfoActivity extends AppCompatActivity implements View.OnClickL
     RelativeLayout userEmail;
     @BindView(R.id.user_info_address)
     RelativeLayout userAddress;
+    private Context context;
 
     //点击头像出现的弹出框
     private PopupWindow headImagePopup;
@@ -89,6 +94,7 @@ public class UserInfoActivity extends AppCompatActivity implements View.OnClickL
         setContentView(R.layout.user_info_layout);
         ButterKnife.bind(this);
 
+        context = this;
         sharedPreferences = getSharedPreferences("birthday",MODE_PRIVATE);
         edit = sharedPreferences.edit();
         initListener();
@@ -136,7 +142,7 @@ public class UserInfoActivity extends AppCompatActivity implements View.OnClickL
                 break;
             case R.id.user_info_mobile://手机
                 Intent mobile = new Intent(this,UserInfoMobileActivity.class);
-                mobile.putExtra("mobile",mobileContent.getText());
+                mobile.putExtra("mobile",Integer.valueOf(mobileContent.getText().toString()));
                 startActivity(mobile);
                 break;
             case R.id.user_info_email://邮箱
@@ -179,9 +185,13 @@ public class UserInfoActivity extends AppCompatActivity implements View.OnClickL
         public void onClick(View view) {
             switch (view.getId()){
                 case R.id.user_info_popup_tack_photo://拍照
+//                    Intent intent = new Intent(context,TackPhotoActivity.class);
+//                    startActivityForResult(intent,1);
                     break;
                 case R.id.user_info_popup_choose_photo://从相册选取照片
-
+//                    Intent intent = new Intent();
+//                    intent.setAction("android.media.action.IMAGE_CAPTURE");
+//                    startActivityForResult(intent, 2);
                     break;
                 case R.id.user_info_popup_cancel://取消
                     headImagePopup.dismiss();
@@ -189,6 +199,14 @@ public class UserInfoActivity extends AppCompatActivity implements View.OnClickL
             }
         }
     };
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (resultCode == RESULT_OK){
+            Bitmap bitmap = BitmapFactory.decodeFile(data.getStringExtra("path"));
+            headImage.setImageBitmap(bitmap);
+        }
+    }
 
     /**
      * 性别选择

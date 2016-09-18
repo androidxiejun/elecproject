@@ -10,12 +10,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <ImageView
+        <CheckBox
             android:id="@+id/user_address_image"
             android:layout_width="15dp"
             android:layout_height="15dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/icon_my_edit_sex_option_on" />
+            android:button="@null"
+            android:background="@drawable/camera_selector_two" />
 
         <LinearLayout
             android:id="@+id/user_address_linear"

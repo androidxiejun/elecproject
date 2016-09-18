@@ -1,27 +1,24 @@
 package com.example.administrator.electronicproject.activity;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-
 import com.example.administrator.electronicproject.R;
 import com.example.administrator.electronicproject.adapter.AddressAdapter;
-import com.example.administrator.electronicproject.adapter.bean.UserAddress;
 import com.handmark.pulltorefresh.library.PullToRefreshListView;
-
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
+import addressdao.com.example.administrator.electronicproject.Address;
+import addressdao.com.example.administrator.electronicproject.DBUtils;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -29,7 +26,7 @@ import butterknife.ButterKnife;
  * Created by sunbin on 2016/9/13.
  * 收货地址
  */
-public class AddressActivity extends AppCompatActivity implements View.OnClickListener{
+public class AddressActivity extends AppCompatActivity implements View.OnClickListener,AddressAdapter.AddressCallBack{
 
     @BindView(R.id.address_back_btn)
     Button backBtn;
@@ -40,7 +37,7 @@ public class AddressActivity extends AppCompatActivity implements View.OnClickLi
     @BindView(R.id.address_empty)
     RelativeLayout emptyView;
     private ListView refreshableView;
-    private List<UserAddress> addressesList = new ArrayList<>();
+    private List<Address> addressesList = new ArrayList<>();
     private AddressAdapter addressAdapter;
 
     @Override
@@ -53,6 +50,14 @@ public class AddressActivity extends AppCompatActivity implements View.OnClickLi
         initView();
     }
 
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        addressesList.clear();
+        addressesList.addAll(DBUtils.getDao(this).loadAll());
+        addressAdapter.notifyDataSetChanged();
+    }
+
     private void initView() {
         backBtn.setOnClickListener(this);
         convert.setOnClickListener(this);
@@ -60,11 +65,23 @@ public class AddressActivity extends AppCompatActivity implements View.OnClickLi
         refreshableView = pullListView.getRefreshableView();
         refreshableView.setEmptyView(emptyView);
 
-        addressAdapter = new AddressAdapter(this,addressesList);
+        addressesList.addAll(DBUtils.getDao(this).loadAll());
+
+        addressAdapter = new AddressAdapter(this,addressesList,this);
         pullListView.setAdapter(addressAdapter);
 
-
+//        initListener();
     }
+
+//    private void initListener() {
+//        pullListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+//                CheckBox box = (CheckBox) view.findViewById(R.id.user_address_image);
+//                box.setChecked(true);
+//            }
+//        });
+//    }
 
     @Override
     public void onClick(View view) {
@@ -78,4 +95,22 @@ public class AddressActivity extends AppCompatActivity implements View.OnClickLi
                 break;
         }
     }
+
+    /**
+     * 适配器中的接口回调，点击返回我的界面,和删除地址信息
+     */
+    @Override
+    public void returnMine(int position) {
+        switch (position){
+            case -1:
+                finish();
+                break;
+            default:
+                DBUtils.getDao(this).delete(addressesList.get(position));
+                addressesList.remove(position);
+                addressAdapter.notifyDataSetChanged();
+                break;
+        }
+    }
+
 }

@@ -1,5 +1,6 @@
 package com.example.administrator.electronicproject.activity;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.hardware.Camera;
@@ -77,8 +78,7 @@ public class TackPhotoActivity extends AppCompatActivity implements SurfaceHolde
         if ( ! dirFile.exists()){
             dirFile.mkdir();
         }
-        Date date = new Date();
-        File file = new File(dirFile, date+".jpg");
+        File file = new File(dirFile, System.currentTimeMillis()+".jpg");
 
         try {
             FileOutputStream outputStream = new FileOutputStream(file);

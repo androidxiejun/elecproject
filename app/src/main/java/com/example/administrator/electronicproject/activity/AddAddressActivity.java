@@ -1,5 +1,6 @@
 package com.example.administrator.electronicproject.activity;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -13,10 +14,9 @@ import android.widget.EditText;
 import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.administrator.electronicproject.R;
-import com.example.administrator.electronicproject.adapter.bean.UserAddress;
-import com.example.administrator.electronicproject.adapter.bean.UtilsInfo;
 import com.wx.wheelview.adapter.ArrayWheelAdapter;
 import com.wx.wheelview.widget.WheelView;
 
@@ -24,6 +24,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+import addressdao.com.example.administrator.electronicproject.Address;
+import addressdao.com.example.administrator.electronicproject.DBUtils;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -56,9 +58,12 @@ public class AddAddressActivity extends AppCompatActivity implements View.OnClic
     private ArrayWheelAdapter wheelAdapter;
     private List<String> provinceList = new ArrayList<>();
     private HashMap<String,List<String>> cityMap = new HashMap<>();
-    private SharedPreferences sharedPreferences;
-    private SharedPreferences.Editor edit;
-    private UserAddress userAdd;
+    private Address userAdd;
+    private static int prov;
+    private static int posi;
+    private List<Address> addresses;
+    private Intent intent;
+    private int index;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -66,11 +71,15 @@ public class AddAddressActivity extends AppCompatActivity implements View.OnClic
         setContentView(R.layout.address_new);
         ButterKnife.bind(this);
 
-        sharedPreferences = getSharedPreferences("user_address",MODE_PRIVATE);
-        edit = sharedPreferences.edit();
+        addresses = DBUtils.getDao(this).loadAll();
+        intent = getIntent();
+        index = intent.getIntExtra("index",-1);
+
         initView();
         initDatas();
     }
+
+
 
     private void initDatas() {
         provinceList.add("北京市");
@@ -116,6 +125,15 @@ public class AddAddressActivity extends AppCompatActivity implements View.OnClic
         backBtn.setOnClickListener(this);
         save.setOnClickListener(this);
         userAddress.setOnClickListener(this);
+        if (index != -1){
+            userAdd = addresses.get(index);
+            userName.setText(userAdd.getUserName());
+            userMobile.setText(userAdd.getUserMobile());
+            userAddress.setText(userAdd.getUserAddress());
+            addressDetails.setText(userAdd.getAddressDetails());
+        }else {
+            userAdd = new Address();
+        }
     }
 
     @Override
@@ -125,12 +143,28 @@ public class AddAddressActivity extends AppCompatActivity implements View.OnClic
                 finish();
                 break;
             case R.id.address_new_save://保存信息
-//                userAdd = new UserAddress();
-//                userAdd.name = userName.getText().toString();
-//                userAdd.mobile = userMobile.getText().toString();
-//                userAdd.address = userAddress.getText().toString()+addressDetails.getText().toString();
-//                UtilsInfo.userSet.add(userAdd);
-
+                if (userName.getText().toString() == null){
+                    Toast.makeText(this,"姓名不能为空",Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                userAdd.setUserName(userName.getText().toString());
+                if (userMobile.getText().toString() == null){
+                    Toast.makeText(this,"电话不能为空",Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                userAdd.setUserMobile(userMobile.getText().toString());
+                if (userAddress.getText().toString() == null){
+                    Toast.makeText(this,"地址不能为空",Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                userAdd.setUserAddress(userAddress.getText().toString());
+                if (addressDetails.getText().toString() == null){
+                    Toast.makeText(this,"地址不能为空",Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                userAdd.setAddressDetails(addressDetails.getText().toString());
+                DBUtils.getDao(this).insertOrReplace(userAdd);
+                finish();
                 break;
             case R.id.address_new_user_address://弹出地址选择框
                 choseAddress();
@@ -147,29 +181,35 @@ public class AddAddressActivity extends AppCompatActivity implements View.OnClic
         cancle = (TextView) addressPopup.findViewById(R.id.address_popup_cancel);
         submit = (TextView) addressPopup.findViewById(R.id.address_popup_submit);
         province = (WheelView) addressPopup.findViewById(R.id.wheelview_province);
-        city = (WheelView) addressPopup.findViewById(R.id.wheelview_city);
+//        city = (WheelView) addressPopup.findViewById(R.id.wheelview_city);
 
         cancle.setOnClickListener(chose);
         submit.setOnClickListener(chose);
 
-//        wheelAdapter = new ArrayWheelAdapter(this);
+        wheelAdapter = new ArrayWheelAdapter(this);
 //        final ArrayWheelAdapter cityAdapter = new ArrayWheelAdapter(this);
-//        province.setWheelAdapter(wheelAdapter);
-//        province.setSkin(WheelView.Skin.Holo);
-//        province.setWheelData(provinceList);
-//        province.setWheelSize(5);
-//
-//        province.setOnWheelItemSelectedListener(new WheelView.OnWheelItemSelectedListener() {
-//            @Override
-//            public void onItemSelected(int position, Object o) {
-//
+        province.setWheelAdapter(wheelAdapter);
+        province.setSkin(WheelView.Skin.Holo);
+        province.setWheelData(provinceList);
+        province.setWheelSize(5);
+
+        province.setOnWheelItemSelectedListener(new WheelView.OnWheelItemSelectedListener() {
+            @Override
+            public void onItemSelected(int position, Object o) {
+                prov = position;
 //                String province = provinceList.get(position);
 //                city.setWheelAdapter(cityAdapter);
 //                city.setSkin(WheelView.Skin.Holo);
 //                city.setWheelData(cityMap.get(province));
 //                city.setWheelSize(5);
-//            }
-//        });
+//                city.setOnWheelItemSelectedListener(new WheelView.OnWheelItemSelectedListener() {
+//                    @Override
+//                    public void onItemSelected(int position, Object o) {
+//                        posi = position;
+//                    }
+//                });
+            }
+        });
 
         popupWindow = new PopupWindow(addressPopup, RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
         popupWindow.setBackgroundDrawable(new ColorDrawable());
@@ -185,6 +225,8 @@ public class AddAddressActivity extends AppCompatActivity implements View.OnClic
                     popupWindow.dismiss();
                     break;
                 case R.id.address_popup_submit://提交信息
+//                    userAddress.setText(provinceList.get(prov)+cityMap.get(provinceList.get(prov)).get(posi));
+                    userAddress.setText(provinceList.get(prov));
                     break;
             }
         }

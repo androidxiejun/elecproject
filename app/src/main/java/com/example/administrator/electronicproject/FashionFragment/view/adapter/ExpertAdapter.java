@@ -24,6 +24,8 @@ import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
+import attention.com.example.administrator.electronicproject.Attention;
+import attention.com.example.administrator.electronicproject.AttentionUtils;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import de.hdodenhof.circleimageview.CircleImageView;
@@ -32,17 +34,19 @@ import de.hdodenhof.circleimageview.CircleImageView;
  * Created by sunbin on 2016/9/9.
  * 衣橱达人界面中listview的适配器
  */
-public class ExpertAdapter extends BaseAdapter implements View.OnClickListener{
+public class ExpertAdapter extends BaseAdapter {
 
     private final LayoutInflater mInflater;
     private Context context;
-    private List<ExpertBean.DataBean.ItemsBean> expertDatas ;
+    private List<ExpertBean.DataBean.ItemsBean> expertDatas;
     private boolean ifClick = false;
+    private List<Attention> attentions;
 
-    public ExpertAdapter(Context context,List<ExpertBean.DataBean.ItemsBean> expertDatas){
+    public ExpertAdapter(Context context, List<ExpertBean.DataBean.ItemsBean> expertDatas) {
         this.context = context;
         this.expertDatas = expertDatas;
         mInflater = LayoutInflater.from(context);
+        attentions = AttentionUtils.getDao(context).loadAll();
     }
 
     @Override
@@ -63,16 +67,17 @@ public class ExpertAdapter extends BaseAdapter implements View.OnClickListener{
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
         ExpertHoler expertHoler = null;
-        if (view == null){
-            view = mInflater.from(context).inflate(R.layout.expert_layout_item,viewGroup,false);
+        if (view == null) {
+            view = mInflater.from(context).inflate(R.layout.expert_layout_item, viewGroup, false);
             expertHoler = new ExpertHoler(view);
-        }else {
+        } else {
             expertHoler = (ExpertHoler) view.getTag();
         }
         final ExpertBean.DataBean.ItemsBean.ComponentBean componentBean = expertDatas.get(i).getComponent();
+        final int userId = componentBean.getUserId();
         //头像
 //        expertHoler.headView.setImageResource(R.drawable.icon_information_on);
-        if (componentBean.getUserAvatar() != null){
+        if (componentBean.getUserAvatar() != null) {
             Picasso.with(context).load(componentBean.getUserAvatar()).into(expertHoler.headView);
         }
         //名称和职业
@@ -93,21 +98,57 @@ public class ExpertAdapter extends BaseAdapter implements View.OnClickListener{
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 int id = picsBeen.get(i).getComponent().getAction().getId();
                 Intent intent = new Intent(context, FashionTopDetailsActivity.class);
-                intent.putExtra("id",id);
-                intent.putExtra("thread_id","");
-                intent.putExtra("come","expert");
+                intent.putExtra("id", id);
+                intent.putExtra("thread_id", "");
+                intent.putExtra("come", "expert");
                 context.startActivity(intent);
             }
         });
+
+        for (int j = 0; j < attentions.size(); j++) {
+            if (attentions.get(j).getUserId() == userId) {
+                expertHoler.attrTv.setText("已关");
+                expertHoler.attrTv.setTextColor(Color.GRAY);
+            } else {
+                expertHoler.attrTv.setText("+关注");
+                expertHoler.attrTv.setTextColor(Color.RED);
+            }
+        }
+
         //点击关注或者取消关注
-        expertHoler.attrTv.setOnClickListener(this);
+        expertHoler.attrTv.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                if (!ifClick) {
+                    ((TextView) view).setText("已关");
+                    ((TextView) view).setTextColor(Color.GRAY);
+                    Attention attention = new Attention();
+                    attention.setUserId(userId);
+                    attention.setUserImage(componentBean.getUserAvatar());
+                    attention.setUserName(componentBean.getUserName());
+                    attention.setUserWork(componentBean.getUserTypeName());
+                    AttentionUtils.getDao(context).insertOrReplace(attention);
+                } else {
+                    ((TextView) view).setText("+关注");
+                    ((TextView) view).setTextColor(Color.RED);
+                    for (int i = 0; i < attentions.size(); i++) {
+                        if (attentions.get(i).getUserId() == userId) {
+                            AttentionUtils.getDao(context).delete(attentions.get(i));
+                        }
+                    }
+                }
+                ifClick = !ifClick;
+            }
+        });
+
+
         //点击进入个人信息
         expertHoler.headRl.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                int userId = componentBean.getUserId();
                 Intent intent = new Intent(context, ExpertPersonActivity.class);
-                intent.putExtra("userId",userId);
+                intent.putExtra("userId", userId);
                 context.startActivity(intent);
             }
         });
@@ -115,30 +156,30 @@ public class ExpertAdapter extends BaseAdapter implements View.OnClickListener{
         return view;
     }
 
-    @Override
-    public void onClick(View view) {
-        switch (view.getId()){
-            //点击关注按钮
-            case R.id.expert_head_attention:
-                if (!ifClick){
-                    ((TextView)view).setText("已关");
-                    ((TextView)view).setTextColor(Color.GRAY);
-                }else {
-                    ((TextView)view).setText("+关注");
-                    ((TextView)view).setTextColor(Color.RED);
-                }
-                ifClick = !ifClick;
-                break;
-        }
+//    @Override
+//    public void onClick(View view) {
+//        switch (view.getId()){
+//            //点击关注按钮
+//            case R.id.expert_head_attention:
+//                if (!ifClick){
+//                    ((TextView)view).setText("已关");
+//                    ((TextView)view).setTextColor(Color.GRAY);
+//                }else {
+//                    ((TextView)view).setText("+关注");
+//                    ((TextView)view).setTextColor(Color.RED);
+//                }
+//                ifClick = !ifClick;
+//                break;
+//        }
+//
+//    }
 
-    }
 
+    class ExpertHoler {
 
-    class ExpertHoler{
-
-        public ExpertHoler(View view){
+        public ExpertHoler(View view) {
             view.setTag(this);
-            ButterKnife.bind(this,view);
+            ButterKnife.bind(this, view);
         }
 
         @BindView(R.id.expert_head_circl_iv)

@@ -43,11 +43,11 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"/>
 
-        <com.wx.wheelview.widget.WheelView
+        <!--  <com.wx.wheelview.widget.WheelView
             android:id="@+id/wheelview_city"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"/>
+            android:layout_weight="1"/>-->
 
     </LinearLayout>
 
