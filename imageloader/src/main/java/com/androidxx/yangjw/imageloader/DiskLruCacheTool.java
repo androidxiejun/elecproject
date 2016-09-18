@@ -23,7 +23,7 @@ public class DiskLruCacheTool {
 
     private static final String TAG = "androidxx";
     private static DiskLruCache diskLruCache;
-    public static final int MAX_SIZE = 10 * 1024 * 1024;
+    public static final int MAX_SIZE = 4 * 1024 * 1024;
 
     public static void init(Context context) {
         //开启缓存对象

@@ -16,10 +16,10 @@ import android.widget.TextView;
 import com.example.administrator.electronicproject.FashionFragment.view.activity.ExpertActivity;
 import com.example.administrator.electronicproject.FashionFragment.view.adapter.AttentionAdapter;
 import com.example.administrator.electronicproject.R;
-import com.example.administrator.electronicproject.adapter.AddressAdapter;
 import com.handmark.pulltorefresh.library.PullToRefreshGridView;
 import com.handmark.pulltorefresh.library.PullToRefreshListView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import attention.com.example.administrator.electronicproject.Attention;
@@ -37,7 +37,7 @@ public class FashionAttentionFragment extends Fragment implements AttentionAdapt
     private PullToRefreshListView pullList;
     private ListView refreshableView;
     private RelativeLayout empty;
-    private List<Attention> attentions;
+    private List<Attention> attentions = new ArrayList<>();
     private AttentionAdapter attentionAdapter;
     private View footView;
     private TextView footTv;
@@ -66,7 +66,7 @@ public class FashionAttentionFragment extends Fragment implements AttentionAdapt
         refreshableView.addFooterView(footView);
         footTv = (TextView) footView.findViewById(R.id.attention_foot_tv);
 
-        attentions = AttentionUtils.getDao(context).loadAll();
+        attentions.addAll(AttentionUtils.getDao(context).loadAll());
         attentionAdapter = new AttentionAdapter(context,attentions,this);
         pullList.setAdapter(attentionAdapter);
 

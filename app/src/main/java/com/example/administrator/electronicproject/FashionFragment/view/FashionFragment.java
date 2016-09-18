@@ -3,7 +3,6 @@ package com.example.administrator.electronicproject.FashionFragment.view;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -16,7 +15,6 @@ import android.widget.Button;
 import android.widget.FrameLayout;
 
 import com.example.administrator.electronicproject.FashionFragment.bean.DatasUtils;
-import com.example.administrator.electronicproject.FashionFragment.view.activity.CameraActivity;
 import com.example.administrator.electronicproject.R;
 import com.example.administrator.electronicproject.SearchActivity.SearchActivity;
 

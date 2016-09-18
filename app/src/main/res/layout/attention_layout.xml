@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/attention_relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <TextView
+            android:id="@+id/attention_head_attention"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:text="取消关注"
+            android:textSize="16sp" />
+
+
+        <RelativeLayout
+            android:id="@+id/attention_head_relative"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/attention_head_attention">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/attention_head_circl_iv"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/attention_head_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/attention_head_circl_iv"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/attention_head_circl_iv"
+                android:text="name"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/attention_head_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/attention_head_circl_iv"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/attention_head_circl_iv"
+                android:text="name"
+                android:textSize="13sp" />
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

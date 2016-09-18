@@ -7,7 +7,7 @@ import android.support.v4.util.LruCache;
  * Created by yangjw on 2016/8/5.
  */
 public class MemoryCacheTool {
-    public static final int MAX_SIZE = 10 * 1024 * 1024;
+    public static final int MAX_SIZE = 4 * 1024 * 1024;
     private static LruCache<String,Bitmap> mLruCache = new LruCache<String,Bitmap>(MAX_SIZE) {
         @Override
         protected int sizeOf(String key, Bitmap value) {
