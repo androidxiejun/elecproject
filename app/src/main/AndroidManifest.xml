@@ -22,7 +22,7 @@
         <!-- 标签界面-->
         <activity android:name=".FashionFragment.view.activity.FashionMiddleTableActivity" android:launchMode="singleTask"/>
         <!-- 点击标签，进入的界面-->
-        <activity android:name=".FashionFragment.view.activity.FashionTableDetailsActivity" android:launchMode="singleTask"/>
+        <activity android:name=".FashionFragment.view.activity.FashionTableDetailsActivity"/>
         <!-- 衣橱达人界面-->
         <activity android:name=".FashionFragment.view.activity.ExpertActivity"/>
         <!-- 衣橱达人个人界面-->
@@ -69,7 +69,10 @@
         <activity android:name=".activity.UserBrandActivity"/>
         <!-- 设置界面-->
         <activity android:name=".activity.SettingActivity"/>
-
+        <!-- 下载图片的服务-->
+        <service android:name=".FashionFragment.view.activity.DownImageService"/>
+        <!-- 拍照界面-->
+        <activity android:name=".activity.TackPhotoActivity"/>
 
         <activity android:name=".ClassifyFragment.DetaillActivity.ClassifyDetiailActivity" />
         <activity android:name=".SearchActivity.SearchActivity" />

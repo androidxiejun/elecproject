@@ -1,6 +1,7 @@
 package com.example.administrator.electronicproject.FashionFragment.view.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Paint;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,6 +12,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.administrator.electronicproject.FashionFragment.bean.RecommendDeatilsBean;
+import com.example.administrator.electronicproject.PurchaseDetails.PurchaseDetails;
 import com.example.administrator.electronicproject.R;
 import com.squareup.picasso.Picasso;
 
@@ -56,7 +58,7 @@ public class FashionTopDetailsBuyAdapter extends BaseAdapter{
         }else {
             buyHolder = (BuyHolder) view.getTag();
         }
-        RecommendDeatilsBean.ResponseBean.DataBean.EmbedItemsBean.CompBeans compBeans = buyDatas.get(i).getComponent();
+        final RecommendDeatilsBean.ResponseBean.DataBean.EmbedItemsBean.CompBeans compBeans = buyDatas.get(i).getComponent();
         Picasso.with(context).load(compBeans.getPicUrl()).into(buyHolder.bigIv);
         buyHolder.titleTv.setText(compBeans.getDescription());
         buyHolder.priceTv.setText("￥"+compBeans.getPrice());
@@ -70,6 +72,9 @@ public class FashionTopDetailsBuyAdapter extends BaseAdapter{
             @Override
             public void onClick(View view) {
                 //点击跳转到购买界面
+                Intent intent = new Intent(context, PurchaseDetails.class);
+                intent.putExtra("source_id",compBeans.getAction().getSourceId());
+                context.startActivity(intent);
             }
         });
         return view;

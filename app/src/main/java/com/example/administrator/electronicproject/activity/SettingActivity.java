@@ -95,6 +95,9 @@ public class SettingActivity extends AppCompatActivity implements View.OnClickLi
         }
     }
 
+    /**
+     * 推荐给好友时，弹出的popupwindow
+     */
     private void initPopup(){
         View popup = LayoutInflater.from(this).inflate(R.layout.setting_popup, null);
 
@@ -114,10 +117,13 @@ public class SettingActivity extends AppCompatActivity implements View.OnClickLi
 
         popupWindow = new PopupWindow(popup, RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
         popupWindow.setBackgroundDrawable(new ColorDrawable());
-        popupWindow.showAtLocation(popup, Gravity.BOTTOM,0,0);
         popupWindow.setOutsideTouchable(true);
+        popupWindow.showAtLocation(popup, Gravity.BOTTOM,0,0);
     }
 
+    /**
+     * popupindow中的点击事件
+     */
     private View.OnClickListener popupListener = new View.OnClickListener() {
         @Override
         public void onClick(View view) {

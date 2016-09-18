@@ -141,10 +141,11 @@ public class FashionRecommendFragment extends Fragment implements View.OnClickLi
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 //跳转到相应界面
                 Intent intent = new Intent(context, FashionTableDetailsActivity.class);
-                int id = fashionMiddleDatas.get(i).getComponent().getAction().getId();
-                intent.putExtra("id", id);
+                FashionMiddleBean.ResponseBean.DataBean.ItemsBean.ComponentBean.ActionBean actionBean = fashionMiddleDatas.get(i).getComponent().getAction();
+                intent.putExtra("id", actionBean.getId());
                 //用于判断进入FashionTableDetailsActivity界面的是哪个界面，用于 FashionTableDetailsActivity的返回
                 intent.putExtra("come", "middle");
+                intent.putExtra("title",actionBean.getTag());
                 startActivity(intent);
             }
         });

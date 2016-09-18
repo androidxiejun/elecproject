@@ -17,6 +17,7 @@ import android.widget.FrameLayout;
 import com.example.administrator.electronicproject.FashionFragment.bean.DatasUtils;
 import com.example.administrator.electronicproject.FashionFragment.view.activity.CameraActivity;
 import com.example.administrator.electronicproject.R;
+import com.example.administrator.electronicproject.SearchActivity.SearchActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -136,6 +137,8 @@ public class FashionFragment extends Fragment implements View.OnClickListener{
         switch (view.getId()){
             case R.id.fashion_tool_bar_search_btn:
                 //点击进入搜索界面
+                Intent search = new Intent(context, SearchActivity.class);
+                startActivity(search);
                 break;
             case R.id.fashion_tool_bar_camera_btn:
                 //点击相机进入调用手机相册

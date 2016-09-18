@@ -8,7 +8,8 @@
         android:id="@+id/camera_tool_bar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        app:contentInsetStart="0dp">
+        app:contentInsetStart="0dp"
+        android:background="#FFFFFF">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -33,7 +34,7 @@
                 android:textSize="15sp" />
 
             <Button
-                android:id="@+id/fashion_tool_bar_camera_btn"
+                android:id="@+id/fashion_tool_bar_camera"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
                 android:layout_centerInParent="true"
@@ -52,6 +53,7 @@
     <FrameLayout
         android:id="@+id/camera_frame_layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:layout_below="@id/camera_tool_bar"/>
 
 </RelativeLayout>

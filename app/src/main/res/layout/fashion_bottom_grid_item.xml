@@ -39,15 +39,6 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="10dp" />
 
-        <TextView
-            android:id="@+id/fashion_bottom_item_name_tv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="10dp"
-            android:layout_toRightOf="@+id/fashion_bottom_item_circle_iv"
-            android:text="name"
-            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/fashion_bottom_item_collct_tv"
@@ -60,6 +51,20 @@
             android:text="978"
             android:gravity="center_vertical"
             android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/fashion_bottom_item_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:singleLine="true"
+            android:layout_toRightOf="@+id/fashion_bottom_item_circle_iv"
+            android:layout_toLeftOf="@id/fashion_bottom_item_collct_tv"
+            android:text="name"
+            android:textSize="16sp" />
+
 
     </RelativeLayout>
 

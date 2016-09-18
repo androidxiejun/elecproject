@@ -1,6 +1,7 @@
 package com.example.administrator.electronicproject.FashionFragment.view.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.administrator.electronicproject.FashionFragment.bean.RecommendDeatilsBean;
+import com.example.administrator.electronicproject.PurchaseDetails.PurchaseDetails;
 import com.example.administrator.electronicproject.R;
 import com.squareup.picasso.Picasso;
 
@@ -47,7 +49,7 @@ public class TopDetailsThreeShopAdapter extends BaseAdapter {
     }
 
     @Override
-    public View getView(int i, View view, ViewGroup viewGroup) {
+    public View getView(final int i, View view, ViewGroup viewGroup) {
         BuyHolderTwo buyHolder = null;
         if (null == view){
             view = LayoutInflater.from(context).inflate(R.layout.fashion_top_details_buy,viewGroup,false);
@@ -55,7 +57,7 @@ public class TopDetailsThreeShopAdapter extends BaseAdapter {
         }else {
             buyHolder = (BuyHolderTwo) view.getTag();
         }
-        RecommendDeatilsBean.ResponseBean.DataBean.ItemsBean.ComponentBean.EmbedItemsBean.ComBeanss comBeanss = embedItemsBeen.get(i).getComponent();
+        final RecommendDeatilsBean.ResponseBean.DataBean.ItemsBean.ComponentBean.EmbedItemsBean.ComBeanss comBeanss = embedItemsBeen.get(i).getComponent();
         Picasso.with(context).load(comBeanss.getPicUrl()).into(buyHolder.bigIv);
         buyHolder.titleTv.setText(comBeanss.getDescription());
         buyHolder.priceTv.setText("￥"+comBeanss.getPrice());
@@ -68,6 +70,9 @@ public class TopDetailsThreeShopAdapter extends BaseAdapter {
             @Override
             public void onClick(View view) {
                 //点击跳转到购买界面
+                Intent intent = new Intent(context, PurchaseDetails.class);
+                intent.putExtra("source_id",comBeanss.getAction().getSourceId());
+                context.startActivity(intent);
             }
         });
         return view;

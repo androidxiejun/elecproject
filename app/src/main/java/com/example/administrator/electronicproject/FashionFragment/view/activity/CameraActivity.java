@@ -21,23 +21,29 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.administrator.electronicproject.FashionFragment.bean.DatasUtils;
+import com.example.administrator.electronicproject.FashionFragment.view.fragment.CameraFragmentOne;
 import com.example.administrator.electronicproject.MainActivity;
 import com.example.administrator.electronicproject.R;
 
+import java.io.File;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
  * Created by sunbin on 2016/9/6.
+ * 照片界面
  */
-public class CameraActivity extends AppCompatActivity implements View.OnClickListener{
+public class CameraActivity extends AppCompatActivity implements View.OnClickListener,CameraFragmentOne.CameraCallBack{
 
     @BindView(R.id.camera_tool_bar_back_btn)
     Button backBtn;
-    @BindView(R.id.fashion_tool_bar_camera_btn)
+    @BindView(R.id.fashion_tool_bar_camera)
     Button cameraModeBtn;
     @BindView(R.id.camera_tool_bar_content_tv)
     TextView ensureTv;
@@ -50,7 +56,10 @@ public class CameraActivity extends AppCompatActivity implements View.OnClickLis
     //调用系统相册-选择图片
     private static final int IMAGE = 1;
     private List<String> cameraList = new ArrayList<>();
+    private Map<String,List<String>> parentMap = new HashMap<>();
+    private List<String> childList;
     private boolean mode = false;//用来判断显示模式
+    private CameraFragmentOne cameraFragmentOne;
 
 
     @Override
@@ -79,29 +88,51 @@ public class CameraActivity extends AppCompatActivity implements View.OnClickLis
         String[] projection = new String[]{MediaStore.Images.Media._ID,
                 MediaStore.Images.Media.BUCKET_DISPLAY_NAME, // 直接包含该图片文件的文件夹名
                 MediaStore.Images.Media.DATA}; // 图片绝对路径
-        
         //根据MediaStore.Images类获取所有图片的路径
+        ContentResolver contentResolver = getContentResolver();
+        Cursor cursor = MediaStore.Images.Media.query(contentResolver,MediaStore.Images.Media.EXTERNAL_CONTENT_URI,projection);
+        while (cursor.moveToNext()){
+            String path = cursor.getString(cursor.getColumnIndex(MediaStore.Images.Media.DATA));
+            String parentPath = cursor.getString(cursor.getColumnIndex(MediaStore.Images.Media.BUCKET_DISPLAY_NAME));
+//            File partentFile = new File(path).getParentFile();
+//            String absolutePath = partentFile.getAbsolutePath();
+            cameraList.add(path);//手机中所有的图片路径
+            if (!parentMap.containsKey(parentPath)){
+                childList = new ArrayList<>();
+                childList.add(path);
+                parentMap.put(parentPath,childList);
+            }else {
+                childList.add(path);
+            }
+        }
+        cameraList.add(0,"ic_image_from_camera");
+        initView();
+    }
 
+    private void initView() {
+        cameraFragmentOne = CameraFragmentOne.newInstances(cameraList,this);
+
+
+        chooseFragment(cameraFragmentOne);
     }
 
     @Override
     public void onClick(View view) {
-        Intent intent = null;
         switch (view.getId()){
             case R.id.camera_tool_bar_back_btn:
-                intent = new Intent(this, MainActivity.class);
+                finish();
                 break;
-            case R.id.fashion_tool_bar_camera_btn:
-                if (mode){
-                    mode = false;
+            case R.id.fashion_tool_bar_camera:
+                if (!mode){
+
                 }else {
-                    mode = true;
+
                 }
+                mode = !mode;
                 break;
             case R.id.camera_tool_bar_content_tv:
                 break;
         }
-        startActivity(intent);
     }
 
     /**
@@ -120,5 +151,10 @@ public class CameraActivity extends AppCompatActivity implements View.OnClickLis
         }
         fragmentTransaction.commit();
         mCurrentShowFragment = fragment;
+    }
+
+    @Override
+    public void count() {
+        ensureTv.setText("("+ DatasUtils.cameraCount.size()+"/6)确定");
     }
 }

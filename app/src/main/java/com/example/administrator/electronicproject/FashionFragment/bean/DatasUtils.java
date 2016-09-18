@@ -12,4 +12,6 @@ public class DatasUtils {
 
     public static int windowHight;
     public static int windowWight;
+
+    public static List<String> cameraCount = new ArrayList<>();
 }

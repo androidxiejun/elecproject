@@ -33,6 +33,7 @@ import com.example.administrator.electronicproject.FashionFragment.view.adapter.
 import com.example.administrator.electronicproject.FashionFragment.view.adapter.RecommendTopDetailsAdapter;
 import com.example.administrator.electronicproject.FashionFragment.view.customview.FlowLayout;
 import com.example.administrator.electronicproject.MainActivity;
+import com.example.administrator.electronicproject.PurchaseDetails.PurchaseDetails;
 import com.example.administrator.electronicproject.R;
 import com.handmark.pulltorefresh.library.PullToRefreshListView;
 import com.handmark.pulltorefresh.library.internal.LoadingLayout;
@@ -266,10 +267,10 @@ public class FashionTopDetailsActivity extends AppCompatActivity implements View
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 //点击，如果是图片，就显示图片，不是无反应
-                String componentType = detailsLists.get(i+1).getComponent().getComponentType();
+                String componentType = detailsLists.get(i-2).getComponent().getComponentType();
                 if (componentType.equals("cell")){
                     Intent intent = new Intent(context,ShowImageActivity.class);
-                    intent.putExtra("url",detailsLists.get(i+1).getComponent().getPicUrl());
+                    intent.putExtra("url",detailsLists.get(i-2).getComponent().getPicUrl());
                     startActivity(intent);
                 }
             }
@@ -314,6 +315,7 @@ public class FashionTopDetailsActivity extends AppCompatActivity implements View
                 startActivity(intent);
             }
         });
+
 
     }
 
@@ -360,6 +362,7 @@ public class FashionTopDetailsActivity extends AppCompatActivity implements View
                         //传递参数，listBeen的id
                         intent.putExtra("id", tags.get(position).getId());
                         intent.putExtra("come","topdetails");
+                        intent.putExtra("title",tags.get(position).getCategory());
                         context.startActivity(intent);
 //                        finish();
                     }

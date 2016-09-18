@@ -58,6 +58,7 @@ public class FashionTableDetailsActivity extends AppCompatActivity implements Vi
     private GridView refreshableView;
     //用于判断进入FashionTableDetailsActivity界面的是哪个界面，用于 FashionTableDetailsActivity的返回
     private String come;
+    private String title;
 
 
     @Override
@@ -70,7 +71,8 @@ public class FashionTableDetailsActivity extends AppCompatActivity implements Vi
         intent = getIntent();
         tag_id = intent.getIntExtra("id",607);
         come = intent.getStringExtra("come");
-
+        title = intent.getStringExtra("title");
+        titleTv.setText("#"+title);
         initView();
     }
 
@@ -152,7 +154,7 @@ public class FashionTableDetailsActivity extends AppCompatActivity implements Vi
             @Override
             public void onResponse(Call<FashionBottonBean> call, Response<FashionBottonBean> response) {
                 FashionBottonBean.ResponseBean.DataBean dataBean = response.body().getResponse().getData();
-                titleTv.setText("#"+dataBean.getTagHead().getTitle());
+//                titleTv.setText("#"+dataBean.getTagHead().getTitle());
                 if (tableDatas != null){
                     tableDatas.clear();
                 }

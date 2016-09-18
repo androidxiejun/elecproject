@@ -3,6 +3,7 @@ package com.example.administrator.electronicproject.MineFragment;
 import android.content.Context;
 import android.content.Intent;
 import android.location.Address;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -245,6 +246,7 @@ public class MineFragment extends Fragment implements View.OnClickListener {
             case R.id.mine_help://帮助和反馈
                 break;
             case R.id.mine_service://客服
+                //已用超链接
                 break;
         }
     }

@@ -81,6 +81,7 @@ public class FashionMiddleTableAdapter extends BaseAdapter {
                 intent.putExtra("id",listBeen.get(position).getId());
                 //用于判断进入FashionTableDetailsActivity界面的是哪个界面，用于 FashionTableDetailsActivity的返回
                 intent.putExtra("come","table");
+                intent.putExtra("title",listBeen.get(position).getTag());
                 context.startActivity(intent);
             }
         });
