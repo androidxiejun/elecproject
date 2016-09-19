@@ -53,6 +53,9 @@ public class UserNickActivity extends AppCompatActivity implements View.OnClickL
                 finish();
                 break;
             case R.id.user_nick_ensure_btn://保存信息，并退出
+                Intent intent = new Intent(this,UserInfoActivity.class);
+                intent.putExtra("nick",nick.getText().toString());
+                setResult(100,intent);
                 break;
         }
     }
