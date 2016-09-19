@@ -144,6 +144,8 @@ public class MineFragment extends Fragment implements View.OnClickListener {
         if (users != null && users.size() > 0){
             user = users.get(0);
             avatar.setImageBitmap(BitmapFactory.decodeFile(user.getUserImage()));
+        }else {
+            avatar.setImageResource(R.drawable.default_avatar);
         }
     }
 
