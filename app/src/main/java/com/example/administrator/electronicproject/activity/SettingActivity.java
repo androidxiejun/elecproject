@@ -17,8 +17,11 @@ import android.widget.Toast;
 
 import com.example.administrator.electronicproject.R;
 
+import addressdao.com.example.administrator.electronicproject.DBUtils;
+import attention.com.example.administrator.electronicproject.AttentionUtils;
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import user.com.example.administrator.electronicproject.UserUtils;
 
 /**
  * Created by sunbin on 2016/9/14.
@@ -90,6 +93,9 @@ public class SettingActivity extends AppCompatActivity implements View.OnClickLi
             case R.id.seting_clear://清除
                 editor.clear();
                 editor.commit();
+                DBUtils.getDao(this).deleteAll();
+                UserUtils.getDao(this).deleteAll();
+                AttentionUtils.getDao(this).deleteAll();
                 Toast.makeText(SettingActivity.this, "清除数据成功", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.seting_declaration://声明
