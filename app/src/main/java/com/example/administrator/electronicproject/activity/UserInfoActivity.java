@@ -100,6 +100,7 @@ public class UserInfoActivity extends AppCompatActivity implements View.OnClickL
     private Bitmap bitmap;
     private User user;
     private static String photoPath;
+    private SharedPreferences share;
 
 
     @Override
@@ -110,7 +111,9 @@ public class UserInfoActivity extends AppCompatActivity implements View.OnClickL
 
         context = this;
         sharedPreferences = getSharedPreferences("birthday",MODE_PRIVATE);
+        share = getSharedPreferences("nick",MODE_PRIVATE);
         edit = sharedPreferences.edit();
+
         initListener();
     }
 
@@ -137,7 +140,7 @@ public class UserInfoActivity extends AppCompatActivity implements View.OnClickL
             nickContent.setText(user.getUserNick());
             sexContent.setText(user.getUserSex());
             birthdayContent.setText(user.getUserBirthday());
-            mobileContent.setText(user.getUserEmail());
+            mobileContent.setText(user.getUserPhone());
             headImage.setImageBitmap(BitmapFactory.decodeFile(user.getUserImage()));
         }
     }
@@ -165,8 +168,8 @@ public class UserInfoActivity extends AppCompatActivity implements View.OnClickL
             case R.id.user_info_nick_name://昵称
                 Intent nick = new Intent(this,UserNickActivity.class);
                 nick.putExtra("hint",nickContent.getText());
-//                startActivity(nick);
-                startActivityForResult(nick,100);
+                startActivity(nick);
+//                startActivityForResult(nick,1001);
                 break;
             case R.id.user_info_sex://性别
                 initSexPopup();
@@ -257,10 +260,6 @@ public class UserInfoActivity extends AppCompatActivity implements View.OnClickL
                     bitmap = BitmapFactory.decodeFile(photoPath);
                     headImage.setImageBitmap(bitmap);
                     break;
-                case 100:
-                    String nick = data.getStringExtra("nick");
-                    nickContent.setText(nick);
-                    break;
             }
         }
     }
@@ -272,11 +271,12 @@ public class UserInfoActivity extends AppCompatActivity implements View.OnClickL
         if ( ! dirFile.exists()){
             dirFile.mkdir();
         }
-        File file = new File(dirFile,System.currentTimeMillis()+".jpg");
+        long millis = System.currentTimeMillis();
+        File file = new File(dirFile,millis+".jpg");
         try {
             FileOutputStream outputStream = new FileOutputStream(file);
             bitmap.compress(Bitmap.CompressFormat.JPEG,100,outputStream);
-            photoPath = path + File.separator + System.currentTimeMillis()+".jpg";
+            photoPath = path + File.separator + millis +".jpg";
             outputStream.flush();
             outputStream.close();
         } catch (FileNotFoundException e) {
@@ -361,4 +361,10 @@ public class UserInfoActivity extends AppCompatActivity implements View.OnClickL
             birthdayPopup.dismiss();
         }
     };
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        nickContent.setText(share.getString("nick",null));
+    }
 }
