@@ -3,6 +3,7 @@ package com.example.administrator.electronicproject.MineFragment;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -36,6 +37,8 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import de.hdodenhof.circleimageview.CircleImageView;
+import user.com.example.administrator.electronicproject.User;
+import user.com.example.administrator.electronicproject.UserUtils;
 
 /**
  * Created by Administrator on 2016/9/5.
@@ -107,6 +110,7 @@ public class MineFragment extends Fragment implements View.OnClickListener {
     private Context context;
     private int userId = 2904927;//默认一个用户id
     private List<Products> productList=new ArrayList<>();
+    private User user;
     public static MineFragment newInstance() {
         return new MineFragment();
     }
@@ -135,6 +139,12 @@ public class MineFragment extends Fragment implements View.OnClickListener {
         super.onResume();
         productList= DaoUtils.getDao(context).loadAll();
         shoppingCarNum.setText(productList.size()+"");
+
+        List<User> users = UserUtils.getDao(context).loadAll();
+        if (users != null && users.size() > 0){
+            user = users.get(0);
+            avatar.setImageBitmap(BitmapFactory.decodeFile(user.getUserImage()));
+        }
     }
 
     private void initListener() {
