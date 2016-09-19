@@ -130,8 +130,7 @@
             android:layout_toLeftOf="@id/user_info_nick_right"
             android:layout_centerVertical="true"
             android:layout_marginRight="10dp"
-            android:textSize="16sp"
-            android:text="18171262635" />
+            android:textSize="16sp" />
 
     </RelativeLayout>
 
@@ -180,8 +179,7 @@
             android:layout_toLeftOf="@id/user_info_sex_right"
             android:layout_centerVertical="true"
             android:layout_marginRight="10dp"
-            android:textSize="16sp"
-            android:text="男" />
+            android:textSize="16sp" />
 
     </RelativeLayout>
 
@@ -322,8 +320,7 @@
             android:layout_toLeftOf="@id/user_info_mobile_right"
             android:layout_centerVertical="true"
             android:layout_marginRight="10dp"
-            android:textSize="16sp"
-            android:text="181" />
+            android:textSize="16sp" />
 
     </RelativeLayout>
 
@@ -420,7 +417,7 @@
             android:layout_centerVertical="true"
             android:layout_marginRight="10dp"
             android:textSize="16sp"
-            android:text="请选择地址" />
+            android:text="不对外显示" />
 
     </RelativeLayout>
 
