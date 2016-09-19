@@ -1,5 +1,6 @@
 package com.example.administrator.electronicproject.activity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -31,12 +32,14 @@ public class TackPhotoActivity extends AppCompatActivity implements SurfaceHolde
     private SurfaceView mSurfaceView;
     private SurfaceHolder mHolder;
     private Camera mCamera;
+    private Context context;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tack_photo_layout);
 
+        context = this;
         initView();
     }
 
@@ -66,6 +69,10 @@ public class TackPhotoActivity extends AppCompatActivity implements SurfaceHolde
                         //暂停和重启预览
                         mCamera.stopPreview();
                         mCamera.startPreview();
+                        Intent intent = new Intent(context,UserInfoActivity.class);
+                        intent.putExtra("mip",bytes);
+                        setResult(2,intent);
+                        finish();
                     }
                 });
             }
