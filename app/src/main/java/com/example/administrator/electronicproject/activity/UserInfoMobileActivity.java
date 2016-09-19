@@ -33,7 +33,7 @@ public class UserInfoMobileActivity extends AppCompatActivity implements View.On
     private Fragment mCurrentShowFragment;
 
     private Intent intent;
-    private int mobile;
+    private String mobile;
     private UserMobileFragmentOne userMobileFragmentOne;
     private UserMobileFragmentTwo userMobileFragmentTwo;
 
@@ -45,7 +45,7 @@ public class UserInfoMobileActivity extends AppCompatActivity implements View.On
 
         manager = getSupportFragmentManager();
         intent = getIntent();
-        mobile = intent.getIntExtra("mobile",0);
+        mobile = intent.getStringExtra("mobile");
 
         initView();
     }
