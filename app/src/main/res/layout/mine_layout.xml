@@ -148,8 +148,7 @@
                         android:layout_centerHorizontal="true"
                         android:textSize="16sp"
                         android:layout_marginTop="10dp"
-                        android:textColor="#000000"
-                        android:text="0"/>
+                        android:textColor="#000000" />
 
                     <TextView
                         android:id="@+id/mine_attention"
@@ -178,8 +177,7 @@
                         android:layout_centerHorizontal="true"
                         android:textSize="16sp"
                         android:layout_marginTop="10dp"
-                        android:textColor="#000000"
-                        android:text="0"/>
+                        android:textColor="#000000" />
 
                     <TextView
                         android:id="@+id/mine_fans"
@@ -207,8 +205,7 @@
                         android:layout_centerHorizontal="true"
                         android:textSize="16sp"
                         android:layout_marginTop="10dp"
-                        android:textColor="#000000"
-                        android:text="0"/>
+                        android:textColor="#000000" />
 
                     <TextView
                         android:id="@+id/mine_collect"
