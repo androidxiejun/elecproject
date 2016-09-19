@@ -1,6 +1,7 @@
 package com.example.administrator.electronicproject.activity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -27,12 +28,17 @@ public class UserNickActivity extends AppCompatActivity implements View.OnClickL
     EditText nick;
     private Intent intent;
     private String nickContent;
+    private SharedPreferences sharedPreferences;
+    private SharedPreferences.Editor edit;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.user_nick_layout);
         ButterKnife.bind(this);
+
+        sharedPreferences = getSharedPreferences("nick",MODE_PRIVATE);
+        edit = sharedPreferences.edit();
 
         intent = getIntent();
         nickContent = intent.getStringExtra("hint");
@@ -53,9 +59,9 @@ public class UserNickActivity extends AppCompatActivity implements View.OnClickL
                 finish();
                 break;
             case R.id.user_nick_ensure_btn://保存信息，并退出
-                Intent intent = new Intent(this,UserInfoActivity.class);
-                intent.putExtra("nick",nick.getText().toString());
-                setResult(100,intent);
+                edit.putString("nick",nick.getText().toString());
+                edit.commit();
+                finish();
                 break;
         }
     }
