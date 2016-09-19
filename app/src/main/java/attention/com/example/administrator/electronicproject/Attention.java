@@ -6,7 +6,7 @@ import org.greenrobot.greendao.annotation.*;
 /**
  * Entity mapped to table "ATTENTION".
  */
-@Entity
+@Entity(schema = "attentiondb")
 public class Attention {
 
     @Id(autoincrement = true)

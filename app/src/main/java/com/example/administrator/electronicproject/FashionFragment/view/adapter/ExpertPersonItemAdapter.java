@@ -59,6 +59,7 @@ public class ExpertPersonItemAdapter extends BaseAdapter {
         String pics = componentBean.getPics();
         if (!pics.equals("")){
             Picasso.with(context).load(pics).into(holder.imageView);
+//            ImageLoader.init(context).load(pics,holder.imageView);
         }
         holder.textView.setText(componentBean.getContent());
         return view;

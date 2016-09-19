@@ -34,7 +34,7 @@ public class AttentionDao extends AbstractDao<Attention, Long> {
         super(config);
     }
     
-    public AttentionDao(DaoConfig config, DaoSession daoSession) {
+    public AttentionDao(DaoConfig config, AttentiondbDaoSession daoSession) {
         super(config, daoSession);
     }
 

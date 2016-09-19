@@ -12,11 +12,11 @@ public class AttentionUtils {
 
     public static AttentionDao getDao(Context context){
         if (attentionDao == null){
-            DaoMaster.DevOpenHelper openHelper = new DaoMaster.DevOpenHelper(context, "android");
+            AttentiondbDaoMaster.DevOpenHelper openHelper = new AttentiondbDaoMaster.DevOpenHelper(context, "android");
             SQLiteDatabase readableDatabase = openHelper.getReadableDatabase();
-            DaoMaster daoMaster = new DaoMaster(readableDatabase);
-            DaoSession daoSession = daoMaster.newSession();
-            attentionDao = daoSession.getAttentionDao();
+            AttentiondbDaoMaster attentiondbDaoMaster = new AttentiondbDaoMaster(readableDatabase);
+            AttentiondbDaoSession attentiondbDaoSession = attentiondbDaoMaster.newSession();
+            attentionDao = attentiondbDaoSession.getAttentionDao();
         }
         return attentionDao;
     }

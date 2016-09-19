@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/addre/addre.iml" filepath="$PROJECT_DIR$/addre/addre.iml" />
+      <module fileurl="file://$PROJECT_DIR$/address/address.iml" filepath="$PROJECT_DIR$/address/address.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/day30_webview/day30_webview.iml" filepath="$PROJECT_DIR$/day30_webview/day30_webview.iml" />
       <module fileurl="file://$PROJECT_DIR$/electricproject.iml" filepath="$PROJECT_DIR$/electricproject.iml" />

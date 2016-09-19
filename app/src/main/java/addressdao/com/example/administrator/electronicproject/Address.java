@@ -6,22 +6,14 @@ import org.greenrobot.greendao.annotation.*;
 /**
  * Entity mapped to table "ADDRESS".
  */
-@Entity
+@Entity(schema = "addressdb")
 public class Address {
 
     @Id(autoincrement = true)
     private Long id;
-
-    @NotNull
     private String userName;
-
-    @NotNull
     private String userMobile;
-
-    @NotNull
     private String userAddress;
-
-    @NotNull
     private String addressDetails;
 
     @Generated
@@ -49,43 +41,35 @@ public class Address {
         this.id = id;
     }
 
-    @NotNull
     public String getUserName() {
         return userName;
     }
 
-    /** Not-null value; ensure this value is available before it is saved to the database. */
-    public void setUserName(@NotNull String userName) {
+    public void setUserName(String userName) {
         this.userName = userName;
     }
 
-    @NotNull
     public String getUserMobile() {
         return userMobile;
     }
 
-    /** Not-null value; ensure this value is available before it is saved to the database. */
-    public void setUserMobile(@NotNull String userMobile) {
+    public void setUserMobile(String userMobile) {
         this.userMobile = userMobile;
     }
 
-    @NotNull
     public String getUserAddress() {
         return userAddress;
     }
 
-    /** Not-null value; ensure this value is available before it is saved to the database. */
-    public void setUserAddress(@NotNull String userAddress) {
+    public void setUserAddress(String userAddress) {
         this.userAddress = userAddress;
     }
 
-    @NotNull
     public String getAddressDetails() {
         return addressDetails;
     }
 
-    /** Not-null value; ensure this value is available before it is saved to the database. */
-    public void setAddressDetails(@NotNull String addressDetails) {
+    public void setAddressDetails(String addressDetails) {
         this.addressDetails = addressDetails;
     }
 

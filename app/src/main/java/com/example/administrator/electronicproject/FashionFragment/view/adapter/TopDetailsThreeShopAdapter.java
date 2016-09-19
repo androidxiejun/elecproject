@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.androidxx.yangjw.imageloader.ImageLoader;
 import com.example.administrator.electronicproject.FashionFragment.bean.RecommendDeatilsBean;
 import com.example.administrator.electronicproject.PurchaseDetails.PurchaseDetails;
 import com.example.administrator.electronicproject.R;
@@ -64,6 +65,7 @@ public class TopDetailsThreeShopAdapter extends BaseAdapter {
 //        buyHolder.smallPrice.getPaint().setFlags(Paint.ANTI_ALIAS_FLAG);
         if ((!comBeanss.getNationalFlag().equals("")) && (comBeanss.getNationalFlag() != null)){
             Picasso.with(context).load(comBeanss.getNationalFlag()).into(buyHolder.localIv);
+//            ImageLoader.init(context).load(comBeanss.getNationalFlag(),buyHolder.localIv);
         }
         buyHolder.localName.setText(comBeanss.getCountry());
         buyHolder.buyBtn.setOnClickListener(new View.OnClickListener() {

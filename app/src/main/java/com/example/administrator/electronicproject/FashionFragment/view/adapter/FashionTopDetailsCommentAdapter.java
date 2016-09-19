@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
+import com.androidxx.yangjw.imageloader.ImageLoader;
 import com.example.administrator.electronicproject.FashionFragment.bean.RecommendTopDetailsCommentBean;
 import com.example.administrator.electronicproject.R;
 import com.squareup.picasso.Picasso;
@@ -61,6 +62,7 @@ public class FashionTopDetailsCommentAdapter extends BaseAdapter {
         holder.imageView.setImageResource(R.drawable.ic_customer_service_girl);
         if (componentBean.getUserAvatar().length() > 10){
             Picasso.with(context).load(componentBean.getUserAvatar()).into(holder.imageView);
+//            ImageLoader.init(context).load(componentBean.getUserAvatar(),holder.imageView);
         }
         return view;
     }

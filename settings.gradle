@@ -1,2 +1,2 @@
-include ':app', ':httplibrary', ':imageloader', ':flowlibrary', ':day30_webview', ':zxing_code', ':shoppingcargreendao'
+include ':app', ':httplibrary', ':imageloader', ':flowlibrary', ':day30_webview', ':zxing_code', ':shoppingcargreendao','address', ':addre'
 include ':pulllibrary'

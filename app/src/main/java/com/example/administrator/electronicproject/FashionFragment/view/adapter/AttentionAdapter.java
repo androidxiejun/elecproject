@@ -9,6 +9,7 @@ import android.widget.BaseAdapter;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.androidxx.yangjw.imageloader.ImageLoader;
 import com.example.administrator.electronicproject.FashionFragment.view.activity.ExpertPersonActivity;
 import com.example.administrator.electronicproject.R;
 import com.squareup.picasso.Picasso;
@@ -66,6 +67,7 @@ public class AttentionAdapter extends BaseAdapter {
         }
         final Attention attention = attentions.get(i);
         Picasso.with(context).load(attention.getUserImage()).into(holder.headImage);
+//        ImageLoader.init(context).load(attention.getUserImage(),holder.headImage);
         holder.name.setText(attention.getUserName());
         holder.work.setText(attention.getUserWork());
         holder.attent.setOnClickListener(new View.OnClickListener() {

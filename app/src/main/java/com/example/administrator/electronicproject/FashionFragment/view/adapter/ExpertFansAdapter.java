@@ -10,6 +10,7 @@ import android.widget.BaseAdapter;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.androidxx.yangjw.imageloader.ImageLoader;
 import com.example.administrator.electronicproject.FashionFragment.bean.FansBean;
 import com.example.administrator.electronicproject.FashionFragment.view.activity.ExpertPersonActivity;
 import com.example.administrator.electronicproject.R;
@@ -71,6 +72,7 @@ public class ExpertFansAdapter extends BaseAdapter implements View.OnClickListen
         if (component.getUserAvatar() != null){
             if (!component.getUserAvatar().equals("")){
                 Picasso.with(context).load(component.getUserAvatar()).into(fansHolder.headImg);
+//                ImageLoader.init(context).load(component.getUserAvatar(),fansHolder.headImg);
             }
         }
         fansHolder.attrTv.setText("+关注");

@@ -1,4 +1,4 @@
-package attention.com.example.administrator.electronicproject;
+package addressdao.com.example.administrator.electronicproject;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
@@ -16,44 +16,44 @@ import org.greenrobot.greendao.identityscope.IdentityScopeType;
 /**
  * Master of DAO (schema version 1): knows all DAOs.
  */
-public class DaoMaster extends AbstractDaoMaster {
+public class AddressdbDaoMaster extends AbstractDaoMaster {
     public static final int SCHEMA_VERSION = 1;
 
     /** Creates underlying database table using DAOs. */
     public static void createAllTables(Database db, boolean ifNotExists) {
-        AttentionDao.createTable(db, ifNotExists);
+        AddressDao.createTable(db, ifNotExists);
     }
 
     /** Drops underlying database table using DAOs. */
     public static void dropAllTables(Database db, boolean ifExists) {
-        AttentionDao.dropTable(db, ifExists);
+        AddressDao.dropTable(db, ifExists);
     }
 
     /**
      * WARNING: Drops all table on Upgrade! Use only during development.
      * Convenience method using a {@link DevOpenHelper}.
      */
-    public static DaoSession newDevSession(Context context, String name) {
+    public static AddressdbDaoSession newDevSession(Context context, String name) {
         Database db = new DevOpenHelper(context, name).getWritableDb();
-        DaoMaster daoMaster = new DaoMaster(db);
+        AddressdbDaoMaster daoMaster = new AddressdbDaoMaster(db);
         return daoMaster.newSession();
     }
 
-    public DaoMaster(SQLiteDatabase db) {
+    public AddressdbDaoMaster(SQLiteDatabase db) {
         this(new StandardDatabase(db));
     }
 
-    public DaoMaster(Database db) {
+    public AddressdbDaoMaster(Database db) {
         super(db, SCHEMA_VERSION);
-        registerDaoClass(AttentionDao.class);
+        registerDaoClass(AddressDao.class);
     }
 
-    public DaoSession newSession() {
-        return new DaoSession(db, IdentityScopeType.Session, daoConfigMap);
+    public AddressdbDaoSession newSession() {
+        return new AddressdbDaoSession(db, IdentityScopeType.Session, daoConfigMap);
     }
 
-    public DaoSession newSession(IdentityScopeType type) {
-        return new DaoSession(db, type, daoConfigMap);
+    public AddressdbDaoSession newSession(IdentityScopeType type) {
+        return new AddressdbDaoSession(db, type, daoConfigMap);
     }
 
     /**

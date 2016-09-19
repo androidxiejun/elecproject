@@ -1,4 +1,4 @@
-package addressdao.com.example.administrator.electronicproject;
+package attention.com.example.administrator.electronicproject;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
@@ -16,44 +16,44 @@ import org.greenrobot.greendao.identityscope.IdentityScopeType;
 /**
  * Master of DAO (schema version 1): knows all DAOs.
  */
-public class DaoMaster extends AbstractDaoMaster {
+public class AttentiondbDaoMaster extends AbstractDaoMaster {
     public static final int SCHEMA_VERSION = 1;
 
     /** Creates underlying database table using DAOs. */
     public static void createAllTables(Database db, boolean ifNotExists) {
-        AddressDao.createTable(db, ifNotExists);
+        AttentionDao.createTable(db, ifNotExists);
     }
 
     /** Drops underlying database table using DAOs. */
     public static void dropAllTables(Database db, boolean ifExists) {
-        AddressDao.dropTable(db, ifExists);
+        AttentionDao.dropTable(db, ifExists);
     }
 
     /**
      * WARNING: Drops all table on Upgrade! Use only during development.
      * Convenience method using a {@link DevOpenHelper}.
      */
-    public static DaoSession newDevSession(Context context, String name) {
+    public static AttentiondbDaoSession newDevSession(Context context, String name) {
         Database db = new DevOpenHelper(context, name).getWritableDb();
-        DaoMaster daoMaster = new DaoMaster(db);
+        AttentiondbDaoMaster daoMaster = new AttentiondbDaoMaster(db);
         return daoMaster.newSession();
     }
 
-    public DaoMaster(SQLiteDatabase db) {
+    public AttentiondbDaoMaster(SQLiteDatabase db) {
         this(new StandardDatabase(db));
     }
 
-    public DaoMaster(Database db) {
+    public AttentiondbDaoMaster(Database db) {
         super(db, SCHEMA_VERSION);
-        registerDaoClass(AddressDao.class);
+        registerDaoClass(AttentionDao.class);
     }
 
-    public DaoSession newSession() {
-        return new DaoSession(db, IdentityScopeType.Session, daoConfigMap);
+    public AttentiondbDaoSession newSession() {
+        return new AttentiondbDaoSession(db, IdentityScopeType.Session, daoConfigMap);
     }
 
-    public DaoSession newSession(IdentityScopeType type) {
-        return new DaoSession(db, type, daoConfigMap);
+    public AttentiondbDaoSession newSession(IdentityScopeType type) {
+        return new AttentiondbDaoSession(db, type, daoConfigMap);
     }
 
     /**

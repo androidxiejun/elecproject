@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.androidxx.yangjw.imageloader.ImageLoader;
 import com.example.administrator.electronicproject.FashionFragment.bean.RecommendDeatilsBean;
 import com.example.administrator.electronicproject.PurchaseDetails.PurchaseDetails;
 import com.example.administrator.electronicproject.R;
@@ -60,12 +61,14 @@ public class FashionTopDetailsBuyAdapter extends BaseAdapter{
         }
         final RecommendDeatilsBean.ResponseBean.DataBean.EmbedItemsBean.CompBeans compBeans = buyDatas.get(i).getComponent();
         Picasso.with(context).load(compBeans.getPicUrl()).into(buyHolder.bigIv);
+//        ImageLoader.init(context).load(compBeans.getPicUrl(),buyHolder.bigIv);
         buyHolder.titleTv.setText(compBeans.getDescription());
         buyHolder.priceTv.setText("￥"+compBeans.getPrice());
         buyHolder.smallPrice.setText("￥"+compBeans.getOrigin_price());
 //        buyHolder.smallPrice.getPaint().setFlags(Paint.ANTI_ALIAS_FLAG);
         if (!compBeans.getNationalFlag().equals("")){
             Picasso.with(context).load(compBeans.getNationalFlag()).into(buyHolder.localIv);
+//            ImageLoader.init(context).load(compBeans.getNationalFlag(),buyHolder.localIv);
         }
         buyHolder.localName.setText(compBeans.getCountry());
         buyHolder.buyBtn.setOnClickListener(new View.OnClickListener() {

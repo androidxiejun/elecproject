@@ -64,25 +64,32 @@
         android:gravity="center"
         android:textSize="13sp" />
 
-    <ImageView
-        android:id="@+id/fashion_top_details_buy_local"
-        android:layout_width="25dp"
-        android:layout_height="15dp"
-        android:layout_alignBottom="@id/fashion_top_details_buy_big_iv"
-        android:layout_alignLeft="@id/fashion_top_details_buy_price"
-        android:layout_toRightOf="@id/fashion_top_details_buy_big_iv"
-        android:scaleType="centerCrop" />
-
-    <TextView
-        android:id="@+id/fashion_top_details_buy_local_name"
+    <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@id/fashion_top_details_buy_local"
-        android:layout_below="@id/fashion_top_details_buy_price_small"
-        android:layout_marginLeft="10dp"
-        android:layout_toRightOf="@id/fashion_top_details_buy_local"
-        android:gravity="bottom"
-        android:text="fffff"
-        android:textSize="13sp" />
+        android:layout_alignBottom="@id/fashion_top_details_buy_big_iv"
+        android:layout_alignLeft="@id/fashion_top_details_buy_price"
+        android:layout_toRightOf="@id/fashion_top_details_buy_big_iv">
+
+
+        <ImageView
+            android:id="@+id/fashion_top_details_buy_local"
+            android:layout_width="25dp"
+            android:layout_height="15dp"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/fashion_top_details_buy_local_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/fashion_top_details_buy_local"
+            android:gravity="bottom"
+            android:text="fffff"
+            android:textSize="13sp" />
+
+    </RelativeLayout>
+
+
 
 </RelativeLayout>

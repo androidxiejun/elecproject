@@ -8,6 +8,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.androidxx.yangjw.imageloader.ImageLoader;
 import com.example.administrator.electronicproject.FashionFragment.bean.FashionMiddleBean;
 import com.example.administrator.electronicproject.R;
 import com.squareup.picasso.Picasso;
@@ -58,6 +59,7 @@ public class FashionMiddleGridAdapter extends BaseAdapter {
         FashionMiddleBean.ResponseBean.DataBean.ItemsBean.ComponentBean component = fashionMiddleDatas.get(i).getComponent();
         middleHolder.textView.setText(component.getTitle());
         Picasso.with(context).load(component.getPicUrl()).into(middleHolder.imageView);
+//        ImageLoader.init(context).load(component.getPicUrl(),middleHolder.imageView);
         return view;
     }
 

@@ -105,15 +105,13 @@ public class ExpertAdapter extends BaseAdapter {
             }
         });
 
-        for (int j = 0; j < attentions.size(); j++) {
-            if (attentions.get(j).getUserId() == userId) {
-                expertHoler.attrTv.setText("已关");
-                expertHoler.attrTv.setTextColor(Color.GRAY);
-            } else {
-                expertHoler.attrTv.setText("+关注");
-                expertHoler.attrTv.setTextColor(Color.RED);
-            }
-        }
+//        for (int j = 0; j < attentions.size(); j++) {
+//            if (attentions.get(j).getUserId() == userId) {
+//                expertHoler.attrTv.setText("已关");
+//                expertHoler.attrTv.setTextColor(Color.GRAY);
+//                break;
+//            }
+//        }
 
         //点击关注或者取消关注
         expertHoler.attrTv.setOnClickListener(new View.OnClickListener() {

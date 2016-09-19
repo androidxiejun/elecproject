@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 
+import com.androidxx.yangjw.imageloader.ImageLoader;
 import com.example.administrator.electronicproject.FashionFragment.bean.ExpertBean;
 import com.example.administrator.electronicproject.R;
 import com.squareup.picasso.Picasso;
@@ -55,6 +56,7 @@ public class ExpertItemAdapter extends BaseAdapter {
         String picUrl = picsBeen.get(i).getComponent().getPicUrl();
         if (!picUrl.equals("")){
             Picasso.with(context).load(picUrl).into(holder.imageView);
+//            ImageLoader.init(context).load(picUrl,holder.imageView);
         }
         return view;
     }

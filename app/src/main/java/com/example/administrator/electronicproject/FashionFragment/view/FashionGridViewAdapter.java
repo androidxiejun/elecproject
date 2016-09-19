@@ -9,6 +9,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.androidxx.yangjw.imageloader.ImageLoader;
 import com.example.administrator.electronicproject.FashionFragment.bean.FashionBottonBean;
 import com.example.administrator.electronicproject.R;
 import com.squareup.picasso.Picasso;
@@ -68,10 +69,11 @@ public class FashionGridViewAdapter extends BaseAdapter {
         if (itemsBean.getComponent().getUser()!=null){
             gridHolder.nameText.setText(itemsBean.getComponent().getUser().getUsername());
             Picasso.with(context).load(itemsBean.getComponent().getUser().getUserAvatar()).into(gridHolder.circleImage);
+//            ImageLoader.init(context).load(itemsBean.getComponent().getUser().getUserAvatar(),gridHolder.circleImage);
         }
         gridHolder.collectText.setText(itemsBean.getComponent().getCollect_count());
         Picasso.with(context).load(itemsBean.getComponent().getPics()).into(gridHolder.bigImage);
-
+//        ImageLoader.init(context).load(itemsBean.getComponent().getPics(),gridHolder.bigImage);
         return itemView;
     }
 
