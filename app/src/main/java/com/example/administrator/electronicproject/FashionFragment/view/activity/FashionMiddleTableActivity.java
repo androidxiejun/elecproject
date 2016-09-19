@@ -83,8 +83,8 @@ public class FashionMiddleTableActivity extends AppCompatActivity implements Vie
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.fashion_table_bar_back_btn:
-                Intent intent = new Intent(this, MainActivity.class);
-                startActivity(intent);
+//                Intent intent = new Intent(this, MainActivity.class);
+//                startActivity(intent);
                 finish();
                 break;
         }
