@@ -4,11 +4,15 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.ColorDrawable;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.preference.PreferenceManager;
+import android.provider.MediaStore;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
@@ -23,11 +27,18 @@ import android.widget.TextView;
 
 import com.example.administrator.electronicproject.R;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.Calendar;
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import de.hdodenhof.circleimageview.CircleImageView;
+import user.com.example.administrator.electronicproject.User;
+import user.com.example.administrator.electronicproject.UserUtils;
 
 /**
  * Created by sunbin on 2016/9/12.
@@ -86,6 +97,9 @@ public class UserInfoActivity extends AppCompatActivity implements View.OnClickL
     private PopupWindow birthdayPopup;
     private SharedPreferences sharedPreferences;
     private SharedPreferences.Editor edit;
+    private Bitmap bitmap;
+    private User user;
+    private static String photoPath;
 
 
     @Override
@@ -115,6 +129,17 @@ public class UserInfoActivity extends AppCompatActivity implements View.OnClickL
         mouth = sharedPreferences.getInt("mouth",Calendar.MONTH);
         day = sharedPreferences.getInt("day",Calendar.DAY_OF_MONTH);
         birthdayContent.setText(year+"-"+mouth+"-"+day);
+
+
+        List<User> users = UserUtils.getDao(this).loadAll();
+        if (users != null && users.size() > 0){
+            user = users.get(0);
+            nickContent.setText(user.getUserNick());
+            sexContent.setText(user.getUserSex());
+            birthdayContent.setText(user.getUserBirthday());
+            mobileContent.setText(user.getUserEmail());
+            headImage.setImageBitmap(BitmapFactory.decodeFile(user.getUserImage()));
+        }
     }
 
     @Override
@@ -125,6 +150,14 @@ public class UserInfoActivity extends AppCompatActivity implements View.OnClickL
                 break;
             case R.id.user_info_ensure_btn://确定
                 //保存更改，并退出
+                user = new User();
+                user.setUserNick(nickContent.getText().toString());
+                user.setUserSex(sexContent.getText().toString());
+                user.setUserBirthday(birthdayContent.getText().toString());
+                user.setUserPhone(mobileContent.getText().toString());
+                user.setUserImage(photoPath);
+                UserUtils.getDao(this).insertOrReplace(user);
+                finish();
                 break;
             case R.id.user_info_head_image://头像
                 initHeadImagePopup();
@@ -132,7 +165,8 @@ public class UserInfoActivity extends AppCompatActivity implements View.OnClickL
             case R.id.user_info_nick_name://昵称
                 Intent nick = new Intent(this,UserNickActivity.class);
                 nick.putExtra("hint",nickContent.getText());
-                startActivity(nick);
+//                startActivity(nick);
+                startActivityForResult(nick,100);
                 break;
             case R.id.user_info_sex://性别
                 initSexPopup();
@@ -142,7 +176,7 @@ public class UserInfoActivity extends AppCompatActivity implements View.OnClickL
                 break;
             case R.id.user_info_mobile://手机
                 Intent mobile = new Intent(this,UserInfoMobileActivity.class);
-                mobile.putExtra("mobile",Integer.valueOf(mobileContent.getText().toString()));
+                mobile.putExtra("mobile",mobileContent.getText().toString());
                 startActivity(mobile);
                 break;
             case R.id.user_info_email://邮箱
@@ -185,13 +219,13 @@ public class UserInfoActivity extends AppCompatActivity implements View.OnClickL
         public void onClick(View view) {
             switch (view.getId()){
                 case R.id.user_info_popup_tack_photo://拍照
-//                    Intent intent = new Intent(context,TackPhotoActivity.class);
-//                    startActivityForResult(intent,1);
+                    Intent intents = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                    startActivityForResult(intents,1000);
                     break;
                 case R.id.user_info_popup_choose_photo://从相册选取照片
-//                    Intent intent = new Intent();
-//                    intent.setAction("android.media.action.IMAGE_CAPTURE");
-//                    startActivityForResult(intent, 2);
+                    Intent intent=new Intent(Intent.ACTION_GET_CONTENT);
+                    intent.setType("image/*");
+                    startActivityForResult(intent,1100);
                     break;
                 case R.id.user_info_popup_cancel://取消
                     headImagePopup.dismiss();
@@ -202,9 +236,53 @@ public class UserInfoActivity extends AppCompatActivity implements View.OnClickL
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (resultCode == RESULT_OK){
-            Bitmap bitmap = BitmapFactory.decodeFile(data.getStringExtra("path"));
-            headImage.setImageBitmap(bitmap);
+        if(resultCode == RESULT_OK){
+            switch (requestCode){
+                case 1000:
+                    Bundle bundle=data.getExtras();
+                    bitmap = (Bitmap)bundle.get("data");
+                    headImage.setImageBitmap(bitmap);
+                    saveBitmap(bitmap);
+                    break;
+                case 1100:
+                    //data中自带有返回的uri
+                    Uri uri = data.getData();
+                    //获取照片路径
+                    String[] filePathColumn={MediaStore.Audio.Media.DATA};
+                    Cursor cursor=getContentResolver().query(uri,filePathColumn,null,null,null);
+                    cursor.moveToFirst();
+                    photoPath = cursor.getString(cursor.getColumnIndex(filePathColumn[0]));
+                    cursor.close();
+                    //有了照片路径，之后就是压缩图片，和之前没有什么区别
+                    bitmap = BitmapFactory.decodeFile(photoPath);
+                    headImage.setImageBitmap(bitmap);
+                    break;
+                case 100:
+                    String nick = data.getStringExtra("nick");
+                    nickContent.setText(nick);
+                    break;
+            }
+        }
+    }
+
+
+    private void saveBitmap(Bitmap bitmap){
+        String path = Environment.getExternalStorageDirectory().getAbsolutePath() + File.separator + "picature";
+        File dirFile = new File(path);
+        if ( ! dirFile.exists()){
+            dirFile.mkdir();
+        }
+        File file = new File(dirFile,System.currentTimeMillis()+".jpg");
+        try {
+            FileOutputStream outputStream = new FileOutputStream(file);
+            bitmap.compress(Bitmap.CompressFormat.JPEG,100,outputStream);
+            photoPath = path + File.separator + System.currentTimeMillis()+".jpg";
+            outputStream.flush();
+            outputStream.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
