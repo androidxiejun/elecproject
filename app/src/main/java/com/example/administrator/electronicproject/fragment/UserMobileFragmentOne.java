@@ -34,7 +34,7 @@ public class UserMobileFragmentOne extends Fragment implements View.OnClickListe
     TextView next;
 
     private Context context;
-    private static int mobile;
+    private static String mobile;
     private static MobileCallBack callBack;
 
 
@@ -42,7 +42,7 @@ public class UserMobileFragmentOne extends Fragment implements View.OnClickListe
         void addNext();
     }
 
-    public static UserMobileFragmentOne newInstance(int mobiles,MobileCallBack call){
+    public static UserMobileFragmentOne newInstance(String mobiles,MobileCallBack call){
         mobile = mobiles;
         callBack = call;
         return new UserMobileFragmentOne();
