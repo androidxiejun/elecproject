@@ -174,19 +174,20 @@ public class FashionTableDetailsActivity extends AppCompatActivity implements Vi
         switch (view.getId()){
             //点击回退按钮进行回退
             case R.id.fashion_details_bar_back_btn:
-                Intent intent = null;
-                if (come.equals("table")){
-                    intent = new Intent(this,FashionMiddleTableActivity.class);
-                    startActivity(intent);
-                    finish();
-                }else if(come.equals("middle")){
-//                    intent = new Intent(this, MainActivity.class);
-//                    startActivity(intent);
-                    finish();
-                }else if (come.equals("topdetails")){
-//                    intent = new Intent(this,FashionTopDetailsActivity.class);
-                    finish();
-                }
+//                Intent intent = null;
+                finish();
+//                if (come.equals("table")){
+//                    intent = new Intent(this,FashionMiddleTableActivity.class);
+////                    startActivity(intent);
+//                    finish();
+//                }else if(come.equals("middle")){
+////                    intent = new Intent(this, MainActivity.class);
+////                    startActivity(intent);
+//                    finish();
+//                }else if (come.equals("topdetails")){
+////                    intent = new Intent(this,FashionTopDetailsActivity.class);
+//                    finish();
+//                }
 //                startActivity(intent);
 //                finish();
                 break;

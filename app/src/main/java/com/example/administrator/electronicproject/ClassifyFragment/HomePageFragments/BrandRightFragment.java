@@ -46,18 +46,29 @@ public class BrandRightFragment extends Fragment implements CallBack{
         return view;
 }
 
+    /**
+     * 对view进行初始化
+     * @param view
+     */
     private void initView(View view) {
         mGridView= (GridView) view.findViewById(R.id.classify_grand_grid_view);
         brandGridAdapter=new BrandGridAdapter();
         mGridView.setAdapter(brandGridAdapter);
     }
 
+    /**
+     * 回调方法，用于刷新fragment
+     * @param index
+     */
     @Override
     public void refreshFragment(int index) {
             this.index=index;
            brandGridAdapter.notifyDataSetChanged();
     }
 
+    /**
+     * tab右边的gridview的适配器
+     */
     class BrandGridAdapter extends BaseAdapter{
 
         @Override

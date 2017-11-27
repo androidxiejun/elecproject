@@ -1,29 +1,23 @@
 package com.example.administrator.electronicproject.FashionFragment.view.activity;
 
-import android.app.ListActivity;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.RecyclerView;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.administrator.electronicproject.FashionFragment.bean.FashionBottonBean;
 import com.example.administrator.electronicproject.FashionFragment.bean.RecommendDeatilsBean;
 import com.example.administrator.electronicproject.FashionFragment.bean.RecommendTopDetailsCommentBean;
-import com.example.administrator.electronicproject.FashionFragment.bean.RecommendTopDetailsFootBean;
 import com.example.administrator.electronicproject.FashionFragment.http.HttpUtils;
 import com.example.administrator.electronicproject.FashionFragment.view.CustomGridView;
 import com.example.administrator.electronicproject.FashionFragment.view.FashionGridViewAdapter;
@@ -31,17 +25,11 @@ import com.example.administrator.electronicproject.FashionFragment.view.adapter.
 import com.example.administrator.electronicproject.FashionFragment.view.adapter.FashionTopDetailsCommentAdapter;
 import com.example.administrator.electronicproject.FashionFragment.view.adapter.RecommendTagAdapter;
 import com.example.administrator.electronicproject.FashionFragment.view.adapter.RecommendTopDetailsAdapter;
-import com.example.administrator.electronicproject.FashionFragment.view.customview.FlowLayout;
-import com.example.administrator.electronicproject.MainActivity;
-import com.example.administrator.electronicproject.PurchaseDetails.PurchaseDetails;
 import com.example.administrator.electronicproject.R;
 import com.handmark.pulltorefresh.library.PullToRefreshListView;
-import com.handmark.pulltorefresh.library.internal.LoadingLayout;
 import com.hhl.library.FlowTagLayout;
 import com.hhl.library.OnTagClickListener;
 import com.squareup.picasso.Picasso;
-import com.zhy.view.flowlayout.TagAdapter;
-import com.zhy.view.flowlayout.TagFlowLayout;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -134,26 +122,27 @@ public class FashionTopDetailsActivity extends AppCompatActivity implements View
             //上部回退
             case R.id.recommend_top_details_tool_back_btn:
                 Intent intent = null;
-                if (come.equals("fashion")) {
-//                    intent = new Intent(this, MainActivity.class);
+//                if (come.equals("fashion")) {
+////                    intent = new Intent(this, MainActivity.class);
+////                    startActivity(intent);
+//                    finish();
+//                } else if (come.equals("table")) {
+//                    intent = new Intent(this, FashionTableDetailsActivity.class);
 //                    startActivity(intent);
+//                } else if(come.equals("this")){
+////                    intent = new Intent(this, FashionTopDetailsActivity.class);
+////                    intent.putExtra("id",footDatas.get(i).getComponent().getId());
+////                    intent.putExtra("come","this");
+////                    intent.putExtra("thread_id",footDatas.get(i).getComponent().getId()+"");
+////                    startActivity(intent);
                     finish();
-                } else if (come.equals("table")) {
-                    intent = new Intent(this, FashionTableDetailsActivity.class);
-                    startActivity(intent);
-                } else if(come.equals("this")){
-//                    intent = new Intent(this, FashionTopDetailsActivity.class);
-//                    intent.putExtra("id",footDatas.get(i).getComponent().getId());
-//                    intent.putExtra("come","this");
-//                    intent.putExtra("thread_id",footDatas.get(i).getComponent().getId()+"");
-//                    startActivity(intent);
-                    finish();
-                }else if (come.equals("expert")){
-                    finish();
-                }else if (come.equals("person")){
-                    finish();
-                }
-//                startActivity(intent);
+
+//                }else if (come.equals("expert")){
+//                    finish();
+//                }else if (come.equals("person")){
+//                    finish();
+//                }
+////                startActivity(intent);
 //                finish();
                 break;
             //底部评论

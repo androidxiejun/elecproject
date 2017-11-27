@@ -1,2 +1,3 @@
-include ':app', ':httplibrary', ':imageloader', ':flowlibrary', ':day30_webview', ':zxing_code', ':shoppingcargreendao','address', ':addre'
+include ':app', ':httplibrary', ':imageloader', ':flowlibrary', ':day30_webview', ':zxing_code', ':shoppingcargreendao', ':websettingtest', ':glidedemo', ':toucheventdemo', ':fragmenttest', ':fragmenttest2', ':testrecyclerview', 'address', ':addre', ':day42_event_clash_exception_demo', ':day42_slide_list_demo', 'ultimatedemo', ':animatordemo', ':day22_broadcast_receiver_1', ':app2', ':fragment_viewpager_radiogroup', ':mday_coordinatorlayout_demo', ':day19_fragmentpagerapdater'
 include ':pulllibrary'
+include ':bluetoothprint'

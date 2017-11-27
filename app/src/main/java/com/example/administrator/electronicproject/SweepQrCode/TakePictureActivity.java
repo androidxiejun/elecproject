@@ -63,6 +63,7 @@ public class TakePictureActivity extends AppCompatActivity implements SurfaceHol
     private void saveBitmap(Bitmap bitmap){
         String dirPath = Environment.getExternalStorageDirectory().getAbsolutePath() +
                 File.separator + "pictures";
+//        String dirPath2=Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES).getAbsolutePath();
         File dir = new File(dirPath);
         if(!dir.exists()){
             dir.mkdir();

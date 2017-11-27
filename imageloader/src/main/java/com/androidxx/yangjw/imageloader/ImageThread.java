@@ -13,7 +13,6 @@ import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.net.URLConnection;
 
 /**
  * Created by yangjw on 2016/8/5.
@@ -80,7 +79,7 @@ public class ImageThread implements Runnable {
                 BitmapFactory.decodeByteArray(bytes,0,bytes.length,options);
                 int outHeight = options.outHeight;
                 int outWidth = options.outWidth;
-                int ratio = outHeight/100;
+                int ratio = outHeight/300;
                 if (ratio >= 1) {
                     options.inSampleSize = ratio;
                 }

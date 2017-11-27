@@ -131,11 +131,11 @@ public class PurchaseDetailFragment extends Fragment implements View.OnClickList
                         if (distanceX < 300) {
                             linearLayout.scrollTo(distanceX, 0);
                         }
-                        if (distanceX > 100) {
-                            freshTxt.setText("拉出以刷新");
+                        if (distanceX > 200) {
+                            freshTxt.setText("放手以刷新");
                             freshBtn.setImageResource(R.drawable.icon_detail_push);
                         } else {
-                            freshTxt.setText("放手以刷新");
+                            freshTxt.setText("拉出以刷新");
                             freshBtn.setImageResource(R.drawable.icon_detail_pull);
                         }
                         break;
@@ -290,6 +290,7 @@ public class PurchaseDetailFragment extends Fragment implements View.OnClickList
                         Intent intent=new Intent(context, PurchaseFirmationActivity.class);
                         intent.putExtra("source_id",PurchaseDetails.source_id);
                         startActivity(intent);
+                        popupWindow.dismiss();
                     }
                 }else{
                     Toast.makeText(context, "请选择颜色和尺码", Toast.LENGTH_SHORT).show();
@@ -319,18 +320,20 @@ public class PurchaseDetailFragment extends Fragment implements View.OnClickList
 //        popupWindow.showAsDropDown(view,400, 0);
         // 设置好参数之后再show
 //        popupWindow.showAsDropDown(view);
-        popupWindow.showAtLocation(view, Gravity.BOTTOM, 0, getStatusBarHeight());
+//        popupWindow.showAtLocation(view, Gravity.BOTTOM, 0, getStatusBarHeight());
+        popupWindow.setOutsideTouchable(true);
+        popupWindow.showAtLocation(view, Gravity.BOTTOM, 0, 0);
     }
 
     //获取屏幕像素高度，使得Popup填充整个屏幕
-    public int getStatusBarHeight() {
-        int result = 0;
-        int resourceId = getResources().getIdentifier("status_bar_height", "dimen", "android");
-        if (resourceId > 0) {
-            result = getResources().getDimensionPixelSize(resourceId);
-        }
-        return result;
-    }
+//    public int getStatusBarHeight() {
+//        int result = 0;
+//        int resourceId = getResources().getIdentifier("status_bar_height", "dimen", "android");
+//        if (resourceId > 0) {
+//            result = getResources().getDimensionPixelSize(resourceId);
+//        }
+//        return result;
+//    }
 
     private void getInfo(String source_id) {
         HttpPurchaseUtils.create().queryBean(source_id).enqueue(new Callback<PurchaseDetailsBean>() {
@@ -365,27 +368,35 @@ public class PurchaseDetailFragment extends Fragment implements View.OnClickList
             switch (msg.what){
                 case 1:
                     blueBtn.setBackgroundColor(Color.WHITE);
+                    blueBtn.setTextColor(Color.RED);
                     isColorBlue=true;
                     break;
                 case 2:
                     blackBtn.setBackgroundColor(Color.WHITE);
+                    blackBtn.setTextColor(Color.RED);
                     isColorBlack=true;
                     break;
                 case 3:
                     nideumBtn.setBackgroundColor(Color.WHITE);
                     largeBtn.setBackgroundColor(Color.WHITE);
+                    nideumBtn.setTextColor(Color.RED);
+                    largeBtn.setTextColor(Color.RED);
                     isDimenMedium=true;
                     isDimenLarge=true;
                     break;
                 case 4:
                     smallBtn.setBackgroundColor(Color.WHITE);
                     largeBtn.setBackgroundColor(Color.WHITE);
+                    smallBtn.setTextColor(Color.RED);
+                    largeBtn.setTextColor(Color.RED);
                     isDimenSmall=true;
                     isDimenLarge=true;
                     break;
                 case 5:
                     smallBtn.setBackgroundColor(Color.WHITE);
                     nideumBtn.setBackgroundColor(Color.WHITE);
+                    smallBtn.setTextColor(Color.RED);
+                    nideumBtn.setTextColor(Color.RED);
                     isDimenSmall=true;
                     isDimenMedium=true;
                     break;
@@ -409,10 +420,12 @@ public class PurchaseDetailFragment extends Fragment implements View.OnClickList
                 if (isColorBlack){
                     isColorBlack=false;
                     blackBtn.setBackgroundColor(Color.RED);
+                    blackBtn.setTextColor(Color.WHITE);
                     mHandler.sendEmptyMessage(1);
                 }else{
                     isColorBlack=true;
                     blackBtn.setBackgroundColor(Color.WHITE);
+                    blackBtn.setTextColor(Color.RED);
                 }
                 mHandler.sendEmptyMessage(6);
                 break;
@@ -420,10 +433,12 @@ public class PurchaseDetailFragment extends Fragment implements View.OnClickList
                 if(isColorBlue){
                     isColorBlue=false;
                     blueBtn.setBackgroundColor(Color.RED);
+                    blueBtn.setTextColor(Color.WHITE);
                     mHandler.sendEmptyMessage(2);
                 }else{
                     isColorBlue=true;
                     blueBtn.setBackgroundColor(Color.WHITE);
+                    blueBtn.setTextColor(Color.RED);
                 }
                 mHandler.sendEmptyMessage(6);
                 break;
@@ -431,10 +446,12 @@ public class PurchaseDetailFragment extends Fragment implements View.OnClickList
                 if(isDimenSmall){
                     isDimenSmall=false;
                     smallBtn.setBackgroundColor(Color.RED);
+                    smallBtn.setTextColor(Color.WHITE);
                     mHandler.sendEmptyMessage(3);
                 }else{
                     isDimenSmall=true;
                     smallBtn.setBackgroundColor(Color.WHITE);
+                    smallBtn.setTextColor(Color.RED);
                 }
                 mHandler.sendEmptyMessage(6);
                 break;
@@ -442,10 +459,12 @@ public class PurchaseDetailFragment extends Fragment implements View.OnClickList
                 if(isDimenMedium){
                     isDimenMedium=false;
                     nideumBtn.setBackgroundColor(Color.RED);
+                    nideumBtn.setTextColor(Color.WHITE);
                     mHandler.sendEmptyMessage(4);
                 }else{
                     isDimenMedium=true;
                     nideumBtn.setBackgroundColor(Color.WHITE);
+                    nideumBtn.setTextColor(Color.RED);
                 }
                 mHandler.sendEmptyMessage(6);
                 break;
@@ -453,10 +472,12 @@ public class PurchaseDetailFragment extends Fragment implements View.OnClickList
                 if(isDimenLarge){
                     isDimenLarge=false;
                     largeBtn.setBackgroundColor(Color.RED);
+                    largeBtn.setTextColor(Color.WHITE);
                     mHandler.sendEmptyMessage(5);
                 }else{
                     isDimenLarge=true;
                     largeBtn.setBackgroundColor(Color.WHITE);
+                    largeBtn.setTextColor(Color.RED);
                 }
                 mHandler.sendEmptyMessage(6);
                 break;

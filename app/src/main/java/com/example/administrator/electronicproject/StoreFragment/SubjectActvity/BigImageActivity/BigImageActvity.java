@@ -60,7 +60,9 @@ public class BigImageActvity extends AppCompatActivity {
                 if (!file.exists()) {
                     file.mkdir();
                 }
-                File picFile=new File(file,"pic"+index+++".jpg");
+                int index = picUrl.lastIndexOf("/");
+                String urlPath=picUrl.substring(index,picUrl.length());
+                File picFile=new File(file,urlPath+".jpg");
                 try {
                     FileOutputStream outputStream = new FileOutputStream(picFile);
                     bitmap.compress(Bitmap.CompressFormat.JPEG,100,outputStream);
@@ -85,12 +87,12 @@ public class BigImageActvity extends AppCompatActivity {
 
         @Override
         public void run() {
+            InputStream inputStream = null;
             try {
                 URL url = new URL(picUrl);
                 HttpURLConnection connection = (HttpURLConnection) url.openConnection();
                 connection.setRequestMethod("GET");
                 connection.connect();
-                InputStream inputStream;
                 if (connection.getResponseCode() == HttpURLConnection.HTTP_OK) {
                     inputStream = url.openStream();
                     bitmap = BitmapFactory.decodeStream(inputStream);
@@ -100,6 +102,14 @@ public class BigImageActvity extends AppCompatActivity {
                 e.printStackTrace();
             } catch (IOException e) {
                 e.printStackTrace();
+            }finally {
+                if(inputStream!=null){
+                    try {
+                        inputStream.close();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
             }
         }
     }

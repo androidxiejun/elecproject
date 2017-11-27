@@ -73,7 +73,7 @@
         <service android:name=".FashionFragment.view.activity.DownImageService"/>
         <!-- 拍照界面-->
         <activity android:name=".activity.TackPhotoActivity"/>
-
+        <activity android:name=".PurchaseDetails.GotoPayActivity.GoToPayActivity"/>
         <activity android:name=".ClassifyFragment.DetaillActivity.ClassifyDetiailActivity" />
         <activity android:name=".SearchActivity.SearchActivity" />
         <activity android:name=".ClassifyFragment.DetailBrandActivity.DetailBrandActivity" />

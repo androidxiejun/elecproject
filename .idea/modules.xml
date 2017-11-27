@@ -2,16 +2,32 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/ElectronicProject.iml" filepath="$PROJECT_DIR$/ElectronicProject.iml" />
       <module fileurl="file://$PROJECT_DIR$/addre/addre.iml" filepath="$PROJECT_DIR$/addre/addre.iml" />
       <module fileurl="file://$PROJECT_DIR$/address/address.iml" filepath="$PROJECT_DIR$/address/address.iml" />
+      <module fileurl="file://$PROJECT_DIR$/animatordemo/animatordemo.iml" filepath="$PROJECT_DIR$/animatordemo/animatordemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app2/app2.iml" filepath="$PROJECT_DIR$/app2/app2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bluetoothprint/bluetoothprint.iml" filepath="$PROJECT_DIR$/bluetoothprint/bluetoothprint.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day19_fragmentpagerapdater/day19_fragmentpagerapdater.iml" filepath="$PROJECT_DIR$/day19_fragmentpagerapdater/day19_fragmentpagerapdater.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day22_broadcast_receiver_1/day22_broadcast_receiver_1.iml" filepath="$PROJECT_DIR$/day22_broadcast_receiver_1/day22_broadcast_receiver_1.iml" />
       <module fileurl="file://$PROJECT_DIR$/day30_webview/day30_webview.iml" filepath="$PROJECT_DIR$/day30_webview/day30_webview.iml" />
-      <module fileurl="file://$PROJECT_DIR$/electricproject.iml" filepath="$PROJECT_DIR$/electricproject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day42_event_clash_exception_demo/day42_event_clash_exception_demo.iml" filepath="$PROJECT_DIR$/day42_event_clash_exception_demo/day42_event_clash_exception_demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day42_slide_list_demo/day42_slide_list_demo.iml" filepath="$PROJECT_DIR$/day42_slide_list_demo/day42_slide_list_demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/flowlibrary/flowlibrary.iml" filepath="$PROJECT_DIR$/flowlibrary/flowlibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fragment_viewpager_radiogroup/fragment_viewpager_radiogroup.iml" filepath="$PROJECT_DIR$/fragment_viewpager_radiogroup/fragment_viewpager_radiogroup.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fragmenttest/fragmenttest.iml" filepath="$PROJECT_DIR$/fragmenttest/fragmenttest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fragmenttest2/fragmenttest2.iml" filepath="$PROJECT_DIR$/fragmenttest2/fragmenttest2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/glidedemo/glidedemo.iml" filepath="$PROJECT_DIR$/glidedemo/glidedemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/httplibrary/httplibrary.iml" filepath="$PROJECT_DIR$/httplibrary/httplibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/imageloader/imageloader.iml" filepath="$PROJECT_DIR$/imageloader/imageloader.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mday_coordinatorlayout_demo/mday_coordinatorlayout_demo.iml" filepath="$PROJECT_DIR$/mday_coordinatorlayout_demo/mday_coordinatorlayout_demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/pulllibrary/pulllibrary.iml" filepath="$PROJECT_DIR$/pulllibrary/pulllibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/shoppingcargreendao/shoppingcargreendao.iml" filepath="$PROJECT_DIR$/shoppingcargreendao/shoppingcargreendao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/testrecyclerview/testrecyclerview.iml" filepath="$PROJECT_DIR$/testrecyclerview/testrecyclerview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/toucheventdemo/toucheventdemo.iml" filepath="$PROJECT_DIR$/toucheventdemo/toucheventdemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ultimatedemo/ultimatedemo.iml" filepath="$PROJECT_DIR$/ultimatedemo/ultimatedemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/websettingtest/websettingtest.iml" filepath="$PROJECT_DIR$/websettingtest/websettingtest.iml" />
       <module fileurl="file://$PROJECT_DIR$/zxing_code/zxing_code.iml" filepath="$PROJECT_DIR$/zxing_code/zxing_code.iml" />
     </modules>
   </component>

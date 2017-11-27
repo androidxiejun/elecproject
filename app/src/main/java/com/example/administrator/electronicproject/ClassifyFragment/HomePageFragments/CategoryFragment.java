@@ -54,12 +54,22 @@ public class CategoryFragment extends Fragment implements ICallback{
         initView(view);
         return view;
     }
+
+    /**
+     * view的初始化
+     * @param view
+     */
     private void initView(View view) {
         manager=getFragmentManager();
         storeFragment=ClassifyStoreFragment.newInstance();
         listFragment=ClassifyListFragment.newInstance();
         listFragment.setCallBack(storeFragment);
     }
+
+    /**
+     * 网络数据的加载
+     * 采用原生的json解析
+     */
     private void getInfo(){
         HttpUtils.load(URL_PATH).callback(this,1);
     }

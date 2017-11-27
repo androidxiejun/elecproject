@@ -39,6 +39,7 @@ public class ProjectActivity extends AppCompatActivity implements View.OnClickLi
     private Context context;
     private int topic_id;
     private int index;
+    private int globalId;
     private String flag;
     private Button backBtn;
     private CustomGridView mListView;
@@ -123,6 +124,7 @@ public class ProjectActivity extends AppCompatActivity implements View.OnClickLi
             @Override
             public void onResponse(Call<SubjectBean> call, Response<SubjectBean> response) {
                 items = response.body().getData().getItems();
+                 globalId= response.body().getData().getId();
                 data = response.body().getData();
                 titleTxt.setText(data.getTitle());
                 commomTxt.setText(data.getCommentCount());
@@ -268,6 +270,8 @@ public class ProjectActivity extends AppCompatActivity implements View.OnClickLi
 //                            //跳转至购买商品界面
                             Intent intent = new Intent(context, BigImageActvity.class);
                             intent.putExtra("picUrl",component.getPicUrl());
+//                            Intent intent = new Intent(context, PurchaseDetails.class);
+//                            intent.putExtra("source_id",component.getAction().getId());
                             startActivity(intent);
                         } else if (actionType.equals("ecshopSearch")) {
                             //跳转至品牌界面
@@ -277,6 +281,8 @@ public class ProjectActivity extends AppCompatActivity implements View.OnClickLi
                         } else {
                             //跳转至逛全球界面
                             Intent intent = new Intent(context, GlobalActivity.class);
+                            intent.putExtra("china_id",component.getAction().getId());
+//                            intent.putExtra("china_id",globalId);
                             startActivity(intent);
                         }
                     }

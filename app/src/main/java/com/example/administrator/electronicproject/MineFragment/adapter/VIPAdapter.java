@@ -72,7 +72,8 @@ public class VIPAdapter extends BaseAdapter {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(context, PurchaseDetails.class);
-                intent.putExtra("sourceId",skusBean.getAction().getSourceId()+"");
+//                intent.putExtra("source_id",skusBean.getAction().getSourceId());
+                intent.putExtra("source_id","2429284");
                 context.startActivity(intent);
             }
         });

@@ -1,7 +1,6 @@
 package com.example.administrator.electronicproject.activity;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -231,4 +230,9 @@ public class AddAddressActivity extends AppCompatActivity implements View.OnClic
             }
         }
     };
+//    TextView t=$(R.id.global_list_view_img);
+//    private <T> T $(int viewId) {
+//        return (T) findViewById(viewId);
+//    }
+    //<T extends View>可以直接写成<T>
 }

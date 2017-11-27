@@ -67,6 +67,11 @@ public class BrandDetailsFragment extends Fragment{
         handler=new Handler();
         recyclerView= (UltimateRecyclerView) view.findViewById(R.id.recycler_view);
         recyclerView.setLayoutManager(new GridLayoutManager(context,2));
+
+//        GridLayoutManager linearLayoutManager = new GridLayoutManager(context,2);
+//        linearLayoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
+//        recyclerView.setLayoutManager(linearLayoutManager);
+
         initListener();
 //        recyclerView.enableDefaultSwipeRefresh(true);
 //        recyclerView.setDefaultOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {

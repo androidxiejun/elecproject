@@ -99,7 +99,7 @@ public class MyCollectActivity extends AppCompatActivity implements View.OnClick
             fragmentTransaction.hide(mCurrentShowFragment);
         }
         if (!fragment.isAdded()) {
-            fragmentTransaction.add(R.id.retrieve_pass_fragment_layout,fragment);
+            fragmentTransaction.add(R.id.my_collect_fragment_layout,fragment);
         } else {
             fragmentTransaction.show(fragment);
         }

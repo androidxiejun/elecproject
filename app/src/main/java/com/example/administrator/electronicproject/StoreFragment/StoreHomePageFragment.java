@@ -21,6 +21,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.administrator.electronicproject.PurchaseDetails.PurchaseDetails;
 import com.example.administrator.electronicproject.R;
@@ -86,6 +87,7 @@ public class StoreHomePageFragment extends Fragment {
         View view = inflater.inflate(R.layout.store_home_page_fargment_layout, container, false);
         initData();
         initListInfo(1);
+        initInfo("");
         initView(view);
         controlIndicator(0);
         mViewPager.setCurrentItem(0);
@@ -150,6 +152,8 @@ public class StoreHomePageFragment extends Fragment {
 
             @Override
             public void onFailure(Call<StoreHomePageNextBean> call, Throwable t) {
+                String message = t.getMessage();
+                Toast.makeText(context, message, Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -161,6 +165,9 @@ public class StoreHomePageFragment extends Fragment {
         mTabLayout = (TabLayout) view.findViewById(R.id.store_home_grid_tab_layout);
         recyclerView = (UltimateRecyclerView) view.findViewById(R.id.recycler_view);
         recyclerView.setLayoutManager(new GridLayoutManager(context, 2));
+//        recyclerView.enableDefaultSwipeRefresh(true);//开启下拉刷新
+//        recyclerView.enableLoadmore();//开启上拉加载更多
+//        recyclerView.reenableLoadmore();
         pagerAdapter = new MyViewPagerAdaoter();
         mViewPager = (ViewPager) view.findViewById(R.id.store_home_view_pager);
         mGridView = (CustomGridView) view.findViewById(R.id.store_home_grid_view);
@@ -183,6 +190,7 @@ public class StoreHomePageFragment extends Fragment {
 
             }
         });
+        //对tablayout进行点击监听，然后加载不同的数据
         mTabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
@@ -248,7 +256,6 @@ public class StoreHomePageFragment extends Fragment {
                         case 1:
                             Intent intent1=new Intent(context, SnapActivity.class);
                             startActivity(intent1);
-                            //TODO
                             break;
                     }
                 }
@@ -465,7 +472,9 @@ public class StoreHomePageFragment extends Fragment {
             }
         }
     }
-
+   /**
+     商城下面的recycleview
+    */
     public class StringViewHolder extends UltimateRecyclerviewViewHolder {
         public ImageView imageView;
         public TextView title, currentPrice, originPrice, countryName;

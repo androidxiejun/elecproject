@@ -1,6 +1,5 @@
 package com.example.administrator.electronicproject.FashionFragment.view.activity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -11,7 +10,6 @@ import android.widget.ListView;
 import com.example.administrator.electronicproject.FashionFragment.bean.TableBean;
 import com.example.administrator.electronicproject.FashionFragment.http.HttpUtils;
 import com.example.administrator.electronicproject.FashionFragment.view.adapter.FashionMiddleTableAdapter;
-import com.example.administrator.electronicproject.MainActivity;
 import com.example.administrator.electronicproject.R;
 
 import java.util.ArrayList;

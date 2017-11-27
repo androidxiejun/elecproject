@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
-import com.example.administrator.electronicproject.FashionFragment.bean.FashionBottonBean;
+
 import com.example.administrator.electronicproject.FashionFragment.bean.FashionMiddleBean;
 import com.example.administrator.electronicproject.FashionFragment.http.HttpUtils;
 import com.example.administrator.electronicproject.FashionFragment.view.activity.FashionMiddleTableActivity;
@@ -49,6 +49,7 @@ public class FashionRecommendFragment extends Fragment implements View.OnClickLi
     private FashionListViewAdapter fashionListViewAdapter;
     //PullToRefreshListView的listview，用来加载下部分
     private ListView refreshableView;
+    private List<String>imgList=new ArrayList<>();
 
     //头部Banner暂时使用的数据
     //暂时使用的数据源
@@ -96,7 +97,11 @@ public class FashionRecommendFragment extends Fragment implements View.OnClickLi
 
         //PullToRefreshListView的listview，用来加载上部分
         refreshableView = fashionListView.getRefreshableView();
-
+        imgList.add("http://s3.mingxingyichu.cn/group6/M00/AE/2F/wKgBjVfNQEyASrljAALE86r9d_U589.jpg?imageMogr2?imageMogr2?imageMogr2");
+        imgList.add("http://s3.mingxingyichu.cn/group6/M00/AE/2F/wKgBjVfNQEyASrljAALE86r9d_U589.jpg?imageMogr2?imageMogr2?imageMogr2");
+        imgList.add("http://s3.mingxingyichu.cn/group6/M00/AE/2F/wKgBjVfNQEyASrljAALE86r9d_U589.jpg?imageMogr2?imageMogr2?imageMogr2");
+        imgList.add("http://s3.mingxingyichu.cn/group6/M00/AE/2F/wKgBjVfNQEyASrljAALE86r9d_U589.jpg?imageMogr2?imageMogr2?imageMogr2");
+        imgList.add("http://s3.mingxingyichu.cn/group6/M00/AE/2F/wKgBjVfNQEyASrljAALE86r9d_U589.jpg?imageMogr2?imageMogr2?imageMogr2");
         //上部视图
         View inflate = LayoutInflater.from(context).inflate(R.layout.fashion_foot_view, null);
         //上部视图的banner
@@ -105,7 +110,7 @@ public class FashionRecommendFragment extends Fragment implements View.OnClickLi
         banner.setIndicatorGravity(BannerConfig.CENTER);
         //设置banner的默认动画,github查询方法
         banner.setBannerAnimation(Transformer.Stack);
-        banner.setImages(images);
+        banner.setImages(imgList);
         banner.setOnBannerClickListener(new OnBannerClickListener() {
             @Override
             public void OnBannerClick(int position) {

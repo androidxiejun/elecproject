@@ -3,39 +3,40 @@
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
-        <option name="distributionType" value="LOCAL" />
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="gradleHome" value="C:\Program Files\Android\Android Studio\gradle\gradle-2.10" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/addre" />
             <option value="$PROJECT_DIR$/address" />
+            <option value="$PROJECT_DIR$/animatordemo" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/app2" />
+            <option value="$PROJECT_DIR$/bluetoothprint" />
+            <option value="$PROJECT_DIR$/day19_fragmentpagerapdater" />
+            <option value="$PROJECT_DIR$/day22_broadcast_receiver_1" />
             <option value="$PROJECT_DIR$/day30_webview" />
+            <option value="$PROJECT_DIR$/day42_event_clash_exception_demo" />
+            <option value="$PROJECT_DIR$/day42_slide_list_demo" />
             <option value="$PROJECT_DIR$/flowlibrary" />
+            <option value="$PROJECT_DIR$/fragment_viewpager_radiogroup" />
+            <option value="$PROJECT_DIR$/fragmenttest" />
+            <option value="$PROJECT_DIR$/fragmenttest2" />
+            <option value="$PROJECT_DIR$/glidedemo" />
             <option value="$PROJECT_DIR$/httplibrary" />
             <option value="$PROJECT_DIR$/imageloader" />
+            <option value="$PROJECT_DIR$/mday_coordinatorlayout_demo" />
             <option value="$PROJECT_DIR$/pulllibrary" />
             <option value="$PROJECT_DIR$/shoppingcargreendao" />
+            <option value="$PROJECT_DIR$/testrecyclerview" />
+            <option value="$PROJECT_DIR$/toucheventdemo" />
+            <option value="$PROJECT_DIR$/ultimatedemo" />
+            <option value="$PROJECT_DIR$/websettingtest" />
             <option value="$PROJECT_DIR$/zxing_code" />
           </set>
         </option>
-        <option name="myModules">
-          <set>
-            <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/addre" />
-            <option value="$PROJECT_DIR$/address" />
-            <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/day30_webview" />
-            <option value="$PROJECT_DIR$/flowlibrary" />
-            <option value="$PROJECT_DIR$/httplibrary" />
-            <option value="$PROJECT_DIR$/imageloader" />
-            <option value="$PROJECT_DIR$/pulllibrary" />
-            <option value="$PROJECT_DIR$/shoppingcargreendao" />
-            <option value="$PROJECT_DIR$/zxing_code" />
-          </set>
-        </option>
+        <option name="resolveModulePerSourceSet" value="false" />
       </GradleProjectSettings>
     </option>
   </component>

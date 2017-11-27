@@ -40,6 +40,11 @@ public class BrandLeftFragment extends Fragment {
         initView(view);
         return view;
     }
+
+    /**
+     * 一个用来获取callback对象的方法
+     * @param callBack
+     */
    public void setCallBack(CallBack callBack){
        this.callBack=callBack;
    }
@@ -59,7 +64,9 @@ public class BrandLeftFragment extends Fragment {
         });
     }
 
-
+    /**
+     * 品牌Tab左边的listview得适配器
+     */
     class BrandListAdapter extends BaseAdapter{
         int mSelect = 0;   //选中项
         public void changeSelected(int positon){ //刷新方法

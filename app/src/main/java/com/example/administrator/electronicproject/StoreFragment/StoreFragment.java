@@ -92,17 +92,27 @@ public class StoreFragment extends Fragment implements View.OnClickListener{
         fragmentTransaction.commit();
     }
 
+    /**
+     * 对按钮进行监听，跳转至不同界面
+     * @param view
+     */
     @Override
     public void onClick(View view) {
         switch (view.getId()){
+            //进入扫描二维码界面
             case R.id.store_sweep_btn:
                 Intent intent=new Intent(context,TakePictureActivity.class);
                 startActivity(intent);
                 break;
+//            Intent intents = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+//            startActivity(intents);
+//            break;
+            //进入搜索界面
             case R.id.store_search_btn:
                 Intent intent2=new Intent(context, SearchActivity.class);
                 startActivity(intent2);
                 break;
+            //进入购物车界面
             case R.id.store_shopping_btn:
                 Intent intent1=new Intent(context, ShappingCart.class);
                 startActivity(intent1);

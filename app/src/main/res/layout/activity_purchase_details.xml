@@ -91,7 +91,7 @@
             android:id="@+id/purchase_detail_brand"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:drawableTop="@drawable/ic_link_customer_service"
+            android:drawableTop="@drawable/icon_star_big_white"
             android:background="@color/colorWhite"
             android:layout_weight="2"
             android:text="品牌"/>

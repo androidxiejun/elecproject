@@ -69,6 +69,9 @@ public class ClassifyFragment extends Fragment implements View.OnClickListener{
         return view;
     }
 
+    /**
+     * 当再次回到该界面时，读取数据库数据
+     */
     @Override
     public void onResume() {
         super.onResume();
@@ -97,6 +100,10 @@ public class ClassifyFragment extends Fragment implements View.OnClickListener{
         mTablayout.setTabMode(TabLayout.MODE_FIXED);
         mTablayout.setupWithViewPager(mViewPager);
     }
+
+    /**
+     * tablayout的名称
+     */
     private void initData() {
         tabTitle.add("品类");
         tabTitle.add("品牌");
@@ -105,10 +112,12 @@ public class ClassifyFragment extends Fragment implements View.OnClickListener{
     @Override
     public void onClick(View view) {
         switch (view.getId()){
+            //进入搜索界面
             case R.id.classify_search_btn:
                 Intent intent=new Intent(context, SearchActivity.class);
                 startActivity(intent);
                 break;
+            //进入购物车界面
             case R.id.classify_shopping_car_btn:
                 Intent intent1=new Intent(context, ShappingCart.class);
                 startActivity(intent1);
@@ -117,7 +126,10 @@ public class ClassifyFragment extends Fragment implements View.OnClickListener{
 
     }
 
-    class ViewPagerAdapter extends FragmentPagerAdapter{
+    /**
+     * tablayout与fragment进行关联
+     */
+    class ViewPagerAdapter extends FragmentPagerAdapter {
 
         public ViewPagerAdapter(FragmentManager fm) {
             super(fm);

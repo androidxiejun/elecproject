@@ -53,6 +53,7 @@ public class ClassifyStoreFragment extends Fragment implements CallBack{
         mGridView= (GridView) view.findViewById(R.id.classfy_category_store_grid_view);
         gridViewAdapter=new GridViewAdapter();
         mGridView.setAdapter(gridViewAdapter);
+        //对gridview进行监听，然后跳转至详情界面
         mGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
@@ -64,6 +65,10 @@ public class ClassifyStoreFragment extends Fragment implements CallBack{
         });
     }
 
+    /**
+     * 通过回调，刷新适配器
+     * @param index
+     */
     @Override
     public void refreshFragment(int index) {
         this.index=index;

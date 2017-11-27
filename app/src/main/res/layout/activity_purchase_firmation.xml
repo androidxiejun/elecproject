@@ -29,12 +29,32 @@
         android:layout_width="match_parent"
         android:layout_height="15dp"
         android:background="@color/colorGray"/>
-    <Button
-        android:id="@+id/inset_lcation_btn"
+    <LinearLayout
+        android:id="@+id/firmation_linear"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="填写收货地址"
-        android:background="@color/colorWhite"/>
+        android:orientation="vertical"
+        android:background="@color/colorWhite"
+        android:padding="10dp"
+        >
+    <TextView
+        android:id="@+id/firmation_custome_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:text="谢军"/>
+        <TextView
+            android:id="@+id/firmation_custome_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="15623736455"/>
+        <TextView
+            android:id="@+id/firmation_custome_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="中国大陆"/>
+    </LinearLayout>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="15dp"

@@ -29,7 +29,7 @@ import attention.com.example.administrator.electronicproject.AttentionUtils;
  * Created by sunbin on 2016/9/9.
  * 衣橱达人的关注
  */
-public class FashionAttentionFragment extends Fragment implements AttentionAdapter.AttentionCallBack{
+class FashionAttentionFragment extends Fragment implements AttentionAdapter.AttentionCallBack{
 
     private Context context;
     private PullToRefreshGridView mAttentionGridView;

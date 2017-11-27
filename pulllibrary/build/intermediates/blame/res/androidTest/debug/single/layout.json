@@ -4,15 +4,7 @@
         "source": "F:\\Users\\Android\\workspace\\ElectronicProject\\pulllibrary\\build\\intermediates\\bundles\\debug\\res\\layout\\pull_to_refresh_header_vertical.xml"
     },
     {
-        "merged": "H:\\workspace\\electricproject\\pulllibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\pull_to_refresh_header_vertical.xml",
-        "source": "H:\\workspace\\electricproject\\pulllibrary\\build\\intermediates\\bundles\\debug\\res\\layout\\pull_to_refresh_header_vertical.xml"
-    },
-    {
         "merged": "F:\\Users\\Android\\workspace\\ElectronicProject\\pulllibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\pull_to_refresh_header_horizontal.xml",
         "source": "F:\\Users\\Android\\workspace\\ElectronicProject\\pulllibrary\\build\\intermediates\\bundles\\debug\\res\\layout\\pull_to_refresh_header_horizontal.xml"
-    },
-    {
-        "merged": "H:\\workspace\\electricproject\\pulllibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\pull_to_refresh_header_horizontal.xml",
-        "source": "H:\\workspace\\electricproject\\pulllibrary\\build\\intermediates\\bundles\\debug\\res\\layout\\pull_to_refresh_header_horizontal.xml"
     }
 ]

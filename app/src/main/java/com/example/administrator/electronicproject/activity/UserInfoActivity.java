@@ -1,6 +1,5 @@
 package com.example.administrator.electronicproject.activity;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -11,14 +10,12 @@ import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
-import android.preference.PreferenceManager;
 import android.provider.MediaStore;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.PopupWindow;
@@ -211,7 +208,9 @@ public class UserInfoActivity extends AppCompatActivity implements View.OnClickL
         headImagePopup = new PopupWindow(popup, RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
         headImagePopup.setBackgroundDrawable(new ColorDrawable());
         headImagePopup.setOutsideTouchable(true);
+//        headImagePopup.showAtLocation(popup,Gravity.BOTTOM,0,0);
         headImagePopup.showAtLocation(popup,Gravity.BOTTOM,0,0);
+
     }
 
     /**

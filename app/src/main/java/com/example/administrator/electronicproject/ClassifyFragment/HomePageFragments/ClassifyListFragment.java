@@ -33,6 +33,11 @@ public class ClassifyListFragment extends Fragment{
         context=getContext();
 
     }
+
+    /**
+     * 获取callback对象
+     * @param callBack
+     */
     public void setCallBack(CallBack callBack){
         this.callBack=callBack;
     }
@@ -62,7 +67,9 @@ public class ClassifyListFragment extends Fragment{
         });
     }
 
-
+    /**
+     * tab左边的listview适配器
+     */
     class  ListViewAdapter extends BaseAdapter {
         int mSelect = 0;   //选中项
         public void changeSelected(int positon){ //刷新方法
